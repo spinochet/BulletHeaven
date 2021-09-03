@@ -1,0 +1,61 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "f9bb18bf-c2dc-4d5c-8605-9fdfbb6dd63a",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "PassThrough",
+                    "id": "062334cb-2c20-4ffb-a7e4-08cfc846b7a4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Aim",
+                    "type": "PassThrough",
+                    "id": "8bd1e169-e3b2-42fd-8e1d-e5565d3bb431",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MeleeAttack",
+                    "type": "Button",
+                    "id": "5d1302e0-5e66-44e8-9377-a50eb3fedb02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RangedAttack",
+                    "type": "Button",
+                    "id": "e8faeb33-3a4a-41dd-83dc-10a8804653a3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AbilityL",
+                    "type": "Button",
+                    "id": "a323fd50-fc66-4be4-835c-ca3b5318007f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AbilityR",
+                    "type": "Button",
+                    "id": "25a964cb-acfc-41ce-bcf0-2d4727078316",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
