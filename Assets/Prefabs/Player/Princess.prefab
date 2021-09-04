@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 6144772641564094672}
   - component: {fileID: 6144772641564094673}
   - component: {fileID: 6144772641564094674}
-  - component: {fileID: 1615463949206869496}
-  - component: {fileID: 1993487731611563409}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Untagged
@@ -83,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &6144772641564094672
@@ -154,27 +152,3 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1615463949206869496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6144772641564094675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de593984b3d0c4966bc91aa44bdc918c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1993487731611563409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6144772641564094675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 792d242ed89de408c989deac0bc07345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
