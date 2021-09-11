@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -126302263036230101, guid: 786f8786ab80fc043a5d4bcc79a7342c,
+        type: 3}
+      propertyPath: animController
+      value: 
+      objectReference: {fileID: 9100000, guid: 4c5a2051a7d4541b5be32b0b0621fdc2, type: 2}
     - target: {fileID: 5114535990754258373, guid: 786f8786ab80fc043a5d4bcc79a7342c,
         type: 3}
       propertyPath: m_LocalPosition.x

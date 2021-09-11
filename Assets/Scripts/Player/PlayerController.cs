@@ -21,11 +21,19 @@ public class PlayerController : MonoBehaviour
 
     private Ability ability1;
 
+    [Header ("Animations")]
+    [SerializeField] private RuntimeAnimatorController animController;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ability1 = gameObject.AddComponent(typeof(BulletTime)) as Ability;
+        // ability1 = gameObject.AddComponent(typeof(BulletTime)) as Ability;
+        // ability1 = GetComponent<Ability>();
+
+
+        Animator animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = animController;
     }
 
     // Update is called once per frame
