@@ -15,7 +15,7 @@
                 },
                 {
                     "name": "Dash",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "be9277d3-14e9-4d8f-84f4-173ce84e910a",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -23,7 +23,7 @@
                 },
                 {
                     "name": "Shoot",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "90c9624b-a047-4a51-b60e-36bce620fad3",
                     "expectedControlType": "Axis",
                     "processors": "",
@@ -31,7 +31,7 @@
                 },
                 {
                     "name": "Ability1",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "18552f7a-69d6-4a7c-a965-c4475d5a06e8",
                     "expectedControlType": "Axis",
                     "processors": "",
@@ -165,7 +165,7 @@
                 },
                 {
                     "name": "Submit",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "89ca1a3c-b9eb-46ae-872d-12957143bd1b",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -230,11 +230,33 @@
                 },
                 {
                     "name": "",
+                    "id": "4ad8d8e0-714d-4e0a-85c2-a9705101884b",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e357a7a7-297a-4654-b893-68f023a91767",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4590519-a7fc-4c29-b72f-f3b217d06be2",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -249,6 +271,17 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

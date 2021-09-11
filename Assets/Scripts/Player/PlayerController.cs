@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,18 +23,17 @@ public class PlayerController : MonoBehaviour
     private Ability ability1;
 
     [Header ("Animations")]
+    [SerializeField] private Sprite portrait;
     [SerializeField] private RuntimeAnimatorController animController;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // ability1 = gameObject.AddComponent(typeof(BulletTime)) as Ability;
-        // ability1 = GetComponent<Ability>();
 
 
-        Animator animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = animController;
+        // Animator animator = GetComponent<Animator>();
+        // animator.runtimeAnimatorController = animController;
     }
 
     // Update is called once per frame
@@ -49,6 +49,17 @@ public class PlayerController : MonoBehaviour
                 Instantiate(bulletPrefab, transform.position, transform.rotation);
             }
         }
+    }
+
+    public void SetUp(CharacterPresets.CharacterPreset preset)
+    {
+        portrait = preset.portrait;
+        animController = preset.anim;
+        bulletPrefab = preset.bulletPrefab;
+        fireRate = preset.fireRate;
+
+        ability1 = preset.ability.GetComponent<Ability>();
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // FixedUpdate is called once per physics frame

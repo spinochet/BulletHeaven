@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.UI;
 
 public class CharacterPresets : MonoBehaviour
 {
@@ -11,9 +12,16 @@ public class CharacterPresets : MonoBehaviour
     public struct CharacterPreset
     {
         [SerializeField] public Sprite portrait;
+        [SerializeField] public RuntimeAnimatorController anim;
+        [SerializeField] public GameObject bulletPrefab;
+        [SerializeField] public float fireRate;
+        [SerializeField] public GameObject ability;
     }
 
     [SerializeField] private List<CharacterPreset> characterPresets;
+    int numPlayers = 0;
+    int readyP1 = -1;
+    int readyP2 = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -24,26 +32,33 @@ public class CharacterPresets : MonoBehaviour
     // OnJoin event callback function
     public void OnJoin(PlayerInput input)
     {
-        if (input.playerIndex == 0)
-        {
-            input.gameObject.name = "Player 1";
-            GameObject.Find("P1 Join Text").SetActive(false);
-            GameObject.Find("P1 Portrait").GetComponent<SpriteRenderer>().enabled = true;
-        }
-        else if (input.playerIndex == 1)
-        {
-            input.gameObject.name = "Player 2";
-            GameObject.Find("P2 Join Text").SetActive(false);
-            GameObject.Find("P2 Portrait").GetComponent<SpriteRenderer>().enabled = true;
-        }
+        int playerIndex = input.playerIndex + 1;
+        ++numPlayers;
 
-        input.transform.GetComponent<SpriteRenderer>().enabled = false;
-        input.transform.GetComponent<PlayerController>().enabled = true;
+        // Update character select menu
+        input.gameObject.name = "Player " + playerIndex.ToString();
+        GameObject.Find("P" + playerIndex.ToString() + " Join Text").SetActive(false);
+        GameObject.Find("P" + playerIndex.ToString() + " Portrait").GetComponent<SpriteRenderer>().enabled = true;
+
+        // InputSystemUIInputModule uiInputModule = GameObject.Find("P" + playerIndex.ToString()).GetComponent<InputSystemUIInputModule>();
+        // uiInputModule.actionsAsset = input.actions;
+
+        input.transform.GetComponentInChildren<MultiplayerEventSystem>().SetSelectedGameObject(GameObject.Find("P" + playerIndex.ToString() + " Portrait"));
+
+        // Setup player character
+        input.transform.GetComponent<PlayerController>().SetUp(characterPresets[playerIndex - 1]);
         DontDestroyOnLoad(input.gameObject);
     }
 
-    void OnSubmit()
+    // OnJoin event callback function
+    public void OnPlayerLeft(PlayerInput input)
     {
-        Debug.Log("Submit!");
+        int playerIndex = input.playerIndex + 1;
+        --numPlayers;
+    }
+
+    public void OnSubmit(int playerIndex)
+    {
+        Debug.Log(playerIndex.ToString());
     }
 }
