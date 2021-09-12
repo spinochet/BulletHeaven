@@ -120,7 +120,7 @@
                     "name": "",
                     "id": "6b64a1d7-2624-450e-b3d8-4d569c1e1643",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Piano",
                     "action": "Dash",

@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class DragonController : MonoBehaviour
 {
-    private List<PlayerController> players;
-    private int numPlayers;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +14,5 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void AddPlayer(GameObject player)
-    {
-        players.Add(player.GetComponent<PlayerController>());
     }
 }
