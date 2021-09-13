@@ -95,6 +95,28 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "18015061-d783-4855-9445-ed459e61b905",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0b94e43-9c47-4404-932c-f2de04b2200f",
+                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Dualshock 4",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "da63966f-c113-4a0f-b0e7-e2fd7ada36c0",
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
@@ -112,6 +134,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "6381e979-5d0e-4117-9548-3ff2ec21b82c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "e7901d8e-e045-4c98-915f-fb83f32450d6",
+                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Dualshock 4",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -145,6 +189,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "Ability1",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "293acdca-b545-4988-9c3e-ad0fca22e06d",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ability1",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "a35b1624-0d01-4ca1-9dce-20f306f3d343",
+                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Dualshock 4",
                     "action": "Ability1",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -260,6 +326,17 @@
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e70da685-0e59-4b13-806c-ac16b3654db0",
+                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Dualshock 4",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -282,6 +359,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Dualshock 4",
+            "bindingGroup": "Dualshock 4",
+            "devices": [
+                {
+                    "devicePath": "<HID::Unknown DUALSHOCK 4 Wireless Controller>",
                     "isOptional": false,
                     "isOR": false
                 }

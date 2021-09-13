@@ -17,10 +17,17 @@ public class PlayerController : MonoBehaviour
     [Header ("Combat")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireRate = 30.0f;
+    [SerializeField] private Ability ability1;
     private bool isShooting;
     private float shootTimer;
 
-    private Ability ability1;
+    [Header ("Stats")]
+    [SerializeField] private int maxHP;
+    [SerializeField] private int maxStamina;
+    private int hp;
+    private int stamina;
+    private Slider hpBar;
+    private Slider staminaBar;
 
     [Header ("Animations")]
     [SerializeField] private Sprite portrait;
@@ -31,9 +38,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-
-        // Animator animator = GetComponent<Animator>();
-        // animator.runtimeAnimatorController = animController;
+        hp = maxHP;
+        stamina = maxStamina;
     }
 
     // Update is called once per frame
@@ -64,12 +70,18 @@ public class PlayerController : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
     }
 
+    public void SetUI(Slider _hpBar, Slider _staminaBar)
+    {
+        hpBar = _hpBar;
+        staminaBar = _staminaBar;
+    }
+
     // FixedUpdate is called once per physics frame
     void FixedUpdate()
     {
         // Handle movement
-        if (rb.velocity.magnitude <= movementSpeed)
-            rb.MovePosition(transform.position + (Vector3) inputVec * movementSpeed * Time.unscaledDeltaTime);
+        // if (rb.velocity.magnitude <= movementSpeed)
+        rb.MovePosition(transform.position + (Vector3) inputVec * movementSpeed * Time.unscaledDeltaTime);
     }
 
     // Move action callback function
@@ -103,5 +115,13 @@ public class PlayerController : MonoBehaviour
         {
             ability1.Deactivate();
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+        hpBar.value = (float) hp / (float) maxHP;
+
+        Debug.Log("Damage");
     }
 }

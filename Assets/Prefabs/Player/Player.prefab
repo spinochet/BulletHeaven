@@ -205,6 +205,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1952417243013044096, guid: f7aadd38a56ee724eb4c3596a054643a,
     type: 3}
   fireRate: 15
+  ability1: {fileID: 0}
+  maxHP: 100
+  maxStamina: 100
   portrait: {fileID: 0}
   animController: {fileID: 0}
 --- !u!1 &8604721201567829206
