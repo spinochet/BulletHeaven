@@ -121,7 +121,5 @@ public class PlayerController : MonoBehaviour
     {
         hp -= damage;
         hpBar.value = (float) hp / (float) maxHP;
-
-        Debug.Log("Damage");
     }
 }
