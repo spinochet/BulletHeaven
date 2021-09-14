@@ -24,16 +24,48 @@
                 {
                     "name": "Shoot",
                     "type": "PassThrough",
-                    "id": "90c9624b-a047-4a51-b60e-36bce620fad3",
+                    "id": "6498ba8f-5d6e-4a90-a22d-1bd825007cce",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Ability1",
+                    "name": "ShootTap",
+                    "type": "PassThrough",
+                    "id": "90c9624b-a047-4a51-b60e-36bce620fad3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap"
+                },
+                {
+                    "name": "ShootHold",
                     "type": "PassThrough",
                     "id": "18552f7a-69d6-4a7c-a965-c4475d5a06e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Burst",
+                    "type": "PassThrough",
+                    "id": "3e4bce7e-10e8-436d-b71b-8b12d877515e",
                     "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AbilityL",
+                    "type": "PassThrough",
+                    "id": "2f782714-828e-4eb0-b521-f0647a513d09",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AbilityR",
+                    "type": "Button",
+                    "id": "6a71db77-6740-4cae-81f5-91a57b574280",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -106,59 +138,26 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "f0b94e43-9c47-4404-932c-f2de04b2200f",
-                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/stick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Dualshock 4",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "da63966f-c113-4a0f-b0e7-e2fd7ada36c0",
-                    "path": "1DAxis(minValue=0,whichSideWins=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "positive",
-                    "id": "c3906605-c59a-42a8-a6b9-dc5f996a7d21",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Piano",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "1D Axis",
                     "id": "6381e979-5d0e-4117-9548-3ff2ec21b82c",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "ShootTap",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "positive",
-                    "id": "e7901d8e-e045-4c98-915f-fb83f32450d6",
-                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/button2",
+                    "name": "",
+                    "id": "2fd7d8db-fe71-46cb-953c-cee28e8e7c30",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Dualshock 4",
-                    "action": "Shoot",
+                    "groups": "Piano",
+                    "action": "ShootTap",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -173,45 +172,111 @@
                 },
                 {
                     "name": "1D Axis",
-                    "id": "da349952-ba8d-4e7b-b48c-80536382faa6",
-                    "path": "1DAxis(minValue=0,whichSideWins=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Ability1",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "positive",
-                    "id": "13e0a6da-40ff-47cc-ab0e-3e615ef9b1f7",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Piano",
-                    "action": "Ability1",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
                     "id": "293acdca-b545-4988-9c3e-ad0fca22e06d",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Ability1",
+                    "action": "ShootHold",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8eded606-d79f-4af6-bcac-5f06b836a0a6",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "ShootHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "aeec2551-f732-43a6-941d-5e50067890f8",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "positive",
-                    "id": "a35b1624-0d01-4ca1-9dce-20f306f3d343",
-                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/button5",
+                    "id": "d27e312d-9a9d-40f9-ae97-aaceb5876cb7",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Dualshock 4",
-                    "action": "Ability1",
+                    "groups": "Piano",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e22fee42-a018-496c-95d8-d31c320e8b98",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityL",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "bbab549e-ecd9-4fd2-9748-9742cd51396a",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "AbilityL",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "0d4a6b93-c118-4a2e-9995-6c90f6201fa2",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "AbilityR",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "7e6eaaea-c36f-4474-a071-104a75a791f2",
+                    "path": "<Keyboard>/rightShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "AbilityR",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "1fc1ad56-26b6-463a-8286-f9f1450f8bfd",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Burst",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "e40e45a3-c34c-44ec-aed4-d99fb34bfa8d",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "Burst",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
@@ -326,17 +391,6 @@
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e70da685-0e59-4b13-806c-ac16b3654db0",
-                    "path": "<HID::Unknown DUALSHOCK 4 Wireless Controller>/button10",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Dualshock 4",
-                    "action": "Submit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
@@ -359,17 +413,6 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Dualshock 4",
-            "bindingGroup": "Dualshock 4",
-            "devices": [
-                {
-                    "devicePath": "<HID::Unknown DUALSHOCK 4 Wireless Controller>",
                     "isOptional": false,
                     "isOR": false
                 }

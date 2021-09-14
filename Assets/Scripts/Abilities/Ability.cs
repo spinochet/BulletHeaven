@@ -4,6 +4,7 @@ using UnityEngine;
 
 abstract public class Ability : MonoBehaviour
 {
-    abstract public void Activate();
+    abstract public bool Activate();
     abstract public void Deactivate();
+    abstract public float GetCost();
 }

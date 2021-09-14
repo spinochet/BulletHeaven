@@ -17,12 +17,12 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerController player1 = GameObject.Find("Player 1").GetComponent<PlayerController>();
+        NewPlayerController player1 = GameObject.Find("Princess").GetComponent<NewPlayerController>();
         if (player1 != null)
         {
             player1.SetUI(p1Health, p1Stamina);
         }
 
-        PlayerController player2 = GameObject.Find("Player 2").GetComponent<PlayerController>();
+        NewPlayerController player2 = GameObject.Find("Player 2").GetComponent<NewPlayerController>();
     }
 }
