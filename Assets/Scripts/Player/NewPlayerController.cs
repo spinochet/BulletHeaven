@@ -41,6 +41,7 @@ public class NewPlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        abilityR.SetOwner(gameObject.name);
 
         hp = maxHP;
         stamina = maxStamina;
@@ -78,6 +79,15 @@ public class NewPlayerController : MonoBehaviour
 
             if (stamina <= 0.0f)
                 abilityL.Deactivate();
+        }
+
+        if (isAbilityR)
+        {
+            stamina -= abilityR.GetCost() * Time.unscaledDeltaTime;
+            staminaBar.value = stamina / maxStamina;
+
+            if (stamina <= 0.0f)
+                abilityR.Deactivate();
         }
 
         // Stats
@@ -149,7 +159,30 @@ public class NewPlayerController : MonoBehaviour
         }
         else
         {
+            isAbilityL = false;
             abilityL.Deactivate();
+        }
+    }
+
+    // AbilityR action callback function
+    void OnAbilityR(InputValue input)
+    {
+        isAbilityR = input.Get<float>() > 0.0f ? true : false;
+
+        if (isAbilityR && stamina > abilityR.GetCost())
+        {
+            isAbilityR = abilityR.Activate();
+
+            if (!isAbilityR)
+            {
+                stamina -= abilityR.GetCost();
+                staminaBar.value = stamina / maxStamina;
+            }
+        }
+        else
+        {
+            isAbilityR = false;
+            abilityR.Deactivate();
         }
     }
 }

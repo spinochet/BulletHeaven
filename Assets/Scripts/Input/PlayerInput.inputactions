@@ -63,9 +63,9 @@
                 },
                 {
                     "name": "AbilityR",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "6a71db77-6740-4cae-81f5-91a57b574280",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 }

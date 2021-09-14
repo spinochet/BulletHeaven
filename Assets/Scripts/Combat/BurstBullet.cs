@@ -39,6 +39,9 @@ public class BurstBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.tag == "Edge")
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -14,6 +14,13 @@ public class NewBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Edge")
+        {
+            Destroy(gameObject);
+        }
     }
 }

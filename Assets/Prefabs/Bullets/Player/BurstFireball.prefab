@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8591395192380731845}
   - component: {fileID: 8591395192380731844}
   - component: {fileID: 4895740666472414116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BurstFireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
