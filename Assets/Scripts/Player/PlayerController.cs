@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -80,7 +80,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Handle movement
-        // if (rb.velocity.magnitude <= movementSpeed)
         rb.MovePosition(transform.position + (Vector3) inputVec * movementSpeed * Time.unscaledDeltaTime);
     }
 
