@@ -90,13 +90,6 @@ public class PlayerController : MonoBehaviour
         inputVec = input.Get<Vector2>();
     }
 
-    // Dash action callback function
-    // public void OnDash()
-    // {
-    //     rb.velocity = Vector2.zero;
-    //     rb.AddForce(inputVec * dashForce, ForceMode2D.Impulse);
-    // }
-
     // Shoot action callback function
     public void OnShoot(InputValue input)
     {

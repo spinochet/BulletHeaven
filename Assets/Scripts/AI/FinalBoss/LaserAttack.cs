@@ -4,29 +4,45 @@ using UnityEngine;
 
 public class LaserAttack : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer sprite;
+    private BoxCollider2D collider;
     [SerializeField] private float speed;
     [SerializeField] private float duration;
 
-    private Rigidbody2D rb;
+    private Color color;
     private Vector3 dir;
     private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        color = sprite.color;
+        collider = GetComponent<BoxCollider2D>();
+        collider.enabled = false;
     }
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        color = sprite.color;
+        collider = GetComponent<BoxCollider2D>();
+        collider.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        transform.position += dir * speed * Time.deltaTime;
+        
+        if (speed > timer)
+        {
+            color.a = timer / speed;
+            sprite.color = color;
+        }
+        else
+        {
+            sprite.color = Color.white;
+            collider.enabled = true;
+        }
 
         if (timer >= duration)
         {

@@ -25,10 +25,4 @@ public class UIController : MonoBehaviour
 
         PlayerController player2 = GameObject.Find("Player 2").GetComponent<PlayerController>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
