@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class LaserAttack : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer sprite;
-    private BoxCollider2D collider;
-    [SerializeField] private float speed;
-    [SerializeField] private float duration;
+    [SerializeField] private Transform sphere;
+    [SerializeField] private MeshRenderer renderer;
+    [SerializeField] private CapsuleCollider collider;
+    [SerializeField] private float speed = 2.0f;
+    [SerializeField] private float duration = 3.0f;
 
-    private Color color;
     private Vector3 dir;
     private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        color = sprite.color;
-        collider = GetComponent<BoxCollider2D>();
-        collider.enabled = false;
     }
 
     void Awake()
     {
-        color = sprite.color;
-        collider = GetComponent<BoxCollider2D>();
-        collider.enabled = false;
     }
 
     // Update is called once per frame
@@ -35,12 +29,11 @@ public class LaserAttack : MonoBehaviour
         
         if (speed > timer)
         {
-            color.a = timer / speed;
-            sprite.color = color;
+            sphere.localScale = new Vector3((timer / speed) * 8.0f, (timer / speed) * 8.0f, (timer / speed) * 8.0f);
         }
         else
         {
-            sprite.color = Color.white;
+            renderer.enabled = true;
             collider.enabled = true;
         }
 
@@ -56,13 +49,13 @@ public class LaserAttack : MonoBehaviour
     }
 
     // when the GameObjects collider arrange for this GameObject to travel to the left of the screen
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        PlayerController player = col.transform.GetComponent<PlayerController>();
+    // void OnTriggerEnter(Collider2D col)
+    // {
+    //     NewPlayerController player = col.transform.GetComponent<NewPlayerController>();
 
-        if (player)
-        {
-            player.TakeDamage(20);
-        }
-    }
+    //     if (player)
+    //     {
+    //         // player.TakeDamage(20);
+    //     }
+    // }
 }
