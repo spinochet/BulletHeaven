@@ -47,15 +47,4 @@ public class LaserAttack : MonoBehaviour
     {
         dir = _dir;
     }
-
-    // when the GameObjects collider arrange for this GameObject to travel to the left of the screen
-    // void OnTriggerEnter(Collider2D col)
-    // {
-    //     NewPlayerController player = col.transform.GetComponent<NewPlayerController>();
-
-    //     if (player)
-    //     {
-    //         // player.TakeDamage(20);
-    //     }
-    // }
 }

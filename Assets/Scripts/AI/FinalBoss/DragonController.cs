@@ -13,21 +13,28 @@ public class DragonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(laser, new Vector3(-2.0f, 7.5f, 0.0f), Quaternion.identity);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        Vector3 startPos = Vector3.zero;
-        Vector3 dirVec = Vector3.zero;
-        Quaternion rotation = Quaternion.identity;
+
+        LaserPhase();
+    }
+
+    void LaserPhase()
+    {
 
         if (timer > 2.0f)
         {
             timer = 0.0f;
             float dir = Random.Range(0.0f, 4.0f);
+
+            Vector3 startPos = Vector3.zero;
+            Vector3 dirVec = Vector3.zero;
+            Quaternion rotation = Quaternion.identity;
 
             if (dir <= 1.0f)
             {

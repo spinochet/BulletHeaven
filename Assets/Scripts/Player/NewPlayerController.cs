@@ -185,4 +185,12 @@ public class NewPlayerController : MonoBehaviour
             abilityR.Deactivate();
         }
     }
+
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
+        if (hp < 0.0f) hp = 0.0f;
+        
+        hpBar.value = hp / maxHP;
+    }
 }
