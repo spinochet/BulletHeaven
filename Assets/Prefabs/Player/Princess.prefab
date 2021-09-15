@@ -103,7 +103,8 @@ MonoBehaviour:
     type: 3}
   abilityL: {fileID: 5213603989278996627, guid: 8da9db3666dd84c0c886ef57723fb040,
     type: 3}
-  abilityR: {fileID: 0}
+  abilityR: {fileID: 6574273399832970647, guid: 45af83460c8fc413f940895048a7e098,
+    type: 3}
   maxHP: 100
   maxStamina: 100
   staminaRecoveryRate: 5
