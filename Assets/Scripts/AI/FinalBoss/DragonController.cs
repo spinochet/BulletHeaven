@@ -8,7 +8,12 @@ public class DragonController : MonoBehaviour
     [SerializeField] private GameObject laser;
     [SerializeField] private float xBound = 8.0f;
     [SerializeField] private float yBound = 4.0f;
+
+    [Header ("Sword Attack")]
+    [SerializeField] private GameObject sword;
+
     private float timer;
+    private float swordTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +25,17 @@ public class DragonController : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        swordTimer += Time.deltaTime;
+
+        if (swordTimer >= 5.0f)
+        {
+            swordTimer = 0.0f;
+            float f = Random.Range(0.0f, 1.0f);
+            if (f < 0.25f)
+            {
+                Instantiate(sword, new Vector3(45.0f, 3.0f, 0.0f), Quaternion.Euler(90.0f, 0.0f, 0.0f));
+            }
+        }
 
         LaserPhase();
     }
@@ -63,6 +79,16 @@ public class DragonController : MonoBehaviour
             
             LaserAttack l = Instantiate(laser, startPos, rotation).GetComponent<LaserAttack>();
             l.Shoot(dirVec);
+        }
+    }
+
+    void SwordAttack()
+    {
+        float dir = Random.Range(0.0f, 2.0f);
+
+        if (dir < 1.0f)
+        {
+
         }
     }
 }
