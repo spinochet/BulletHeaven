@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DragonController : MonoBehaviour
 {
+    [Header ("Stats")]
+    [SerializeField] private float maxHP;
+    private float hp;
+
     [Header ("Laser Attack")]
     [SerializeField] private GameObject laser;
     [SerializeField] private float xBound = 8.0f;
@@ -18,7 +22,7 @@ public class DragonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hp = maxHP;
     }
 
     // Update is called once per frame
@@ -89,6 +93,27 @@ public class DragonController : MonoBehaviour
         if (dir < 1.0f)
         {
 
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        Debug.Log("Here");
+
+        if (col.gameObject.GetComponent<Bullet>())
+        {
+            hp -= 20.0f;
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.GetComponent<BurstBullet>())
+        {
+            hp -= 40.0f;
+            Destroy(col.gameObject);
+        }
+
+        if (hp <= 0.0f)
+        {
+            Destroy(gameObject);
         }
     }
 }
