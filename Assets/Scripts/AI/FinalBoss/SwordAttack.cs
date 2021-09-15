@@ -9,12 +9,13 @@ public class SwordAttack : MonoBehaviour
     [SerializeField] private float chargeTime;
     [SerializeField] private float speed;
 
+    private AudioSource audio;
     private float timer;
+    private bool flag;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,9 @@ public class SwordAttack : MonoBehaviour
         }
         else
         {
+            if (!flag) audio.Play();
+
+            flag = true;
             sprite.gameObject.SetActive(false);
             Vector3 euler = transform.eulerAngles;
             euler.y -= Time.deltaTime * speed;

@@ -6,6 +6,7 @@ public class BurstBullet : MonoBehaviour
 {
     [SerializeField] private float chargeTime;
     [SerializeField] private float speed;
+    [SerializeField] private AudioSource audio;
 
     private Vector3 size;
     private float timer;
@@ -35,6 +36,7 @@ public class BurstBullet : MonoBehaviour
     public void Shoot()
     {
         isShot = true;
+        audio.Play();
     }
 
     private void OnTriggerEnter(Collider other)
