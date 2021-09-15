@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        GameObject p1 = GameObject.Find("Player 1");
-        if (p1 != null)
-        {
-            p1.GetComponent<SpriteRenderer>().enabled = true;
-            p1.GetComponent<PlayerInput>().currentActionMap = p1.GetComponent<PlayerInput>().actions.FindActionMap("Gameplay");
-        }
+    [SerializeField] private GameObject princess;
+    [SerializeField] private GameObject robot;
 
-        GameObject p2 = GameObject.Find("Player 2");
-        if (p2 != null)
-        {
-            p2.GetComponent<SpriteRenderer>().enabled = true;
-            p2.GetComponent<PlayerInput>().currentActionMap = p2.GetComponent<PlayerInput>().actions.FindActionMap("Gameplay");
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void Join (PlayerInput input)
     {
-        
+        if (input.playerIndex == 0)
+        {
+            input.transform.position = new Vector3(-20.0f, 3.0f, -7.0f);
+            GameObject obj = Instantiate(princess, Vector3.zero, Quaternion.Euler(-40.0f, 180.0f, 0.0f), input.transform);
+            obj.transform.localPosition = Vector3.zero;
+
+            input.gameObject.GetComponent<NewPlayerController>().SetUI(GameObject.Find("P1 HP Bar").GetComponent<Slider>(), GameObject.Find("P1 Stamina Bar").GetComponent<Slider>());
+        }
+        else if (input.playerIndex == 1)
+        {
+            input.transform.position = new Vector3(20.0f, 3.0f, -7.0f);
+            GameObject obj = Instantiate(robot, new Vector3(20.0f, 3.0f, -7.0f), Quaternion.Euler(-40.0f, 180.0f, 0.0f), input.transform);
+            obj.transform.localPosition = Vector3.zero;
+
+            input.gameObject.GetComponent<NewPlayerController>().SetUI(GameObject.Find("P1 HP Bar").GetComponent<Slider>(), GameObject.Find("P1 Stamina Bar").GetComponent<Slider>());
+        }
     }
 }
