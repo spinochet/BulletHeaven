@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class NewPlayerController : MonoBehaviour
 {
+    // Test
     [Header ("Movement")]
     [SerializeField] private float speed = 20.0f;
 
