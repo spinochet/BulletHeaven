@@ -46,4 +46,14 @@ public class BurstBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public bool Activate()
+    {
+        return true;
+    }
+
+    public void Deactivate()
+    {
+        
+    }
 }

@@ -51,8 +51,6 @@ public class NewPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Movement
-        controller.Move((Vector3) movement * speed * Time.unscaledDeltaTime);
 
         // Shooting
         if (isShooting)

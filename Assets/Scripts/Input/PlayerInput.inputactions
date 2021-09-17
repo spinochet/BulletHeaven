@@ -30,22 +30,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ShootTap",
-                    "type": "PassThrough",
-                    "id": "90c9624b-a047-4a51-b60e-36bce620fad3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap"
-                },
-                {
-                    "name": "ShootHold",
-                    "type": "PassThrough",
-                    "id": "18552f7a-69d6-4a7c-a965-c4475d5a06e8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Burst",
                     "type": "PassThrough",
                     "id": "3e4bce7e-10e8-436d-b71b-8b12d877515e",
@@ -138,28 +122,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "6381e979-5d0e-4117-9548-3ff2ec21b82c",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ShootTap",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2fd7d8db-fe71-46cb-953c-cee28e8e7c30",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Piano",
-                    "action": "ShootTap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "",
                     "id": "6b64a1d7-2624-450e-b3d8-4d569c1e1643",
                     "path": "<Keyboard>/space",
@@ -167,28 +129,6 @@
                     "processors": "",
                     "groups": "Piano",
                     "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "293acdca-b545-4988-9c3e-ad0fca22e06d",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ShootHold",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8eded606-d79f-4af6-bcac-5f06b836a0a6",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Piano",
-                    "action": "ShootHold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
