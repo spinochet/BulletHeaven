@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: 557c0f64448e84f29ae10b7a0f0bdf7f
+guid: 8a7bdd4bbd6492c448bec01fa7e2b94c
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 6021541049730126926
+    second: robot|robot_idle
+  - first:
+      74: 345642364010441014
+    second: robot|robot_run
   externalObjects: {}
   materials:
     materialImportMode: 1
