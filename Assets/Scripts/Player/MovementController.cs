@@ -28,8 +28,9 @@ public class MovementController : MonoBehaviour
     }
 
     // Move character in XY plane
-    public void Move(Vector3 moveVector)
+    public void Move(Vector2 moveVector)
     {
-        movement = moveVector;
+        movement.x = moveVector.x;
+        movement.z = moveVector.y;
     }
 }

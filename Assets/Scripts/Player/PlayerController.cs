@@ -6,51 +6,94 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // Class to store character data
+    [System.Serializable]
+    public class CharacterPreset
+    {
+        [Header ("Movement")]
+        public float speed = 10.0f;
+
+        [Header ("Stats")]
+        public float maxHP = 100.0f;
+        public float hpRegenRate = 0.0f;
+        public float hpRegenCooldown = 0.0f;
+        [Space (10)]
+        public float maxStamina = 100.0f;
+        public float staminaRegenRate = 5.0f;
+        public float staminaRegenCooldown = 0.5f;
+
+        [Header ("Combat")]
+        public GameObject bulletPrefab;
+        public GameObject burstPrefab;
+
+        [Header ("Abilities")]
+        public Ability abilityL;
+        public Ability abilityR;
+    }
+
+    // Controller scripts for player mechanics
     private MovementController movementController;
-    [Header ("Movement")]
-    [SerializeField] private float speed = 20.0f;
-
     private StatsController statsController;
-    [Header ("Stats")]
-    [SerializeField] private float maxHP = 100.0f;
-    [SerializeField] private float maxStamina = 100.0f;
-    [SerializeField] private float hpRegenRate = 0.0f;
-    [SerializeField] private float staminaRegenRate = 5.0f;
-
     private BulletController bulletController;
-    [Header ("Combat")]
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private GameObject burstPrefab;
+    private AbilityController abilityController;
 
-    public AbilityController abilityController;
-    [Header ("Abilities")]
-    [SerializeField] private Ability abilityL;
-    [SerializeField] private Ability abilityR;
+    // Character data
+    [SerializeField] private CharacterPreset presets;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
+    {
+        
+    }
+
+    // ------------
+    // PLAYER SETUP
+    // ------------
+    
+    // Initialize player for character selection
+    public void Init()
     {
         // Set up player movement
         movementController = gameObject.AddComponent(typeof(MovementController)) as MovementController;
-        movementController.Setup(speed);
+        movementController.Setup(10.0f);
+    }
+
+    // Initialize player for gameplay
+    public void Init(CharacterPreset _presets)
+    {
+        presets = _presets;
+
+        // Set up player movement
+        movementController = gameObject.AddComponent(typeof(MovementController)) as MovementController;
+        movementController.Setup(presets.speed);
 
         // Set up player stats
         statsController = gameObject.AddComponent(typeof(StatsController)) as StatsController;
-        statsController.Setup(maxHP, maxStamina, hpRegenRate, staminaRegenRate);
+        statsController.Setup(presets.maxHP, presets.maxStamina, presets.hpRegenRate, presets.staminaRegenRate, presets.hpRegenCooldown, presets.staminaRegenCooldown);
 
         // Set up player bullets
         bulletController = gameObject.AddComponent(typeof(BulletController)) as BulletController;
-        bulletController.Setup(bulletPrefab, burstPrefab);
+        bulletController.Setup(presets.bulletPrefab, presets.burstPrefab);
 
         // Set up player abilities
         abilityController = gameObject.AddComponent(typeof(AbilityController)) as AbilityController;
-        abilityController.Setup(statsController, abilityL, abilityR);
+        abilityController.Setup(statsController, presets.abilityL, presets.abilityR);
     }
+
+    // Assing hud
+    public void AssignHUD(HUDController _hud)
+    {
+        statsController.AssignHUD(_hud);
+    }
+
+    // ---------------
+    // EVENT CALLBACKS
+    // ---------------
 
     // Move action callback
     void OnMove(InputValue input)
     {
-        movementController.Move((Vector3) input.Get<Vector2>());
+        movementController.Move(input.Get<Vector2>());
     }
 
     // Shoot action callback

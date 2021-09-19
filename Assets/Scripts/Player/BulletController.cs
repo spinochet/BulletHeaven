@@ -21,6 +21,8 @@ public class BulletController : MonoBehaviour
     {
         bulletPrefab = _bulletPrefab;
         burstPrefab = _burstPrefab;
+
+        fireRate = bulletPrefab.GetComponent<Bullet>().GetFireRate();
     }
 
     // Update is called once per frame

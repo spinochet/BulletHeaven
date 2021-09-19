@@ -12,6 +12,11 @@ public class StatsController : MonoBehaviour
     private float stamina;
     private float hpRegenRate;
     private float staminaRegenRate;
+    private float hpRegenCooldown;
+    private float staminaRegenCooldown;
+
+    private float hpTimer;
+    private float staminaTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +25,7 @@ public class StatsController : MonoBehaviour
     }
 
     // Initiate variables
-    public void Setup(float _maxHP, float _maxStamina, float _hpRegenRate, float _staminaRegenRate)
+    public void Setup(float _maxHP, float _maxStamina, float _hpRegenRate, float _staminaRegenRate, float _hpRegenCooldown, float _staminaRegenCooldown)
     {
         maxHP = _maxHP;
         maxStamina = _maxStamina;
@@ -28,6 +33,8 @@ public class StatsController : MonoBehaviour
         stamina = maxStamina;
         hpRegenRate = _hpRegenRate;
         staminaRegenRate = _staminaRegenRate;
+        hpRegenCooldown = _hpRegenCooldown;
+        staminaRegenCooldown = _staminaRegenCooldown;
     }
 
     // Assign player's HUD
@@ -39,9 +46,14 @@ public class StatsController : MonoBehaviour
     // Update is called once every frame
     void Update()
     {
+        hpTimer += Time.unscaledDeltaTime;
+        staminaTimer += Time.unscaledDeltaTime;
+
         // Recover health and stamina
-        hp += hpRegenRate * Time.unscaledDeltaTime;
-        stamina += staminaRegenRate * Time.unscaledDeltaTime;
+        if (hp < maxHP && hpTimer > hpRegenCooldown)
+            hp += hpRegenRate * Time.unscaledDeltaTime;
+        if (stamina < maxStamina && staminaTimer > staminaRegenCooldown) 
+            stamina += staminaRegenRate * Time.unscaledDeltaTime;
 
         // Update HUD
         if (hud)
@@ -67,11 +79,13 @@ public class StatsController : MonoBehaviour
     public void ModifyHealth(float value)
     {
         hp += value;
+        hpTimer = 0.0f;
     }
 
     // Consume player stamina
     public void ConsumeStamina(float value)
     {
-        stamina += value;
+        stamina -= value;
+        staminaTimer = 0.0f;
     }
 }
