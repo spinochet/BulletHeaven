@@ -12,7 +12,37 @@ ModelImporter:
   - first:
       74: -7964293892698193363
     second: princess|princessAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: armor
+    second: {fileID: 2100000, guid: edd30269e7734b04299d997eb6f616b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: crown.001
+    second: {fileID: 2100000, guid: 4defabd9df20d1946b7b70ecba104c47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green_eyes
+    second: {fileID: 2100000, guid: 79f63ecfacb9d234b8c2045e3feab1f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair
+    second: {fileID: 2100000, guid: cd4133a06f91fc14f94855a385353124, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin
+    second: {fileID: 2100000, guid: 102ae8bd4fa86994ca82e715b1948c9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white_eyes
+    second: {fileID: 2100000, guid: ea84e461b43612046ab067fd671831f1, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -81,7 +111,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

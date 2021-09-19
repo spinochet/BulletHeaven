@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterSelection : MonoBehaviour
 {
     [SerializeField] private PlayerController.CharacterPreset presets;
-    [SerializeField] private GameObject model;
     [SerializeField] private string name;
 
     // When a GameObject collides with another GameObject, Unity calls OnTriggerEnter.
@@ -14,6 +13,6 @@ public class CharacterSelection : MonoBehaviour
         PlayerToken player = GameObject.Find(other.gameObject.name + " Token").GetComponent<PlayerToken>();
 
         if (player)
-            player.characterSelect.UpdateSelection(model, name);
+            player.characterSelect.UpdateSelection(presets);
     }
 }

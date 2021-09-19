@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     [System.Serializable]
     public class CharacterPreset
     {
+        [Header ("Model")]
+        public GameObject model;
+        public string name;
+
         [Header ("Movement")]
         public float speed = 10.0f;
 
