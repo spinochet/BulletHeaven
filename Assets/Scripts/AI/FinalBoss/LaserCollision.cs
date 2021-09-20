@@ -8,11 +8,11 @@ public class LaserCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        NewPlayerController player = col.transform.GetComponent<NewPlayerController>();
+        // NewPlayerController player = col.transform.GetComponent<NewPlayerController>();
 
-        if (player)
-        {
-            player.TakeDamage(damage);
-        }
+        // if (player)
+        // {
+        //     player.TakeDamage(damage);
+        // }
     }
 }
