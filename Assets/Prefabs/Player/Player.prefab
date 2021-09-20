@@ -79,7 +79,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
+  m_DefaultActionMap: ca941f70-285c-48f1-8a9a-899e81ddf5e1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &6148656104204094170
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presets:
+    model: {fileID: 0}
+    name: 
     speed: 10
     maxHP: 100
     hpRegenRate: 0

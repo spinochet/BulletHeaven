@@ -3,12 +3,17 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private bool isCharacterSelect;
+
+    // Character select variables
     [SerializeField] private GameObject tokenPrefab;
+    [SerializeField] private GameObject readyBanner;
+    private bool isReady;
 
     private int numPlayers;
     private PlayerController[] players;
@@ -21,12 +26,6 @@ public class PlayerManager : MonoBehaviour
         players = new PlayerController[4];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Add player to manager
     public void AddPlayer(PlayerInput player)
     {
@@ -35,7 +34,7 @@ public class PlayerManager : MonoBehaviour
         DontDestroyOnLoad(player.gameObject);
 
         players[player.playerIndex] = player.transform.GetComponent<PlayerController>();
-        players[player.playerIndex].Init();
+        players[player.playerIndex].AssignManager(this);
         ++numPlayers;
 
         if (isCharacterSelect)
@@ -46,6 +45,7 @@ public class PlayerManager : MonoBehaviour
             PlayerCharacterSelect characterSelect = GameObject.Find("P" + (player.playerIndex + 1).ToString() + " Character Select").GetComponent<PlayerCharacterSelect>();
             characterSelect.transform.Find("Cover").GetComponent<RawImage>().enabled = false;
 
+            players[player.playerIndex].Init(null, characterSelect);
             token.Init(player.transform, characterSelect);
         }
     }
@@ -54,6 +54,33 @@ public class PlayerManager : MonoBehaviour
     public void RemovePlayer(PlayerInput player)
     {
         players[player.playerIndex] = null;
+        --numPlayers;
+    }
+
+    // Check if all players have selected their character
+    public void IsReady()
+    {
+        isReady = true;
+
+        for (int i = 0; i < numPlayers; ++i)
+        {
+            isReady = isReady && players[i].IsReady();
+        }
+
+        readyBanner.SetActive(isReady);
+    }
+
+    // If all players are ready load first level
+    public void StartGame()
+    {
+        if (isReady)
+        {
+            SceneManager.LoadScene("CharacterController");
+            for (int i = 0; i < numPlayers; ++i)
+            {
+                players[i].Init();
+            }
+        }
     }
 
     // Load HUD

@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menus/MainMenu.unity
-    guid: c135584fb2a8b4957afaaad2d40f5f30
+    path: Assets/Scenes/Test Scenes/Simon/CharacterSelect.unity
+    guid: b60e00d8112a7974f802b263b2a80ee8
   - enabled: 1
-    path: Assets/Scenes/Menus/CharacterSelect.unity
-    guid: c7f5633ef2af4475c9aea06a56bc19c8
-  - enabled: 1
-    path: Assets/Scenes/Levels/FinalBoss.unity
-    guid: 3274e48f99d404959b9b6a34bf6088e6
+    path: Assets/Scenes/Test Scenes/Simon/CharacterController.unity
+    guid: 5c928bc74cc44624f952539584c4675f
   m_configObjects: {}
