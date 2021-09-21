@@ -131,6 +131,18 @@ public class PlayerController : MonoBehaviour
             movementController.Move(input.Get<Vector2>());
     }
 
+    public void EnableMovement()
+    {
+        if (movementController)
+            movementController.enabled = true;
+    }
+
+    public void DisableMovement()
+    {
+        if (movementController)
+            movementController.enabled = false;
+    }
+
     // ---------
     // UI EVENTS
     // ---------

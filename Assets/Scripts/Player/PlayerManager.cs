@@ -44,6 +44,7 @@ public class PlayerManager : MonoBehaviour
 
             PlayerCharacterSelect characterSelect = GameObject.Find("P" + (player.playerIndex + 1).ToString() + " Character Select").GetComponent<PlayerCharacterSelect>();
             characterSelect.transform.Find("Cover").GetComponent<RawImage>().enabled = false;
+            characterSelect.transform.Find("Cover/Text").GetComponent<Text>().enabled = false;
 
             players[player.playerIndex].Init(null, characterSelect);
             token.Init(player.transform, characterSelect);
@@ -83,19 +84,20 @@ public class PlayerManager : MonoBehaviour
     {
         for (int i = 0; i < numPlayers; ++i)
         {
-            // Spawn at correct location
-            GameObject spawn = GameObject.Find("P" + i.ToString() + " Spawn");
-            if (spawn) players[i].gameObject.transform.position = spawn.transform.position;
-            else players[i].gameObject.transform.position = new Vector3(-5.0f + (i * 3.33f), 0.0f, -4.0f);
-
             // Initialize player
             players[i].Init();
+            players[i].DisableMovement();
 
             // Assign hud
             if (numPlayers <= 2)
                 players[i].AssignHUD(hud[1 + (i * 2)]);
             else
                 players[i].AssignHUD(hud[i]);
+
+            // Spawn at correct location
+            GameObject spawn = GameObject.Find("P" + i.ToString() + " Spawn");
+            if (spawn) players[i].transform.position = spawn.transform.position;
+            else players[i].transform.position = new Vector3(-5.0f + (i * 3.33f), 0.0f, -4.0f);
         }
 
         // Assign huds
@@ -114,6 +116,8 @@ public class PlayerManager : MonoBehaviour
         {
             hud[3].gameObject.SetActive(false);
         }
+
+        StartCoroutine(LevelWait());
     }
 
     // Load HUD
@@ -127,5 +131,19 @@ public class PlayerManager : MonoBehaviour
                 players[i].AssignHUD(hud.GetComponent<HUDController>());
             }
         }
+    }
+
+    IEnumerator LevelWait()
+    {
+        float timer = 0.0f;
+
+        while (timer < 0.5f)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        for (int i = 0; i < numPlayers; ++i)
+            players[i].EnableMovement();
     }
 }

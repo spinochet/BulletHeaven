@@ -33,6 +33,9 @@ public class HUDController : MonoBehaviour
     // Update character portrait
     public void UpdatePortrait(Texture texture)
     {
+        if (portrait == null)
+            portrait = transform.Find("Portrait/Character").GetComponent<RawImage>();
+            
         portrait.texture = texture;
     }
 }
