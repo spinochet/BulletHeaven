@@ -85,17 +85,20 @@ public class PlayerManager : MonoBehaviour
         for (int i = 0; i < numPlayers; ++i)
         {
             // Initialize player
-            players[i].Init();
-            players[i].DisableMovement();
+            // players[i].Init();
 
             // Assign hud
             if (numPlayers <= 2)
-                players[i].AssignHUD(hud[1 + (i * 2)]);
+                players[i].Init(hud[1 + (i * 2)]);
+                // players[i].AssignHUD(hud[1 + (i * 2)]);
             else
-                players[i].AssignHUD(hud[i]);
+                players[i].Init(hud[i]);
+                // players[i].AssignHUD(hud[i]);
 
             // Spawn at correct location
+            players[i].DisableMovement();
             GameObject spawn = GameObject.Find("P" + i.ToString() + " Spawn");
+
             if (spawn) players[i].transform.position = spawn.transform.position;
             else players[i].transform.position = new Vector3(-5.0f + (i * 3.33f), 0.0f, -4.0f);
         }
@@ -120,19 +123,6 @@ public class PlayerManager : MonoBehaviour
         StartCoroutine(LevelWait());
     }
 
-    // Load HUD
-    public void LoadHUD()
-    {
-        for (int i = 0; i < 4; ++i)
-        {
-            if (players[i])
-            {
-                GameObject hud = GameObject.Find("P" + (i + 1).ToString() + " Stats");
-                players[i].AssignHUD(hud.GetComponent<HUDController>());
-            }
-        }
-    }
-
     IEnumerator LevelWait()
     {
         float timer = 0.0f;
@@ -145,5 +135,16 @@ public class PlayerManager : MonoBehaviour
 
         for (int i = 0; i < numPlayers; ++i)
             players[i].EnableMovement();
+    }
+
+    public void TogglePause(bool isPaused)
+    {
+        for (int i = 0; i < numPlayers; ++i)
+        {
+            if (isPaused)
+                players[i].DisableMovement();
+            else
+                players[i].EnableMovement();
+        }
     }
 }

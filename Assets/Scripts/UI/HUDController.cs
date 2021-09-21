@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
+    [SerializeField] Pause pause;
+
     private Slider hpBar;
     private Slider staminaBar;
     private RawImage portrait;
@@ -35,7 +37,13 @@ public class HUDController : MonoBehaviour
     {
         if (portrait == null)
             portrait = transform.Find("Portrait/Character").GetComponent<RawImage>();
-            
+
         portrait.texture = texture;
+    }
+
+    // Toggle pause
+    public bool TogglePause()
+    {
+        return pause.TogglePause();
     }
 }

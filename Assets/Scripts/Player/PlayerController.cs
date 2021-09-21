@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private StatsController statsController;
     private BulletController bulletController;
     private AbilityController abilityController;
+    private HUDController hudController;
 
     // Character select scripts
     private PlayerCharacterSelect characterSelect;
@@ -82,7 +83,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Initialize player for gameplay from character select screen
-    public void Init()
+    public void Init(HUDController _hud)
     {
         // Set up player movement
         if (movementController) Destroy(movementController);
@@ -104,6 +105,14 @@ public class PlayerController : MonoBehaviour
         abilityController = gameObject.AddComponent(typeof(AbilityController)) as AbilityController;
         abilityController.Setup(statsController, presets.abilityL, presets.abilityR);
 
+        // Set up HUd
+        if (_hud != null)
+        {
+            hudController = _hud;
+            statsController.AssignHUD(hudController);
+            hudController.UpdatePortrait(presets.portrait.texture);
+        }
+
         // Spawn model
         GameObject model = Instantiate(presets.model, transform);
         model.transform.localScale= new Vector3(0.2f, 0.2f, 0.2f);
@@ -111,13 +120,6 @@ public class PlayerController : MonoBehaviour
         // Switch input map
         PlayerInput input = GetComponent<PlayerInput>();
         if (input) input.SwitchCurrentActionMap("Gameplay");
-    }
-
-    // Assing hud
-    public void AssignHUD(HUDController _hud)
-    {
-        statsController.AssignHUD(_hud);
-        _hud.UpdatePortrait(presets.portrait.texture);
     }
 
     // ---------------
@@ -220,5 +222,12 @@ public class PlayerController : MonoBehaviour
             if (input.Get<float>() > 0.0f) abilityController.Activate(1);
             else abilityController.Deactivate(1);
         }
+    }
+
+    // Pause action callback function
+    void OnPause()
+    {
+        bool isPaused = hudController.TogglePause();
+        manager.TogglePause(isPaused);
     }
 }
