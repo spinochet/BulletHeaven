@@ -59,7 +59,7 @@ public class PlayerCharacterSelect : MonoBehaviour
             readyUI.SetActive(ready);
             character.SetSelected(true);
         }
-        else
+        else if (!_ready)
         {
             if (character != null && !_ready)
             {
