@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
         [Header ("Movement")]
         public float speed = 10.0f;
+        public float dashDist = 5.0f;
 
         [Header ("Stats")]
         public float maxHP = 100.0f;
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
         // Set up player movement
         movementController = gameObject.AddComponent(typeof(MovementController)) as MovementController;
-        movementController.Setup(10.0f);
+        movementController.Setup(10.0f, 0.0f);
     }
 
     // Initialize player for gameplay from character select screen
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
         // Set up player movement
         if (movementController) Destroy(movementController);
         movementController = gameObject.AddComponent(typeof(MovementController)) as MovementController;
-        movementController.Setup(presets.speed);
+        movementController.Setup(presets.speed, presets.dashDist);
 
         // Set up player stats
         if (statsController) Destroy(statsController);
@@ -221,6 +222,15 @@ public class PlayerController : MonoBehaviour
         {
             if (input.Get<float>() > 0.0f) abilityController.Activate(1);
             else abilityController.Deactivate(1);
+        }
+    }
+
+    // Dash action callback function
+    void OnDash()
+    {
+        if (movementController)
+        {
+            movementController.Dash();
         }
     }
 

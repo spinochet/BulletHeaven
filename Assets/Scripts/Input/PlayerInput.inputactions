@@ -19,7 +19,7 @@
                     "id": "be9277d3-14e9-4d8f-84f4-173ce84e910a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Tap"
                 },
                 {
                     "name": "Shoot",
@@ -133,9 +133,20 @@
                     "name": "",
                     "id": "6b64a1d7-2624-450e-b3d8-4d569c1e1643",
                     "path": "<Keyboard>/space",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4506221d-5cdd-44e4-acb4-5a17823558ec",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
