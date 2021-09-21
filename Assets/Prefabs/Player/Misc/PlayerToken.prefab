@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7466430055470682484}
   - component: {fileID: 1791733080706332852}
   - component: {fileID: 361545222756337469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerToken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,3 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b777f437d0d8f48acb86ec1b7bc88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 1791733080706332852}
+  characterSelect: {fileID: 0}

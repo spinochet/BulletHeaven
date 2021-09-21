@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerToken : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer sprite;
+
     private Transform player;
     public PlayerCharacterSelect characterSelect;
 
@@ -14,6 +16,9 @@ public class PlayerToken : MonoBehaviour
         {
             transform.position = player.position + (Vector3.up * 9.0f);
         }
+
+        if (characterSelect != null)
+            sprite.enabled = !characterSelect.IsReady();
     }
 
     // Initialize token

@@ -22,15 +22,18 @@ public class AbilityController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isAbilityL)
+        if (isAbilityL && isAbilityR)
+        {
+            Debug.Log("Waiting for team attack");
+        }
+        else if (isAbilityL)
         {
             statsController.ConsumeStamina(abilityL.GetCost() * Time.unscaledDeltaTime);
 
             if (statsController.GetStamina() <= 0.0f)
                 abilityL.Deactivate();
         }
-
-        if (isAbilityR)
+        else if (isAbilityR)
         {
             statsController.ConsumeStamina(abilityR.GetCost() * Time.unscaledDeltaTime);
 

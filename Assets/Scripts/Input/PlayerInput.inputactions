@@ -156,6 +156,28 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "946ea316-ef03-4717-97ab-dbc6d4ff8958",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "48c3483c-70cc-4a7a-a07a-0cdd38797c94",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "e22fee42-a018-496c-95d8-d31c320e8b98",
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
@@ -172,6 +194,50 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "AbilityL",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "ac4b04c2-e2d9-4d7c-b4f9-0e0f36542540",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityL",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "d3a0f05f-87bc-44f4-86ea-35dba17cd894",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "AbilityL",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "33535fd6-a0f0-4a48-bd49-4c322825f45b",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityL",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "148de6be-334e-4848-b20c-f90b3a3dca62",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "AbilityL",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -200,6 +266,50 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "5fa4a830-5d3a-42ea-9f59-ec0bd729d7ef",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "AbilityR",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "5b1552ae-aa40-41ac-88d5-25d6f63585be",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "AbilityR",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "3e43379a-38a3-458d-948e-797d1bad825f",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "AbilityR",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "843b0ce1-9ee5-4b76-ab3b-33db716ad17f",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "AbilityR",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "1fc1ad56-26b6-463a-8286-f9f1450f8bfd",
                     "path": "1DAxis",
                     "interactions": "",
@@ -216,6 +326,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "Burst",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "558da19d-645e-46df-91d6-2aaff39427ac",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Burst",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "edd696a3-9c12-4800-80ab-111aa3232e96",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Burst",
                     "isComposite": false,
                     "isPartOfComposite": true

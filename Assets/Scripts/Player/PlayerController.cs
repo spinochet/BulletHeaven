@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     {
         [Header ("Model")]
         public GameObject model;
+        public RawImage portrait;
         public string name;
 
         [Header ("Movement")]
@@ -115,6 +117,7 @@ public class PlayerController : MonoBehaviour
     public void AssignHUD(HUDController _hud)
     {
         statsController.AssignHUD(_hud);
+        _hud.UpdatePortrait(presets.portrait.texture);
     }
 
     // ---------------
@@ -163,7 +166,7 @@ public class PlayerController : MonoBehaviour
     // Submit action callback
     void OnSubmit()
     {
-        manager.StartGame();
+        manager.LoadLevel("CharacterController");
     }
 
     public bool IsReady()

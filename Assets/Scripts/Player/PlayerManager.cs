@@ -47,6 +47,8 @@ public class PlayerManager : MonoBehaviour
 
             players[player.playerIndex].Init(null, characterSelect);
             token.Init(player.transform, characterSelect);
+
+            IsReady();
         }
     }
 
@@ -70,16 +72,47 @@ public class PlayerManager : MonoBehaviour
         readyBanner.SetActive(isReady);
     }
 
-    // If all players are ready load first level
-    public void StartGame()
+    // If all players are ready load level
+    public void LoadLevel(string level)
     {
-        if (isReady)
+        if (isReady) SceneManager.LoadScene(level);
+    }
+
+    // Set up all players for level
+    public void SetupPlayers(HUDController[] hud)
+    {
+        for (int i = 0; i < numPlayers; ++i)
         {
-            SceneManager.LoadScene("CharacterController");
-            for (int i = 0; i < numPlayers; ++i)
-            {
-                players[i].Init();
-            }
+            // Spawn at correct location
+            GameObject spawn = GameObject.Find("P" + i.ToString() + " Spawn");
+            if (spawn) players[i].gameObject.transform.position = spawn.transform.position;
+            else players[i].gameObject.transform.position = new Vector3(-5.0f + (i * 3.33f), 0.0f, -4.0f);
+
+            // Initialize player
+            players[i].Init();
+
+            // Assign hud
+            if (numPlayers <= 2)
+                players[i].AssignHUD(hud[1 + (i * 2)]);
+            else
+                players[i].AssignHUD(hud[i]);
+        }
+
+        // Assign huds
+        if (numPlayers == 1)
+        {
+            hud[0].gameObject.SetActive(false);
+            hud[2].gameObject.SetActive(false);
+            hud[3].gameObject.SetActive(false);
+        }
+        else if (numPlayers == 2)
+        {
+            hud[0].gameObject.SetActive(false);
+            hud[2].gameObject.SetActive(false);
+        }
+        else if (numPlayers == 3)
+        {
+            hud[3].gameObject.SetActive(false);
         }
     }
 

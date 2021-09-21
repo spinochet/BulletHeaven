@@ -16,7 +16,7 @@ public class PlayerCharacterSelect : MonoBehaviour
     private Quaternion rotation = Quaternion.Euler(0.0f, 15.0f, 0.0f);
     private Vector3 scale = new Vector3(65.0f, 65.0f, 65.0f);
 
-    private CharacterSelection character;
+    public CharacterSelection character;
 
     void Start()
     {
@@ -70,6 +70,11 @@ public class PlayerCharacterSelect : MonoBehaviour
             readyUI.SetActive(false);
         }
 
+        return ready;
+    }
+
+    public bool IsReady()
+    {
         return ready;
     }
 }
