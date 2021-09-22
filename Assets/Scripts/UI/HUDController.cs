@@ -42,8 +42,9 @@ public class HUDController : MonoBehaviour
     }
 
     // Toggle pause
-    public bool TogglePause()
+    public void TogglePause()
     {
-        return pause.TogglePause();
+        pause.gameObject.SetActive(true);
+        pause.TogglePause();
     }
 }

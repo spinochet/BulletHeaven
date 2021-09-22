@@ -123,6 +123,15 @@ public class PlayerManager : MonoBehaviour
         StartCoroutine(LevelWait());
     }
 
+    // Delete players
+    public void DeletePlayers()
+    {
+        for (int i = 0; i < numPlayers; ++i)
+        {
+            Destroy(players[i].gameObject);
+        }
+    }
+
     IEnumerator LevelWait()
     {
         float timer = 0.0f;

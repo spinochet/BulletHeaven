@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 5ac0194462d2f834699be9a0f6245c9c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gazette
+  fontNames:
+  - Gazette
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 34f12741d75c4434db2abfd6ddab02c3, type: 3}
+  - {fileID: 12800000, guid: 652a65593f7918d4ca9fdd3c9c4d9863, type: 3}
+  - {fileID: 12800000, guid: 513279bcf274b6c4d91277072fb8a1c4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

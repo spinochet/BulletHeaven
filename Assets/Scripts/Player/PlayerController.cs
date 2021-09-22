@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
     // Submit action callback
     void OnSubmit()
     {
-        manager.LoadLevel("CharacterController");
+        // manager.LoadLevel("CharacterController");
     }
 
     public bool IsReady()
@@ -237,7 +237,6 @@ public class PlayerController : MonoBehaviour
     // Pause action callback function
     void OnPause()
     {
-        bool isPaused = hudController.TogglePause();
-        manager.TogglePause(isPaused);
+        hudController.TogglePause();
     }
 }

@@ -8,6 +8,11 @@ public class MainMenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("FinalBoss");
+        SceneManager.LoadScene("CharacterSelect");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

@@ -2,23 +2,32 @@
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
-    [SerializeField] private RawImage background;
-    [SerializeField] private Text text;
-
     private bool isPaused;
 
-    public bool TogglePause()
+    public void TogglePause()
     {
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0.0f : 1.0f;
 
-        if (background) background.enabled = isPaused;
-        if (text) text.enabled = isPaused;
+        GameObject.Find("Player Manager").GetComponent<PlayerManager>().TogglePause(isPaused);
+        gameObject.SetActive(isPaused);
+    }
 
-        return isPaused;
+    public void MainMenu()
+    {
+        GameObject.Find("Player Manager").GetComponent<PlayerManager>().DeletePlayers();
+        Destroy(GameObject.Find("Player Manager"));
+        
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

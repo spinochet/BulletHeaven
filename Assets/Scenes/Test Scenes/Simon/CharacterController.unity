@@ -528,6 +528,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6086191115237827613, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167413334171028526, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167413334171028526, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6959813842056720536, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -733,5 +748,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7668515243131524444, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da631b61c27cce47be4447e7b707202, type: 3}
