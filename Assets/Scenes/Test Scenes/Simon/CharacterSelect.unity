@@ -2038,7 +2038,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CharacterController
+          m_StringArgument: Whitebox
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &423479412
@@ -7814,7 +7814,7 @@ MonoBehaviour:
     maxStamina: 100
     staminaRegenRate: 5
     staminaRegenCooldown: 0.5
-    bulletPrefab: {fileID: 8061707729531987755, guid: f7aadd38a56ee724eb4c3596a054643a,
+    bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
       type: 3}
     burstPrefab: {fileID: 0}
     abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
@@ -8058,10 +8058,9 @@ MonoBehaviour:
     maxStamina: 80
     staminaRegenRate: 5
     staminaRegenCooldown: 2.5
-    bulletPrefab: {fileID: 8061707729531987755, guid: f7aadd38a56ee724eb4c3596a054643a,
+    bulletPrefab: {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7,
       type: 3}
-    burstPrefab: {fileID: 8967842997552430582, guid: 9d921214a18e4474bb9b969ddb031095,
-      type: 3}
+    burstPrefab: {fileID: 0}
     abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
       type: 3}
     abilityR: {fileID: 0}

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/Simon/CharacterController.unity
     guid: 5c928bc74cc44624f952539584c4675f
+  - enabled: 1
+    path: Assets/Scenes/Whitebox.unity
+    guid: 18b602cf03a12224aa622405140c19ae
   m_configObjects: {}
