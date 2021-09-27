@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68eb217d18d90d648a6a6a6e202b0b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  show: 1
+  show: 0
   target1: {fileID: 1247238831}
   target2: {fileID: 2044921141}
 --- !u!1 &1827867232
