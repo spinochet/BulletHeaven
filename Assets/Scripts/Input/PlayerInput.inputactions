@@ -197,6 +197,28 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "f84c0f54-2b02-4a77-af81-e4550474c22f",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "14e5d2f3-1406-41f7-9456-5f0bc8472e68",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "e22fee42-a018-496c-95d8-d31c320e8b98",
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
@@ -501,6 +523,28 @@
                 },
                 {
                     "name": "",
+                    "id": "1c2417fb-6be1-4693-9015-5c341697c092",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e40994db-e2c9-4670-8658-628ed0f6f96c",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e357a7a7-297a-4654-b893-68f023a91767",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
@@ -513,10 +557,21 @@
                 {
                     "name": "",
                     "id": "d4590519-a7fc-4c29-b72f-f3b217d06be2",
-                    "path": "<Gamepad>/start",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50e6c254-b2d3-4fe7-aae3-637c582d1c08",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -539,6 +594,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86677501-7b8a-4da0-ba0a-0e58fb5721a2",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -586,6 +652,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamecube",
+            "bindingGroup": "Gamecube",
+            "devices": [
+                {
+                    "devicePath": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>",
                     "isOptional": false,
                     "isOR": false
                 }

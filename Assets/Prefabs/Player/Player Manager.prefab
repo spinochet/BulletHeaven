@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8676e76a6ad5a94ab4faaddfbbe52af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCharacterSelect: 1
-  tokenPrefab: {fileID: 4068863621749359426, guid: fa7ca7360bf0eb44387fcd8f29ab6849,
-    type: 3}
-  readyBanner: {fileID: 0}
+  playerColors:
+  - {r: 1, g: 0.49019608, b: 0.49019608, a: 1}
+  - {r: 0.49019608, g: 0.49019608, b: 1, a: 1}
+  - {r: 1, g: 1, b: 0.49019608, a: 1}
+  - {r: 0.49019608, g: 1, b: 0.49019608, a: 1}
 --- !u!114 &2856773661876552485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ MonoBehaviour:
       m_SingletonActionBindings:
       - m_Name: 
         m_Id: 3371f3ee-d530-400e-be29-babfaf25ccec
-        m_Path: <Keyboard>/space
+        m_Path: <Keyboard>/enter
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -112,7 +113,15 @@ MonoBehaviour:
         m_Flags: 0
       - m_Name: 
         m_Id: bcb2d08e-aad4-4137-a149-723abde3b5f9
-        m_Path: <Gamepad>/buttonSouth
+        m_Path: <Gamepad>/start
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: a1e8f6e9-947c-49ec-9dac-4e1519442d4e
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
         m_Interactions: 
         m_Processors: 
         m_Groups: 
