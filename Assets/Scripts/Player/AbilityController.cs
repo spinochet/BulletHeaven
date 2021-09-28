@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class AbilityController : MonoBehaviour
 {
-    private StatsController statsController;
-    private Ability abilityL;
-    private Ability abilityR;
+    [SerializeField] private Ability abilityL;
+    [SerializeField] private Ability abilityR;
 
+    private StatsController statsController;
     private bool isAbilityL;
     private bool isAbilityR;
 
-    // Initiate variables
-    public void Setup(StatsController _statsController, Ability _abilityL, Ability _abilityR)
+    void Awake()
     {
-        statsController = _statsController;
-        abilityL = _abilityL;
-        abilityR = _abilityR;
+        // bullet = bulletPrefab.GetComponent<Bullet>();
+        // burst = burstPrefab.GetComponent<BurstBullet>();
+        statsController = GetComponent<StatsController>();
     }
 
     // Update is called once per frame
@@ -33,7 +32,7 @@ public class AbilityController : MonoBehaviour
             if (statsController.GetStamina() <= 0.0f)
                 abilityL.Deactivate();
         }
-        else if (isAbilityR)
+        else if (isAbilityR && abilityR != null)
         {
             statsController.ConsumeStamina(abilityR.GetCost() * Time.unscaledDeltaTime);
 
@@ -45,7 +44,7 @@ public class AbilityController : MonoBehaviour
     // Activate chosen ability
     public void Activate(int i)
     {
-        if (i == 0 && statsController.GetStamina() > abilityL.GetCost())
+        if (i == 0 && abilityL != null && statsController.GetStamina() > abilityL.GetCost())
         {
             isAbilityL = abilityL.Activate();
 
@@ -54,7 +53,7 @@ public class AbilityController : MonoBehaviour
                 statsController.ConsumeStamina(abilityL.GetCost());
             }
         }
-        else if (i == 1 && statsController.GetStamina() > abilityR.GetCost())
+        else if (i == 1 && abilityR != null && statsController.GetStamina() > abilityR.GetCost())
         {
             isAbilityR = abilityR.Activate();
 

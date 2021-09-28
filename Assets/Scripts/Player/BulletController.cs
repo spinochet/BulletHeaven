@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    private GameObject bulletPrefab;
-    private GameObject burstPrefab;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject burstPrefab;
 
     // Bullet
+    Bullet bullet;
     private bool isShooting;
-    private float fireRate;
     private float fireTimer;
 
     // Burst
@@ -17,12 +17,10 @@ public class BulletController : MonoBehaviour
     private bool isBurst;
 
     // Initiate variables
-    public void Setup(GameObject _bulletPrefab, GameObject _burstPrefab)
+    void Awake()
     {
-        bulletPrefab = _bulletPrefab;
-        burstPrefab = _burstPrefab;
-
-        fireRate = bulletPrefab.GetComponent<Bullet>().GetFireRate();
+        bullet = bulletPrefab.GetComponent<Bullet>();
+        // burst = burstPrefab.GetComponent<BurstBullet>();
     }
 
     // Update is called once per frame
@@ -32,7 +30,7 @@ public class BulletController : MonoBehaviour
 
         if (isShooting && !isBurst)
         {
-            if (fireTimer > 1.0f / fireRate)
+            if (fireTimer > 1.0f / bullet.GetFireRate())
             {
                 fireTimer = 0.0f;
                 Instantiate(bulletPrefab, transform.position, transform.rotation);
@@ -43,7 +41,7 @@ public class BulletController : MonoBehaviour
     // Start shooting
     public void StartShooting()
     {
-        if (fireTimer > 1.0f / fireRate)
+        if (fireTimer > 1.0f / bullet.GetFireRate())
         {
             fireTimer = 0.0f;
             Instantiate(bulletPrefab, transform.position, transform.rotation);

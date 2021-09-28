@@ -5,8 +5,8 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     private CharacterController controller;
-    private float speed;
-    private float dashDist;
+    [SerializeField] private float speed;
+    [SerializeField] private float dashDist;
 
     private Vector3 movement;
     private bool isDashing;

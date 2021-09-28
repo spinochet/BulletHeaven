@@ -6,35 +6,25 @@ public class StatsController : MonoBehaviour
 {
     private HUDController hud;
 
-    private float maxHP;
-    private float maxStamina;
+    [SerializeField] private float maxHP;
+    [SerializeField] private float hpRegenRate;
+    [SerializeField] private float hpRegenCooldown;
+
+    [Space (10)]
+    [SerializeField] private float maxStamina;
+    [SerializeField] private float staminaRegenRate;
+    [SerializeField] private float staminaRegenCooldown;
+
     private float hp;
     private float stamina;
-    private float hpRegenRate;
-    private float staminaRegenRate;
-    private float hpRegenCooldown;
-    private float staminaRegenCooldown;
-
     private float hpTimer;
     private float staminaTimer;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Initiate variables
-    public void Setup(float _maxHP, float _maxStamina, float _hpRegenRate, float _staminaRegenRate, float _hpRegenCooldown, float _staminaRegenCooldown)
-    {
-        maxHP = _maxHP;
-        maxStamina = _maxStamina;
         hp = maxHP;
         stamina = maxStamina;
-        hpRegenRate = _hpRegenRate;
-        staminaRegenRate = _staminaRegenRate;
-        hpRegenCooldown = _hpRegenCooldown;
-        staminaRegenCooldown = _staminaRegenCooldown;
     }
 
     // Assign player's HUD

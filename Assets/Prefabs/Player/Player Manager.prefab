@@ -44,6 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8676e76a6ad5a94ab4faaddfbbe52af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMode: MainMenu
+  AIPlayer: {fileID: 6643795195893352019, guid: 7024e5080cbe1134b9cddea89d21a779,
+    type: 3}
+  princessPrefab: {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d,
+    type: 3}
+  robotPrefab: {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c,
+    type: 3}
   playerColors:
   - {r: 1, g: 0.49019608, b: 0.49019608, a: 1}
   - {r: 0.49019608, g: 0.49019608, b: 1, a: 1}
@@ -62,9 +69,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 2
-  m_MaxPlayerCount: 4
+  m_MaxPlayerCount: 2
   m_AllowJoining: 1
-  m_JoinBehavior: 1
+  m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:

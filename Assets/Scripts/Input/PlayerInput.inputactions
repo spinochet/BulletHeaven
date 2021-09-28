@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Switch",
+                    "type": "Button",
+                    "id": "a0382a9c-9b31-4eca-b098-33c118d04c27",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -125,6 +133,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55f5f722-e5b2-49bd-aacf-bc75b7215e0a",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c839546-aebe-462a-9386-351c7a512701",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -410,8 +440,41 @@
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a71cc481-c573-470f-9566-69dfd33091de",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df25e2d1-0b02-4699-9305-ee43be867bc0",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe0565ea-246a-42ae-bd88-f77bac1b9674",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "Switch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -433,14 +496,6 @@
                     "name": "Submit",
                     "type": "PassThrough",
                     "id": "89ca1a3c-b9eb-46ae-872d-12957143bd1b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Select",
-                    "type": "Button",
-                    "id": "265aa0d5-ef4d-43c7-ab76-1b30090d81b2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -546,7 +601,7 @@
                 {
                     "name": "",
                     "id": "e357a7a7-297a-4654-b893-68f023a91767",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
@@ -606,28 +661,6 @@
                     "processors": "",
                     "groups": "Gamecube",
                     "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dec108bf-af11-47cc-8834-523b7ebc1600",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Piano",
-                    "action": "Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "36c2162a-f86e-4165-ba28-c8943f9eaccf",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

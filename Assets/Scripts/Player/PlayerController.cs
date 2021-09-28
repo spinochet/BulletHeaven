@@ -18,47 +18,61 @@ public class PlayerController : MonoBehaviour
 
     // Character and player data
     private Color playerColor;
-    private PlayerData presets;
-
-    // Load character presets
-    public void LoadCharacter(PlayerData _presets)
-    {
-        presets = _presets;
-    }
+    private int score;
 
     // Spawn players in level
-    public void SpawnPlayer(Vector3 spawnPoint)
+    public void AssignPawn(GameObject pawn, HUDController hud = null)
     {
-        transform.position = spawnPoint;
+        // Set up player HUD
+        if (hud != null)
+            hudController = hud;
+        if (hudController != null)
+            hudController.UpdatePortrait(pawn.GetComponent<CharacterData>().portrait.texture);
 
         // Set up player movement
-        if (movementController) Destroy(movementController);
-        movementController = gameObject.AddComponent(typeof(MovementController)) as MovementController;
-        movementController.Setup(presets.speed, presets.dashDist);
+        movementController = pawn.GetComponent<MovementController>();
 
         // Set up player stats
-        if (statsController) Destroy(statsController);
-        statsController = gameObject.AddComponent(typeof(StatsController)) as StatsController;
-        statsController.Setup(presets.maxHP, presets.maxStamina, presets.hpRegenRate, presets.staminaRegenRate, presets.hpRegenCooldown, presets.staminaRegenCooldown);
+        statsController = pawn.GetComponent<StatsController>();
+        statsController.AssignHUD(hudController);
 
         // Set up player bullets
-        if (bulletController) Destroy(bulletController);
-        bulletController = gameObject.AddComponent(typeof(BulletController)) as BulletController;
-        bulletController.Setup(presets.bulletPrefab, presets.burstPrefab);
+        bulletController = pawn.GetComponent<BulletController>();
+        bulletController.StopShooting();
 
         // Set up player abilities
-        if (abilityController) Destroy(abilityController);
-        abilityController = gameObject.AddComponent(typeof(AbilityController)) as AbilityController;
-        abilityController.Setup(statsController, presets.abilityL, presets.abilityR);
-
-        // Spawn model
-        GameObject model = Instantiate(presets.model, transform);
-        model.transform.localScale= new Vector3(0.2f, 0.2f, 0.2f);
+        abilityController = pawn.GetComponent<AbilityController>();
+        abilityController.Deactivate(0);
+        abilityController.Deactivate(1);
 
         // Switch input map
         PlayerInput input = GetComponent<PlayerInput>();
         if (input) input.SwitchCurrentActionMap("Gameplay");
     }
+
+    // Spawn players in level
+    // public void AssignPawn(GameObject pawn)
+    // {
+    //     // Set up player movement
+    //     movementController = pawn.GetComponent<MovementController>();
+
+    //     // Set up player stats
+    //     statsController = pawn.GetComponent<StatsController>();
+    //     statsController.AssignHUD(hudController);
+
+    //     // Set up player bullets
+    //     bulletController = pawn.GetComponent<BulletController>();
+    //     bulletController.StopShooting();
+
+    //     // Set up player abilities
+    //     abilityController = pawn.GetComponent<AbilityController>();
+    //     abilityController.Deactivate(0);
+    //     abilityController.Deactivate(1);
+
+    //     // Switch input map
+    //     PlayerInput input = GetComponent<PlayerInput>();
+    //     if (input) input.SwitchCurrentActionMap("Gameplay");
+    // }
 
     // ---------------
     // EVENT CALLBACKS
@@ -132,5 +146,11 @@ public class PlayerController : MonoBehaviour
     void OnPause()
     {
         hudController.TogglePause();
+    }
+
+    // Switch action callback
+    void OnSwitch()
+    {
+        manager.SwitchCharacters();
     }
 }

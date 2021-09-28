@@ -100,18 +100,18 @@ public class DragonController : MonoBehaviour
     {
         Debug.Log(col.gameObject);
 
-        if (col.gameObject.GetComponent<NewBullet>())
-        {
-            hp -= 20.0f;
-            Debug.Log("Bullet");
-            Destroy(col.gameObject);
-        }
-        else if (col.gameObject.GetComponent<BurstBullet>())
-        {
-            hp -= 40.0f;
-            Debug.Log("Burst");
-            Destroy(col.gameObject);
-        }
+        // if (col.gameObject.GetComponent<NewBullet>())
+        // {
+        //     hp -= 20.0f;
+        //     Debug.Log("Bullet");
+        //     Destroy(col.gameObject);
+        // }
+        // else if (col.gameObject.GetComponent<BurstBullet>())
+        // {
+        //     hp -= 40.0f;
+        //     Debug.Log("Burst");
+        //     Destroy(col.gameObject);
+        // }
 
         if (hp <= 0.0f)
         {

@@ -24,7 +24,7 @@ public class CharacterSelectPlayerController : MonoBehaviour
         eventSystem.SetSelectedGameObject(firstSelected);
 
         firstSelected.GetComponent<CharacterSelectButton>().SetColor(playerColor);
-        characterSelection.UpdateSelection(eventSystem.currentSelectedGameObject.GetComponent<PlayerData>());
+        // characterSelection.UpdateSelection(eventSystem.currentSelectedGameObject.GetComponent<PlayerData>());
     }
 
     private void OnMove(InputValue input)
@@ -52,7 +52,7 @@ public class CharacterSelectPlayerController : MonoBehaviour
             cooldown = false;
         }
 
-        characterSelection.UpdateSelection(eventSystem.currentSelectedGameObject.GetComponent<PlayerData>());
+        // characterSelection.UpdateSelection(eventSystem.currentSelectedGameObject.GetComponent<PlayerData>());
     }
 
     private void OnSubmit()

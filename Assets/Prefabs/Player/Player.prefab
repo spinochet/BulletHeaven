@@ -9,10 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6148656104204094168}
-  - component: {fileID: 6148656104204094169}
   - component: {fileID: 6148656104204094171}
-  - component: {fileID: 6549189134301476910}
-  - component: {fileID: 5406193593379177094}
+  - component: {fileID: -2021873978722025626}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -35,24 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &6148656104204094169
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6148656104204094247}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.4
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &6148656104204094171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +64,7 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &6549189134301476910
+--- !u!114 &-2021873978722025626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,19 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
---- !u!114 &5406193593379177094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6148656104204094247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eb87fed89f34c84492eb776137ef29e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerColor: {r: 1, g: 0.75, b: 0.94753087, a: 1}
 --- !u!1 &7288587991730094792
 GameObject:
   m_ObjectHideFlags: 0
