@@ -6,15 +6,9 @@ public class WaveSpawner3D : MonoBehaviour
 {
     public GameObject _enemyPrefab;
 
-    // Time in between waves
-    public float timeBetweenWaves = 3f;
-
-    // Private variables
-    private float waveCountDown;
-
     void Start()
     {
-        waveCountDown = timeBetweenWaves;
+
 
     }
 
