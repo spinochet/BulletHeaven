@@ -32,6 +32,7 @@ public class CompanionController : MonoBehaviour
 
         // Set up player bullets
         bulletController = pawn.GetComponent<BulletController>();
+        bulletController.AssignOwner(this);
         bulletController.StopShooting();
 
         // Set up player abilities

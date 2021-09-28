@@ -7,6 +7,11 @@ public class BulletController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject burstPrefab;
 
+    // Controllers
+    private PlayerController playerController;
+    private CompanionController companionController;
+    private EnemyController enemyController;
+
     // Bullet
     Bullet bullet;
     private bool isShooting;
@@ -23,6 +28,24 @@ public class BulletController : MonoBehaviour
         // burst = burstPrefab.GetComponent<BurstBullet>();
     }
 
+    // Assign bullet owner
+    public void AssignOwner(PlayerController controller)
+    {
+        playerController = controller;
+    }
+
+    // Assign bullet owner
+    public void AssignOwner(CompanionController controller)
+    {
+        companionController = controller;
+    }
+
+    // Assign bullet owner
+    public void AssignOwner(EnemyController controller)
+    {
+        enemyController = controller;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +56,16 @@ public class BulletController : MonoBehaviour
             if (fireTimer > 1.0f / bullet.GetFireRate())
             {
                 fireTimer = 0.0f;
-                Instantiate(bulletPrefab, transform.position, transform.rotation);
+                GameObject b = Instantiate(bullet.gameObject, transform.position, transform.rotation);
+
+                if (playerController != null)
+                    b.GetComponent<Bullet>().AssignOwner(playerController);
+                else if (companionController != null)
+                    b.GetComponent<Bullet>().AssignOwner(companionController);
+                else if (enemyController != null)
+                    b.GetComponent<Bullet>().AssignOwner(enemyController);
+
+                b.GetComponent<Bullet>().Print();
             }
         }
     }
@@ -44,7 +76,7 @@ public class BulletController : MonoBehaviour
         if (fireTimer > 1.0f / bullet.GetFireRate())
         {
             fireTimer = 0.0f;
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
         }
 
         isShooting = true;

@@ -16,8 +16,11 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         movementController = GetComponent<MovementController>();
+        
         statsController = GetComponent<StatsController>();
+
         bulletController = GetComponent<BulletController>();
+        bulletController.AssignOwner(this);
     }
 
     // Update is called once per frame
