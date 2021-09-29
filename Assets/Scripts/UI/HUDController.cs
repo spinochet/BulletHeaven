@@ -11,6 +11,7 @@ public class HUDController : MonoBehaviour
     private Slider hpBar;
     private Slider staminaBar;
     private RawImage portrait;
+    private Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class HUDController : MonoBehaviour
         hpBar = transform.Find("HP Bar").GetComponent<Slider>();
         staminaBar = transform.Find("Stamina Bar").GetComponent<Slider>();
         portrait = transform.Find("Portrait/Character").GetComponent<RawImage>();
+        text = transform.Find("Score/ScoreText").GetComponent<Text>();
     }
 
     // Update current health
@@ -39,6 +41,12 @@ public class HUDController : MonoBehaviour
             portrait = transform.Find("Portrait/Character").GetComponent<RawImage>();
 
         portrait.texture = texture;
+    }
+
+    // Update current score
+    public void UpdateScore(int score)
+    {
+        text.text = score.ToString();
     }
 
     // Toggle pause

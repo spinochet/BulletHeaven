@@ -308,12 +308,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de22539a41db75447a226b929a588481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 50
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 0
   staminaRegenRate: 0
   staminaRegenCooldown: 0
+  destroy: 1
 --- !u!114 &3007241012240742888
 MonoBehaviour:
   m_ObjectHideFlags: 0

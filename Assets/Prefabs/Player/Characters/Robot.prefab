@@ -160,7 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
     type: 3}
-  abilityR: {fileID: 0}
+  abilityR: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
+    type: 3}
 --- !u!1 &1092565388352361883
 GameObject:
   m_ObjectHideFlags: 0

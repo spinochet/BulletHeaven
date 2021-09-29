@@ -139,9 +139,12 @@ public class PlayerController : MonoBehaviour
 
     public void Damage()
     {
-        if (--health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        statsController.ModifyHealth(-10);
+    }
+
+    public void AddPoints()
+    {
+        score += 100;
+        hudController.UpdateScore(score);
     }
 }

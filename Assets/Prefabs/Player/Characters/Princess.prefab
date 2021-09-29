@@ -274,8 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa39355efca2d94fbf5c7193294e304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityL: {fileID: 0}
-  abilityR: {fileID: 0}
+  abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
+    type: 3}
+  abilityR: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
+    type: 3}
 --- !u!1 &1075859038004255789
 GameObject:
   m_ObjectHideFlags: 0

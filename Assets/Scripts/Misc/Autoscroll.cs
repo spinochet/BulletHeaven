@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Autoscroll : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
+    [SerializeField] private float speed = 2.5f;
+    [SerializeField] private GameObject background1;
+    [SerializeField] private GameObject background2;
 
     private float timer;
 
@@ -14,15 +16,11 @@ public class Autoscroll : MonoBehaviour
     void Update()
     {
         transform.position -= Vector3.forward * speed * Time.deltaTime;
-       // if (transform.position.z <= -137.5f)
-       //{
-       //     speed = 0.0f;
-       //     timer += Time.deltaTime;
+       
+       background1.transform.position -= Vector3.forward * speed * Time.deltaTime;
+       if (background1.transform.position.z <= -5.4f) background1.transform.position = new Vector3(0.0f, 0.0f, 45.0f);
 
-       //     if (timer > 7.5f)
-       //     {
-       //         SceneManager.LoadScene("MainMenu");
-       //     }
-       // }
+       background2.transform.position -= Vector3.forward * speed * Time.deltaTime;
+       if (background2.transform.position.z <= -5.4f) background2.transform.position = new Vector3(0.0f, 0.0f, 45.0f);
     }
 }

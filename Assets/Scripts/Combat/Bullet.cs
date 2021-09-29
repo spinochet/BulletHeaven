@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private bool destroyOnCollision = true;
+    [SerializeField] private bool isEnemyBullet = true;
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float fireRate = 30.0f;
@@ -18,6 +19,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
     }
 
     // Assign bullet owner
@@ -47,19 +49,13 @@ public class Bullet : MonoBehaviour
     // FIX AFTER SPRINT
     public void OnTriggerEnter(Collider col)
     {
-        if (col.GetComponent<PlayerController>() && playerController == null)
+        if (col.transform.GetComponent<StatsController>() || col.transform.GetComponent<Bullet>())
         {
-            col.GetComponent<PlayerController>().Damage();
-            if (destroyOnCollision) Destroy(gameObject);
-        }
-        else if (col.GetComponent<CompanionController>() && companionController == null)
-        {
-            col.GetComponent<CompanionController>().Damage();
-            if (destroyOnCollision) Destroy(gameObject);
-        }
-        else if (col.GetComponent<EnemyController>() && enemyController == null)
-        {
-            col.GetComponent<EnemyController>().Damage();
+            if (playerController) playerController.AddPoints();
+
+            if (col.transform.GetComponent<StatsController>())
+                col.transform.GetComponent<StatsController>().ModifyHealth(-10);
+
             if (destroyOnCollision) Destroy(gameObject);
         }
     }

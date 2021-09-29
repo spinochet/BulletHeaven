@@ -111,7 +111,7 @@ public class PlayerManager : MonoBehaviour
     IEnumerator LoadStoryLevel()
     {
         // Load level
-        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Level 1 Test", LoadSceneMode.Single);
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Level 1", LoadSceneMode.Single);
 
         // Wait for level to load
         while (!asyncLoadLevel.isDone)

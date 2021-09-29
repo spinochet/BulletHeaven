@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
     {
         if (--health <= 0)
         {
-        //    Destroy(gameObject);
+           Destroy(gameObject);
         }
     }
 }

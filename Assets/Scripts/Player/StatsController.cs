@@ -15,6 +15,8 @@ public class StatsController : MonoBehaviour
     [SerializeField] private float staminaRegenRate;
     [SerializeField] private float staminaRegenCooldown;
 
+    public bool destroy;
+
     private float hp;
     private float stamina;
     private float hpTimer;
@@ -70,6 +72,8 @@ public class StatsController : MonoBehaviour
     {
         hp += value;
         hpTimer = 0.0f;
+
+        if (hp <= 0 && destroy) Destroy(gameObject);
     }
 
     // Consume player stamina
