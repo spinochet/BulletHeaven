@@ -32,8 +32,8 @@ public class EnemyController : MonoBehaviour
         if (timer > 0.5f)
         {
             timer = 0.0f;
-            float shoot = Random.Range(0.0f, 0.1f);
-            if (shoot < 0.5f)
+            float shoot = Random.Range(0.0f, 1.0f);
+            if (shoot < 0.4f)
                 bulletController.StartShooting();
             else
                 bulletController.StopShooting();
@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
     {
         if (--health <= 0)
         {
-            Destroy(gameObject);
+        //    Destroy(gameObject);
         }
     }
 }

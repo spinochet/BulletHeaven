@@ -14,15 +14,15 @@ public class Autoscroll : MonoBehaviour
     void Update()
     {
         transform.position -= Vector3.forward * speed * Time.deltaTime;
-        if (transform.position.z <= -137.5f)
-        {
-            speed = 0.0f;
-            timer += Time.deltaTime;
+       // if (transform.position.z <= -137.5f)
+       //{
+       //     speed = 0.0f;
+       //     timer += Time.deltaTime;
 
-            if (timer > 7.5f)
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-        }
+       //     if (timer > 7.5f)
+       //     {
+       //         SceneManager.LoadScene("MainMenu");
+       //     }
+       // }
     }
 }

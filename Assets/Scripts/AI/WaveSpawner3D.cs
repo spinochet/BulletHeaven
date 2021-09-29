@@ -32,7 +32,7 @@ public class WaveSpawner3D : MonoBehaviour
                 }
 
                 Vector3 sp = _spawnPoint + _dir * i;
-                Instantiate(_enemyPrefab, sp, Quaternion.identity);
+                Instantiate(_enemyPrefab, sp, Quaternion.Euler(0.0f,180f,0.0f));
             }
 
             Destroy(gameObject);
@@ -48,20 +48,9 @@ public class WaveSpawner3D : MonoBehaviour
 
     public Direction dir;
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
-        float x = transform.position.x;
-        float z = transform.position.z;
-        Vector3 p1 = new Vector3(-7.2f + x, 0f, 5.4f + z);
-        Vector3 p2 = new Vector3(-7.2f + x, 0f, -5.4f + z);
-        Vector3 p3 = new Vector3(7.2f + x, 0f, -5.4f + z);
-        Vector3 p4 = new Vector3(7.2f + x, 0f, 5.4f + z);
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(p1, p2);
-        Gizmos.DrawLine(p2, p3);
-        Gizmos.DrawLine(p3, p4);
-        Gizmos.DrawLine(p4, p1);
-
         for (int i = 0; i < numShifts; ++i) {
             Vector3 _dir = Vector3.zero;
             switch (dir) {
@@ -80,6 +69,19 @@ public class WaveSpawner3D : MonoBehaviour
         }
         
     }
+    void OnDrawGizmosSelected(){
+        float x = transform.position.x;
+        float z = transform.position.z;
+        Vector3 p1 = new Vector3(-7.2f + x, 0f, 5.4f + z);
+        Vector3 p2 = new Vector3(-7.2f + x, 0f, -5.4f + z);
+        Vector3 p3 = new Vector3(7.2f + x, 0f, -5.4f + z);
+        Vector3 p4 = new Vector3(7.2f + x, 0f, 5.4f + z);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(p1, p2);
+        Gizmos.DrawLine(p2, p3);
+        Gizmos.DrawLine(p3, p4);
+        Gizmos.DrawLine(p4, p1);
 
+    }
 
 }
