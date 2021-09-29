@@ -69,4 +69,18 @@ public class CompanionController : MonoBehaviour
 
         movementController.Move(movement);
     }
+
+    // ----
+    // TEMP
+    // ----
+
+    [SerializeField] private int health = 10;
+
+    public void Damage()
+    {
+        if (--health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

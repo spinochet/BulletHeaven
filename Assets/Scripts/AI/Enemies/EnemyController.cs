@@ -39,4 +39,18 @@ public class EnemyController : MonoBehaviour
                 bulletController.StopShooting();
         }
     }
+
+    // ----
+    // TEMP
+    // ----
+
+    [SerializeField] private int health = 4;
+
+    public void Damage()
+    {
+        if (--health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

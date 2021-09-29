@@ -64,8 +64,6 @@ public class BulletController : MonoBehaviour
                     b.GetComponent<Bullet>().AssignOwner(companionController);
                 else if (enemyController != null)
                     b.GetComponent<Bullet>().AssignOwner(enemyController);
-
-                b.GetComponent<Bullet>().Print();
             }
         }
     }

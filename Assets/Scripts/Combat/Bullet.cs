@@ -44,10 +44,23 @@ public class Bullet : MonoBehaviour
         return fireRate;
     }
 
-    public void Print()
+    // FIX AFTER SPRINT
+    public void OnTriggerEnter(Collider col)
     {
-        Debug.Log(playerController);
-        Debug.Log(companionController);
-        Debug.Log(enemyController);
+        if (col.GetComponent<PlayerController>() && playerController == null)
+        {
+            col.GetComponent<PlayerController>().Damage();
+            if (destroyOnCollision) Destroy(gameObject);
+        }
+        else if (col.GetComponent<CompanionController>() && companionController == null)
+        {
+            col.GetComponent<CompanionController>().Damage();
+            if (destroyOnCollision) Destroy(gameObject);
+        }
+        else if (col.GetComponent<EnemyController>() && enemyController == null)
+        {
+            col.GetComponent<EnemyController>().Damage();
+            if (destroyOnCollision) Destroy(gameObject);
+        }
     }
 }

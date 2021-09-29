@@ -51,30 +51,6 @@ public class PlayerController : MonoBehaviour
         if (input) input.SwitchCurrentActionMap("Gameplay");
     }
 
-    // Spawn players in level
-    // public void AssignPawn(GameObject pawn)
-    // {
-    //     // Set up player movement
-    //     movementController = pawn.GetComponent<MovementController>();
-
-    //     // Set up player stats
-    //     statsController = pawn.GetComponent<StatsController>();
-    //     statsController.AssignHUD(hudController);
-
-    //     // Set up player bullets
-    //     bulletController = pawn.GetComponent<BulletController>();
-    //     bulletController.StopShooting();
-
-    //     // Set up player abilities
-    //     abilityController = pawn.GetComponent<AbilityController>();
-    //     abilityController.Deactivate(0);
-    //     abilityController.Deactivate(1);
-
-    //     // Switch input map
-    //     PlayerInput input = GetComponent<PlayerInput>();
-    //     if (input) input.SwitchCurrentActionMap("Gameplay");
-    // }
-
     // ---------------
     // EVENT CALLBACKS
     // ---------------
@@ -153,5 +129,19 @@ public class PlayerController : MonoBehaviour
     void OnSwitch()
     {
         manager.SwitchCharacters();
+    }
+
+    // ----
+    // TEMP
+    // ----
+
+    [SerializeField] private int health = 10;
+
+    public void Damage()
+    {
+        if (--health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
