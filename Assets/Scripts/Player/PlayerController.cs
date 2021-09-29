@@ -27,7 +27,9 @@ public class PlayerController : MonoBehaviour
         if (hud != null)
             hudController = hud;
         if (hudController != null)
+        {
             hudController.UpdatePortrait(pawn.GetComponent<CharacterData>().portrait.texture);
+        }
 
         // Set up player movement
         movementController = pawn.GetComponent<MovementController>();

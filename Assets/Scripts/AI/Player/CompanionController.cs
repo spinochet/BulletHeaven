@@ -13,6 +13,7 @@ public class CompanionController : MonoBehaviour
 
     // TEMP BEHAVIOR
     float timer;
+    int score;
     Vector2 movement;
 
     // Spawn players in level
@@ -29,6 +30,7 @@ public class CompanionController : MonoBehaviour
 
         // Set up player stats
         statsController = pawn.GetComponent<StatsController>();
+        statsController.AssignHUD(hudController);
 
         // Set up player bullets
         bulletController = pawn.GetComponent<BulletController>();
@@ -44,30 +46,44 @@ public class CompanionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.unscaledDeltaTime;
-
-        if (timer > 0.5f)
+        if (Time.timeScale > 0.0f)
         {
-            timer = 0.0f;
+            timer += Time.unscaledDeltaTime;
 
-            // Random movement
-            float dir = Random.Range(0.0f, 1.0f);
-            if (dir < 0.25f)
-                movement = Vector2.left;
-            else if (dir < 0.5f)
-                movement = Vector2.right;
-            else
-                movement = Vector2.zero;
+            if (timer > 0.5f)
+            {
+                timer = 0.0f;
 
-            // Random shooting
-            float shoot = Random.Range(0.0f, 1.0f);
-            if (shoot < 0.6f)
-                bulletController.StartShooting();
-            else
-                bulletController.StopShooting();
+                // Random movement
+                float dir = Random.Range(0.0f, 1.0f);
+                if (dir < 0.25f)
+                    movement = Vector2.left;
+                else if (dir < 0.5f)
+                    movement = Vector2.right;
+                else
+                    movement = Vector2.zero;
+
+                // Random shooting
+                float shoot = Random.Range(0.0f, 1.0f);
+                if (shoot < 0.6f)
+                    bulletController.StartShooting();
+                else
+                    bulletController.StopShooting();
+            }
+
+            movementController.Move(movement);
         }
+        else
+        {
+            movementController.Move(Vector3.zero);
+            bulletController.StopShooting();
+        }
+    }
 
-        movementController.Move(movement);
+    public void AddPoints()
+    {
+        score += 100;
+        hudController.UpdateScore(score);
     }
 
     // ----
@@ -78,9 +94,6 @@ public class CompanionController : MonoBehaviour
 
     public void Damage()
     {
-        if (--health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        statsController.ModifyHealth(-10);
     }
 }

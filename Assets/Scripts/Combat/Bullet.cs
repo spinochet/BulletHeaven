@@ -26,17 +26,23 @@ public class Bullet : MonoBehaviour
     public void AssignOwner(PlayerController controller)
     {
         playerController = controller;
+        companionController = null;
+        enemyController = null;
     }
 
     // Assign bullet owner
     public void AssignOwner(CompanionController controller)
     {
+        playerController = null;
         companionController = controller;
+        enemyController = null;
     }
 
     // Assign bullet owner
     public void AssignOwner(EnemyController controller)
     {
+        playerController = null;
+        companionController = null;
         enemyController = controller;
     }
 
@@ -52,6 +58,7 @@ public class Bullet : MonoBehaviour
         if (col.transform.GetComponent<StatsController>() || col.transform.GetComponent<Bullet>())
         {
             if (playerController) playerController.AddPoints();
+            else if (companionController) companionController.AddPoints();
 
             if (col.transform.GetComponent<StatsController>())
                 col.transform.GetComponent<StatsController>().ModifyHealth(-10);

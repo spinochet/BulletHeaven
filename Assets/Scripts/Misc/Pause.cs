@@ -15,6 +15,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = isPaused ? 0.0f : 1.0f;
 
         gameObject.SetActive(isPaused);
+        GameObject.Find("Player Manager").GetComponent<PlayerManager>().TogglePause(isPaused);
     }
 
     public void MainMenu()

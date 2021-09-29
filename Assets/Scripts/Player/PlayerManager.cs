@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     // Manager
+    public static PlayerManager instance;
     private int numPlayers;
     private PlayerInput[] players;
     [SerializeField] private string currentMode;
@@ -31,6 +32,14 @@ public class PlayerManager : MonoBehaviour
     private GameObject p2Pawn;
     private GameObject p3Pawn;
     private GameObject p4Pawn;
+
+    void Awake()
+    {
+          if (instance == null)
+                instance = this;
+          else
+                DestroyImmediate(this);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +94,17 @@ public class PlayerManager : MonoBehaviour
         Destroy(player.gameObject);
         players[player.playerIndex] = null;
         --numPlayers;
+    }
+
+    public void TogglePause(bool pause)
+    {
+        foreach (PlayerInput player in players)
+        {
+            if (pause)
+                player.gameObject.GetComponent<PlayerController>().DisableMovement();
+            else
+                player.gameObject.GetComponent<PlayerController>().EnableMovement();
+        }
     }
 
     // ---------

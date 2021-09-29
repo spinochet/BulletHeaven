@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementController.Move(Vector2.down);
+        movementController.Move(Vector2.down * Time.timeScale);
 
         timer += Time.deltaTime;
         if (timer > 0.5f)
@@ -37,6 +37,11 @@ public class EnemyController : MonoBehaviour
                 bulletController.StartShooting();
             else
                 bulletController.StopShooting();
+        }
+
+        if (Time.deltaTime == 0.0f)
+        {
+            bulletController.StopShooting();
         }
     }
 

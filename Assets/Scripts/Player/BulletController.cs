@@ -32,17 +32,23 @@ public class BulletController : MonoBehaviour
     public void AssignOwner(PlayerController controller)
     {
         playerController = controller;
+        companionController = null;
+        enemyController = null;
     }
 
     // Assign bullet owner
     public void AssignOwner(CompanionController controller)
     {
+        playerController = null;
         companionController = controller;
+        enemyController = null;
     }
 
     // Assign bullet owner
     public void AssignOwner(EnemyController controller)
     {
+        playerController = null;
+        companionController = null;
         enemyController = controller;
     }
 
