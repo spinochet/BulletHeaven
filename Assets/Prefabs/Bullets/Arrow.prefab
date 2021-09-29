@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4134280871756914495}
   - component: {fileID: -5714502692662860827}
   - component: {fileID: 8061707729531987753}
-  - component: {fileID: 784958134227932870}
+  - component: {fileID: 5271880728271274341}
   m_Layer: 10
   m_Name: Arrow
   m_TagString: Untagged
@@ -81,7 +81,7 @@ MonoBehaviour:
   speed: 7.5
   damage: 10
   fireRate: 3
---- !u!82 &784958134227932870
+--- !u!82 &5271880728271274341
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,9 +91,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05a7c1b15e818499ca0ba54c365572d2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d7dbc4cdcabdc44e3a34af3c46f6b9ff, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

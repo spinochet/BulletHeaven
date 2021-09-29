@@ -601,7 +601,7 @@
                 {
                     "name": "",
                     "id": "e357a7a7-297a-4654-b893-68f023a91767",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",
@@ -661,6 +661,44 @@
                     "processors": "",
                     "groups": "Gamecube",
                     "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Controls",
+            "id": "4decf698-3454-4e3c-9fc6-5119d17ff993",
+            "actions": [
+                {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "2988554f-a28f-4f4b-a19a-d5aface0356f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a4a1ae12-034d-48b9-970b-af04baa16218",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ae531f1-4bdc-448d-b6b7-bff95311f561",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Piano",
+                    "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

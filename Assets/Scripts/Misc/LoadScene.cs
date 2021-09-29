@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class LoadScene : MonoBehaviour
 {
-    public PlayerManager manager;
+    public void LoadStory()
+    {
+        GameObject.Find("Player Manager").GetComponent<PlayerManager>().StoryMode();
+    }
 }
