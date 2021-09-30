@@ -48,7 +48,6 @@ public class StatsController : MonoBehaviour
             stamina += staminaRegenRate * Time.unscaledDeltaTime;
 
         // Update HUD
-        Debug.Log("Here");
         if (hud)
         {
             hud.UpdateHealth(hp / maxHP);

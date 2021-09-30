@@ -5,53 +5,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : PawnController
 {
     public PlayerManager manager;
-
-    // Controller scripts for player mechanics
-    private MovementController movementController;
-    private StatsController statsController;
-    private BulletController bulletController;
-    private AbilityController abilityController;
-    private HUDController hudController;
 
     // Character and player data
     private Color playerColor;
     private int score;
-
-    // Spawn players in level
-    public void AssignPawn(GameObject pawn, HUDController hud = null)
-    {
-        // Set up player HUD
-        if (hud != null)
-            hudController = hud;
-        if (hudController != null)
-        {
-            hudController.UpdatePortrait(pawn.GetComponent<CharacterData>().portrait.texture);
-        }
-
-        // Set up player movement
-        movementController = pawn.GetComponent<MovementController>();
-
-        // Set up player stats
-        statsController = pawn.GetComponent<StatsController>();
-        statsController.AssignHUD(hudController);
-
-        // Set up player bullets
-        bulletController = pawn.GetComponent<BulletController>();
-        bulletController.AssignOwner(this);
-        bulletController.StopShooting();
-
-        // Set up player abilities
-        abilityController = pawn.GetComponent<AbilityController>();
-        abilityController.Deactivate(0);
-        abilityController.Deactivate(1);
-
-        // Switch input map
-        PlayerInput input = GetComponent<PlayerInput>();
-        if (input) input.SwitchCurrentActionMap("Gameplay");
-    }
 
     // ---------------
     // EVENT CALLBACKS
@@ -62,18 +22,6 @@ public class PlayerController : MonoBehaviour
     {
         if (movementController)
             movementController.Move(input.Get<Vector2>());
-    }
-
-    public void EnableMovement()
-    {
-        if (movementController)
-            movementController.enabled = true;
-    }
-
-    public void DisableMovement()
-    {
-        if (movementController)
-            movementController.enabled = false;
     }
 
     // -------------
@@ -124,29 +72,32 @@ public class PlayerController : MonoBehaviour
     // Pause action callback function
     void OnPause()
     {
-        hudController.TogglePause();
+        if (hudController)
+            hudController.TogglePause();
     }
 
     // Switch action callback
     void OnSwitch()
     {
-        manager.SwitchCharacters();
+        if (manager)
+            manager.SwitchCharacters();
     }
 
-    // ----
-    // TEMP
-    // ----
+    // -----
+    // SCORE
+    // -----
 
-    [SerializeField] private int health = 10;
-
-    public void Damage()
+    public void AddPoints(int points)
     {
-        statsController.ModifyHealth(-10);
+        score += points;
+        if (hudController)
+            hudController.UpdateScore(score);
     }
 
-    public void AddPoints()
+    public void ResetPoints()
     {
-        score += 100;
-        hudController.UpdateScore(score);
+        score = 0;
+        if (hudController)
+            hudController.UpdateScore(score);
     }
 }

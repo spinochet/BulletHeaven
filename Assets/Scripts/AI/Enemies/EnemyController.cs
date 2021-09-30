@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : PawnController
 {
-    // Controller scripts for player mechanics
-    private MovementController movementController;
-    private StatsController statsController;
-    private BulletController bulletController;
-
     // TEMP BEHAVIORS
     private float timer;
 
@@ -16,11 +11,8 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         movementController = GetComponent<MovementController>();
-        
         statsController = GetComponent<StatsController>();
-
         bulletController = GetComponent<BulletController>();
-        bulletController.AssignOwner(this);
     }
 
     // Update is called once per frame
@@ -42,20 +34,6 @@ public class EnemyController : MonoBehaviour
         if (Time.deltaTime == 0.0f)
         {
             bulletController.StopShooting();
-        }
-    }
-
-    // ----
-    // TEMP
-    // ----
-
-    [SerializeField] private int health = 4;
-
-    public void Damage()
-    {
-        if (--health <= 0)
-        {
-           Destroy(gameObject);
         }
     }
 }

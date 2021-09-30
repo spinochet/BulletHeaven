@@ -28,30 +28,6 @@ public class BulletController : MonoBehaviour
         // burst = burstPrefab.GetComponent<BurstBullet>();
     }
 
-    // Assign bullet owner
-    public void AssignOwner(PlayerController controller)
-    {
-        playerController = controller;
-        companionController = null;
-        enemyController = null;
-    }
-
-    // Assign bullet owner
-    public void AssignOwner(CompanionController controller)
-    {
-        playerController = null;
-        companionController = controller;
-        enemyController = null;
-    }
-
-    // Assign bullet owner
-    public void AssignOwner(EnemyController controller)
-    {
-        playerController = null;
-        companionController = null;
-        enemyController = controller;
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -63,13 +39,6 @@ public class BulletController : MonoBehaviour
             {
                 fireTimer = 0.0f;
                 GameObject b = Instantiate(bullet.gameObject, transform.position, transform.rotation);
-
-                if (playerController != null)
-                    b.GetComponent<Bullet>().AssignOwner(playerController);
-                else if (companionController != null)
-                    b.GetComponent<Bullet>().AssignOwner(companionController);
-                else if (enemyController != null)
-                    b.GetComponent<Bullet>().AssignOwner(enemyController);
             }
         }
     }
