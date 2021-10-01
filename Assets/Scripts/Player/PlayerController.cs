@@ -12,6 +12,34 @@ public class PlayerController : PawnController
     // Character and player data
     private Color playerColor;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+        
+        Pawn[] pawns = GameObject.FindObjectsOfType(typeof(Pawn)) as Pawn[];
+        foreach (Pawn pawn in pawns)
+        {
+            CompanionController ai = pawn.gameObject.GetComponent<CompanionController>();
+            if (ai && ai.enabled)
+            {
+                ai.enabled = false;
+                PossesPawn(pawn);
+                break;
+            }
+        }
+    }
+
+    // Assign pawn to controller
+    public void PossesPawn(Pawn _pawn)
+    {
+        pawn = _pawn;
+        pawn.StopShooting();
+
+        // Switch input map
+        PlayerInput input = GetComponent<PlayerInput>();
+        if (input) input.SwitchCurrentActionMap("Gameplay");
+    }
+
     // ---------------
     // EVENT CALLBACKS
     // ---------------
@@ -19,7 +47,7 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if (pawn)
+        if (this.isLocalPlayer && pawn)
             pawn.Move(input.Get<Vector2>());
     }
 
@@ -32,7 +60,7 @@ public class PlayerController : PawnController
     {
         bool isShooting = input.Get<float>() > 0.0f ? true : false;
 
-        if (pawn)
+        if (this.isLocalPlayer && pawn)
         {
             if (isShooting) pawn.StartShooting();
             else pawn.StopShooting();
@@ -42,7 +70,7 @@ public class PlayerController : PawnController
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {
-        if (pawn)
+        if (this.isLocalPlayer && pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
             else pawn.DeactivateAbility(0);
@@ -52,7 +80,7 @@ public class PlayerController : PawnController
     // AbilityR action callback function
     void OnAbilityR(InputValue input)
     {
-        if (pawn)
+        if (this.isLocalPlayer && pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
             else pawn.DeactivateAbility(1);
@@ -62,14 +90,14 @@ public class PlayerController : PawnController
     // Pause action callback function
     void OnPause()
     {
-        if (manager)
+        if (this.isLocalPlayer && manager)
             manager.TogglePause(this);
     }
 
     // Switch action callback
     void OnSwitch()
     {
-        if (manager)
+        if (this.isLocalPlayer && manager)
             manager.SwitchCharacters();
     }
 

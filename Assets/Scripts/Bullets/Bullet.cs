@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+using Mirror;
+
+public class Bullet : NetworkBehaviour
 {
     [SerializeField] private bool destroyOnCollision = true;
     [SerializeField] private bool isEnemyBullet = false;

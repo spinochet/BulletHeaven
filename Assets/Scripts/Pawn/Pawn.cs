@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pawn : MonoBehaviour
+using Mirror;
+
+public class Pawn : NetworkBehaviour
 {
     private HUDController hud;
 

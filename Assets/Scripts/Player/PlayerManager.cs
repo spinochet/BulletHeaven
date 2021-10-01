@@ -55,10 +55,6 @@ public class PlayerManager : MonoBehaviour
     // Add player to manager
     public void AddPlayer(PlayerInput player)
     {
-        string playerName = "Player " + (player.playerIndex + 1).ToString();
-        player.gameObject.name = playerName;
-        DontDestroyOnLoad(player.gameObject);
-
         players[player.playerIndex] = player;
         players[player.playerIndex].transform.GetComponent<PlayerController>().manager = this;
         ++numPlayers;
@@ -166,7 +162,7 @@ public class PlayerManager : MonoBehaviour
             GameObject hud = GameObject.Find("P2 Stats");
 
             p1Pawn = Instantiate(princessPrefab, spawnPoint, Quaternion.identity);
-            players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn.GetComponent<Pawn>());
+            players[0].transform.GetComponent<PlayerController>().PossesPawn(p1Pawn.GetComponent<Pawn>());
         }
 
         if (numPlayers >= 2)
