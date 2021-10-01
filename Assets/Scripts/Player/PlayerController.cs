@@ -11,7 +11,6 @@ public class PlayerController : PawnController
 
     // Character and player data
     private Color playerColor;
-    private int score;
 
     // ---------------
     // EVENT CALLBACKS
@@ -20,8 +19,8 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if (movementController)
-            movementController.Move(input.Get<Vector2>());
+        if (pawn)
+            pawn.Move(input.Get<Vector2>());
     }
 
     // -------------
@@ -33,47 +32,38 @@ public class PlayerController : PawnController
     {
         bool isShooting = input.Get<float>() > 0.0f ? true : false;
 
-        if (bulletController)
+        if (pawn)
         {
-            if (isShooting) bulletController.StartShooting();
-            else bulletController.StopShooting();
+            if (isShooting) pawn.StartShooting();
+            else pawn.StopShooting();
         }
     }
 
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {
-        if (abilityController)
+        if (pawn)
         {
-            if (input.Get<float>() > 0.0f) abilityController.Activate(0);
-            else abilityController.Deactivate(0);
+            if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
+            else pawn.DeactivateAbility(0);
         }
     }
 
     // AbilityR action callback function
     void OnAbilityR(InputValue input)
     {
-        if (abilityController)
+        if (pawn)
         {
-            if (input.Get<float>() > 0.0f) abilityController.Activate(1);
-            else abilityController.Deactivate(1);
-        }
-    }
-
-    // Dash action callback function
-    void OnDash()
-    {
-        if (movementController)
-        {
-            movementController.Dash();
+            if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
+            else pawn.DeactivateAbility(1);
         }
     }
 
     // Pause action callback function
     void OnPause()
     {
-        if (hudController)
-            hudController.TogglePause();
+        if (manager)
+            manager.TogglePause(this);
     }
 
     // Switch action callback
@@ -87,17 +77,10 @@ public class PlayerController : PawnController
     // SCORE
     // -----
 
-    public void AddPoints(int points)
-    {
-        score += points;
-        if (hudController)
-            hudController.UpdateScore(score);
-    }
-
     public void ResetPoints()
     {
-        score = 0;
-        if (hudController)
-            hudController.UpdateScore(score);
+        // score = 0;
+        // if (hudController)
+        //     hudController.UpdateScore(score);
     }
 }

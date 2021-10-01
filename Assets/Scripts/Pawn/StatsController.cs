@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatsController : MonoBehaviour
+public class StatsController : Controller
 {
     private HUDController hud;
 
@@ -15,12 +15,13 @@ public class StatsController : MonoBehaviour
     [SerializeField] private float staminaRegenRate;
     [SerializeField] private float staminaRegenCooldown;
 
-    public bool destroy;
-
     private float hp;
     private float stamina;
     private float hpTimer;
     private float staminaTimer;
+    private int score;
+
+    public bool destroy;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,20 +39,23 @@ public class StatsController : MonoBehaviour
     // Update is called once every frame
     void Update()
     {
-        hpTimer += Time.unscaledDeltaTime;
-        staminaTimer += Time.unscaledDeltaTime;
-
-        // Recover health and stamina
-        if (hp < maxHP && hpTimer > hpRegenCooldown)
-            hp += hpRegenRate * Time.unscaledDeltaTime;
-        if (stamina < maxStamina && staminaTimer > staminaRegenCooldown) 
-            stamina += staminaRegenRate * Time.unscaledDeltaTime;
-
-        // Update HUD
-        if (hud)
+        if (!IsPaused())
         {
-            hud.UpdateHealth(hp / maxHP);
-            hud.UpdateStamina(stamina / maxStamina);
+            hpTimer += Time.unscaledDeltaTime;
+            staminaTimer += Time.unscaledDeltaTime;
+
+            // Recover health and stamina
+            if (hp < maxHP && hpTimer > hpRegenCooldown)
+                hp += hpRegenRate * Time.unscaledDeltaTime;
+            if (stamina < maxStamina && staminaTimer > staminaRegenCooldown) 
+                stamina += staminaRegenRate * Time.unscaledDeltaTime;
+
+            // Update HUD
+            if (hud)
+            {
+                hud.UpdateHealth(hp / maxHP);
+                hud.UpdateStamina(stamina / maxStamina);
+            }
         }
     }
 
@@ -81,5 +85,12 @@ public class StatsController : MonoBehaviour
     {
         stamina -= value;
         staminaTimer = 0.0f;
+    }
+
+    public void AddPoints(int points)
+    {
+        score += points;
+        if (hud)
+            hud.UpdateScore(score);
     }
 }

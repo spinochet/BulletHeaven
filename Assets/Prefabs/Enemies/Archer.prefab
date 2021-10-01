@@ -281,7 +281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f9b050caccf5d429077028ef0c55fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
 --- !u!114 &3007241012240742894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +329,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
     type: 3}
   burstPrefab: {fileID: 0}
+  isTimeScale: 1
 --- !u!1 &3532057981992372333
 GameObject:
   m_ObjectHideFlags: 0

@@ -157,11 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1027628024979106852}
   - component: {fileID: 1027628024979106853}
-  - component: {fileID: 7569143795233014122}
-  - component: {fileID: 1027628024979106859}
-  - component: {fileID: 1027628024979106858}
-  - component: {fileID: 1027628024979106857}
-  - component: {fileID: 1027628024979106856}
+  - component: {fileID: -4788320597337895063}
   m_Layer: 8
   m_Name: Princess
   m_TagString: Untagged
@@ -202,7 +198,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &7569143795233014122
+--- !u!114 &-4788320597337895063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,73 +207,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1027628024979106863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e11001fac8bfa4b48b74cf2ff8f19492, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Princess
   portrait: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
---- !u!114 &1027628024979106859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9905494f51aa2a742b4e27677146fab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   speed: 10
-  dashDist: 10
---- !u!114 &1027628024979106858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de22539a41db75447a226b929a588481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   maxHP: 100
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
   staminaRegenRate: 1
   staminaRegenCooldown: 2.5
---- !u!114 &1027628024979106857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 637bcb595cddbb34fb1051883cb7011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
-  burstPrefab: {fileID: 0}
---- !u!114 &1027628024979106856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa39355efca2d94fbf5c7193294e304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
     type: 3}
-  abilityR: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
-    type: 3}
+  abilityR: {fileID: 0}
 --- !u!1 &1075859038004255789
 GameObject:
   m_ObjectHideFlags: 0

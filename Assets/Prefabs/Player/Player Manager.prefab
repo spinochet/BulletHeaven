@@ -47,9 +47,9 @@ MonoBehaviour:
   currentMode: MainMenu
   AIPlayer: {fileID: 6643795195893352019, guid: 7024e5080cbe1134b9cddea89d21a779,
     type: 3}
-  princessPrefab: {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d,
+  princessPrefab: {fileID: -4788320597337895063, guid: 2f55efd5276c2274f810c48f6e54822d,
     type: 3}
-  robotPrefab: {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c,
+  robotPrefab: {fileID: -7373040332776867667, guid: 746fe167bf58eda43bba9006107f655c,
     type: 3}
   playerColors:
   - {r: 1, g: 0.49019608, b: 0.49019608, a: 1}
@@ -135,7 +135,7 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6148656104204094247, guid: 6306ce2b9880f3449808c3bab2f411d7,
+  m_PlayerPrefab: {fileID: 6148656104204094247, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0

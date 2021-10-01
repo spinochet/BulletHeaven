@@ -17,8 +17,8 @@ public class PlayerManager : MonoBehaviour
 
     // Story mode stuff
     [Header ("Story mode stuff")]
-    [SerializeField] private GameObject princessPrefab;
-    [SerializeField] private GameObject robotPrefab;
+    [SerializeField] private Pawn princessPrefab;
+    [SerializeField] private Pawn robotPrefab;
 
     // Character select stuff
     [SerializeField] private Color[] playerColors;
@@ -28,17 +28,17 @@ public class PlayerManager : MonoBehaviour
     private GameObject p3AI;
     private GameObject p4AI;
 
-    private GameObject p1Pawn;
-    private GameObject p2Pawn;
-    private GameObject p3Pawn;
-    private GameObject p4Pawn;
+    private Pawn p1Pawn;
+    private Pawn p2Pawn;
+    private Pawn p3Pawn;
+    private Pawn p4Pawn;
 
     void Awake()
     {
           if (instance == null)
-                instance = this;
+            instance = this;
           else
-                DestroyImmediate(this);
+            DestroyImmediate(this);
     }
 
     // Start is called before the first frame update
@@ -76,7 +76,7 @@ public class PlayerManager : MonoBehaviour
                 Destroy(p2AI);
 
                 GameObject hud = GameObject.Find("P4 Stats");
-                player.transform.GetComponent<PlayerController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
+                // player.transform.GetComponent<PlayerController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
             }
         }
         // if (currentScene == "CharacterSelect")
@@ -96,14 +96,26 @@ public class PlayerManager : MonoBehaviour
         --numPlayers;
     }
 
-    public void TogglePause(bool pause)
+    private bool isPaused;
+    public void TogglePause(PlayerController caller)
     {
-        foreach (PlayerInput player in players)
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0.0f : 1.0f;
+
+        PlayerManager playerManager = this;
+
+        // Disable all pawns
+        PawnController[] controllers = Object.FindObjectsOfType<PawnController>();
+        foreach(PawnController script in controllers)
         {
-            if (pause)
-                player.gameObject.GetComponent<PlayerController>().DisableMovement();
-            else
-                player.gameObject.GetComponent<PlayerController>().EnableMovement();
+            script.TogglePause(isPaused);
+        }
+
+        // Disable all bullets
+        Bullet[] bullets = Object.FindObjectsOfType<Bullet>();
+        foreach(Bullet script in bullets)
+        {
+            script.enabled = !isPaused;
         }
     }
 
@@ -144,6 +156,9 @@ public class PlayerManager : MonoBehaviour
         GameObject.Find("P1 Stats").SetActive(false);
         GameObject.Find("P3 Stats").SetActive(false);
 
+        // Instantiate(princessPrefab);
+        // Instantiate(robotPrefab);
+
         // Spawn princess
         if (numPlayers >= 1)
         {
@@ -151,7 +166,7 @@ public class PlayerManager : MonoBehaviour
             GameObject hud = GameObject.Find("P2 Stats");
 
             p1Pawn = Instantiate(princessPrefab, spawnPoint, Quaternion.identity);
-            players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn, hud.GetComponent<HUDController>());
+            players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn.GetComponent<Pawn>());
         }
 
         if (numPlayers >= 2)
@@ -160,7 +175,7 @@ public class PlayerManager : MonoBehaviour
             GameObject hud = GameObject.Find("P4 Stats");
 
             p2Pawn = Instantiate(robotPrefab, spawnPoint, Quaternion.identity);
-            players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
+            // players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
         }
         else
         {
@@ -170,7 +185,7 @@ public class PlayerManager : MonoBehaviour
             GameObject hud = GameObject.Find("P4 Stats");
             
             p2Pawn = Instantiate(robotPrefab, spawnPoint, Quaternion.identity);
-            p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
+            // p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
         }
     }
 
@@ -179,13 +194,13 @@ public class PlayerManager : MonoBehaviour
     {
         if (numPlayers == 1)
         {
-            GameObject tempPawn = p1Pawn;
+            Pawn tempPawn = p1Pawn;
             p1Pawn = p2Pawn;
             p2Pawn = tempPawn;
 
-            players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn);
-            if (numPlayers >= 2) players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn);
-            else p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn);
+            // players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn);
+            // if (numPlayers >= 2) players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn);
+            // else p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn);
         }
     }
 

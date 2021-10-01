@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BulletController : Controller
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject burstPrefab;
-
-    // Controllers
-    private PlayerController playerController;
-    private CompanionController companionController;
-    private EnemyController enemyController;
+    [SerializeField] private bool isTimeScale;
 
     // Bullet
     Bullet bullet;
@@ -31,14 +27,21 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fireTimer += Time.unscaledDeltaTime;
-
-        if (isShooting && !isBurst)
+        if (!IsPaused())
         {
-            if (fireTimer > 1.0f / bullet.GetFireRate())
+            if (isTimeScale)
+                fireTimer += Time.deltaTime;
+            else
+                fireTimer += Time.unscaledDeltaTime;
+
+            if (isShooting && !isBurst)
             {
-                fireTimer = 0.0f;
-                GameObject b = Instantiate(bullet.gameObject, transform.position, transform.rotation);
+                if (fireTimer > 1.0f / bullet.GetFireRate())
+                {
+                    fireTimer = 0.0f;
+                    GameObject b = Instantiate(bullet.gameObject, transform.position, transform.rotation);
+                    b.GetComponent<Bullet>().SetOwner(GetComponent<StatsController>());
+                }
             }
         }
     }
@@ -46,13 +49,16 @@ public class BulletController : MonoBehaviour
     // Start shooting
     public void StartShooting()
     {
-        if (fireTimer > 1.0f / bullet.GetFireRate())
+        if (!IsPaused())
         {
-            fireTimer = 0.0f;
-            GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        }
+            if (fireTimer > 1.0f / bullet.GetFireRate())
+            {
+                fireTimer = 0.0f;
+                GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            }
 
-        isShooting = true;
+            isShooting = true;
+        }
     }
 
     // Stop shooting
