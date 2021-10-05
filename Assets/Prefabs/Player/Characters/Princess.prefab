@@ -158,7 +158,6 @@ GameObject:
   - component: {fileID: 1027628024979106852}
   - component: {fileID: 1027628024979106853}
   - component: {fileID: -4788320597337895063}
-  - component: {fileID: 2596236997879047811}
   - component: {fileID: 6169354877529406646}
   - component: {fileID: -3489781365833388046}
   m_Layer: 8
@@ -229,21 +228,6 @@ MonoBehaviour:
   abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
     type: 3}
   abilityR: {fileID: 0}
---- !u!114 &2596236997879047811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cd6614d24d74e4bb84b6290bf8efd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  pawn: {fileID: -4788320597337895063}
 --- !u!114 &6169354877529406646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 0
+  clientAuthority: 1
   sendInterval: 0.05
   syncPosition: 1
   syncRotation: 1

@@ -7,6 +7,7 @@ using Mirror;
 public class Pawn : NetworkBehaviour
 {
     private HUDController hud;
+    [SyncVar] public int playerNum = -1;
 
     // Character Data
     [Header ("Character Data")]
@@ -62,6 +63,21 @@ public class Pawn : NetworkBehaviour
 
         // Combat
         bullet = bulletPrefab.GetComponent<Bullet>();
+        
+        // StartCoroutine(WaitForNumber());
+    }
+
+    // Coroutine to assign pawn
+    IEnumerator WaitForNumber()
+    {
+        while (playerNum < 0) yield return null;
+
+            Debug.Log(gameObject.name);
+
+        while (ClientScene.localPlayer == null) yield return null;
+
+        GameObject localPlayer = ClientScene.localPlayer.gameObject;
+        if (localPlayer && localPlayer.GetComponent<PlayerController>().playerNum == playerNum) localPlayer.GetComponent<PlayerController>().PossesPawn(this);
     }
 
     // Start is called before the first frame update

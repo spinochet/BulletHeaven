@@ -10,30 +10,29 @@ public class EnemyController : PawnController
     // Start is called before the first frame update
     void Start()
     {
-        // movementController = GetComponent<MovementController>();
-        // statsController = GetComponent<StatsController>();
-        // bulletController = GetComponent<BulletController>();
+        if (!pawn)
+            pawn = GetComponent<Pawn>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // movementController.Move(Vector2.down * Time.timeScale);
+        pawn.Move(Vector2.down * Time.timeScale);
 
-        // timer += Time.deltaTime;
-        // if (timer > 0.5f)
-        // {
-        //     timer = 0.0f;
-        //     float shoot = Random.Range(0.0f, 1.0f);
-        //     if (shoot < 0.4f)
-        //         bulletController.StartShooting();
-        //     else
-        //         bulletController.StopShooting();
-        // }
+        timer += Time.deltaTime;
+        if (timer > 0.5f)
+        {
+            timer = 0.0f;
+            float shoot = Random.Range(0.0f, 1.0f);
+            if (shoot < 0.4f)
+                pawn.StartShooting();
+            else
+                pawn.StopShooting();
+        }
 
-        // if (Time.deltaTime == 0.0f)
-        // {
-        //     bulletController.StopShooting();
-        // }
+        if (Time.deltaTime == 0.0f)
+        {
+            pawn.StopShooting();
+        }
     }
 }
