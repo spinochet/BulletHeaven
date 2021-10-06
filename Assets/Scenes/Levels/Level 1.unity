@@ -171,6 +171,9 @@ MonoBehaviour:
   _spawnPoint: {x: -4, y: 0, z: 13}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &33114948
 GameObject:
@@ -222,6 +225,9 @@ MonoBehaviour:
   _spawnPoint: {x: 1, y: 0, z: 16}
   numShifts: 4
   dist: 2
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 2
 --- !u!1001 &56737859
 PrefabInstance:
@@ -368,6 +374,9 @@ MonoBehaviour:
   _spawnPoint: {x: 2, y: 0, z: 13}
   numShifts: 1
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &138725900
 GameObject:
@@ -419,6 +428,9 @@ MonoBehaviour:
   _spawnPoint: {x: 0, y: 0, z: 10}
   numShifts: 1
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &261544314
 GameObject:
@@ -470,6 +482,9 @@ MonoBehaviour:
   _spawnPoint: {x: -5.5, y: 0, z: 16}
   numShifts: 5
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &387135010
 GameObject:
@@ -521,6 +536,9 @@ MonoBehaviour:
   _spawnPoint: {x: -4, y: 0, z: 13}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &430026747
 GameObject:
@@ -547,7 +565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430026747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 350}
+  m_LocalPosition: {x: 0, y: 0, z: 369.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -565,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c696c7f882a6b8048ba7e3b7a058c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: PlaceHolder 2
 --- !u!1 &446763794
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +634,9 @@ MonoBehaviour:
   _spawnPoint: {x: -2, y: 0, z: 16}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &450969926
 GameObject:
@@ -666,6 +688,9 @@ MonoBehaviour:
   _spawnPoint: {x: -1, y: 0, z: 16}
   numShifts: 4
   dist: -2
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 2
 --- !u!1 &532015225
 GameObject:
@@ -1154,6 +1179,9 @@ MonoBehaviour:
   _spawnPoint: {x: -1, y: 0, z: 16}
   numShifts: 4
   dist: -2
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 2
 --- !u!1 &978373623
 GameObject:
@@ -1205,6 +1233,9 @@ MonoBehaviour:
   _spawnPoint: {x: 5, y: 0, z: 16}
   numShifts: 1
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &1029031089
 GameObject:
@@ -1256,6 +1287,9 @@ MonoBehaviour:
   _spawnPoint: {x: -5.5, y: 0, z: 10}
   numShifts: 5
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &1033663429
 GameObject:
@@ -1307,6 +1341,9 @@ MonoBehaviour:
   _spawnPoint: {x: -6, y: 0, z: 16}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &1060349040
 GameObject:
@@ -1358,6 +1395,9 @@ MonoBehaviour:
   _spawnPoint: {x: -5.5, y: 0, z: 16}
   numShifts: 5
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &1074643453
 GameObject:
@@ -1409,6 +1449,9 @@ MonoBehaviour:
   _spawnPoint: {x: -4, y: 0, z: 9}
   numShifts: 4
   dist: 2
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &1154795138
 GameObject:
@@ -1460,6 +1503,9 @@ MonoBehaviour:
   _spawnPoint: {x: 4, y: 0, z: 8}
   numShifts: 4
   dist: 2
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &1194587290
 GameObject:
@@ -1511,6 +1557,9 @@ MonoBehaviour:
   _spawnPoint: {x: 3, y: 0, z: 16}
   numShifts: 1
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &1286759221
 GameObject:
@@ -1643,6 +1692,9 @@ MonoBehaviour:
   _spawnPoint: {x: -2, y: 0, z: 13}
   numShifts: 1
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &1905646802
 GameObject:
@@ -1694,6 +1746,9 @@ MonoBehaviour:
   _spawnPoint: {x: -2, y: 0, z: 16}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &1920383330
 GameObject:
@@ -1745,6 +1800,9 @@ MonoBehaviour:
   _spawnPoint: {x: 4, y: 0, z: 10}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &1965803426
 GameObject:
@@ -1962,6 +2020,9 @@ MonoBehaviour:
   _spawnPoint: {x: -4, y: 0, z: 10}
   numShifts: 4
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 0
 --- !u!1 &2017741714
 GameObject:
@@ -2013,6 +2074,9 @@ MonoBehaviour:
   _spawnPoint: {x: 1.5, y: 0, z: 16}
   numShifts: 1
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1 &2109322275
 GameObject:
@@ -2064,6 +2128,9 @@ MonoBehaviour:
   _spawnPoint: {x: -5.5, y: 0, z: 10}
   numShifts: 5
   dist: 3
+  rowDist: 0
+  numRows: 1
+  stagger: 0
   dir: 1
 --- !u!1001 &1046563580771827754
 PrefabInstance:

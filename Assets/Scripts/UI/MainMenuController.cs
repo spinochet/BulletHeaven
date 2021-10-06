@@ -58,7 +58,7 @@ public class MainMenuController : MonoBehaviour
     public void StoryMode()
     {
         // GameObject.Find("Player Manager").GetComponent<PlayerManager>().StoryMode();
-        SceneManager.LoadScene("Controls");
+        SceneManager.LoadScene("PlaceHolder 1");
         // StartCoroutine(LoadStoryLevel());
     }
 

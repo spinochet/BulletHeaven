@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
+
+    public string nextLevel;
+
     // Update is called once per frame
     void Update()
     {
         if (transform.position.z <= 0.0f)
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(nextLevel);
     }
 }
