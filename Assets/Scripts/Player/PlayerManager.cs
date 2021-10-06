@@ -10,7 +10,7 @@ using Mirror;
 
 public class PlayerManager : NetworkManager
 {
-    public enum GameMode {MainMenu, StoryMode};
+    public enum GameMode {Lobby, StoryMode};
 
     public struct PawnMessage : NetworkMessage
     {
@@ -23,7 +23,6 @@ public class PlayerManager : NetworkManager
     private int numPlayers;
     private PlayerController[] players;
 
-    public bool isOffline;
     [SerializeField] private GameMode currentMode;
 
     // Characters
@@ -31,9 +30,11 @@ public class PlayerManager : NetworkManager
     [SerializeField] private List<GameObject> characterPrefabs;
     [SerializeField] private Color[] playerColors;
 
+    // Connection
     private GameObject localPlayer;
     private bool isConnectionReady;
 
+    // Players objects for offline
     private Pawn p1Pawn;
     private Pawn p2Pawn;
     private Pawn p3Pawn;
@@ -41,9 +42,15 @@ public class PlayerManager : NetworkManager
 
     void Awake()
     {
-          if (instance == null)
+        if (Application.isBatchMode)
+        {
+            StartServer();
+            Debug.Log("Server started");
+        }
+
+        if (instance == null)
             instance = this;
-          else
+        else
             DestroyImmediate(this);
     }
 
@@ -52,31 +59,37 @@ public class PlayerManager : NetworkManager
     {
         DontDestroyOnLoad(gameObject);
         players = new PlayerController[4];
-        
-        if (!isOffline)
-            GetComponent<PlayerInputManager>().enabled = false;
+
     }
 
-    // ----------
-    // NETWORKING
-    // ----------
+    // -----------------
+    // SERVER NETWORKING
+    // -----------------
 
+    // Like Start(), but only called on server and host.
+    public override void OnStartServer()
+    {
+        GetComponent<PlayerInputManager>().enabled = false;
+    }
+
+    //Called on the server when a new client connects.
     public override void OnServerConnect(NetworkConnection conn)
     {
-        if (!isOffline)
+        if (mode == NetworkManagerMode.ServerOnly)
         {
+            Debug.Log("Client connected");
             base.OnServerConnect(conn);
             StartCoroutine(WaitForServerConnect(conn));
         }
     }
 
-    public override void OnClientConnect(NetworkConnection conn)
+    // Called on the server when a client disconnects.
+    public override void OnServerDisconnect(NetworkConnection conn)
     {
-        if (!isOffline)
+        if (mode == NetworkManagerMode.ServerOnly)
         {
-            base.OnClientConnect(conn);
-            NetworkClient.RegisterHandler<PawnMessage>(AssignPawn);
-            StartCoroutine(WaitForClientConnect(conn));
+            base.OnServerDisconnect(conn);
+            --numPlayers;
         }
     }
 
@@ -90,6 +103,27 @@ public class PlayerManager : NetworkManager
         }
 
         AddPlayer(identity.gameObject.GetComponent<PlayerInput>());
+    }
+
+    // -----------------
+    // CLIENT NETWORKING
+    // -----------------
+
+    // Like Start(), but only called for objects the client has authority over.
+    public override void OnStartClient()
+    {
+        GetComponent<PlayerInputManager>().enabled = false;
+    }
+
+    // Called on the client when connected to a server. By default it sets client as ready and adds a player.
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        if (mode == NetworkManagerMode.ClientOnly)
+        {
+            base.OnClientConnect(conn);
+            NetworkClient.RegisterHandler<PawnMessage>(AssignPawn);
+            StartCoroutine(WaitForClientConnect(conn));
+        }
     }
 
     IEnumerator WaitForClientConnect(NetworkConnection conn)
@@ -117,18 +151,12 @@ public class PlayerManager : NetworkManager
 
         player.transform.GetComponent<PlayerController>().playerNum = numPlayers;
 
-        if (currentMode == GameMode.MainMenu)
-        {
-            GameObject pressStart = GameObject.Find("PressStart");
-            if (pressStart)
-                pressStart.GetComponent<PressStart>().OnSubmit();
-        }
-        else if (currentMode == GameMode.StoryMode)
+        if (currentMode == GameMode.StoryMode)
         {
             GameObject pawn = Instantiate(characterPrefabs[numPlayers - 1], Vector3.zero, Quaternion.identity);
             pawn.GetComponent<Pawn>().playerNum = numPlayers;
 
-            if (!isOffline)
+            if (mode == NetworkManagerMode.ServerOnly)
             {
                 NetworkServer.Spawn(pawn, player.gameObject);
 
@@ -187,13 +215,18 @@ public class PlayerManager : NetworkManager
         }
     }
 
-    // ---------
-    // MAIN MENU
-    // ---------
+    // ----------------
+    // LOBBY NETWORKING
+    // ----------------
 
-    public void MainMenu()
+    public void Lobby()
     {
-        currentMode = GameMode.MainMenu;
+        currentMode = GameMode.Lobby;
+    }
+
+    public void CreateLobby()
+    {
+        
     }
 
     // ----------

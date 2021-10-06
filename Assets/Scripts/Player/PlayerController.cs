@@ -28,7 +28,7 @@ public class PlayerController : PawnController
     // Assign pawn to controller
     public void PossesPawn(Pawn _pawn)
     {
-        if ((manager && manager.isOffline) || this.isLocalPlayer)
+        if (manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer)
         {
             pawn = _pawn;
             pawn.StopShooting();
@@ -46,7 +46,7 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if (((manager && manager.isOffline) || this.isLocalPlayer) && pawn)
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
             pawn.Move(input.Get<Vector2>());
     }
 
@@ -59,7 +59,7 @@ public class PlayerController : PawnController
     {
         bool isShooting = input.Get<float>() > 0.0f ? true : false;
 
-        if (((manager && manager.isOffline) || this.isLocalPlayer) && pawn)
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
         {
             if (isShooting) pawn.StartShooting();
             else pawn.StopShooting();
@@ -69,7 +69,7 @@ public class PlayerController : PawnController
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {
-        if (((manager && manager.isOffline) || this.isLocalPlayer) && pawn)
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
             else pawn.DeactivateAbility(0);
@@ -79,7 +79,7 @@ public class PlayerController : PawnController
     // AbilityR action callback function
     void OnAbilityR(InputValue input)
     {
-        if (((manager && manager.isOffline) || this.isLocalPlayer) && pawn)
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
             else pawn.DeactivateAbility(1);
@@ -89,14 +89,14 @@ public class PlayerController : PawnController
     // Pause action callback function
     void OnPause()
     {
-        if (((manager && manager.isOffline) || this.isLocalPlayer) && manager)
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
             manager.TogglePause(this);
     }
 
     // Switch action callback
     void OnSwitch()
     {
-        if (((manager && manager.isOffline) || this.isLocalPlayer) && manager)
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
             manager.SwitchCharacters();
     }
 

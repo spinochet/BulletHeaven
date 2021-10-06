@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2856773661876552484
+--- !u!1 &3452626330490769908
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2856773661876552487}
-  - component: {fileID: 2856773661876552486}
-  - component: {fileID: 2856773661876552485}
+  - component: {fileID: 3452626330490769915}
+  - component: {fileID: 3452626330490769914}
+  - component: {fileID: 3452626330490769909}
+  - component: {fileID: 3452626330490769912}
+  - component: {fileID: 3452626330490769913}
   m_Layer: 0
-  m_Name: Player Manager
+  m_Name: PlayerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2856773661876552487
+--- !u!4 &3452626330490769915
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856773661876552484}
+  m_GameObject: {fileID: 3452626330490769908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,37 +34,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2856773661876552486
+--- !u!114 &3452626330490769914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856773661876552484}
+  m_GameObject: {fileID: 3452626330490769908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8676e76a6ad5a94ab4faaddfbbe52af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMode: MainMenu
-  AIPlayer: {fileID: 6643795195893352019, guid: 7024e5080cbe1134b9cddea89d21a779,
+  dontDestroyOnLoad: 1
+  PersistNetworkManagerToOfflineScene: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  serverTickRate: 60
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 3452626330490769912}
+  networkAddress: localhost
+  maxConnections: 100
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 6148656104204094247, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}
-  princessPrefab: {fileID: -4788320597337895063, guid: 2f55efd5276c2274f810c48f6e54822d,
-    type: 3}
-  robotPrefab: {fileID: -7373040332776867667, guid: 746fe167bf58eda43bba9006107f655c,
-    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs:
+  - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
+  - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}
+  isOffline: 0
+  currentMode: 1
+  characterPrefabs:
+  - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
+  - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}
   playerColors:
   - {r: 1, g: 0.49019608, b: 0.49019608, a: 1}
   - {r: 0.49019608, g: 0.49019608, b: 1, a: 1}
   - {r: 1, g: 1, b: 0.49019608, a: 1}
   - {r: 0.49019608, g: 1, b: 0.49019608, a: 1}
---- !u!114 &2856773661876552485
+--- !u!114 &3452626330490769909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856773661876552484}
+  m_GameObject: {fileID: 3452626330490769908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
@@ -75,7 +95,7 @@ MonoBehaviour:
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2856773661876552486}
+      - m_Target: {fileID: 3452626330490769914}
         m_MethodName: AddPlayer
         m_Mode: 0
         m_Arguments:
@@ -89,7 +109,7 @@ MonoBehaviour:
   m_PlayerLeftEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2856773661876552486}
+      - m_Target: {fileID: 3452626330490769914}
         m_MethodName: RemovePlayer
         m_Mode: 0
         m_Arguments:
@@ -103,37 +123,13 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Join
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: d809822e-99c2-4ea2-b146-3871a83c03ed
+      m_Id: 
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 3371f3ee-d530-400e-be29-babfaf25ccec
-        m_Path: <Keyboard>/enter
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      - m_Name: 
-        m_Id: bcb2d08e-aad4-4137-a149-723abde3b5f9
-        m_Path: <Gamepad>/start
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      - m_Name: 
-        m_Id: a1e8f6e9-947c-49ec-9dac-4e1519442d4e
-        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
+      m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 6148656104204094247, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}
@@ -146,3 +142,42 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &3452626330490769912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452626330490769908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 7777
+  NoDelay: 1
+  SendTimeout: 5000
+  ReceiveTimeout: 30000
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  serverSendQueueLimitPerConnection: 10000
+  serverReceiveQueueLimitPerConnection: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000
+  clientSendQueueLimit: 10000
+  clientReceiveQueueLimit: 10000
+--- !u!114 &3452626330490769913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452626330490769908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGUI: 1
+  offsetX: 0
+  offsetY: 0
