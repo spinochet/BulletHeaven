@@ -102,7 +102,9 @@ public class PlayerManager : NetworkManager
             yield return null;
         }
 
-        AddPlayer(identity.gameObject.GetComponent<PlayerInput>());
+        // Spawn lobby 
+
+        // AddPlayer(identity.gameObject.GetComponent<PlayerInput>());
     }
 
     // -----------------
@@ -153,7 +155,7 @@ public class PlayerManager : NetworkManager
 
         if (currentMode == GameMode.StoryMode)
         {
-            GameObject pawn = Instantiate(characterPrefabs[numPlayers - 1], Vector3.zero, Quaternion.identity);
+            GameObject pawn = Instantiate(characterPrefabs[1], Vector3.zero, Quaternion.identity);
             pawn.GetComponent<Pawn>().playerNum = numPlayers;
 
             if (mode == NetworkManagerMode.ServerOnly)

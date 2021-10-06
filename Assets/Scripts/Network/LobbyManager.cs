@@ -9,6 +9,12 @@ using UnityEngine.SceneManagement;
 public class LobbyManager : NetworkBehaviour
 {
     [SerializeField] private PlayerManager manager;
+    private string code;
+
+    [SerializeField] private NetworkIdentity p1;
+    [SerializeField] private NetworkIdentity p2;
+    [SerializeField] private NetworkIdentity p3;
+    [SerializeField] private NetworkIdentity p4;
 
     void Awake()
     {
