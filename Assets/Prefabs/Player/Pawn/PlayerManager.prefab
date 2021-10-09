@@ -66,8 +66,7 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
   - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}
-  isOffline: 0
-  currentMode: 1
+  currentMode: 0
   characterPrefabs:
   - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
   - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}

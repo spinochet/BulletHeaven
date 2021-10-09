@@ -102,6 +102,11 @@ public class PlayerManager : NetworkManager
             yield return null;
         }
 
+        if (currentMode == GameMode.Lobby)
+        {
+            GameObject.Find("LobbyController").GetComponent<LobbyManager>().JoinLobby(identity);
+        }
+
         // Spawn lobby 
 
         // AddPlayer(identity.gameObject.GetComponent<PlayerInput>());
