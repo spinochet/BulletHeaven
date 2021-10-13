@@ -169,11 +169,11 @@ MonoBehaviour:
   _spawnPoints: []
   _spawnPoint: {x: -5, y: 0, z: 6}
   numShifts: 2
-  dist: 10
-  rowDist: 4
+  dist: 14
+  rowDist: 3
   numRows: 5
-  stagger: 0
-  dir: 1
+  stagger: 1
+  dir: 2
 --- !u!1 &329072219
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,8 +312,8 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
-  _spawnPoint: {x: -5, y: 0, z: 6}
-  numShifts: 4
+  _spawnPoint: {x: -6, y: 0, z: 6}
+  numShifts: 5
   dist: 4
   rowDist: 4
   numRows: 1
