@@ -155,11 +155,11 @@ public class PlayerNetworkManager : NetworkManager
     // ARCADE MODE
     // -----------
 
-    public void LoadArcadeLevel(int levelNum)
+    public void LoadArcadeLevel(string level)
     {
         if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
         {
-            ServerChangeScene("Level " + levelNum.ToString());
+            ServerChangeScene(level);
             readyClients = 0;
         }
     }

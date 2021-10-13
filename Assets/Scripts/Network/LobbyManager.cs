@@ -79,8 +79,8 @@ public class LobbyManager : NetworkBehaviour
     }
 
     [Command(requiresAuthority = false)]
-    public void StartGame()
+    public void StartGame(string level)
     {
-        manager.LoadArcadeLevel(1);
+        manager.LoadArcadeLevel(level);
     }
 }

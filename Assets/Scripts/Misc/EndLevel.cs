@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndLevel : MonoBehaviour
+using Mirror;
+
+public class EndLevel : NetworkBehaviour
 {
 
     public string nextLevel;
@@ -13,6 +15,8 @@ public class EndLevel : MonoBehaviour
     void Update()
     {
         if (transform.position.z <= 0.0f)
-            SceneManager.LoadScene(nextLevel);
+        {
+            GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>().LoadArcadeLevel(nextLevel);
+        }
     }
 }

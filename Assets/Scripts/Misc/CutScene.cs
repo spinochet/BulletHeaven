@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CutScene : MonoBehaviour
+using Mirror;
+
+public class CutScene : NetworkBehaviour
 {
 
     private float timer = 0.0f;
@@ -20,7 +23,7 @@ public class CutScene : MonoBehaviour
     {
         timer += Time.deltaTime;
         if (timer >= 5f) {
-            SceneManager.LoadScene(scene);
+            GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>().LoadArcadeLevel(scene);
         }
     }
 }
