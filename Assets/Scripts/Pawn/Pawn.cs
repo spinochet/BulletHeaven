@@ -123,7 +123,7 @@ public class Pawn : NetworkBehaviour
             if (fireTimer > 1.0f / bullet.GetFireRate())
             {
                 fireTimer = 0.0f;
-                Instantiate(bullet.gameObject, transform.position, transform.rotation);
+                Shoot(transform.position, transform.rotation);
             }
         }
 
@@ -185,10 +185,17 @@ public class Pawn : NetworkBehaviour
         if (fireTimer > 1.0f / bullet.GetFireRate())
         {
             fireTimer = 0.0f;
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Shoot(transform.position, transform.rotation);
         }
 
         isShooting = true;
+    }
+
+    [Command(requiresAuthority = false)]
+    public void Shoot(Vector3 position, Quaternion rotation)
+    {
+        GameObject b = Instantiate(bullet.gameObject, position, rotation);
+        NetworkServer.Spawn(b);
     }
 
     // Stop shooting

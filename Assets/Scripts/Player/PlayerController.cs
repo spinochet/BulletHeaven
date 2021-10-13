@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class PlayerController : PawnController
 {
-    public PlayerManager manager;
+    public PlayerNetworkManager manager;
 
     // Character and player data
     private Color playerColor;
@@ -17,26 +17,48 @@ public class PlayerController : PawnController
     void Awake()
     {
         DontDestroyOnLoad(this);
-        if (!manager) manager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+        if (!manager) manager = GameObject.Find("PlayerManager").GetComponent<PlayerNetworkManager>();
     }
 
     void Start()
     {
-        if (!manager) manager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+        if (!manager) manager = GameObject.Find("PlayerManager").GetComponent<PlayerNetworkManager>();
     }
 
     // Assign pawn to controller
     public void PossesPawn(Pawn _pawn)
     {
-        if (manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer)
+        pawn = _pawn;
+        pawn.StopShooting();
+
+        // Switch input map
+        PlayerInput input = GetComponent<PlayerInput>();
+        if (input) input.SwitchCurrentActionMap("Gameplay");
+    }
+
+    // Assign pawn to controller over the network
+    [TargetRpc]
+    public void TargetPossesPawn(NetworkIdentity pawnIdentity)
+    {
+        Debug.Log("In target posses");
+        if (this.isLocalPlayer)
         {
-            pawn = _pawn;
+            pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
             pawn.StopShooting();
 
             // Switch input map
             PlayerInput input = GetComponent<PlayerInput>();
             if (input) input.SwitchCurrentActionMap("Gameplay");
+
+            Debug.Log("MADE IT HERE!!");
         }
+    }
+
+    // DEBUG
+    [TargetRpc]
+    public void TargetPrint(int playerNum)
+    {
+        Debug.Log("PLAYER " + playerNum.ToString());
     }
 
     // ---------------
@@ -89,15 +111,15 @@ public class PlayerController : PawnController
     // Pause action callback function
     void OnPause()
     {
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
-            manager.TogglePause(this);
+        // if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
+        //     manager.TogglePause(this);
     }
 
     // Switch action callback
     void OnSwitch()
     {
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
-            manager.SwitchCharacters();
+        // if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
+        //     manager.SwitchCharacters();
     }
 
     // -----

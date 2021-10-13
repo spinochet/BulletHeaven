@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class LobbyManager : NetworkBehaviour
 {
-    [SerializeField] private PlayerManager manager;
+    [SerializeField] private PlayerNetworkManager manager;
 
     [Header ("Player Sprites")]
     [SerializeField] private SpriteRenderer defaultBackgound;
@@ -20,15 +20,15 @@ public class LobbyManager : NetworkBehaviour
 
     private string code = "6969";
 
-    [SyncVar] public NetworkIdentity p1;
-    [SyncVar] public NetworkIdentity p2;
-    [SyncVar] public NetworkIdentity p3;
-    [SyncVar] public NetworkIdentity p4;
+    [SyncVar] private NetworkIdentity p1;
+    [SyncVar] private NetworkIdentity p2;
+    [SyncVar] private NetworkIdentity p3;
+    [SyncVar] private NetworkIdentity p4;
 
     void Awake()
     {
         if (!manager)
-            manager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+            manager = GameObject.Find("PlayerManager").GetComponent<PlayerNetworkManager>();
     }
 
     void Update()
@@ -66,5 +66,21 @@ public class LobbyManager : NetworkBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene("Level 1");
+    }
+
+    public NetworkIdentity[] GetPlayers()
+    {
+        NetworkIdentity[] players = new NetworkIdentity[4];
+        players[0] = p1;
+        players[1] = p2;
+        players[2] = p3;
+        players[3] = p4;
+        return players;
+    }
+
+    [Command(requiresAuthority = false)]
+    public void StartGame()
+    {
+        manager.LoadArcadeLevel(1);
     }
 }

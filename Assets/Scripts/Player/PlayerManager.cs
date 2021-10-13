@@ -10,7 +10,7 @@ using Mirror;
 
 public class PlayerManager : NetworkManager
 {
-    public enum GameMode {Lobby, StoryMode};
+    public enum GameMode {Lobby, StoryMode, ArcadeMode};
 
     public struct PawnMessage : NetworkMessage
     {
@@ -47,6 +47,10 @@ public class PlayerManager : NetworkManager
             StartServer();
             Debug.Log("Server started");
         }
+        // else
+        // {
+        //     StartClient();
+        // }
 
         if (instance == null)
             instance = this;
@@ -80,6 +84,8 @@ public class PlayerManager : NetworkManager
             Debug.Log("Client connected");
             base.OnServerConnect(conn);
             StartCoroutine(WaitForServerConnect(conn));
+
+            ++numPlayers;
         }
     }
 
@@ -105,6 +111,7 @@ public class PlayerManager : NetworkManager
         if (currentMode == GameMode.Lobby)
         {
             GameObject.Find("LobbyController").GetComponent<LobbyManager>().JoinLobby(identity);
+            players[numPlayers] = identity.gameObject.GetComponent<PlayerController>();
         }
 
         // Spawn lobby 
@@ -152,9 +159,8 @@ public class PlayerManager : NetworkManager
     // Add player to manager
     public void AddPlayer(PlayerInput player)
     {
-        players[player.playerIndex] = player.transform.GetComponent<PlayerController>();
-        players[player.playerIndex].manager = this;
-        ++numPlayers;
+        players[numPlayers] = player.transform.GetComponent<PlayerController>();
+        // players[numPlayers].manager = this;
 
         player.transform.GetComponent<PlayerController>().playerNum = numPlayers;
 
@@ -175,7 +181,7 @@ public class PlayerManager : NetworkManager
                 NetworkServer.SendToAll(msg);
             }
 
-            players[player.playerIndex].PossesPawn(pawn.GetComponent<Pawn>());
+            players[numPlayers].PossesPawn(pawn.GetComponent<Pawn>());
         }
     }
     
@@ -220,20 +226,6 @@ public class PlayerManager : NetworkManager
         {
             script.enabled = !isPaused;
         }
-    }
-
-    // ----------------
-    // LOBBY NETWORKING
-    // ----------------
-
-    public void Lobby()
-    {
-        currentMode = GameMode.Lobby;
-    }
-
-    public void CreateLobby()
-    {
-        
     }
 
     // ----------
@@ -291,19 +283,54 @@ public class PlayerManager : NetworkManager
         }
     }
 
-    // ----------------
-    // CHARACTER SELECT
-    // ----------------
+    // -----------
+    // ARCADE MODE
+    // -----------
 
-    // Give players character select
-    public void CharacterSelect()
+    public void ArcadeMode()
     {
-        // currentMode = "CharacterSelect";
+        currentMode = GameMode.ArcadeMode;
+        // StartCoroutine(LoadArcadeLevel());
 
-        // foreach (PlayerInput player in players)
-        // {
-            // PlayerCharacterSelect characterSelect = GameObject.Find("P" + (player.playerIndex + 1).ToString() + " Selected Character").GetComponent<PlayerCharacterSelect>();
-            // player.transform.GetComponentInChildren<CharacterSelectPlayerController>().Setup(characterSelect, playerColors[player.playerIndex], GameObject.Find("CharacterButton"));
-        // }
+        ServerChangeScene("Level 1");
+        // NetworkIdentity[] players = GameObject.Find("LobbyController").GetComponent<LobbyManager>().GetPlayers();
+
+        // Spawn players
+        for (int i = 0; i < 4; ++i)
+        {
+            if (players[i])
+            {
+                AddPlayer(players[i].gameObject.GetComponent<PlayerInput>());
+            }
+        }
+    }
+
+    // Load first story level
+    IEnumerator LoadArcadeLevel()
+    {
+        // Load level
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Level 1", LoadSceneMode.Single);
+
+        // Wait for HUD to be awake
+        while (GameObject.Find("HUD") == null)
+            yield return null;
+
+        // NetworkIdentity[] players = GameObject.Find("LobbyController").GetComponent<LobbyManager>().GetPlayers();
+
+        // Spawn princess
+        if (numPlayers >= 1)
+        {
+            Vector3 spawnPoint = new Vector3(-3.5f, 0.0f, -3.5f);
+            GameObject hud = GameObject.Find("P2 Stats");
+        }
+
+        for (int i = 0; i < 4; ++i)
+        {
+            if (players[i])
+            {
+                GameObject pawn = Instantiate(characterPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, -3.5f), Quaternion.identity);
+                NetworkServer.Spawn(pawn, players[i].gameObject);
+            }
+        }
     }
 }
