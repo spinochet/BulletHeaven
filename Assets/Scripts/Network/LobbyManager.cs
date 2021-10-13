@@ -28,7 +28,7 @@ public class LobbyManager : NetworkBehaviour
     void Awake()
     {
         if (!manager)
-            manager = GameObject.Find("PlayerManager").GetComponent<PlayerNetworkManager>();
+            manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
     }
 
     void Update()

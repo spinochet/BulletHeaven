@@ -17,13 +17,13 @@ public class PlayerController : PawnController
     void Awake()
     {
         DontDestroyOnLoad(this);
-        if (!manager) manager = GameObject.Find("PlayerManager").GetComponent<PlayerNetworkManager>();
+    //     if (!manager) manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
     }
 
-    void Start()
-    {
-        if (!manager) manager = GameObject.Find("PlayerManager").GetComponent<PlayerNetworkManager>();
-    }
+    // void Start()
+    // {
+    //     if (!manager) manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
+    // }
 
     // Assign pawn to controller
     public void PossesPawn(Pawn _pawn)

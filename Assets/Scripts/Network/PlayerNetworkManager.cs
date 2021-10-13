@@ -28,7 +28,7 @@ public class PlayerNetworkManager : NetworkManager
 
     void Update()
     {
-        Debug.Log(networkAddress);
+        // Debug.Log(GetLocalIPAddress());
     }
 
     // -----------------
@@ -49,7 +49,6 @@ public class PlayerNetworkManager : NetworkManager
     {
         if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
         {
-            Debug.Log("Client connected");
             base.OnServerConnect(conn);
             StartCoroutine(StoreIdentity(conn));
         }
@@ -61,12 +60,6 @@ public class PlayerNetworkManager : NetworkManager
         if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
         {
             base.OnServerDisconnect(conn);
-            Debug.Log(numPlayers.ToString());
-
-            if (numPlayers == 0)
-            {
-                ServerChangeScene("Lobby 1");
-            }
         }
     }
 
@@ -116,7 +109,11 @@ public class PlayerNetworkManager : NetworkManager
             }
         }
 
-        GameObject.Find("LobbyController").GetComponent<LobbyManager>().JoinLobby(identity);
+        if (networkSceneName.Contains("Lobby"))
+        {
+            GameObject lobby = GameObject.Find("LobbyController");
+            if (lobby) lobby.GetComponent<LobbyManager>().JoinLobby(identity);
+        }
     }
 
     // -----------------
@@ -126,17 +123,31 @@ public class PlayerNetworkManager : NetworkManager
     // Called on the client when connected to a server. By default it sets client as ready and adds a player.
     public override void OnClientConnect(NetworkConnection conn)
     {
-        if (mode == NetworkManagerMode.ClientOnly)
+        if (mode == NetworkManagerMode.ClientOnly || mode == NetworkManagerMode.Host)
         {
             base.OnClientConnect(conn);
         }
     }
 
+    // Called on clients when a scene has completed loaded, when the scene load was initiated by the server.
     public override void OnClientSceneChanged(NetworkConnection conn)
     {
-        if (mode == NetworkManagerMode.ClientOnly)
+        if (mode == NetworkManagerMode.ClientOnly || mode == NetworkManagerMode.Host)
         {
             base.OnClientSceneChanged(conn);
+        }
+    }
+
+    // -----
+    // LOBBY
+    // -----
+
+    public void LoadLobby()
+    {
+        if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
+        {
+            Debug.Log("Loading Lobby");
+            ServerChangeScene("Lobby 1");
         }
     }
 

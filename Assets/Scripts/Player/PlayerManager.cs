@@ -162,12 +162,12 @@ public class PlayerManager : NetworkManager
         players[numPlayers] = player.transform.GetComponent<PlayerController>();
         // players[numPlayers].manager = this;
 
-        player.transform.GetComponent<PlayerController>().playerNum = numPlayers;
+        // player.transform.GetComponent<PlayerController>().playerNum = numPlayers;
 
         if (currentMode == GameMode.StoryMode)
         {
             GameObject pawn = Instantiate(characterPrefabs[1], Vector3.zero, Quaternion.identity);
-            pawn.GetComponent<Pawn>().playerNum = numPlayers;
+            // pawn.GetComponent<Pawn>().playerNum = numPlayers;
 
             if (mode == NetworkManagerMode.ServerOnly)
             {
