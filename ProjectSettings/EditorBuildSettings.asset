@@ -7,11 +7,35 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Menus/MainMenu.unity
-    guid: 855921c30ae73004c8a0a8536b801be4
+    guid: c9dd9b930caef8c41857308c4368de2b
+  - enabled: 1
+    path: Assets/Scenes/Menus/Lobby.unity
+    guid: 77ef3485883417247b4720d3b73be1d6
   - enabled: 1
     path: Assets/Scenes/Levels/Level 1.unity
-    guid: 6ac39c326adf1ff478a5612d01a71354
+    guid: 9603c8231efa83a4cba111b8e970ad8f
   - enabled: 1
-    path: Assets/Scenes/Levels/Controls.unity
-    guid: 60f6a6b9bebbfc34cbe38751ed522f1a
+    path: Assets/Scenes/Levels/Level 2.unity
+    guid: 98cd3944b69f15c4495b261ae9c74197
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 3.unity
+    guid: 7461935fac603d1428279512845be8ad
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 4.unity
+    guid: 64490c5a8c66d124e97f4d3bd55e6bc4
+  - enabled: 1
+    path: Assets/Scenes/Levels/PlaceHolder 1.unity
+    guid: a5ad04bf5de7c42c9ba8299cebc94b85
+  - enabled: 1
+    path: Assets/Scenes/Levels/PlaceHolder 2.unity
+    guid: 54d4ea64a5f81c54cbb6da5980905869
+  - enabled: 1
+    path: Assets/Scenes/Levels/PlaceHolder 3.unity
+    guid: 03c9f8e88cb7f4948b20a72c3702fdd3
+  - enabled: 1
+    path: Assets/Scenes/Levels/PlaceHolder 4.unity
+    guid: 581494964c8fc2340983e41bbf852c07
+  - enabled: 1
+    path: Assets/Scenes/Levels/PlaceHolder 5.unity
+    guid: 640e240be50685a4f9a0d53d1185afe2
   m_configObjects: {}

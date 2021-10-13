@@ -6,46 +6,150 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerManager : MonoBehaviour
+using Mirror;
+
+public class PlayerManager : NetworkManager
 {
+    public enum GameMode {Lobby, StoryMode, ArcadeMode};
+
+    public struct PawnMessage : NetworkMessage
+    {
+        public NetworkIdentity player;
+        public NetworkIdentity pawn;
+    }
+
     // Manager
     public static PlayerManager instance;
     private int numPlayers;
-    private PlayerInput[] players;
-    [SerializeField] private string currentMode;
-    [SerializeField] private GameObject AIPlayer;
+    private PlayerController[] players;
 
-    // Story mode stuff
-    [Header ("Story mode stuff")]
-    [SerializeField] private GameObject princessPrefab;
-    [SerializeField] private GameObject robotPrefab;
+    [SerializeField] private GameMode currentMode;
 
-    // Character select stuff
+    // Characters
+    [Space (10)]
+    [SerializeField] private List<GameObject> characterPrefabs;
     [SerializeField] private Color[] playerColors;
 
-    private GameObject p1AI;
-    private GameObject p2AI;
-    private GameObject p3AI;
-    private GameObject p4AI;
+    // Connection
+    private GameObject localPlayer;
+    private bool isConnectionReady;
 
-    private GameObject p1Pawn;
-    private GameObject p2Pawn;
-    private GameObject p3Pawn;
-    private GameObject p4Pawn;
+    // Players objects for offline
+    private Pawn p1Pawn;
+    private Pawn p2Pawn;
+    private Pawn p3Pawn;
+    private Pawn p4Pawn;
 
     void Awake()
     {
-          if (instance == null)
-                instance = this;
-          else
-                DestroyImmediate(this);
+        if (Application.isBatchMode)
+        {
+            StartServer();
+            Debug.Log("Server started");
+        }
+        // else
+        // {
+        //     StartClient();
+        // }
+
+        if (instance == null)
+            instance = this;
+        else
+            DestroyImmediate(this);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        players = new PlayerInput[4];
+        players = new PlayerController[4];
+
+    }
+
+    // -----------------
+    // SERVER NETWORKING
+    // -----------------
+
+    // Like Start(), but only called on server and host.
+    public override void OnStartServer()
+    {
+        GetComponent<PlayerInputManager>().enabled = false;
+    }
+
+    //Called on the server when a new client connects.
+    public override void OnServerConnect(NetworkConnection conn)
+    {
+        if (mode == NetworkManagerMode.ServerOnly)
+        {
+            Debug.Log("Client connected");
+            base.OnServerConnect(conn);
+            StartCoroutine(WaitForServerConnect(conn));
+
+            ++numPlayers;
+        }
+    }
+
+    // Called on the server when a client disconnects.
+    public override void OnServerDisconnect(NetworkConnection conn)
+    {
+        if (mode == NetworkManagerMode.ServerOnly)
+        {
+            base.OnServerDisconnect(conn);
+            --numPlayers;
+        }
+    }
+
+    IEnumerator WaitForServerConnect(NetworkConnection conn)
+    {
+        NetworkIdentity  identity = conn.identity;
+        while (!identity)
+        {
+            identity = conn.identity;
+            yield return null;
+        }
+
+        if (currentMode == GameMode.Lobby)
+        {
+            GameObject.Find("LobbyController").GetComponent<LobbyManager>().JoinLobby(identity);
+            players[numPlayers] = identity.gameObject.GetComponent<PlayerController>();
+        }
+
+        // Spawn lobby 
+
+        // AddPlayer(identity.gameObject.GetComponent<PlayerInput>());
+    }
+
+    // -----------------
+    // CLIENT NETWORKING
+    // -----------------
+
+    // Like Start(), but only called for objects the client has authority over.
+    public override void OnStartClient()
+    {
+        GetComponent<PlayerInputManager>().enabled = false;
+    }
+
+    // Called on the client when connected to a server. By default it sets client as ready and adds a player.
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        if (mode == NetworkManagerMode.ClientOnly)
+        {
+            base.OnClientConnect(conn);
+            NetworkClient.RegisterHandler<PawnMessage>(AssignPawn);
+            StartCoroutine(WaitForClientConnect(conn));
+        }
+    }
+
+    IEnumerator WaitForClientConnect(NetworkConnection conn)
+    {
+        NetworkIdentity  identity = conn.identity;
+        while (!identity)
+        {
+            identity = conn.identity;
+            yield return null;
+        }
+
+        isConnectionReady = true;
     }
 
     // -----------------
@@ -55,37 +159,42 @@ public class PlayerManager : MonoBehaviour
     // Add player to manager
     public void AddPlayer(PlayerInput player)
     {
-        string playerName = "Player " + (player.playerIndex + 1).ToString();
-        player.gameObject.name = playerName;
-        DontDestroyOnLoad(player.gameObject);
+        players[numPlayers] = player.transform.GetComponent<PlayerController>();
+        // players[numPlayers].manager = this;
 
-        players[player.playerIndex] = player;
-        players[player.playerIndex].transform.GetComponent<PlayerController>().manager = this;
-        ++numPlayers;
+        // player.transform.GetComponent<PlayerController>().playerNum = numPlayers;
 
-        if (currentMode == "MainMenu")
+        if (currentMode == GameMode.StoryMode)
         {
-            GameObject pressStart = GameObject.Find("PressStart");
-            if (pressStart)
-                pressStart.GetComponent<PressStart>().OnSubmit();
-        }
-        else if (currentMode == "StoryMode")
-        {
-            if (p2Pawn)
+            GameObject pawn = Instantiate(characterPrefabs[1], Vector3.zero, Quaternion.identity);
+            // pawn.GetComponent<Pawn>().playerNum = numPlayers;
+
+            if (mode == NetworkManagerMode.ServerOnly)
             {
-                Destroy(p2AI);
+                NetworkServer.Spawn(pawn, player.gameObject);
 
-                GameObject hud = GameObject.Find("P4 Stats");
-                player.transform.GetComponent<PlayerController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
+                PawnMessage msg = new PawnMessage()
+                {
+                    player = player.gameObject.GetComponent<NetworkIdentity>(),
+                    pawn = pawn.gameObject.GetComponent<NetworkIdentity>()
+                };
+                NetworkServer.SendToAll(msg);
             }
-        }
-        // if (currentScene == "CharacterSelect")
-        // {
-            // PlayerCharacterSelect characterSelect = GameObject.Find("P" + (player.playerIndex + 1).ToString() + " Selected Character").GetComponent<PlayerCharacterSelect>();
-            // player.transform.GetComponentInChildren<CharacterSelectPlayerController>().Setup(characterSelect, playerColors[player.playerIndex], GameObject.Find("CharacterButton"));
-        // }
 
-        // CharacterSelect();
+            players[numPlayers].PossesPawn(pawn.GetComponent<Pawn>());
+        }
+    }
+    
+    public void AssignPawn(PawnMessage msg)
+    {
+        StartCoroutine(WaitToAssignPlayer(msg));
+    }
+
+    IEnumerator WaitToAssignPlayer(PawnMessage msg)
+    {
+        while (!isConnectionReady) yield return null;
+
+        msg.player.gameObject.GetComponent<PlayerController>().PossesPawn(msg.pawn.gameObject.GetComponent<Pawn>());
     }
 
     // Remove players
@@ -96,24 +205,27 @@ public class PlayerManager : MonoBehaviour
         --numPlayers;
     }
 
-    public void TogglePause(bool pause)
+    private bool isPaused;
+    public void TogglePause(PlayerController caller)
     {
-        foreach (PlayerInput player in players)
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0.0f : 1.0f;
+
+        PlayerManager playerManager = this;
+
+        // Disable all pawns
+        PawnController[] controllers = Object.FindObjectsOfType<PawnController>();
+        foreach(PawnController script in controllers)
         {
-            if (pause)
-                player.gameObject.GetComponent<PlayerController>().DisableMovement();
-            else
-                player.gameObject.GetComponent<PlayerController>().EnableMovement();
+            script.TogglePause(isPaused);
         }
-    }
 
-    // ---------
-    // MAIN MENU
-    // ---------
-
-    public void MainMenu()
-    {
-        currentMode = "MainMenu";
+        // Disable all bullets
+        Bullet[] bullets = Object.FindObjectsOfType<Bullet>();
+        foreach(Bullet script in bullets)
+        {
+            script.enabled = !isPaused;
+        }
     }
 
     // ----------
@@ -123,7 +235,7 @@ public class PlayerManager : MonoBehaviour
     // Load players into story mode
     public void StoryMode()
     {
-        currentMode = "StoryMode";
+        currentMode = GameMode.StoryMode;
         StartCoroutine(LoadStoryLevel());
     }
 
@@ -144,33 +256,15 @@ public class PlayerManager : MonoBehaviour
         GameObject.Find("P1 Stats").SetActive(false);
         GameObject.Find("P3 Stats").SetActive(false);
 
+
         // Spawn princess
         if (numPlayers >= 1)
         {
             Vector3 spawnPoint = new Vector3(-3.5f, 0.0f, -3.5f);
             GameObject hud = GameObject.Find("P2 Stats");
 
-            p1Pawn = Instantiate(princessPrefab, spawnPoint, Quaternion.identity);
-            players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn, hud.GetComponent<HUDController>());
-        }
-
-        if (numPlayers >= 2)
-        {
-            Vector3 spawnPoint = new Vector3(3.5f, 0.0f, -3.5f);
-            GameObject hud = GameObject.Find("P4 Stats");
-
-            p2Pawn = Instantiate(robotPrefab, spawnPoint, Quaternion.identity);
-            players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
-        }
-        else
-        {
-            p2AI = Instantiate(AIPlayer);
-
-            Vector3 spawnPoint = new Vector3(3.5f, 0.0f, -3.5f);
-            GameObject hud = GameObject.Find("P4 Stats");
-            
-            p2Pawn = Instantiate(robotPrefab, spawnPoint, Quaternion.identity);
-            p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn, hud.GetComponent<HUDController>());
+            // p1Pawn = Instantiate(characterPrefabs[0], spawnPoint, Quaternion.identity);
+            // players[0].transform.GetComponent<PlayerController>().PossesPawn(p1Pawn.GetComponent<Pawn>());
         }
     }
 
@@ -179,29 +273,64 @@ public class PlayerManager : MonoBehaviour
     {
         if (numPlayers == 1)
         {
-            GameObject tempPawn = p1Pawn;
+            Pawn tempPawn = p1Pawn;
             p1Pawn = p2Pawn;
             p2Pawn = tempPawn;
 
-            players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn);
-            if (numPlayers >= 2) players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn);
-            else p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn);
+            // players[0].transform.GetComponent<PlayerController>().AssignPawn(p1Pawn);
+            // if (numPlayers >= 2) players[1].transform.GetComponent<PlayerController>().AssignPawn(p2Pawn);
+            // else p2AI.GetComponent<CompanionController>().AssignPawn(p2Pawn);
         }
     }
 
-    // ----------------
-    // CHARACTER SELECT
-    // ----------------
+    // -----------
+    // ARCADE MODE
+    // -----------
 
-    // Give players character select
-    public void CharacterSelect()
+    public void ArcadeMode()
     {
-        currentMode = "CharacterSelect";
+        currentMode = GameMode.ArcadeMode;
+        // StartCoroutine(LoadArcadeLevel());
 
-        foreach (PlayerInput player in players)
+        ServerChangeScene("Level 1");
+        // NetworkIdentity[] players = GameObject.Find("LobbyController").GetComponent<LobbyManager>().GetPlayers();
+
+        // Spawn players
+        for (int i = 0; i < 4; ++i)
         {
-            // PlayerCharacterSelect characterSelect = GameObject.Find("P" + (player.playerIndex + 1).ToString() + " Selected Character").GetComponent<PlayerCharacterSelect>();
-            // player.transform.GetComponentInChildren<CharacterSelectPlayerController>().Setup(characterSelect, playerColors[player.playerIndex], GameObject.Find("CharacterButton"));
+            if (players[i])
+            {
+                AddPlayer(players[i].gameObject.GetComponent<PlayerInput>());
+            }
+        }
+    }
+
+    // Load first story level
+    IEnumerator LoadArcadeLevel()
+    {
+        // Load level
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Level 1", LoadSceneMode.Single);
+
+        // Wait for HUD to be awake
+        while (GameObject.Find("HUD") == null)
+            yield return null;
+
+        // NetworkIdentity[] players = GameObject.Find("LobbyController").GetComponent<LobbyManager>().GetPlayers();
+
+        // Spawn princess
+        if (numPlayers >= 1)
+        {
+            Vector3 spawnPoint = new Vector3(-3.5f, 0.0f, -3.5f);
+            GameObject hud = GameObject.Find("P2 Stats");
+        }
+
+        for (int i = 0; i < 4; ++i)
+        {
+            if (players[i])
+            {
+                GameObject pawn = Instantiate(characterPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, -3.5f), Quaternion.identity);
+                NetworkServer.Spawn(pawn, players[i].gameObject);
+            }
         }
     }
 }

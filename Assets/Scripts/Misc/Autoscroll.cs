@@ -12,10 +12,16 @@ public class Autoscroll : MonoBehaviour
 
     private float timer;
 
-    void Start()
+    public void StartScroll()
     {
         Time.timeScale = 1.0f;
         Time.fixedDeltaTime = 1.0f / 60.0f;
+    }
+
+    public void PauseScroll()
+    {
+        Time.timeScale = 0f;
+        Time.fixedDeltaTime = 0f;
     }
 
     // Update is called once per frame
