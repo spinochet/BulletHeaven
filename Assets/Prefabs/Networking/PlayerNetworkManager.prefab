@@ -112,3 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f352c17692c2e34791bbbe2bd5af410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSteam: 0

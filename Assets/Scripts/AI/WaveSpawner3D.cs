@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveSpawner3D : MonoBehaviour
+using Mirror;
+
+public class WaveSpawner3D : NetworkBehaviour
 {
     public GameObject _enemyPrefab;
 
@@ -29,71 +31,74 @@ public class WaveSpawner3D : MonoBehaviour
     {
 
         if (transform.position.z <= 0) {
-            transform.position = Vector3.zero;
+            if (isServer)
+            {
+                transform.position = Vector3.zero;
 
-            if (dir == Direction.V_ANGLE) {
+                if (dir == Direction.V_ANGLE) {
 
-                // I would advise making the V angle have an 
-                // odd number of enemies
-                int target_offset = numShifts / 2;
-                int e_offset = -target_offset;
+                    // I would advise making the V angle have an 
+                    // odd number of enemies
+                    int target_offset = numShifts / 2;
+                    int e_offset = -target_offset;
 
-                for (; e_offset <= target_offset; ++e_offset) {
-                    Vector3 _dir = Vector3.zero;
-                    if (e_offset < 0) {
-                        _dir = (Vector3.left * Mathf.Sign(e_offset) - Vector3.forward).normalized * dist;
-                    } else {
-                        _dir = (Vector3.right * Mathf.Sign(e_offset) + Vector3.forward).normalized * dist;
-                    }
-                    
-
-                    Vector3 sp = Vector3.zero;
-
-                    sp = (_spawnPoint + _dir * e_offset);
-                    Instantiate(_enemyPrefab, sp, Quaternion.Euler(0.0f,180f,0.0f));
-                }
-
-            } else {
-                for (int j = 0; j < numRows; ++j) {
-                    int staggerOffset = 0;
-                    int staggerFactor = 0;
-                    bool diag = false;
-                    if (j % 2 != 0 && stagger) {
-                        staggerFactor = 1;
-                        staggerOffset = -1;
-                    }
-
-                    for (int i = 0; i < numShifts + staggerOffset; ++i) {
+                    for (; e_offset <= target_offset; ++e_offset) {
                         Vector3 _dir = Vector3.zero;
-
-                        switch (dir) {
-                            case Direction.FORWARD:
-                                _dir = Vector3.forward * dist;
-                                break;
-                            case Direction.RIGHT:
-                                _dir = Vector3.right * dist;
-                                break;
-                            case Direction.DIAG:
-                                diag = true;
-                                _dir = (Vector3.right * Mathf.Sign(dist) + Vector3.forward).normalized * Mathf.Abs(dist);
-                                break;
+                        if (e_offset < 0) {
+                            _dir = (Vector3.left * Mathf.Sign(e_offset) - Vector3.forward).normalized * dist;
+                        } else {
+                            _dir = (Vector3.right * Mathf.Sign(e_offset) + Vector3.forward).normalized * dist;
                         }
+                        
 
                         Vector3 sp = Vector3.zero;
-                        if (diag) {
-                            sp = (_spawnPoint + _dir * i) + (Vector3.forward * rowDist * j) + (_dir * 0.5f * staggerFactor);
-                        } else {
-                            sp = (_spawnPoint + _dir * i) + (Vector3.forward * rowDist * j) + (Vector3.right * dist * 0.5f * staggerFactor);
+
+                        sp = (_spawnPoint + _dir * e_offset);
+
+                        GameObject e = Instantiate(_enemyPrefab, sp, Quaternion.Euler(0.0f,180f,0.0f));
+                        NetworkServer.Spawn(e);
+                    }
+
+                } else {
+                    for (int j = 0; j < numRows; ++j) {
+                        int staggerOffset = 0;
+                        int staggerFactor = 0;
+                        bool diag = false;
+                        if (j % 2 != 0 && stagger) {
+                            staggerFactor = 1;
+                            staggerOffset = -1;
                         }
 
-                        Instantiate(_enemyPrefab, sp, Quaternion.Euler(0.0f,180f,0.0f));
+                        for (int i = 0; i < numShifts + staggerOffset; ++i) {
+                            Vector3 _dir = Vector3.zero;
+
+                            switch (dir) {
+                                case Direction.FORWARD:
+                                    _dir = Vector3.forward * dist;
+                                    break;
+                                case Direction.RIGHT:
+                                    _dir = Vector3.right * dist;
+                                    break;
+                                case Direction.DIAG:
+                                    diag = true;
+                                    _dir = (Vector3.right * Mathf.Sign(dist) + Vector3.forward).normalized * Mathf.Abs(dist);
+                                    break;
+                            }
+
+                            Vector3 sp = Vector3.zero;
+                            if (diag) {
+                                sp = (_spawnPoint + _dir * i) + (Vector3.forward * rowDist * j) + (_dir * 0.5f * staggerFactor);
+                            } else {
+                                sp = (_spawnPoint + _dir * i) + (Vector3.forward * rowDist * j) + (Vector3.right * dist * 0.5f * staggerFactor);
+                            }
+
+                            GameObject e = Instantiate(_enemyPrefab, sp, Quaternion.Euler(0.0f,180f,0.0f));
+                            NetworkServer.Spawn(e);
+                        }
                     }
                 }
             }
             
-            
-            
-
             Destroy(gameObject);
         }
     }
@@ -173,5 +178,4 @@ public class WaveSpawner3D : MonoBehaviour
         Gizmos.DrawLine(p4, p1);
 
     }
-
 }

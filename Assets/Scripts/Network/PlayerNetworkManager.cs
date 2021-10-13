@@ -147,7 +147,7 @@ public class PlayerNetworkManager : NetworkManager
         if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
         {
             Debug.Log("Loading Lobby");
-            ServerChangeScene("Lobby 1");
+            ServerChangeScene("Lobby");
         }
     }
 

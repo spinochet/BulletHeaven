@@ -7,6 +7,8 @@ using Steamworks;
 
 public class SteamLobby : MonoBehaviour
 {
+    public bool isSteam;
+
     protected Callback<LobbyCreated_t> lobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> gameLobbyJoinRequested;
     protected Callback<LobbyEnter_t> lobbyEntered;
@@ -26,15 +28,18 @@ public class SteamLobby : MonoBehaviour
         lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void HostLobby()
     {
-        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, manager.maxConnections);
+        if (isSteam)
+        {
+            SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, manager.maxConnections);
+        }
+        else
+        {
+            manager.StartHost();
+            manager.LoadLobby();
+        }
+
     }
 
     private void OnLobbyCreated(LobbyCreated_t callback)

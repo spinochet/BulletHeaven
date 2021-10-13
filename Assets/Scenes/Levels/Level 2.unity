@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39014612}
   - component: {fileID: 39014613}
+  - component: {fileID: 39014614}
   m_Layer: 0
   m_Name: Wave 8 Car2
   m_TagString: Untagged
@@ -164,6 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -174,6 +177,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 0
   dir: 2
+--- !u!114 &39014614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39014611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3237452122
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &185644162
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 185644163}
   - component: {fileID: 185644164}
+  - component: {fileID: 185644165}
   m_Layer: 0
   m_Name: 'Wave X Final '
   m_TagString: Untagged
@@ -217,6 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -227,6 +250,23 @@ MonoBehaviour:
   numRows: 3
   stagger: 1
   dir: 2
+--- !u!114 &185644165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185644162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4237097798
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &271052488
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271052489}
   - component: {fileID: 271052490}
+  - component: {fileID: 271052491}
   m_Layer: 0
   m_Name: EndLevel
   m_TagString: Untagged
@@ -270,7 +311,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c696c7f882a6b8048ba7e3b7a058c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   nextLevel: PlaceHolder 3
+--- !u!114 &271052491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271052488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3521695192
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &417460615
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417460616}
   - component: {fileID: 417460617}
+  - component: {fileID: 417460618}
   m_Layer: 0
   m_Name: Wave 4 Car1
   m_TagString: Untagged
@@ -314,6 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -324,6 +387,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   dir: 2
+--- !u!114 &417460618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417460615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 34860002
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &425945684
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425945685}
   - component: {fileID: 425945686}
+  - component: {fileID: 425945687}
   m_Layer: 0
   m_Name: Wave 9 (Tri)
   m_TagString: Untagged
@@ -367,6 +448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -377,6 +460,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   dir: 1
+--- !u!114 &425945687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425945684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2511553507
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &474968532
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474968533}
   - component: {fileID: 474968534}
+  - component: {fileID: 474968535}
   m_Layer: 0
   m_Name: Wave 12 (Diag)
   m_TagString: Untagged
@@ -420,6 +521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -430,6 +533,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   dir: 2
+--- !u!114 &474968535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474968532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 734742869
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1001 &486503879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -704,6 +824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533042260}
   - component: {fileID: 533042261}
+  - component: {fileID: 533042262}
   m_Layer: 0
   m_Name: Wave 5 Car Mini (2)
   m_TagString: Untagged
@@ -737,6 +858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -747,6 +870,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   dir: 1
+--- !u!114 &533042262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533042259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2505227976
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &546119744
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 546119745}
   - component: {fileID: 546119746}
+  - component: {fileID: 546119747}
   m_Layer: 0
   m_Name: Wave 5
   m_TagString: Untagged
@@ -790,6 +931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -800,6 +943,23 @@ MonoBehaviour:
   numRows: 3
   stagger: 1
   dir: 1
+--- !u!114 &546119747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546119744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4033749861
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &579680258
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 579680259}
   - component: {fileID: 579680260}
+  - component: {fileID: 579680261}
   m_Layer: 0
   m_Name: Wave 1
   m_TagString: Untagged
@@ -843,6 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -853,6 +1016,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 0
   dir: 2
+--- !u!114 &579680261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579680258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3649888215
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!20 &588794034 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7025826338078573930, guid: ba07ae0548b7283438514e1e31213ad6,
@@ -938,6 +1118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871475444}
   - component: {fileID: 871475445}
+  - component: {fileID: 871475446}
   m_Layer: 0
   m_Name: 'Wave 10 (Penta) '
   m_TagString: Untagged
@@ -971,6 +1152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -981,6 +1164,23 @@ MonoBehaviour:
   numRows: 3
   stagger: 1
   dir: 1
+--- !u!114 &871475446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871475443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 867916522
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &944387756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1012937549}
   - component: {fileID: 1012937550}
+  - component: {fileID: 1012937551}
   m_Layer: 0
   m_Name: Wave 3 (Tri)
   m_TagString: Untagged
@@ -1116,6 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1126,6 +1329,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   dir: 1
+--- !u!114 &1012937551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 760784986
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1013655797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,6 +1356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013655798}
   - component: {fileID: 1013655799}
+  - component: {fileID: 1013655800}
   m_Layer: 0
   m_Name: Wave 6
   m_TagString: Untagged
@@ -1169,6 +1390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1179,6 +1402,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   dir: 3
+--- !u!114 &1013655800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013655797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3767109012
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1001 &1024180023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1258,6 +1498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035182780}
   - component: {fileID: 1035182781}
+  - component: {fileID: 1035182782}
   m_Layer: 0
   m_Name: Wave 13 (Tri) 3
   m_TagString: Untagged
@@ -1291,6 +1532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1301,6 +1544,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   dir: 1
+--- !u!114 &1035182782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035182779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2457104949
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1052860234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052860235}
   - component: {fileID: 1052860236}
+  - component: {fileID: 1052860237}
   m_Layer: 0
   m_Name: 'Wave 8 Car2 '
   m_TagString: Untagged
@@ -1344,6 +1605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -1354,6 +1617,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   dir: 2
+--- !u!114 &1052860237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052860234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 6496755
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1287003341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287003342}
   - component: {fileID: 1287003343}
+  - component: {fileID: 1287003344}
   m_Layer: 0
   m_Name: Wave 7 Car Mini
   m_TagString: Untagged
@@ -1397,6 +1678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -1407,6 +1690,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   dir: 1
+--- !u!114 &1287003344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287003341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4133924454
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1364712494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364712495}
   - component: {fileID: 1364712496}
+  - component: {fileID: 1364712497}
   m_Layer: 0
   m_Name: Wave 4.2 Car1
   m_TagString: Untagged
@@ -1450,6 +1751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -1460,6 +1763,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   dir: 2
+--- !u!114 &1364712497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364712494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2189313723
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1367535148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1367535149}
   - component: {fileID: 1367535150}
+  - component: {fileID: 1367535151}
   m_Layer: 0
   m_Name: Wave 11 Car Mini (1)
   m_TagString: Untagged
@@ -1503,6 +1824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -1513,6 +1836,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   dir: 1
+--- !u!114 &1367535151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367535148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3956319633
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1528839558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1528839559}
   - component: {fileID: 1528839560}
+  - component: {fileID: 1528839561}
   m_Layer: 0
   m_Name: 'Wave 12 (Diag) '
   m_TagString: Untagged
@@ -1556,6 +1897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1566,6 +1909,23 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   dir: 2
+--- !u!114 &1528839561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528839558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 759709122
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1596561658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596561659}
   - component: {fileID: 1596561660}
+  - component: {fileID: 1596561661}
   m_Layer: 0
   m_Name: Wave 2
   m_TagString: Untagged
@@ -1609,6 +1970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1619,6 +1982,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 0
   dir: 2
+--- !u!114 &1596561661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596561658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2796049410
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1001 &1674899570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1753,6 +2133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1726985863}
   - component: {fileID: 1726985864}
+  - component: {fileID: 1726985865}
   m_Layer: 0
   m_Name: 'Wave 8 Car2 '
   m_TagString: Untagged
@@ -1786,6 +2167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -1796,6 +2179,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   dir: 2
+--- !u!114 &1726985865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726985862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1242439798
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1832560423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +2206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832560424}
   - component: {fileID: 1832560425}
+  - component: {fileID: 1832560426}
   m_Layer: 0
   m_Name: Wave 9 (Tri)
   m_TagString: Untagged
@@ -1839,6 +2240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1849,6 +2252,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   dir: 1
+--- !u!114 &1832560426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832560423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 403965955
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1852314414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +2279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852314415}
   - component: {fileID: 1852314416}
+  - component: {fileID: 1852314417}
   m_Layer: 0
   m_Name: Wave 4.1 Car1
   m_TagString: Untagged
@@ -1892,6 +2313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
   _spawnPoints: []
@@ -1902,6 +2325,23 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   dir: 2
+--- !u!114 &1852314417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852314414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2142334763
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1921236010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +2352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921236011}
   - component: {fileID: 1921236012}
+  - component: {fileID: 1921236013}
   m_Layer: 0
   m_Name: Wave 8 (Duo) (1)
   m_TagString: Untagged
@@ -1945,6 +2386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
   _spawnPoints: []
@@ -1955,3 +2398,20 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   dir: 1
+--- !u!114 &1921236013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921236010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1298283180
+  serverOnly: 1
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
