@@ -226,9 +226,8 @@ GameObject:
   - component: {fileID: 3007241012240742892}
   - component: {fileID: 3007241012240742899}
   - component: {fileID: 3007241012240742893}
-  - component: {fileID: 3007241012240742894}
-  - component: {fileID: 3007241012240742895}
-  - component: {fileID: 3007241012240742888}
+  - component: {fileID: 8019127529922287089}
+  - component: {fileID: -4387995181352385413}
   m_Layer: 10
   m_Name: Archer
   m_TagString: Enemy
@@ -281,8 +280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f9b050caccf5d429077028ef0c55fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
---- !u!114 &3007241012240742894
+  syncMode: 0
+  syncInterval: 0.1
+  pawn: {fileID: 8019127529922287089}
+--- !u!114 &8019127529922287089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,31 +292,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 3007241012240742889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9905494f51aa2a742b4e27677146fab9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  name: Archer
+  portrait: {fileID: 0}
   speed: 2.5
-  dashDist: 0
---- !u!114 &3007241012240742895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007241012240742889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de22539a41db75447a226b929a588481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   maxHP: 50
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 0
   staminaRegenRate: 0
   staminaRegenCooldown: 0
-  destroy: 1
---- !u!114 &3007241012240742888
+  bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
+    type: 3}
+  abilityL: {fileID: 0}
+  abilityR: {fileID: 0}
+--- !u!114 &-4387995181352385413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,12 +319,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3007241012240742889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 637bcb595cddbb34fb1051883cb7011b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
-    type: 3}
-  burstPrefab: {fileID: 0}
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 322e2294b1b446e4db08e71c6b0958b7
+  hasSpawned: 0
 --- !u!1 &3532057981992372333
 GameObject:
   m_ObjectHideFlags: 0
