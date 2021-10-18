@@ -246,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &138725902
 MonoBehaviour:
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2669221447
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -320,7 +320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &430026749
 MonoBehaviour:
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 953040644
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -384,7 +384,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &446763796
 MonoBehaviour:
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2484591829
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -458,7 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &450969928
 MonoBehaviour:
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 3587049328
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -969,7 +969,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &972571459
 MonoBehaviour:
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2251634355
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1043,7 +1043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1029031091
 MonoBehaviour:
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2322700792
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1117,7 +1117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1033663431
 MonoBehaviour:
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 1048651134
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 3190305595
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1291,7 +1291,7 @@ MonoBehaviour:
   rowDist: 0
   numRows: 1
   stagger: 0
-  dir: 2
+  dir: 3
 --- !u!114 &1154795141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 826368164
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1339,7 +1339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1194587292
 MonoBehaviour:
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2165135900
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1494,7 +1494,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1905646804
 MonoBehaviour:
@@ -1534,81 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 4027414013
-  serverOnly: 1
-  visible: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!1 &1920383330
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1920383331}
-  - component: {fileID: 1920383332}
-  - component: {fileID: 1920383333}
-  m_Layer: 0
-  m_Name: Wave 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1920383331
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920383330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 56}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1965803427}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1920383332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920383330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
-    type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 4, y: 0, z: 6}
-  numShifts: 4
-  dist: -4
-  rowDist: 0
-  numRows: 1
-  stagger: 0
-  dir: 2
---- !u!114 &1920383333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920383330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 3907037577
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1644,7 +1570,6 @@ Transform:
   - {fileID: 1154795139}
   - {fileID: 1074643454}
   - {fileID: 1968537634}
-  - {fileID: 1920383331}
   - {fileID: 138725901}
   - {fileID: 1029031090}
   - {fileID: 446763795}
@@ -1819,13 +1744,13 @@ MonoBehaviour:
     type: 3}
   _spawnPoints:
   - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: -4, y: 0, z: 6}
+  _spawnPoint: {x: 0.12, y: 0, z: 11.76}
   numShifts: 4
   dist: 4
   rowDist: 0
   numRows: 1
   stagger: 0
-  dir: 2
+  dir: 4
 --- !u!114 &1968537636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2452068793
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
@@ -1873,7 +1798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2109322277
 MonoBehaviour:
@@ -1913,7 +1838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2432455152
-  serverOnly: 1
+  serverOnly: 0
   visible: 0
   m_AssetId: 
   hasSpawned: 0
