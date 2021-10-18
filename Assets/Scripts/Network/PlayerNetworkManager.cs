@@ -15,6 +15,9 @@ public class PlayerNetworkManager : NetworkManager
     // Manage connections
     private int readyClients;
 
+    // Debug flag
+    public bool debugLevel;
+
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
@@ -24,6 +27,11 @@ public class PlayerNetworkManager : NetworkManager
             instance = this;
         else
             DestroyImmediate(this);
+
+        if (debugLevel)
+        {
+            StartHost();
+        }
     }
 
     void Update()
@@ -109,7 +117,15 @@ public class PlayerNetworkManager : NetworkManager
             }
         }
 
-        if (networkSceneName.Contains("Lobby"))
+        if (debugLevel)
+        {
+            GameObject pawn = Instantiate(spawnPrefabs[0], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            NetworkServer.Spawn(pawn, identity.gameObject);
+            
+            identity.gameObject.GetComponent<PlayerController>().manager = this;
+            identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(pawn.GetComponent<NetworkIdentity>());
+        }
+        else if (networkSceneName.Contains("Lobby"))
         {
             GameObject lobby = GameObject.Find("LobbyController");
             if (lobby) lobby.GetComponent<LobbyManager>().JoinLobby(identity);
