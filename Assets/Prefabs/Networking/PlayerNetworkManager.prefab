@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 2123622467903022845}
   - component: {fileID: 2123622467903022834}
   - component: {fileID: 2123622467903022832}
-  - component: {fileID: 2123622467903022835}
-  - component: {fileID: 2484535942361861046}
   m_Layer: 0
   m_Name: PlayerNetworkManager
   m_TagString: Untagged
@@ -51,9 +49,9 @@ MonoBehaviour:
   runInBackground: 1
   autoStartServerBuild: 1
   serverTickRate: 60
-  offlineScene: Assets/Scenes/Menus/Lobby 1.unity
-  onlineScene: Assets/Scenes/Menus/Lobby 1.unity
-  transport: {fileID: 2123622467903022835}
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 0}
   networkAddress: localhost
   maxConnections: 4
   disconnectInactiveConnections: 0
@@ -67,6 +65,8 @@ MonoBehaviour:
   - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
   - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}
   - {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b, type: 3}
+  debugLevel: 0
+  debugPlayer: 0
 --- !u!114 &2123622467903022832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,34 +82,3 @@ MonoBehaviour:
   showGUI: 1
   offsetX: 0
   offsetY: 0
---- !u!114 &2123622467903022835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123622467903022833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea368fb6f27ec2f40a40e20977992b9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Channels: 0200000001000000
-  Timeout: 25
-  SteamAppID: 480
-  AllowSteamRelay: 1
-  UseNextGenSteamNetworking: 1
-  SteamUserID: 0
---- !u!114 &2484535942361861046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123622467903022833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f352c17692c2e34791bbbe2bd5af410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSteam: 0

@@ -40,7 +40,6 @@ public class PlayerController : PawnController
     [TargetRpc]
     public void TargetPossesPawn(NetworkIdentity pawnIdentity)
     {
-        Debug.Log("In target posses");
         if (this.isLocalPlayer)
         {
             pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
@@ -50,7 +49,7 @@ public class PlayerController : PawnController
             PlayerInput input = GetComponent<PlayerInput>();
             if (input) input.SwitchCurrentActionMap("Gameplay");
 
-            Debug.Log("MADE IT HERE!!");
+            if (!manager) manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
         }
     }
 

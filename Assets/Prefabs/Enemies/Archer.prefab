@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  isEnemy: 1
   name: Archer
   portrait: {fileID: 0}
   speed: 2.5
@@ -538,6 +539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5067361846863054634}
+  - component: {fileID: 1647196489729711515}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -562,6 +564,19 @@ Transform:
   m_Father: {fileID: 3007241012240742892}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 180, z: 0}
+--- !u!114 &1647196489729711515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5555527058871000464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyParent: 0
 --- !u!1 &5939910340987635901
 GameObject:
   m_ObjectHideFlags: 0

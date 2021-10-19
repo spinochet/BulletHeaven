@@ -7,6 +7,7 @@ using Mirror;
 public class Pawn : NetworkBehaviour
 {
     private HUDController hud;
+    public bool isEnemy;
 
     // Character Data
     [Header ("Character Data")]
@@ -101,7 +102,11 @@ public class Pawn : NetworkBehaviour
         }
 
         // Combat
-        fireTimer += Time.unscaledDeltaTime;
+        if (isEnemy)
+            fireTimer += Time.deltaTime;
+        else
+            fireTimer += Time.unscaledDeltaTime;
+
         if (isShooting)
         {
             if (fireTimer > 1.0f / bullet.GetFireRate())

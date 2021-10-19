@@ -9,11 +9,17 @@ public class Bullet : NetworkBehaviour
     [SerializeField] private bool destroyOnCollision = true;
     [SerializeField] private bool isEnemyBullet = false;
 
+    [SerializeField] private string name;
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float damage = 10.0f;
     [SerializeField] private float fireRate = 30.0f;
 
     private Pawn owner;
+
+    void Awake()
+    {
+        SoundManager.Instance.Play(name);
+    }
 
     // Update is called once per frame
     void Update()
@@ -30,12 +36,6 @@ public class Bullet : NetworkBehaviour
     public float GetFireRate()
     {
         return fireRate;
-    }
-
-    // Set owner after firing
-    public void SetOwner(Pawn _owner)
-    {
-        owner = _owner;
     }
 
     // FIX AFTER SPRINT

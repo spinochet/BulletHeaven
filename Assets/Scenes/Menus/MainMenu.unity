@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: spawnPrefabs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -152,14 +152,31 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7,
+      objectReference: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
         type: 3}
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: spawnPrefabs.Array.data[4]
       value: 
+      objectReference: {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7,
+        type: 3}
+    - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[5]
+      value: 
       objectReference: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
         type: 3}
+    - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
+        type: 3}
+    - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: serverTickRate
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022845, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -220,18 +237,23 @@ PrefabInstance:
       propertyPath: isSteam
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3309551217214254195, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: Interval
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde31c3142ff75448b360b03d818673d, type: 3}
---- !u!114 &222068954 stripped
+--- !u!114 &222068953 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2484535942361861046, guid: dde31c3142ff75448b360b03d818673d,
+  m_CorrespondingSourceObject: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
     type: 3}
   m_PrefabInstance: {fileID: 222068952}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f352c17692c2e34791bbbe2bd5af410, type: 3}
+  m_Script: {fileID: 11500000, guid: b47e0880c660f3e40804941f18dd746e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &475102463
@@ -1067,8 +1089,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222068954}
-        m_MethodName: HostLobby
+      - m_Target: {fileID: 222068953}
+        m_MethodName: LoadLobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

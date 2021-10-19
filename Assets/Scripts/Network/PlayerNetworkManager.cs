@@ -28,7 +28,10 @@ public class PlayerNetworkManager : NetworkManager
             instance = this;
         else
             DestroyImmediate(this);
+    }
 
+    void Start()
+    {
         if (debugLevel)
         {
             StartHost();
