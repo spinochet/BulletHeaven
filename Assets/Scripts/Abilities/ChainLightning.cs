@@ -4,40 +4,38 @@ using UnityEngine;
 
 public class ChainLightning : Ability
 {
-    [SerializeField] private float cost = 33.0f;
     [SerializeField] private int maxChain = 3;
+    [SerializeField] private float timing;
     [SerializeField] private float minDist = 20.0f;
 
-    override public bool Activate()
+    override public void Activate()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        GameObject current = GameObject.Find(owner);
-        Debug.Log(current.transform.parent);
+        StartCoroutine(Chain());
 
-        for (int i = 0; i < maxChain; ++i)
-        {
-            GameObject closest = null;
-            float dist = minDist;
+        // GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // GameObject current = gameObject;
 
-            foreach (GameObject enemy in enemies)
-            {
-                Vector3 diff = current.transform.position - enemy.transform.position;
-                if (diff.magnitude < dist && enemy != current)
-                {
-                    closest = enemy;
-                    dist = diff.magnitude;
-                }
-            }
+        // for (int i = 0; i < maxChain; ++i)
+        // {
+        //     GameObject closest = null;
+        //     float dist = minDist;
 
+        //     foreach (GameObject enemy in enemies)
+        //     {
+        //         Vector3 diff = current.transform.position - enemy.transform.position;
+        //         if (diff.magnitude < dist && enemy != current)
+        //         {
+        //             closest = enemy;
+        //             dist = diff.magnitude;
+        //         }
+        //     }
 
-            if (closest == null) break;
-            if (current.tag == "Enemy") Destroy(current);
-            current = closest;
-        }
+        //     if (closest == null) break;
+        //     if (current.tag == "Enemy") Destroy(current);
+        //     current = closest;
+        // }
 
-        if (current.tag == "Enemy") Destroy(current);
-
-        return false;
+        // if (current.tag == "Enemy") Destroy(current);
     }
 
     override public void Deactivate()
@@ -45,8 +43,41 @@ public class ChainLightning : Ability
         
     }
 
-    override public float GetCost()
+    IEnumerator Chain()
     {
-        return cost;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject current = gameObject;
+        float timer = timing;
+
+        for (int i = 0; i <= maxChain; ++i)
+        {
+            while (timer < timing)
+            {
+                timer += Time.deltaTime;
+                yield return null;
+            }
+
+            GameObject closest = null;
+            float dist = minDist;
+
+            foreach (GameObject enemy in enemies)
+            {
+                if (enemy)
+                {
+                    Vector3 diff = current.transform.position - enemy.transform.position;
+                    if (diff.magnitude < dist && enemy != current)
+                    {
+                        closest = enemy;
+                        dist = diff.magnitude;
+                    }
+                }
+            }
+
+            if (closest == null) break;
+            if (current.tag == "Enemy") Destroy(current);
+            current = closest;
+
+            timer = 0.0f;
+        }
     }
 }

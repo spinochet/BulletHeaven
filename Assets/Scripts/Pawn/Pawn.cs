@@ -197,15 +197,21 @@ public class Pawn : NetworkBehaviour
     {
         if (i == 0 && abilityL != null && stamina > abilityL.GetCost())
         {
-            isAbilityL = abilityL.Activate();
-            if (!isAbilityL)
+            abilityL.Activate();
+
+            if (!abilityL.IsOverTime())
                 ConsumeStamina(abilityL.GetCost());
+            else
+                isAbilityL = true;
         }
         else if (i == 1 && abilityR != null && stamina > abilityR.GetCost())
         {
-            isAbilityR = abilityR.Activate();
-            if (!isAbilityR)
+            abilityR.Activate();
+
+            if (!abilityR.IsOverTime())
                 ConsumeStamina(abilityR.GetCost());
+            else
+                isAbilityR = true;
         }
     }
 

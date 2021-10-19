@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract public class Ability : MonoBehaviour
+using Mirror;
+
+abstract public class Ability : NetworkBehaviour
 {
-    protected string owner;
+    [SerializeField] protected float cost = 20.0f;
+    [SerializeField] protected bool overTime;
 
-    public void SetOwner(string _owner)
-    {
-        owner = _owner;
-    }
-
-    abstract public bool Activate();
+    abstract public void Activate();
     abstract public void Deactivate();
-    abstract public float GetCost();
+
+    public bool IsOverTime()
+    {
+        return overTime;
+    }
+    
+    public float GetCost()
+    {
+        return cost;
+    }
 }

@@ -17,6 +17,7 @@ public class PlayerNetworkManager : NetworkManager
 
     // Debug flag
     public bool debugLevel;
+    public int debugPlayer;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -119,7 +120,7 @@ public class PlayerNetworkManager : NetworkManager
 
         if (debugLevel)
         {
-            GameObject pawn = Instantiate(spawnPrefabs[0], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            GameObject pawn = Instantiate(spawnPrefabs[debugPlayer], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(pawn, identity.gameObject);
             
             identity.gameObject.GetComponent<PlayerController>().manager = this;

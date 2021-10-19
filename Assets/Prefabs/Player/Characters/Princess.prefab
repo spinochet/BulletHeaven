@@ -158,6 +158,8 @@ GameObject:
   - component: {fileID: 1027628024979106852}
   - component: {fileID: 1027628024979106853}
   - component: {fileID: -4788320597337895063}
+  - component: {fileID: -2938303050458440424}
+  - component: {fileID: -1585304140282818587}
   - component: {fileID: 6169354877529406646}
   - component: {fileID: -3489781365833388046}
   m_Layer: 8
@@ -225,9 +227,44 @@ MonoBehaviour:
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
-  abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
-    type: 3}
+  abilityL: {fileID: -1585304140282818587}
   abilityR: {fileID: 0}
+--- !u!114 &-2938303050458440424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027628024979106863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce2bdca0ca7252429c53c0f4c9745f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cost: 20
+  overTime: 1
+  timeScale: 0.3
+--- !u!114 &-1585304140282818587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027628024979106863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fb8a82291cf418083a947537bbedd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cost: 20
+  overTime: 0
+  maxChain: 3
+  timing: 0.3
+  minDist: 20
 --- !u!114 &6169354877529406646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,13 +297,13 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   clientAuthority: 1
-  sendInterval: 0.05
+  sendInterval: 0.01
   syncPosition: 1
-  syncRotation: 1
-  syncScale: 1
+  syncRotation: 0
+  syncScale: 0
   interpolatePosition: 1
-  interpolateRotation: 1
-  interpolateScale: 1
+  interpolateRotation: 0
+  interpolateScale: 0
   bufferTimeMultiplier: 3
   bufferSizeLimit: 64
   catchupThreshold: 6
