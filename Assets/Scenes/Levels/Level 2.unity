@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  nextLevel: PlaceHolder 3
+  nextLevel: MainMenu
 --- !u!114 &271052491
 MonoBehaviour:
   m_ObjectHideFlags: 0

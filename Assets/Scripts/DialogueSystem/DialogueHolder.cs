@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace DialogueSystem
 {
     public class DialogueHolder : MonoBehaviour
     {
+        public InputAction skip;
         [SerializeField] private CutScene nextLevel;
 
         private void Awake()
@@ -14,6 +16,9 @@ namespace DialogueSystem
 
         private IEnumerator dialogueSequence()
         {
+            skip.Enable();
+            skip.performed += ctx => Skip();
+
             for (int i = 0; i < transform.childCount; i++)
             {
                 Deactivate();
@@ -31,6 +36,11 @@ namespace DialogueSystem
             {
                 transform.GetChild(i).gameObject.SetActive(false);
             }
+        }
+
+        private void Skip()
+        {
+            nextLevel.NextLevel();
         }
     }
 }

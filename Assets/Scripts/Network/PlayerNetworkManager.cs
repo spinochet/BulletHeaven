@@ -95,10 +95,10 @@ public class PlayerNetworkManager : NetworkManager
                 {
                     if (players[i])
                     {
-                        GameObject princess = Instantiate(spawnPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
+                        princess = Instantiate(spawnPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(princess, players[i].gameObject);
 
-                        GameObject robot = Instantiate(spawnPrefabs[1], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
+                        robot = Instantiate(spawnPrefabs[1], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(robot, players[i].gameObject);
                         robot.SetActive(false);
                         
@@ -215,23 +215,29 @@ public class PlayerNetworkManager : NetworkManager
     {
         if (activeCharacter == 0)
         {
-            activeCharacter = 1;
-            robot.SetActive(true);
+            if (princess != null && robot != null)
+            {
+                activeCharacter = 1;
+                robot.SetActive(true);
 
-            players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(robot.GetComponent<NetworkIdentity>(), princess.transform.position);
+                players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(robot.GetComponent<NetworkIdentity>(), princess.transform.position);
 
-            princess.GetComponent<Pawn>().EnableMovement(false);
-            princess.SetActive(false);
+                princess.GetComponent<Pawn>().EnableMovement(false);
+                princess.SetActive(false);
+            }
         }
         else
         {
-            activeCharacter = 0;
-            princess.SetActive(true);
+            if (princess != null && robot != null)
+            {
+                activeCharacter = 0;
+                princess.SetActive(true);
 
-            players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(princess.GetComponent<NetworkIdentity>(), robot.transform.position);
+                players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(princess.GetComponent<NetworkIdentity>(), robot.transform.position);
 
-            robot.GetComponent<Pawn>().EnableMovement(false);
-            robot.SetActive(false);
+                robot.GetComponent<Pawn>().EnableMovement(false);
+                robot.SetActive(false);
+            }
         }
 
         // GameObject pawn = Instantiate(spawnPrefabs[activeCharacter], _pawn.transform.position, Quaternion.identity);

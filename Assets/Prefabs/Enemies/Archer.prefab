@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 3007241012240742893}
   - component: {fileID: 8019127529922287089}
   - component: {fileID: -4387995181352385413}
+  - component: {fileID: 8140509201408157259}
   m_Layer: 10
   m_Name: Archer
   m_TagString: Enemy
@@ -328,6 +329,19 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 322e2294b1b446e4db08e71c6b0958b7
   hasSpawned: 0
+--- !u!114 &8140509201408157259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007241012240742889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyParent: 0
 --- !u!1 &3532057981992372333
 GameObject:
   m_ObjectHideFlags: 0

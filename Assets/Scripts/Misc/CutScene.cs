@@ -14,6 +14,6 @@ public class CutScene : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void NextLevel()
     {
-        PlayerNetworkManager.instance.LoadArcadeLevel(scene);
+        PlayerNetworkManager.Instance.LoadArcadeLevel(scene);
     }
 }
