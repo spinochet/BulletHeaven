@@ -185,6 +185,19 @@ public class PlayerNetworkManager : NetworkManager
         }
     }
 
+    // ----------
+    // STORY MODE
+    // ----------
+
+    public void LoadStoryLevel(string level)
+    {
+        if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
+        {
+            ServerChangeScene(level);
+            readyClients = 0;
+        }
+    }
+
     // -----------
     // ARCADE MODE
     // -----------

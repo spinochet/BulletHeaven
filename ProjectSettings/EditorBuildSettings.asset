@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/PlaceHolder 5.unity
     guid: 640e240be50685a4f9a0d53d1185afe2
+  - enabled: 1
+    path: Assets/Scenes/Cut Scenes/CutScene1.unity
+    guid: 688280a1ee65ea94e905fcce2c2dfa1e
   m_configObjects: {}
