@@ -29,7 +29,7 @@ public class MainMenuController : MonoBehaviour
     public void SettingsMode()
     {
         // GameObject.Find("Player Manager").GetComponent<PlayerManager>().StoryMode();
-        SceneManager.LoadScene("PlaceHolder 1");
+        SceneManager.LoadScene("CutScene1");
         // StartCoroutine(LoadStoryLevel());
     }
 
