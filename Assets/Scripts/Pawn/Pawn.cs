@@ -43,6 +43,8 @@ public class Pawn : NetworkBehaviour
     Bullet bullet;
     private bool isShooting;
     private float fireTimer;
+    private System.Random rnd;
+    public int firingArcAngle = 30;
 
     // Abilities
     [Header ("Abilities")]
@@ -64,6 +66,7 @@ public class Pawn : NetworkBehaviour
 
         // Combat
         bullet = bulletPrefab.GetComponent<Bullet>();
+        rnd = new System.Random();
     }
 
     // Start is called before the first frame update
@@ -190,7 +193,15 @@ public class Pawn : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void Shoot(Vector3 position, Quaternion rotation)
     {
-        GameObject b = Instantiate(bullet.gameObject, position, rotation);
+        int randDegree = rnd.Next(firingArcAngle);
+        int ranSign = rnd.NextDouble() > 0.5f ? 1 : -1;
+        GameObject b;
+        if (isEnemy) {
+            b = Instantiate(bullet.gameObject, position, rotation *= Quaternion.Euler(0, ranSign * randDegree, 0));
+        } else {
+            b = Instantiate(bullet.gameObject, position, rotation);
+        }
+        
         NetworkServer.Spawn(b);
     }
 
