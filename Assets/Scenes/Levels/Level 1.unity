@@ -336,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  nextLevel: CutScene1
+  nextLevel: PlaceHolder 2
 --- !u!114 &430026750
 MonoBehaviour:
   m_ObjectHideFlags: 0

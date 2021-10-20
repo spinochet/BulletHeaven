@@ -18,7 +18,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StoryMode()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("CutScene1");
     }
 
     public void ArcadeMode()
