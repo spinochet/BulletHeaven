@@ -104,11 +104,11 @@ MonoBehaviour:
   name: Robot
   portrait: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   speed: 10
-  maxHP: 100
+  maxHP: 200
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
-  staminaRegenRate: 1
+  staminaRegenRate: 5
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7,
     type: 3}

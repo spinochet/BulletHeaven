@@ -30,9 +30,9 @@ public class Autoscroll : MonoBehaviour
         transform.position -= Vector3.forward * speed * Time.deltaTime;
        
        background1.transform.position -= Vector3.forward * speed * Time.deltaTime;
-       if (background1.transform.position.z <= -10.4f) background1.transform.position = new Vector3(0.0f, 0.0f, 40.0f);
+       if (background1.transform.position.z <= -10.4f) background1.transform.position = new Vector3(0.0f, -1.0f, 40.0f);
 
        background2.transform.position -= Vector3.forward * speed * Time.deltaTime;
-       if (background2.transform.position.z <= -10.4f) background2.transform.position = new Vector3(0.0f, 0.0f, 40.0f);
+       if (background2.transform.position.z <= -10.4f) background2.transform.position = new Vector3(0.0f, -1.0f, 40.0f);
     }
 }

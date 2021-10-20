@@ -221,11 +221,11 @@ MonoBehaviour:
   name: Princess
   portrait: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   speed: 10
-  maxHP: 100
+  maxHP: 200
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
-  staminaRegenRate: 1
+  staminaRegenRate: 5
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}

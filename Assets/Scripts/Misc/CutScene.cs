@@ -14,6 +14,7 @@ public class CutScene : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void NextLevel()
     {
+        Ultima.used = false;
         PlayerNetworkManager.Instance.LoadArcadeLevel(scene);
     }
 }

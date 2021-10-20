@@ -6,7 +6,7 @@ using Mirror;
 
 public class Ultima : Ability
 {
-    private static bool used = false;
+    public static bool used = false;
 
     [Command(requiresAuthority = false)]
     override public void Activate()
