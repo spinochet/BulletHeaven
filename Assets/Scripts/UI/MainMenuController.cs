@@ -18,7 +18,9 @@ public class MainMenuController : MonoBehaviour
 
     public void StoryMode()
     {
-        SceneManager.LoadScene("CutScene1");
+        // SceneManager.LoadScene("CutScene1");
+        PlayerNetworkManager.instance.StartHost();
+        PlayerNetworkManager.instance.LoadStoryLevel("CutScene1");
     }
 
     public void ArcadeMode()
@@ -29,7 +31,7 @@ public class MainMenuController : MonoBehaviour
     public void SettingsMode()
     {
         // GameObject.Find("Player Manager").GetComponent<PlayerManager>().StoryMode();
-        SceneManager.LoadScene("CutScene1");
+        // SceneManager.LoadScene("CutScene1");
         // StartCoroutine(LoadStoryLevel());
     }
 

@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace DialogueSystem
 {
     public class DialogueBaseClass : MonoBehaviour
     {
+        public InputAction space;
+        private bool spacePressed;
+
         public bool finished { get; private set; }
 
         protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delay)
         {
+            space.Enable();
+            space.performed += ctx => OnSpace();
+
             textHolder.color = textColor;
             textHolder.font = textFont;
 
@@ -20,9 +27,15 @@ namespace DialogueSystem
                 yield return new WaitForSeconds(delay);
             }
 
-            //yield return new WaitForSeconds(delayBetweenLines);
-           // yield return new WaitUntil(() => Input.GetMouseButton(0));
+            // yield return new WaitForSeconds(delay);
+            spacePressed = false;
+            while (!spacePressed) yield return null;
             finished = true;
+        }
+
+        void OnSpace()
+        {
+            spacePressed = true;
         }
     }
 }

@@ -5,6 +5,8 @@ namespace DialogueSystem
 {
     public class DialogueHolder : MonoBehaviour
     {
+        [SerializeField] private CutScene nextLevel;
+
         private void Awake()
         {
             StartCoroutine(dialogueSequence());
@@ -19,6 +21,8 @@ namespace DialogueSystem
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished);
             }
             gameObject.SetActive(false);
+
+            nextLevel.NextLevel();
         }
 
         private void Deactivate()
