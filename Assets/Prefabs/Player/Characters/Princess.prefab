@@ -229,7 +229,7 @@ MonoBehaviour:
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
-  abilityL: {fileID: -2938303050458440424}
+  abilityL: {fileID: -1585304140282818587}
   abilityR: {fileID: -6181670409465947137}
 --- !u!114 &-2938303050458440424
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  cost: 20
+  cost: 0
   overTime: 0
 --- !u!114 &6169354877529406646
 MonoBehaviour:

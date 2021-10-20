@@ -195,7 +195,7 @@
                 {
                     "name": "positive",
                     "id": "d27e312d-9a9d-40f9-ae97-aaceb5876cb7",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Piano",

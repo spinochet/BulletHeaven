@@ -17,13 +17,13 @@ public class PlayerController : PawnController
     void Awake()
     {
         DontDestroyOnLoad(this);
-    //     if (!manager) manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
+        if (!manager) manager = PlayerNetworkManager.Instance;
     }
 
-    // void Start()
-    // {
-    //     if (!manager) manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
-    // }
+    void Start()
+    {
+        if (!manager) manager = PlayerNetworkManager.Instance;
+    }
 
     // Assign pawn to controller
     public void PossesPawn(Pawn _pawn)
@@ -49,7 +49,27 @@ public class PlayerController : PawnController
             PlayerInput input = GetComponent<PlayerInput>();
             if (input) input.SwitchCurrentActionMap("Gameplay");
 
-            if (!manager) manager = GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>();
+            if (!manager) manager = PlayerNetworkManager.Instance;
+        }
+    }
+
+    // Assign pawn to controller over the network
+    [TargetRpc]
+    public void TargetPossesPawnPos(NetworkIdentity pawnIdentity, Vector3 position)
+    {
+        if (this.isLocalPlayer)
+        {
+            pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
+            pawn.StopShooting();
+            pawn.transform.position = position;
+
+            // Switch input map
+            PlayerInput input = GetComponent<PlayerInput>();
+            if (input) input.SwitchCurrentActionMap("Gameplay");
+
+            if (!manager) manager = PlayerNetworkManager.Instance;
+
+            pawn.EnableMovement(true);
         }
     }
 
@@ -117,8 +137,15 @@ public class PlayerController : PawnController
     // Switch action callback
     void OnSwitch()
     {
-        // if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
-        //     manager.SwitchCharacters();
+        Debug.Log("Switch");
+        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
+            Switch();
+    }
+
+    [Command(requiresAuthority = false)]
+    void Switch()
+    {
+        manager.SwitchCharacters(pawn);
     }
 
     // -----

@@ -7,7 +7,8 @@ using Mirror;
 public class PlayerNetworkManager : NetworkManager
 {
     // Singleton
-    public static PlayerNetworkManager instance;
+    public static PlayerNetworkManager _instance;
+    public static PlayerNetworkManager Instance { get { return _instance; } }
 
     // Player data
     private NetworkIdentity[] players;
@@ -19,13 +20,18 @@ public class PlayerNetworkManager : NetworkManager
     public bool debugLevel;
     public int debugPlayer;
 
+    // Story
+    public int activeCharacter;
+    GameObject princess;
+    GameObject robot;
+
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
         players = new NetworkIdentity[4];
 
-        if (instance == null)
-            instance = this;
+        if (_instance == null)
+            _instance = this;
         else
             DestroyImmediate(this);
     }
@@ -89,11 +95,15 @@ public class PlayerNetworkManager : NetworkManager
                 {
                     if (players[i])
                     {
-                        GameObject pawn = Instantiate(spawnPrefabs[i % 2], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
-                        NetworkServer.Spawn(pawn, players[i].gameObject);
+                        GameObject princess = Instantiate(spawnPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
+                        NetworkServer.Spawn(princess, players[i].gameObject);
+
+                        GameObject robot = Instantiate(spawnPrefabs[1], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
+                        NetworkServer.Spawn(robot, players[i].gameObject);
+                        robot.SetActive(false);
                         
                         players[i].gameObject.GetComponent<PlayerController>().manager = this;
-                        players[i].gameObject.GetComponent<PlayerController>().TargetPossesPawn(pawn.GetComponent<NetworkIdentity>());
+                        players[i].gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
                     }
                 }
             }
@@ -123,11 +133,15 @@ public class PlayerNetworkManager : NetworkManager
 
         if (debugLevel)
         {
-            GameObject pawn = Instantiate(spawnPrefabs[debugPlayer], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-            NetworkServer.Spawn(pawn, identity.gameObject);
+            princess = Instantiate(spawnPrefabs[0], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            NetworkServer.Spawn(princess, identity.gameObject);
+
+            robot = Instantiate(spawnPrefabs[1], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            NetworkServer.Spawn(robot, identity.gameObject);
+            robot.SetActive(false);
             
             identity.gameObject.GetComponent<PlayerController>().manager = this;
-            identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(pawn.GetComponent<NetworkIdentity>());
+            identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
         }
         else if (networkSceneName.Contains("Lobby"))
         {
@@ -182,5 +196,35 @@ public class PlayerNetworkManager : NetworkManager
             ServerChangeScene(level);
             readyClients = 0;
         }
+    }
+
+    public void SwitchCharacters(Pawn _pawn)
+    {
+        if (activeCharacter == 0)
+        {
+            activeCharacter = 1;
+            robot.SetActive(true);
+
+            players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(robot.GetComponent<NetworkIdentity>(), princess.transform.position);
+
+            princess.GetComponent<Pawn>().EnableMovement(false);
+            princess.SetActive(false);
+        }
+        else
+        {
+            activeCharacter = 0;
+            princess.SetActive(true);
+
+            players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(princess.GetComponent<NetworkIdentity>(), robot.transform.position);
+
+            robot.GetComponent<Pawn>().EnableMovement(false);
+            robot.SetActive(false);
+        }
+
+        // GameObject pawn = Instantiate(spawnPrefabs[activeCharacter], _pawn.transform.position, Quaternion.identity);
+        // NetworkServer.Spawn(pawn, players[0].gameObject);
+        
+        // players[0].gameObject.GetComponent<PlayerController>().manager = this;
+        // players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawn(pawn.GetComponent<NetworkIdentity>());
     }
 }

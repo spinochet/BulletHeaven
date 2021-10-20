@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 1027628024979106852}
   - component: {fileID: 1027628024979106853}
   - component: {fileID: -7373040332776867667}
+  - component: {fileID: 949287809729758976}
+  - component: {fileID: 6988537135582660480}
   - component: {fileID: -8281485748624298167}
   - component: {fileID: -7185356826066695946}
   m_Layer: 8
@@ -110,9 +112,41 @@ MonoBehaviour:
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7,
     type: 3}
-  abilityL: {fileID: 3892247049466476714, guid: 9d921214a18e4474bb9b969ddb031095,
-    type: 3}
-  abilityR: {fileID: 0}
+  abilityL: {fileID: 949287809729758976}
+  abilityR: {fileID: 6988537135582660480}
+--- !u!114 &949287809729758976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027628024979106863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce2bdca0ca7252429c53c0f4c9745f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cost: 20
+  overTime: 1
+  timeScale: 0.3
+--- !u!114 &6988537135582660480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027628024979106863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa6e7cad1c05ed4e8a975b3ac7c072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cost: 0
+  overTime: 0
 --- !u!114 &-8281485748624298167
 MonoBehaviour:
   m_ObjectHideFlags: 0

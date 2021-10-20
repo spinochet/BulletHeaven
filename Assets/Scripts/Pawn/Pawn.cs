@@ -19,6 +19,7 @@ public class Pawn : NetworkBehaviour
     [SerializeField] private float speed = 10.0f;
     private CharacterController controller;
     private Vector3 movement;
+    private bool isMove = true;
 
     // Stats
     [Header ("Stats")]
@@ -82,7 +83,8 @@ public class Pawn : NetworkBehaviour
     void Update()
     {
         // Movement
-        controller.Move(movement * speed * Time.unscaledDeltaTime);
+        if (isMove)
+            controller.Move(movement * speed * Time.unscaledDeltaTime);
 
         // Abilities
         hpTimer += Time.unscaledDeltaTime;
@@ -142,6 +144,11 @@ public class Pawn : NetworkBehaviour
     {
         movement.x = moveVector.x;
         movement.z = moveVector.y;
+    }
+
+    public void EnableMovement(bool move)
+    {
+        isMove = move;
     }
 
     // -----
