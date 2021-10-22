@@ -19,6 +19,7 @@ public class Pawn : NetworkBehaviour
     [SerializeField] private float speed = 10.0f;
     private CharacterController controller;
     private Vector3 movement;
+    public Vector3 Movement { get { return movement; } }
     private bool isMove = true;
 
     // Stats
@@ -80,6 +81,7 @@ public class Pawn : NetworkBehaviour
     public void AssignHUD(HUDController _hud)
     {
         hud = _hud;
+        hud.UpdatePortrait(portrait.texture);
     }
 
     // Update is called once per frame
@@ -152,6 +154,8 @@ public class Pawn : NetworkBehaviour
     public void EnableMovement(bool move)
     {
         isMove = move;
+
+        if (!move) movement = Vector3.zero;
     }
 
     // -----

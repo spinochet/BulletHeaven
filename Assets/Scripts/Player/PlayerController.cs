@@ -12,20 +12,11 @@ public class PlayerController : PawnController
     // Character and player data
     private Color playerColor;
 
+    private Vector3 movement;
+
     void Awake()
     {
         DontDestroyOnLoad(this);
-    }
-
-    // Assign pawn to controller
-    public void PossesPawn(Pawn _pawn)
-    {
-        pawn = _pawn;
-        pawn.StopShooting();
-
-        // Switch input map
-        PlayerInput input = GetComponent<PlayerInput>();
-        if (input) input.SwitchCurrentActionMap("Gameplay");
     }
 
     // Assign pawn to controller over the network
@@ -58,14 +49,8 @@ public class PlayerController : PawnController
             if (input) input.SwitchCurrentActionMap("Gameplay");
 
             pawn.EnableMovement(true);
+            pawn.Move(new Vector2(movement.x, movement.z));
         }
-    }
-
-    // DEBUG
-    [TargetRpc]
-    public void TargetPrint(int playerNum)
-    {
-        Debug.Log("PLAYER " + playerNum.ToString());
     }
 
     // ---------------
@@ -132,6 +117,7 @@ public class PlayerController : PawnController
     [Command(requiresAuthority = false)]
     void Switch()
     {
+        movement = pawn.Movement;
         PlayerNetworkManager.Instance.SwitchCharacters(pawn);
     }
 

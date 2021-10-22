@@ -158,6 +158,7 @@ public class PlayerNetworkManager : NetworkManager
         {
             princess = Instantiate(spawnPrefabs[0], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(princess, identity.gameObject);
+            GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
             robot = Instantiate(spawnPrefabs[1], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(robot, identity.gameObject);
@@ -260,6 +261,7 @@ public class PlayerNetworkManager : NetworkManager
                 robot.SetActive(true);
 
                 players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(robot.GetComponent<NetworkIdentity>(), princess.transform.position);
+                GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(robot.GetComponent<Pawn>(), 1);
 
                 princess.GetComponent<Pawn>().EnableMovement(false);
                 princess.SetActive(false);
@@ -273,6 +275,7 @@ public class PlayerNetworkManager : NetworkManager
                 princess.SetActive(true);
 
                 players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(princess.GetComponent<NetworkIdentity>(), robot.transform.position);
+                GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
                 robot.GetComponent<Pawn>().EnableMovement(false);
                 robot.SetActive(false);
