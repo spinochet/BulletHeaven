@@ -196,7 +196,7 @@ public class PlayerNetworkManager : NetworkManager
     // Called on the client when connected to a server. By default it sets client as ready and adds a player.
     public override void OnClientConnect(NetworkConnection conn)
     {
-        if (mode == NetworkManagerMode.ClientOnly)
+        if (mode == NetworkManagerMode.ClientOnly || mode == NetworkManagerMode.Host)
         {
             base.OnClientConnect(conn);
         }
