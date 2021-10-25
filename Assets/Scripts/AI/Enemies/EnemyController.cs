@@ -17,7 +17,10 @@ public class EnemyController : PawnController
     // Update is called once per frame
     void Update()
     {
-        pawn.Move(Vector2.down * Time.timeScale);
+        if (LevelManager.Instance.IsScrolling)
+            pawn.Move(Vector2.down * Time.timeScale);
+        else
+            pawn.Move(Vector2.zero);
 
         timer += Time.deltaTime;
         if (timer > 0.5f)
