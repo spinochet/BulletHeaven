@@ -215,4 +215,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyParent: 1
+  destroy: {fileID: 8061707729531987755}
