@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: -3489781365833388046}
   m_Layer: 8
   m_Name: Princess
-  m_TagString: Player
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
+  fireRate: 10
   abilityL: {fileID: -1585304140282818587}
   abilityR: {fileID: -6181670409465947137}
 --- !u!114 &-2938303050458440424
