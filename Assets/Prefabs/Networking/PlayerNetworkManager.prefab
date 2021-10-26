@@ -67,7 +67,10 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
   - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}
+  - {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7, type: 3}
   - {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b, type: 3}
+  - {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7, type: 3}
+  - {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e, type: 3}
   debugLevel: 0
   debugPlayer: 0
   activeCharacter: 0

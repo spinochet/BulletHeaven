@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class DestroyInvisible : MonoBehaviour
 {
-    [SerializeField] private bool destroyParent;
+    [SerializeField] private GameObject destroy;
 
     public void OnBecameInvisible()
     {
-        if (destroyParent)
-            Destroy(transform.parent.gameObject);
-        else
-            Destroy(gameObject);
+        Destroy(destroy);
     }
 }
