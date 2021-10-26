@@ -301,7 +301,7 @@ MonoBehaviour:
   isEnemy: 1
   name: Archer
   portrait: {fileID: 0}
-  speed: 2.5
+  speed: 1.5
   maxHP: 50
   hpRegenRate: 0
   hpRegenCooldown: 0
@@ -310,6 +310,7 @@ MonoBehaviour:
   staminaRegenCooldown: 0
   bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
     type: 3}
+  firingArcAngle: 30
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
 --- !u!114 &-4387995181352385413
@@ -341,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyParent: 0
+  destroyParent: 1
 --- !u!1 &3532057981992372333
 GameObject:
   m_ObjectHideFlags: 0

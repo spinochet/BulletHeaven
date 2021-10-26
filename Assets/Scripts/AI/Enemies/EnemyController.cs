@@ -24,7 +24,7 @@ public class EnemyController : PawnController
         {
             timer = 0.0f;
             float shoot = Random.Range(0.0f, 1.0f);
-            if (shoot < 0.4f)
+            if (shoot < 0.3f)
                 pawn.StartShooting();
             else
                 pawn.StopShooting();
