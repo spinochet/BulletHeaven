@@ -9,20 +9,12 @@ using UnityEngine.UI;
 
 public class PlayerController : PawnController
 {
-    public PlayerNetworkManager manager;
-
     // Character and player data
     private Color playerColor;
 
     void Awake()
     {
         DontDestroyOnLoad(this);
-        if (!manager) manager = PlayerNetworkManager.Instance;
-    }
-
-    void Start()
-    {
-        if (!manager) manager = PlayerNetworkManager.Instance;
     }
 
     // Assign pawn to controller
@@ -48,8 +40,6 @@ public class PlayerController : PawnController
             // Switch input map
             PlayerInput input = GetComponent<PlayerInput>();
             if (input) input.SwitchCurrentActionMap("Gameplay");
-
-            if (!manager) manager = PlayerNetworkManager.Instance;
         }
     }
 
@@ -66,8 +56,6 @@ public class PlayerController : PawnController
             // Switch input map
             PlayerInput input = GetComponent<PlayerInput>();
             if (input) input.SwitchCurrentActionMap("Gameplay");
-
-            if (!manager) manager = PlayerNetworkManager.Instance;
 
             pawn.EnableMovement(true);
         }
@@ -87,7 +75,7 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
+        if (this.isLocalPlayer && pawn)
             pawn.Move(input.Get<Vector2>());
     }
 
@@ -100,7 +88,7 @@ public class PlayerController : PawnController
     {
         bool isShooting = input.Get<float>() > 0.0f ? true : false;
 
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
+        if (this.isLocalPlayer && pawn)
         {
             if (isShooting) pawn.StartShooting();
             else pawn.StopShooting();
@@ -110,7 +98,7 @@ public class PlayerController : PawnController
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
+        if (this.isLocalPlayer && pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
             else pawn.DeactivateAbility(0);
@@ -120,7 +108,7 @@ public class PlayerController : PawnController
     // AbilityR action callback function
     void OnAbilityR(InputValue input)
     {
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && pawn)
+        if (this.isLocalPlayer && pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
             else pawn.DeactivateAbility(1);
@@ -137,15 +125,14 @@ public class PlayerController : PawnController
     // Switch action callback
     void OnSwitch()
     {
-        Debug.Log("Switch");
-        if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
+        if (this.isLocalPlayer)
             Switch();
     }
 
     [Command(requiresAuthority = false)]
     void Switch()
     {
-        manager.SwitchCharacters(pawn);
+        PlayerNetworkManager.Instance.SwitchCharacters(pawn);
     }
 
     // -----
