@@ -152,7 +152,6 @@ public class Pawn : NetworkBehaviour
     public void EnableMovement(bool move)
     {
         isMove = move;
-
         if (!move) movement = Vector3.zero;
     }
 
