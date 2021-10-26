@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2123622467903022845}
   - component: {fileID: 2123622467903022834}
+  - component: {fileID: 4023920863425053509}
   - component: {fileID: 2123622467903022832}
   - component: {fileID: 3309551217214254195}
-  - component: {fileID: 4023920863425053509}
   - component: {fileID: 7288465762301627842}
   m_Layer: 0
   m_Name: PlayerNetworkManager
@@ -67,10 +67,55 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 1027628024979106863, guid: 2f55efd5276c2274f810c48f6e54822d, type: 3}
   - {fileID: 1027628024979106863, guid: 746fe167bf58eda43bba9006107f655c, type: 3}
+  - {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7, type: 3}
   - {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b, type: 3}
+  - {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7, type: 3}
+  - {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e, type: 3}
   debugLevel: 0
   debugPlayer: 0
   activeCharacter: 0
+--- !u!114 &4023920863425053509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123622467903022833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfd9762294fc3b418fad9713e40c43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugSound: 0
+  source: {fileID: 7288465762301627842}
+  soundList:
+  - name: Fireball
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 05a7c1b15e818499ca0ba54c365572d2, type: 3}
+      volume: 1
+      soundCooldown: 0.1
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Laser
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 555f8f411463a434292d35da7e25977d, type: 3}
+      volume: 0.3
+      soundCooldown: 0.1
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 1
+  - name: Arrow
+    sound:
+      sound:
+      - {fileID: 8300000, guid: d7dbc4cdcabdc44e3a34af3c46f6b9ff, type: 3}
+      volume: 0.3
+      soundCooldown: 0.4
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
 --- !u!114 &2123622467903022832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,34 +156,6 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
---- !u!114 &4023920863425053509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123622467903022833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cfd9762294fc3b418fad9713e40c43b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 7288465762301627842}
-  fireball:
-    sound: {fileID: 8300000, guid: 05a7c1b15e818499ca0ba54c365572d2, type: 3}
-    volume: 0.25
-    soundCooldown: 0.1
-    soundTimer: 0
-  laser:
-    sound: {fileID: 8300000, guid: 555f8f411463a434292d35da7e25977d, type: 3}
-    volume: 0.25
-    soundCooldown: 0.1
-    soundTimer: 0
-  arrow:
-    sound: {fileID: 8300000, guid: d7dbc4cdcabdc44e3a34af3c46f6b9ff, type: 3}
-    volume: 0.25
-    soundCooldown: 0.1
-    soundTimer: 0
 --- !u!82 &7288465762301627842
 AudioSource:
   m_ObjectHideFlags: 0
