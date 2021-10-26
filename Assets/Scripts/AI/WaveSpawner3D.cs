@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Mirror;
 
-public class WaveSpawner3D : NetworkBehaviour
+public class WaveSpawner3D : MonoBehaviour
 {
 
     struct DirData {
@@ -103,82 +103,79 @@ public class WaveSpawner3D : NetworkBehaviour
 
     void SpawnWave()
     {
-        if (isServer)
+        spawned = true; // Comment this line for bug
+
+        if (dir == Direction.V_ANGLE)
         {
-            spawned = true; // Comment this line for bug
 
-            if (dir == Direction.V_ANGLE)
+            // I would advise making the V angle have an 
+            // odd number of enemies
+            int target_offset = numShifts / 2;
+            int e_offset = -target_offset;
+
+            for (; e_offset <= target_offset; ++e_offset)
             {
+                DirData data = GetDir(e_offset);
 
-                // I would advise making the V angle have an 
-                // odd number of enemies
-                int target_offset = numShifts / 2;
-                int e_offset = -target_offset;
+                Vector3 sp = Vector3.zero;
+                sp = (_spawnPoint + data.dir * e_offset);
 
-                for (; e_offset <= target_offset; ++e_offset)
+                GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                enemies.Add(e);
+            }
+
+        }
+        else if (dir == Direction.X)
+        {
+            int target_offset = numShifts / 2;
+            int e_offset = -target_offset;
+
+            for (; e_offset <= target_offset; ++e_offset) {
+                DirData data = GetDir(e_offset);
+
+                Vector3 sp1 = Vector3.zero;
+                sp1 = (_spawnPoint + data.dir * e_offset);
+                
+                GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                enemies.Add(e);
+
+                if (e_offset != 0) {
+                    Vector3 sp2 = Vector3.zero;
+                    sp2 = (_spawnPoint + data.dir2 * e_offset);
+                    
+                    e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                    enemies.Add(e);
+                }
+            }
+        }
+        else 
+        {
+            for (int j = 0; j < numRows; ++j)
+            {
+                int staggerOffset = 0;
+                int staggerFactor = 0;
+                if (j % 2 != 0 && stagger)
                 {
-                    DirData data = GetDir(e_offset);
+                    staggerFactor = 1;
+                    staggerOffset = -1;
+                }
+
+                for (int i = 0; i < numShifts + staggerOffset; ++i)
+                {
+                    DirData data = GetDir();
 
                     Vector3 sp = Vector3.zero;
-                    sp = (_spawnPoint + data.dir * e_offset);
-
-                    GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
+                    if (data.diag)
+                    {
+                        sp = (_spawnPoint + data.dir * i) + (Vector3.forward * rowDist * j) + (data.dir * 0.5f * staggerFactor);
+                    }
+                    else
+                    {
+                        sp = (_spawnPoint + data.dir * i) + (Vector3.forward * rowDist * j) + (Vector3.right * dist * 0.5f * staggerFactor);
+                    }
+                    
+                    GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                     enemies.Add(e);
-                    NetworkServer.Spawn(e);
-                }
-
-            }
-            else if (dir == Direction.X)
-            {
-                int target_offset = numShifts / 2;
-                int e_offset = -target_offset;
-
-                for (; e_offset <= target_offset; ++e_offset) {
-                    DirData data = GetDir(e_offset);
-
-                    Vector3 sp1 = Vector3.zero;
-                    sp1 = (_spawnPoint + data.dir * e_offset);
-                    GameObject e = Instantiate(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
-                    NetworkServer.Spawn(e);
-
-                    if (e_offset != 0) {
-                        Vector3 sp2 = Vector3.zero;
-                        sp2 = (_spawnPoint + data.dir2 * e_offset);
-                        GameObject e2 = Instantiate(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
-                        enemies.Add(e);
-                        NetworkServer.Spawn(e2);
-                    }
-                }
-            }
-            else 
-            {
-                for (int j = 0; j < numRows; ++j)
-                {
-                    int staggerOffset = 0;
-                    int staggerFactor = 0;
-                    if (j % 2 != 0 && stagger)
-                    {
-                        staggerFactor = 1;
-                        staggerOffset = -1;
-                    }
-
-                    for (int i = 0; i < numShifts + staggerOffset; ++i)
-                    {
-                        DirData data = GetDir();
-
-                        Vector3 sp = Vector3.zero;
-                        if (data.diag)
-                        {
-                            sp = (_spawnPoint + data.dir * i) + (Vector3.forward * rowDist * j) + (data.dir * 0.5f * staggerFactor);
-                        }
-                        else
-                        {
-                            sp = (_spawnPoint + data.dir * i) + (Vector3.forward * rowDist * j) + (Vector3.right * dist * 0.5f * staggerFactor);
-                        }
-                        GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
-                        enemies.Add(e);
-                        NetworkServer.Spawn(e);
-                    }
                 }
             }
         }

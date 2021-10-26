@@ -6,17 +6,14 @@ using UnityEngine.SceneManagement;
 
 using Mirror;
 
-public class EndLevel : NetworkBehaviour
+public class EndLevel : MonoBehaviour
 {
-
-    public string nextLevel;
-
     // Update is called once per frame
     void Update()
     {
         if (transform.position.z <= 0.0f)
         {
-            GameObject.Find("PlayerNetworkManager").GetComponent<PlayerNetworkManager>().LoadArcadeLevel(nextLevel);
+            LevelManager.Instance.NextLevel();
         }
     }
 }
