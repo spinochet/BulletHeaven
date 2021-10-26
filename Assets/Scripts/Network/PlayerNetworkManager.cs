@@ -54,11 +54,35 @@ public class PlayerNetworkManager : NetworkManager
     // -----------------
 
     // This is invoked when a server is started - including when a host is started.
-    public virtual void OnStartServer()
+    public override void OnStartServer()
     {
-        if (mode == NetworkManagerMode.ServerOnly || mode == NetworkManagerMode.Host)
+        if (mode == NetworkManagerMode.ServerOnly)
         {
             base.OnStartServer();
+        }
+    }
+
+    public override void OnStopServer()
+    {
+        if (mode == NetworkManagerMode.ServerOnly)
+        {
+            base.OnStopServer();
+        }
+    }
+
+    public override void OnStartHost()
+    {
+        if (mode == NetworkManagerMode.Host)
+        {
+            base.OnStartHost();
+        }
+    }
+
+    public override void OnStopHost()
+    {
+        if (mode == NetworkManagerMode.Host)
+        {
+            base.OnStopHost();
         }
     }
 
@@ -102,7 +126,6 @@ public class PlayerNetworkManager : NetworkManager
                         NetworkServer.Spawn(robot, players[i].gameObject);
                         robot.SetActive(false);
                         
-                        players[i].gameObject.GetComponent<PlayerController>().manager = this;
                         players[i].gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
                     }
                 }
@@ -135,12 +158,12 @@ public class PlayerNetworkManager : NetworkManager
         {
             princess = Instantiate(spawnPrefabs[0], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(princess, identity.gameObject);
+            GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
             robot = Instantiate(spawnPrefabs[1], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(robot, identity.gameObject);
             robot.SetActive(false);
             
-            identity.gameObject.GetComponent<PlayerController>().manager = this;
             identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
         }
         else if (networkSceneName.Contains("Lobby"))
@@ -153,6 +176,23 @@ public class PlayerNetworkManager : NetworkManager
     // -----------------
     // CLIENT NETWORKING
     // -----------------
+
+    // This is invoked when the client is started.
+    public override void OnStartClient()
+    {
+        if (mode == NetworkManagerMode.ClientOnly)
+        {
+            base.OnStartClient();
+        }
+    }
+
+    public override void OnStopClient()
+    {
+        if (mode == NetworkManagerMode.ClientOnly)
+        {
+            base.OnStopClient();
+        }
+    }
 
     // Called on the client when connected to a server. By default it sets client as ready and adds a player.
     public override void OnClientConnect(NetworkConnection conn)
@@ -221,6 +261,7 @@ public class PlayerNetworkManager : NetworkManager
                 robot.SetActive(true);
 
                 players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(robot.GetComponent<NetworkIdentity>(), princess.transform.position);
+                GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(robot.GetComponent<Pawn>(), 1);
 
                 princess.GetComponent<Pawn>().EnableMovement(false);
                 princess.SetActive(false);
@@ -234,6 +275,7 @@ public class PlayerNetworkManager : NetworkManager
                 princess.SetActive(true);
 
                 players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(princess.GetComponent<NetworkIdentity>(), robot.transform.position);
+                GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
                 robot.GetComponent<Pawn>().EnableMovement(false);
                 robot.SetActive(false);

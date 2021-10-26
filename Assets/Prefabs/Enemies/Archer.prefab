@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274775094489268793}
   - component: {fileID: 8154660587401367558}
+  - component: {fileID: 7371574887717698107}
   m_Layer: 0
   m_Name: enemy_archer_mesh
   m_TagString: Untagged
@@ -184,6 +185,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0050958395, y: 2.8866024, z: 1.1961415}
     m_Extent: {x: 1.7002454, y: 2.1748009, z: 2.3349445}
   m_DirtyAABB: 0
+--- !u!114 &7371574887717698107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676022157930472641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy: {fileID: 3007241012240742889}
 --- !u!1 &956488808367439547
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +242,6 @@ GameObject:
   - component: {fileID: 3007241012240742893}
   - component: {fileID: 8019127529922287089}
   - component: {fileID: -4387995181352385413}
-  - component: {fileID: 8140509201408157259}
   m_Layer: 10
   m_Name: Archer
   m_TagString: Enemy
@@ -310,7 +323,7 @@ MonoBehaviour:
   staminaRegenCooldown: 0
   bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
     type: 3}
-  firingArcAngle: 30
+  fireRate: 1.5
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
 --- !u!114 &-4387995181352385413
@@ -330,19 +343,6 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 322e2294b1b446e4db08e71c6b0958b7
   hasSpawned: 0
---- !u!114 &8140509201408157259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007241012240742889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyParent: 1
 --- !u!1 &3532057981992372333
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +554,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5067361846863054634}
-  - component: {fileID: 1647196489729711515}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -579,19 +578,6 @@ Transform:
   m_Father: {fileID: 3007241012240742892}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 180, z: 0}
---- !u!114 &1647196489729711515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5555527058871000464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyParent: 0
 --- !u!1 &5939910340987635901
 GameObject:
   m_ObjectHideFlags: 0

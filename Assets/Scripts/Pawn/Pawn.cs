@@ -19,6 +19,7 @@ public class Pawn : NetworkBehaviour
     [SerializeField] private float speed = 10.0f;
     private CharacterController controller;
     private Vector3 movement;
+    public Vector3 Movement { get { return movement; } }
     private bool isMove = true;
 
     // Stats
@@ -40,11 +41,10 @@ public class Pawn : NetworkBehaviour
     // Combat
     [Header ("Combat")]
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float fireRate;
     Bullet bullet;
     private bool isShooting;
     private float fireTimer;
-    private System.Random rnd;
-    public int firingArcAngle = 30;
 
     // Abilities
     [Header ("Abilities")]
@@ -66,7 +66,6 @@ public class Pawn : NetworkBehaviour
 
         // Combat
         bullet = bulletPrefab.GetComponent<Bullet>();
-        rnd = new System.Random();
     }
 
     // Start is called before the first frame update
@@ -80,6 +79,7 @@ public class Pawn : NetworkBehaviour
     public void AssignHUD(HUDController _hud)
     {
         hud = _hud;
+        hud.UpdatePortrait(portrait.texture);
     }
 
     // Update is called once per frame
@@ -114,7 +114,7 @@ public class Pawn : NetworkBehaviour
 
         if (isShooting)
         {
-            if (fireTimer > 1.0f / bullet.GetFireRate())
+            if (fireTimer > 1.0f / fireRate)
             {
                 fireTimer = 0.0f;
                 Shoot(transform.position, transform.rotation);
@@ -152,6 +152,8 @@ public class Pawn : NetworkBehaviour
     public void EnableMovement(bool move)
     {
         isMove = move;
+
+        if (!move) movement = Vector3.zero;
     }
 
     // -----
@@ -181,7 +183,7 @@ public class Pawn : NetworkBehaviour
     // Start shooting
     public void StartShooting()
     {
-        if (fireTimer > 1.0f / bullet.GetFireRate())
+        if (fireTimer > 1.0f / fireRate)
         {
             fireTimer = 0.0f;
             Shoot(transform.position, transform.rotation);
@@ -193,12 +195,15 @@ public class Pawn : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void Shoot(Vector3 position, Quaternion rotation)
     {
-        int randDegree = rnd.Next(firingArcAngle);
-        int ranSign = rnd.NextDouble() > 0.5f ? 1 : -1;
         GameObject b;
-        if (isEnemy) {
-            b = Instantiate(bullet.gameObject, position, rotation *= Quaternion.Euler(0, ranSign * randDegree, 0));
-        } else {
+        if (isEnemy)
+        {
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Character");
+            Vector3 dir = players[0].transform.position - transform.position;
+            b = Instantiate(bullet.gameObject, position, Quaternion.LookRotation(dir));
+        }
+        else
+        {
             b = Instantiate(bullet.gameObject, position, rotation);
         }
         
