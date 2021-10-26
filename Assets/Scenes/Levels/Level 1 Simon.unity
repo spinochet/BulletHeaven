@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 2669221447
-  serverOnly: 0
-  visible: 0
+  serverOnly: 1
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1001 &230175077
@@ -301,6 +301,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2123622467903022832, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022833, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: m_Name
@@ -434,7 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 953040644
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &446763794
@@ -507,7 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2484591829
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &450969926
@@ -580,7 +585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3587049328
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &532015225
@@ -1105,7 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2251634355
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1029031089
@@ -1178,7 +1183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2322700792
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1033663429
@@ -1252,7 +1257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1048651134
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1074643453
@@ -1325,7 +1330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3190305595
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1154795138
@@ -1398,7 +1403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 826368164
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1194587290
@@ -1625,7 +1630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 4027414013
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1920383330
@@ -1698,7 +1703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3907037577
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1965803426
@@ -1965,7 +1970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2452068793
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &2109322275
@@ -2038,7 +2043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2432455152
   serverOnly: 1
-  visible: 0
+  visible: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!1001 &1046563580771827754

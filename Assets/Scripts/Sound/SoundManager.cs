@@ -37,12 +37,10 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        } else {
+        if (_instance == null)
             _instance = this;
-        }
+        else
+            DestroyImmediate(this);
 
         // Load in sounds
         sounds = new Dictionary<string, Sound>();

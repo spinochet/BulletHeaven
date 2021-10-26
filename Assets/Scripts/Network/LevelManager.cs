@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Mirror;
 
-public class LevelManager : NetworkBehaviour
+public class LevelManager : MonoBehaviour
 {
     // Singleton
     public static LevelManager _instance;

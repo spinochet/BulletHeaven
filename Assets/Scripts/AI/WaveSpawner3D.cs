@@ -149,8 +149,6 @@ public class WaveSpawner3D : NetworkBehaviour
                         NetworkServer.Spawn(e2);
                     }
                 }
-
-
             }
             else 
             {
