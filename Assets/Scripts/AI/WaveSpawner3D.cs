@@ -122,7 +122,7 @@ public class WaveSpawner3D : NetworkBehaviour
                     Vector3 sp = Vector3.zero;
                     sp = (_spawnPoint + data.dir * e_offset);
 
-                    GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
+                    GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                     enemies.Add(e);
                     NetworkServer.Spawn(e);
                 }
@@ -138,13 +138,13 @@ public class WaveSpawner3D : NetworkBehaviour
 
                     Vector3 sp1 = Vector3.zero;
                     sp1 = (_spawnPoint + data.dir * e_offset);
-                    GameObject e = Instantiate(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
+                    GameObject e = Instantiate(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                     NetworkServer.Spawn(e);
 
                     if (e_offset != 0) {
                         Vector3 sp2 = Vector3.zero;
                         sp2 = (_spawnPoint + data.dir2 * e_offset);
-                        GameObject e2 = Instantiate(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
+                        GameObject e2 = Instantiate(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                         enemies.Add(e);
                         NetworkServer.Spawn(e2);
                     }
@@ -177,7 +177,7 @@ public class WaveSpawner3D : NetworkBehaviour
                         {
                             sp = (_spawnPoint + data.dir * i) + (Vector3.forward * rowDist * j) + (Vector3.right * dist * 0.5f * staggerFactor);
                         }
-                        GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f), LevelManager.Instance.transform);
+                        GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                         enemies.Add(e);
                         NetworkServer.Spawn(e);
                     }

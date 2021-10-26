@@ -242,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138725900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 69}
+  m_LocalPosition: {x: 0, y: 0, z: 73.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -264,14 +264,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 0, y: 0, z: 6}
+  _spawnPoint: {x: 0, y: 0, z: 3.4}
   numShifts: 5
   dist: 4
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &138725903
 MonoBehaviour:
@@ -402,14 +401,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -1.67, y: 0, z: 6}
   numShifts: 3
   dist: 3
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &446763797
 MonoBehaviour:
@@ -454,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450969926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 150}
+  m_LocalPosition: {x: 0, y: 0, z: 142.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -476,14 +474,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 0, y: 0, z: 12.17}
+  _spawnPoint: {x: 0, y: 0, z: 9.51}
   numShifts: 7
   dist: -2.5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &450969929
 MonoBehaviour:
@@ -620,7 +617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621455928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 199.9}
+  m_LocalPosition: {x: 0, y: 0, z: 178.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -659,14 +656,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: -3.04, y: 0, z: 11.71}
+  _spawnPoint: {x: -3.4, y: 0, z: 8.5}
   numShifts: 2
   dist: 7
   rowDist: 1
   numRows: 1
   stagger: 1
+  pauseLevel: 1
   dir: 1
 --- !u!1001 &646270417
 PrefabInstance:
@@ -903,7 +899,7 @@ PrefabInstance:
     - target: {fileID: 6959813843487987671, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959813843802129512, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
@@ -1204,14 +1200,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 5.21, y: 0, z: 6}
+  _spawnPoint: {x: 4.93, y: 0, z: 0.54}
   numShifts: 5
   dist: -3.5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &972571460
 MonoBehaviour:
@@ -1256,7 +1251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029031089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 94.5}
+  m_LocalPosition: {x: 0, y: 0, z: 100.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1278,14 +1273,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -5.04, y: 0, z: 6}
   numShifts: 3
   dist: 5
   rowDist: 3
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1029031092
 MonoBehaviour:
@@ -1330,7 +1324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033663429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 87.5}
+  m_LocalPosition: {x: 0, y: 0, z: 88.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1352,14 +1346,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -4.81, y: 0, z: 6}
   numShifts: 3
   dist: 3
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1033663432
 MonoBehaviour:
@@ -1404,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074643453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16.8}
+  m_LocalPosition: {x: 0, y: 0, z: 15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1426,14 +1419,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 3.53, y: 0, z: 6.39}
+  _spawnPoint: {x: 4.23, y: 0, z: 1.15}
   numShifts: 3
   dist: -6
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1074643456
 MonoBehaviour:
@@ -1478,7 +1470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154795138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 7}
+  m_LocalPosition: {x: 0, y: 0, z: 5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1500,14 +1492,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 0.01, y: 0, z: 6}
+  _spawnPoint: {x: 0.01, y: 0, z: 4.35}
   numShifts: 3
   dist: 5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &1154795141
 MonoBehaviour:
@@ -1552,7 +1543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194587290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 109.1}
+  m_LocalPosition: {x: 0, y: 0, z: 114.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1574,14 +1565,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: -4.97, y: 0, z: 6}
+  _spawnPoint: {x: -4.97, y: 0, z: 0.37}
   numShifts: 5
   dist: 3.5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1194587293
 MonoBehaviour:
@@ -1707,7 +1697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703547857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 49.4}
+  m_LocalPosition: {x: 0, y: 0, z: 29.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1746,14 +1736,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 0.21, y: 0, z: 6}
+  _spawnPoint: {x: -4.31, y: 0, z: 1.44}
   numShifts: 3
-  dist: 3
+  dist: 6
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!1 &1905646802
 GameObject:
@@ -1781,7 +1770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905646802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 91.1}
+  m_LocalPosition: {x: 0, y: 0, z: 93.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1803,14 +1792,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -1.71, y: 0, z: 6}
   numShifts: 3
   dist: 3
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1905646805
 MonoBehaviour:
@@ -1841,7 +1829,7 @@ GameObject:
   - component: {fileID: 1920383332}
   - component: {fileID: 1920383333}
   m_Layer: 0
-  m_Name: Wave 4
+  m_Name: Tower 1
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1855,7 +1843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920383330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 63.5}
+  m_LocalPosition: {x: 0, y: 0, z: 61.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1877,14 +1865,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 0.02, y: 0, z: 12.4}
+  _spawnPoint: {x: 0.02, y: 0, z: 9.18}
   numShifts: 1
   dist: -4
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 1
   dir: 2
 --- !u!114 &1920383333
 MonoBehaviour:
@@ -1912,8 +1899,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1965803427}
-  - component: {fileID: 1965803428}
   - component: {fileID: 1965803429}
+  - component: {fileID: 1965803430}
+  - component: {fileID: 1965803428}
   m_Layer: 0
   m_Name: Level 1
   m_TagString: Untagged
@@ -1960,12 +1948,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1965803426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0c0302d4ea76241bf1b01532ceb03d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d6245d9d7a100448b14a4034c3cc0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.75
-  background1: {fileID: 886829754}
-  background2: {fileID: 1286759221}
+  syncMode: 0
+  syncInterval: 0.1
+  scrollSpeed: 2.5
+  backgrounds:
+  - {fileID: 21300000, guid: 6fb7b0fca18ceaf4ab7c4438e5515a0c, type: 3}
+  background_1: {fileID: 886829754}
+  background_2: {fileID: 1286759221}
 --- !u!82 &1965803429
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2062,6 +2054,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1965803430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965803426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4016730019
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1968537633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968537633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 56.6}
+  m_LocalPosition: {x: 0, y: 0, z: 46.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -2110,14 +2119,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: 0.12, y: 0, z: 11.76}
+  _spawnPoint: {x: 0.12, y: 0, z: 5.79}
   numShifts: 3
-  dist: 4
+  dist: 5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 4
 --- !u!114 &1968537636
 MonoBehaviour:
@@ -2162,7 +2170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109322275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 174}
+  m_LocalPosition: {x: 0, y: 0, z: 158.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -2184,14 +2192,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
-  _spawnPoint: {x: -5.5, y: 0, z: 6}
+  _spawnPoint: {x: -6.08, y: 0, z: 1.3}
   numShifts: 5
   dist: 3
   rowDist: 4
   numRows: 3
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &2109322278
 MonoBehaviour:

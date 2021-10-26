@@ -314,7 +314,7 @@ MonoBehaviour:
   isEnemy: 1
   name: Archer
   portrait: {fileID: 0}
-  speed: 1.5
+  speed: 2.5
   maxHP: 50
   hpRegenRate: 0
   hpRegenCooldown: 0
