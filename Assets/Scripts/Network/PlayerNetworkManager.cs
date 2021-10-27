@@ -121,6 +121,7 @@ public class PlayerNetworkManager : NetworkManager
                     {
                         princess = Instantiate(spawnPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(princess, players[i].gameObject);
+                        GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
                         robot = Instantiate(spawnPrefabs[1], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(robot, players[i].gameObject);

@@ -80,6 +80,18 @@ public class PlayerController : PawnController
         }
     }
 
+    void OnShootStraight(InputValue input)
+    {
+        bool isShooting = input.Get<float>() > 0.0f ? true : false;
+
+        if (this.isLocalPlayer && pawn)
+        {
+            pawn.Aim(Vector3.forward);
+            if (isShooting) pawn.StartShooting();
+            else pawn.StopShooting();
+        }
+    }
+
     // Shoot action callback
     void OnAim(InputValue input)
     {

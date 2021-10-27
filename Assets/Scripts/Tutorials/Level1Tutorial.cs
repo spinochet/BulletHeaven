@@ -16,10 +16,10 @@ public class Level1Tutorial : TutorialScript
     {
         players = GameObject.FindGameObjectsWithTag("Character");
 
-        foreach (GameObject player in players)
-        {
-            player.GetComponent<Pawn>().enabled = false;
-        }
+        // foreach (GameObject player in players)
+        // {
+        //     player.GetComponent<Pawn>().enabled = false;
+        // }
 
         if (!LevelManager.Instance.PlayTutorial)
         {
@@ -39,10 +39,10 @@ public class Level1Tutorial : TutorialScript
             canShoot = true;
             LevelManager.Instance.PauseLevel();
 
-            foreach (GameObject player in players)
-            {
-                player.GetComponent<Pawn>().enabled = true;
-            }
+            // foreach (GameObject player in players)
+            // {
+            //     player.GetComponent<Pawn>().enabled = true;
+            // }
         }
         else if (transform.position.z <= -16.0f)
         {
