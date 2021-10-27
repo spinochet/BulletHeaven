@@ -6,6 +6,7 @@ public class EnemyController : PawnController
 {
     // TEMP BEHAVIORS
     private float timer;
+    public float shootFrequency = 0.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class EnemyController : PawnController
         {
             timer = 0.0f;
             float shoot = Random.Range(0.0f, 1.0f);
-            if (shoot < 0.3f)
+            if (shoot < shootFrequency)
                 pawn.StartShooting();
             else
                 pawn.StopShooting();

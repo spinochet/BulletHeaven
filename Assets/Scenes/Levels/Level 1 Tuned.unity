@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 138725901}
   - component: {fileID: 138725902}
   m_Layer: 0
-  m_Name: Wave T1
+  m_Name: Wave 6
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -241,11 +241,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138725900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 79.2}
+  m_LocalPosition: {x: 0, y: 0, z: 82.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 14
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &138725902
 MonoBehaviour:
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 446763795}
   - component: {fileID: 446763796}
   m_Layer: 0
-  m_Name: Wave 6
+  m_Name: Wave 7
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446763794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 88.6}
+  m_LocalPosition: {x: 0, y: 0, z: 96.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 450969927}
   - component: {fileID: 450969928}
   m_Layer: 0
-  m_Name: Wave 11
+  m_Name: Wave 13
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -347,11 +347,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450969926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 148.59999}
+  m_LocalPosition: {x: 0, y: 0, z: 184.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &450969928
 MonoBehaviour:
@@ -373,8 +373,61 @@ MonoBehaviour:
   rowDist: 0
   numRows: 1
   stagger: 0
-  pauseLevel: 0
+  pauseLevel: 1
   dir: 3
+--- !u!1 &469381559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469381560}
+  - component: {fileID: 469381561}
+  m_Layer: 0
+  m_Name: Single Tower 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469381560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469381559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 123.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1965803427}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469381561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469381559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
+    type: 3}
+  _spawnPoint: {x: -5.43, y: 0, z: 9.23}
+  numShifts: 1
+  dist: 9
+  rowDist: 2
+  numRows: 1
+  stagger: 1
+  pauseLevel: 0
+  dir: 1
 --- !u!1 &532015225
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +531,7 @@ GameObject:
   - component: {fileID: 621455929}
   - component: {fileID: 621455931}
   m_Layer: 0
-  m_Name: Wave 12 (1)
+  m_Name: Towers 2
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -492,11 +545,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621455928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 183.8}
+  m_LocalPosition: {x: 0, y: 0, z: 223.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621455931
 MonoBehaviour:
@@ -512,11 +565,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
     type: 3}
-  _spawnPoint: {x: -3.4, y: 0, z: 8.5}
+  _spawnPoint: {x: -4.64, y: 0, z: 7.99}
   numShifts: 2
-  dist: 7
-  rowDist: 1
-  numRows: 1
+  dist: 9
+  rowDist: 2
+  numRows: 2
   stagger: 1
   pauseLevel: 1
   dir: 1
@@ -789,6 +842,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da631b61c27cce47be4447e7b707202, type: 3}
+--- !u!1 &806119245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806119246}
+  - component: {fileID: 806119247}
+  m_Layer: 0
+  m_Name: Single Tower 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806119246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806119245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 184.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1965803427}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806119247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806119245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
+    type: 3}
+  _spawnPoint: {x: -5.43, y: 0, z: 9.23}
+  numShifts: 1
+  dist: 9
+  rowDist: 2
+  numRows: 1
+  stagger: 1
+  pauseLevel: 0
+  dir: 1
 --- !u!1 &865113384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1112,7 @@ GameObject:
   - component: {fileID: 972571458}
   - component: {fileID: 972571459}
   m_Layer: 0
-  m_Name: Wave 10
+  m_Name: Wave 12
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1020,11 +1126,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972571457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 135.5}
+  m_LocalPosition: {x: 0, y: 0, z: 167.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &972571459
 MonoBehaviour:
@@ -1059,7 +1165,7 @@ GameObject:
   - component: {fileID: 1029031090}
   - component: {fileID: 1029031091}
   m_Layer: 0
-  m_Name: Wave 5
+  m_Name: Wave 10
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1072,12 +1178,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029031089}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 105.899994}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 137.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1029031091
 MonoBehaviour:
@@ -1112,7 +1218,7 @@ GameObject:
   - component: {fileID: 1033663430}
   - component: {fileID: 1033663431}
   m_Layer: 0
-  m_Name: Wave 7
+  m_Name: Wave 8
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1126,7 +1232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033663429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 93.799995}
+  m_LocalPosition: {x: 0, y: 0, z: 107.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1207,6 +1313,59 @@ MonoBehaviour:
   stagger: 0
   pauseLevel: 0
   dir: 2
+--- !u!1 &1142665298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1142665299}
+  - component: {fileID: 1142665300}
+  m_Layer: 0
+  m_Name: Single Tower 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1142665299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142665298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 100.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1965803427}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142665300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142665298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
+    type: 3}
+  _spawnPoint: {x: 4.79, y: 0, z: 9.23}
+  numShifts: 1
+  dist: 9
+  rowDist: 2
+  numRows: 1
+  stagger: 1
+  pauseLevel: 0
+  dir: 1
 --- !u!1 &1154795138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1430,7 @@ GameObject:
   - component: {fileID: 1194587291}
   - component: {fileID: 1194587292}
   m_Layer: 0
-  m_Name: Wave 9
+  m_Name: Wave 11
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1285,11 +1444,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194587290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 120.5}
+  m_LocalPosition: {x: 0, y: 0, z: 152.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1194587292
 MonoBehaviour:
@@ -1405,7 +1564,7 @@ GameObject:
   - component: {fileID: 1703547858}
   - component: {fileID: 1703547860}
   m_Layer: 0
-  m_Name: Wave 2 (1)
+  m_Name: Wave 3
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1458,7 +1617,7 @@ GameObject:
   - component: {fileID: 1905646803}
   - component: {fileID: 1905646804}
   m_Layer: 0
-  m_Name: Wave 8
+  m_Name: Wave 9
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1472,7 +1631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905646802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99.299995}
+  m_LocalPosition: {x: 0, y: 0, z: 116.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
@@ -1511,7 +1670,7 @@ GameObject:
   - component: {fileID: 1920383331}
   - component: {fileID: 1920383332}
   m_Layer: 0
-  m_Name: Tower 1
+  m_Name: Towers 1
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1545,14 +1704,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67,
     type: 3}
-  _spawnPoint: {x: 0.02, y: 0, z: 9.18}
-  numShifts: 1
-  dist: -4
+  _spawnPoint: {x: -3.69, y: 0, z: 9.18}
+  numShifts: 2
+  dist: 7
   rowDist: 0
   numRows: 1
   stagger: 0
   pauseLevel: 1
-  dir: 2
+  dir: 1
 --- !u!1 &1965803426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,16 +1747,19 @@ Transform:
   - {fileID: 1703547858}
   - {fileID: 1968537634}
   - {fileID: 1920383331}
-  - {fileID: 1029031090}
+  - {fileID: 138725901}
   - {fileID: 446763795}
   - {fileID: 1033663430}
   - {fileID: 1905646803}
+  - {fileID: 1029031090}
   - {fileID: 1194587291}
   - {fileID: 972571458}
   - {fileID: 450969927}
   - {fileID: 2109322276}
   - {fileID: 621455929}
-  - {fileID: 138725901}
+  - {fileID: 1142665299}
+  - {fileID: 469381560}
+  - {fileID: 806119246}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1745,7 +1907,7 @@ GameObject:
   - component: {fileID: 1968537634}
   - component: {fileID: 1968537635}
   m_Layer: 0
-  m_Name: Wave 3
+  m_Name: Wave 4
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1798,7 +1960,7 @@ GameObject:
   - component: {fileID: 2109322276}
   - component: {fileID: 2109322277}
   m_Layer: 0
-  m_Name: Wave 12
+  m_Name: MegaGauntlet
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1812,11 +1974,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109322275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 163.8}
+  m_LocalPosition: {x: 0, y: 0, z: 206.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2109322277
 MonoBehaviour:
@@ -1832,9 +1994,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoint: {x: -6.08, y: 0, z: 1.3}
-  numShifts: 5
-  dist: 3
+  _spawnPoint: {x: -5.06, y: 0, z: 1.3}
+  numShifts: 3
+  dist: 5
   rowDist: 4
   numRows: 3
   stagger: 1
