@@ -866,7 +866,7 @@ MonoBehaviour:
   name: Archer
   portrait: {fileID: 0}
   speed: 2.5
-  maxHP: 600
+  maxHP: 700
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
   staminaRegenCooldown: 0
   bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
     type: 3}
-  fireRate: 5
+  fireRate: 7
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
 --- !u!114 &-4387995181352385413
