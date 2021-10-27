@@ -170,7 +170,15 @@ public class Pawn : NetworkBehaviour
         hp -= value;
         hpTimer = 0.0f;
 
-        if (hp <= 0) Destroy(gameObject);
+        if (hp <= 0)
+        {
+            SoundManager.Instance.Play(name + " Death");
+            Destroy(gameObject);
+
+        } else
+        {
+            SoundManager.Instance.Play(name + " Hurt");
+        }
     }
 
     // Consume player stamina
