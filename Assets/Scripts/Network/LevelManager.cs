@@ -12,6 +12,8 @@ public class LevelManager : NetworkBehaviour
 
     // Level
     [Header ("Level Stuff")]
+    public GameObject spawnPointP1;
+    public GameObject spawnPointP2;
     [SerializeField] private string nextLevel;
 
     // Backgrounds
@@ -22,11 +24,14 @@ public class LevelManager : NetworkBehaviour
     [SerializeField] private GameObject background_2;
     private int currentBackground = 0;
 
-    // private List<GameObject> waves;
-
     private Camera cam;
     private bool isScrolling = false;
     public bool IsScrolling { get { return isScrolling; } }
+
+    [Header ("Tutorial Stuff")]
+    [SerializeField] private GameObject tutorial;
+    [SerializeField] private bool playTutorial = false;
+    public bool PlayTutorial { get { return playTutorial; } }
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -46,7 +51,6 @@ public class LevelManager : NetworkBehaviour
         background_2.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
 
         cam = Camera.main;
-        isScrolling = true;
     }
 
     // Update is called once per frame
@@ -54,7 +58,10 @@ public class LevelManager : NetworkBehaviour
     {
         if (isScrolling)
         {
-            transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
+            if (!playTutorial)
+                transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
+            else
+                tutorial.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
             
             // Scroll background 1
             background_1.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
@@ -68,10 +75,37 @@ public class LevelManager : NetworkBehaviour
         }
     }
 
-    void StartLevel()
+    // --------------
+    // TUTORIAL STUFF
+    // --------------
+
+    public void EndTutorial()
     {
-        
+        Debug.Log("End");
+        playTutorial = false;
     }
+
+    // [ClientRpc]
+    // public void EndTutorialRpc()
+    // {
+    //     playTutorial = false;
+    // }
+
+    // -----------
+    // LEVEL STUFF
+    // -----------
+
+    public void StartLevel()
+    {
+        isScrolling = true;
+        // StartLevelRpc();
+    }
+
+    // [ClientRpc]
+    // public void StartLevelRpc()
+    // {
+    //     isScrolling = true;
+    // }
 
     public void NextLevel()
     {
@@ -89,10 +123,23 @@ public class LevelManager : NetworkBehaviour
     public void PauseLevel()
     {
         isScrolling = false;
+        // PauseLevelRpc();
     }
+
+    // [ClientRpc]
+    // public void PauseLevelRpc()
+    // {
+    //     isScrolling = false;
+    // }
 
     public void ResumeLevel()
     {
         isScrolling = true;
     }
+
+    // [ClientRpc]
+    // public void ResumeLevelRpc()
+    // {
+    //     isScrolling = true;
+    // }
 }

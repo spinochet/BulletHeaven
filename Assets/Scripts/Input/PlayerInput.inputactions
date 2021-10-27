@@ -30,6 +30,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Aim",
+                    "type": "PassThrough",
+                    "id": "1d98e48a-705f-4c93-8a53-56d46ae2550b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Burst",
                     "type": "PassThrough",
                     "id": "3e4bce7e-10e8-436d-b71b-8b12d877515e",
@@ -88,7 +96,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -99,7 +107,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -110,7 +118,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -121,7 +129,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -165,7 +173,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -198,7 +206,29 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "8c226dcf-2329-4f59-bbd2-d7d6f87a39c1",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "76aaec19-4696-4928-bee4-8ae748262be1",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "M&K",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -264,7 +294,7 @@
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "AbilityL",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -319,7 +349,7 @@
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "AbilityR",
                     "isComposite": true,
                     "isPartOfComposite": false
@@ -330,7 +360,7 @@
                     "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "AbilityR",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -341,7 +371,7 @@
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "AbilityR",
                     "isComposite": true,
                     "isPartOfComposite": false
@@ -363,7 +393,7 @@
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "AbilityR",
                     "isComposite": true,
                     "isPartOfComposite": false
@@ -396,7 +426,7 @@
                     "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Burst",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -429,7 +459,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -473,8 +503,19 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4df10933-baa3-4267-a997-57dd94be0cb4",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "M&K",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -527,7 +568,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -538,7 +579,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -549,7 +590,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -560,7 +601,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -604,7 +645,7 @@
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -648,7 +689,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -697,7 +738,7 @@
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Piano",
+                    "groups": "M&K",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -707,12 +748,17 @@
     ],
     "controlSchemes": [
         {
-            "name": "Piano",
-            "bindingGroup": "Piano",
+            "name": "M&K",
+            "bindingGroup": "M&K",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

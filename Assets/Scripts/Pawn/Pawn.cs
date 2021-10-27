@@ -42,6 +42,8 @@ public class Pawn : NetworkBehaviour
     [Header ("Combat")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireRate;
+    private Vector3 aim;
+
     Bullet bullet;
     private bool isShooting;
     private float fireTimer;
@@ -194,6 +196,12 @@ public class Pawn : NetworkBehaviour
         isShooting = true;
     }
 
+    // Set aim
+    public void Aim(Vector3 target)
+    {
+        aim = target;
+    }
+
     [Command(requiresAuthority = false)]
     public void Shoot(Vector3 position, Quaternion rotation)
     {
@@ -208,7 +216,7 @@ public class Pawn : NetworkBehaviour
         }
         else
         {
-            b = Instantiate(bullet.gameObject, position, rotation);
+            b = Instantiate(bullet.gameObject, position, Quaternion.LookRotation(aim));
         }
         
         NetworkServer.Spawn(b);

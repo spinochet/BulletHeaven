@@ -278,6 +278,5 @@ public class WaveSpawner3D : MonoBehaviour
         Gizmos.DrawLine(p2, p3);
         Gizmos.DrawLine(p3, p4);
         Gizmos.DrawLine(p4, p1);
-
     }
 }

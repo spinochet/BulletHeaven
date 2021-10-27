@@ -81,7 +81,7 @@ MonoBehaviour:
   destroyOnCollision: 1
   isEnemyBullet: 0
   name: Fireball
-  speed: 15
+  speed: 30
   damage: 15
   fireRate: 10
 --- !u!114 &7477043600559313110
