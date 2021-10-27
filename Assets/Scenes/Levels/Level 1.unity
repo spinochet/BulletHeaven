@@ -264,14 +264,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 0, y: 0, z: 6}
   numShifts: 3
   dist: 5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &138725903
 MonoBehaviour:
@@ -402,14 +401,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -3, y: 0, z: 6}
   numShifts: 4
   dist: 3
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &446763797
 MonoBehaviour:
@@ -476,14 +474,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 0, y: 0, z: 6}
   numShifts: 8
   dist: 2
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &450969929
 MonoBehaviour:
@@ -829,7 +826,7 @@ PrefabInstance:
     - target: {fileID: 6959813843487987671, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959813843802129512, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
@@ -992,14 +989,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -1, y: 0, z: 6}
   numShifts: 4
   dist: -2
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &972571460
 MonoBehaviour:
@@ -1066,14 +1062,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -5.5, y: 0, z: 6}
   numShifts: 5
   dist: 3
   rowDist: 4
   numRows: 3
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1029031092
 MonoBehaviour:
@@ -1140,14 +1135,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -6, y: 0, z: 6}
   numShifts: 4
   dist: 3
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1033663432
 MonoBehaviour:
@@ -1214,14 +1208,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -2, y: 0, z: 6}
   numShifts: 4
   dist: -2
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1074643456
 MonoBehaviour:
@@ -1288,14 +1281,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 2, y: 0, z: 6}
   numShifts: 4
   dist: 2
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &1154795141
 MonoBehaviour:
@@ -1362,14 +1354,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 0, y: 0, z: 6}
   numShifts: 3
   dist: 5
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &1194587293
 MonoBehaviour:
@@ -1517,14 +1508,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -3, y: 0, z: 6}
   numShifts: 4
   dist: 3
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1905646805
 MonoBehaviour:
@@ -1591,14 +1581,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 4, y: 0, z: 6}
   numShifts: 4
   dist: -4
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1920383333
 MonoBehaviour:
@@ -1822,14 +1811,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 0.12, y: 0, z: 11.76}
   numShifts: 4
   dist: 4
   rowDist: 0
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 4
 --- !u!114 &1968537636
 MonoBehaviour:
@@ -1896,14 +1884,13 @@ MonoBehaviour:
   syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints:
-  - {x: 0, y: 0, z: 0}
   _spawnPoint: {x: -5.5, y: 0, z: 6}
   numShifts: 5
   dist: 3
   rowDist: 3
   numRows: 3
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &2109322278
 MonoBehaviour:

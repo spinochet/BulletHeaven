@@ -10,6 +10,10 @@ public class LevelManager : NetworkBehaviour
     public static LevelManager _instance;
     public static LevelManager Instance { get { return _instance; } }
 
+    // Level
+    [Header ("Level Stuff")]
+    [SerializeField] private string nextLevel;
+
     // Backgrounds
     [Header ("Scrollable Backgrounds")]
     [SerializeField] private float scrollSpeed = 2.5f;
@@ -17,6 +21,8 @@ public class LevelManager : NetworkBehaviour
     [SerializeField] private GameObject background_1;
     [SerializeField] private GameObject background_2;
     private int currentBackground = 0;
+
+    // private List<GameObject> waves;
 
     private Camera cam;
     private bool isScrolling = false;
@@ -65,6 +71,19 @@ public class LevelManager : NetworkBehaviour
     void StartLevel()
     {
         
+    }
+
+    public void NextLevel()
+    {
+        PlayerNetworkManager.Instance.LoadArcadeLevel(nextLevel);
+    }
+
+    public GameObject SpawnEnemy(GameObject enemyPrefab, Vector3 position, Quaternion rotation)
+    {
+        GameObject e = Instantiate(enemyPrefab, position, rotation);
+        NetworkServer.Spawn(e);
+
+        return e;
     }
 
     public void PauseLevel()
