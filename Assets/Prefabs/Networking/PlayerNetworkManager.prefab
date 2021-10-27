@@ -152,7 +152,7 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Enemy Death
+  - name: Archer Death
     sound:
       sound:
       - {fileID: 8300000, guid: c3063734048d248929e91f3008e5710f, type: 3}
