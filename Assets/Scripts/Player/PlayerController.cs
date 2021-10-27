@@ -80,6 +80,18 @@ public class PlayerController : PawnController
         }
     }
 
+    // Shoot action callback
+    void OnAim(InputValue input)
+    {
+        if (this.isLocalPlayer && pawn)
+        {
+            Vector3 target = Camera.main.ScreenToWorldPoint((Vector3) input.Get<Vector2>());
+            target.y = 0.0f;
+
+            pawn.Aim(target - pawn.transform.position);
+        }
+    }
+
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {

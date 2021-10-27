@@ -81,7 +81,7 @@ MonoBehaviour:
   destroyOnCollision: 1
   isEnemyBullet: 0
   name: Laser
-  speed: 15
+  speed: 50
   damage: 15
   fireRate: 10
 --- !u!114 &-1435561008292283698

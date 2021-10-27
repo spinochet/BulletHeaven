@@ -112,7 +112,7 @@ MonoBehaviour:
   staminaRegenCooldown: 2.5
   bulletPrefab: {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7,
     type: 3}
-  fireRate: 10
+  fireRate: 15
   abilityL: {fileID: 949287809729758976}
   abilityR: {fileID: 6988537135582660480}
 --- !u!114 &949287809729758976

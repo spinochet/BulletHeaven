@@ -51,5 +51,11 @@ public class Bullet : NetworkBehaviour
 
             if (destroyOnCollision) Destroy(gameObject);
         }
+        else if (col.gameObject.tag == "Letter")
+        {
+            Debug.Log("Here");
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

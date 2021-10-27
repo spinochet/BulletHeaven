@@ -129,6 +129,8 @@ public class PlayerNetworkManager : NetworkManager
                         players[i].gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
                     }
                 }
+
+                LevelManager.Instance.StartLevel();
             }
         }
     }
@@ -165,6 +167,8 @@ public class PlayerNetworkManager : NetworkManager
             robot.SetActive(false);
             
             identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
+
+            LevelManager.Instance.StartLevel();
         }
         else if (networkSceneName.Contains("Lobby"))
         {
