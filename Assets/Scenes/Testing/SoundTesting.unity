@@ -411,7 +411,7 @@ PrefabInstance:
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[7].name
-      value: Enemy Death
+      value: Archer Death
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
