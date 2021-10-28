@@ -51,7 +51,6 @@ public class Level1Tutorial : TutorialScript
         }
         if (tutorialStarted && canShoot && timer < 5.0f)
         {
-            Debug.Log("Here");
             timer += Time.deltaTime;
         }
         else if (timer > 5.0f)

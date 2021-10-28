@@ -5,8 +5,17 @@ using UnityEngine;
 public class EnemyController : PawnController
 {
     // TEMP BEHAVIORS
-    private float timer;
+    private CharacterController controller;
+    private float speed = 2.5f;
+
+
+    private float fireTimer;
     public float shootFrequency = 0.3f;
+
+    void Awake()
+    {
+        controller = GetComponent<CharacterController>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,24 +28,15 @@ public class EnemyController : PawnController
     void Update()
     {
         if (LevelManager.Instance.IsScrolling)
-            pawn.Move(Vector2.down * Time.timeScale);
-        else
-            pawn.Move(Vector2.zero);
+            controller.Move(Vector3.forward * -speed * Time.deltaTime);
 
-        timer += Time.deltaTime;
-        if (timer > 0.5f)
+        fireTimer += Time.unscaledDeltaTime;
+        if (fireTimer > 1.0f / pawn.FireRate)
         {
-            timer = 0.0f;
-            float shoot = Random.Range(0.0f, 1.0f);
-            if (shoot < shootFrequency)
-                pawn.StartShooting();
-            else
-                pawn.StopShooting();
-        }
-
-        if (Time.deltaTime == 0.0f)
-        {
-            pawn.StopShooting();
+            fireTimer = 0.0f;
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Character");
+            Vector3 dir = players[0].transform.position - transform.position;
+            pawn.Shoot(transform.position, Quaternion.LookRotation(dir));
         }
     }
 }

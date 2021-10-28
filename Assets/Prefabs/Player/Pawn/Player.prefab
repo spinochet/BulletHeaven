@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6148656104204094171}
   - component: {fileID: -2021873978722025626}
   - component: {fileID: 9185999476245966764}
+  - component: {fileID: -6521073231595870471}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -79,7 +80,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   pawn: {fileID: 0}
-  manager: {fileID: 0}
 --- !u!114 &9185999476245966764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +97,21 @@ MonoBehaviour:
   visible: 0
   m_AssetId: c6a9fff894159e34da498cc22a7327de
   hasSpawned: 0
+--- !u!143 &-6521073231595870471
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148656104204094247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.5, z: 0}

@@ -284,7 +284,7 @@ PrefabInstance:
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: debugLevel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022845, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -1680,7 +1680,7 @@ MonoBehaviour:
   background_1: {fileID: 886829754}
   background_2: {fileID: 1286759221}
   tutorial: {fileID: 1495267863}
-  playTutorial: 1
+  playTutorial: 0
 --- !u!82 &1965803429
 AudioSource:
   m_ObjectHideFlags: 0

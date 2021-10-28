@@ -12,11 +12,38 @@ public class PlayerController : PawnController
     // Character and player data
     private Color playerColor;
 
-    private Vector3 movement;
+    // Movement
+    CharacterController controller = null;
+    private Vector3 movement = Vector3.zero;
+    [SerializeField] private float speed = 10.0f;
+
+    // Combat
+    private bool isShooting = false;
+    private float fireTimer = 0.0f;
 
     void Awake()
     {
         DontDestroyOnLoad(this);
+
+        controller = GetComponent<CharacterController>();
+    }
+
+    void Update()
+    {
+        if (pawn)
+        {
+            // Movement
+            controller.Move(movement * speed * Time.unscaledDeltaTime);
+                pawn.transform.position = transform.position;
+
+            // Combat
+            fireTimer += Time.unscaledDeltaTime;
+            if (isShooting && fireTimer > 1.0f / pawn.FireRate)
+            {
+                fireTimer = 0.0f;
+                pawn.Shoot(transform.position, transform.rotation);
+            }
+        }
     }
 
     // Assign pawn to controller over the network
@@ -60,8 +87,15 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if (this.isLocalPlayer && pawn)
-            pawn.Move(input.Get<Vector2>());
+        if (this.isLocalPlayer)
+        {
+            Vector2 inputVec = input.Get<Vector2>();
+            movement.x = inputVec.x;
+            movement.z = inputVec.y;
+        }
+
+        // if (this.isLocalPlayer && pawn)
+        //     pawn.Move(input.Get<Vector2>());
     }
 
     // -------------
@@ -71,13 +105,13 @@ public class PlayerController : PawnController
     // Shoot action callback
     void OnShoot(InputValue input)
     {
-        bool isShooting = input.Get<float>() > 0.0f ? true : false;
+        isShooting = input.Get<float>() > 0.0f ? true : false;
 
-        if (this.isLocalPlayer && pawn)
-        {
-            if (isShooting) pawn.StartShooting();
-            else pawn.StopShooting();
-        }
+        // if (this.isLocalPlayer && pawn)
+        // {
+        //     if (isShooting) pawn.StartShooting();
+        //     else pawn.StopShooting();
+        // }
     }
 
     void OnShootStraight(InputValue input)
@@ -95,13 +129,13 @@ public class PlayerController : PawnController
     // Shoot action callback
     void OnAim(InputValue input)
     {
-        if (this.isLocalPlayer && pawn)
-        {
-            Vector3 target = Camera.main.ScreenToWorldPoint((Vector3) input.Get<Vector2>());
-            target.y = 0.0f;
+        // if (this.isLocalPlayer && pawn)
+        // {
+        //     Vector3 target = Camera.main.ScreenToWorldPoint((Vector3) input.Get<Vector2>());
+        //     target.y = 0.0f;
 
-            pawn.Aim(target - pawn.transform.position);
-        }
+        //     pawn.Aim(target - pawn.transform.position);
+        // }
     }
 
     // AbilityL action callback function

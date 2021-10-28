@@ -8,6 +8,7 @@ public class Pawn : NetworkBehaviour
 {
     private HUDController hud;
     public bool isEnemy;
+    // private PawnController pawnController;
 
     // Character Data
     [Header ("Character Data")]
@@ -44,11 +45,11 @@ public class Pawn : NetworkBehaviour
     [SerializeField] private float fireRate;
     private Vector3 aim;
 
+    public float FireRate { get { return fireRate; } }
+
     Bullet bullet;
     private bool isShooting;
     private float fireTimer;
-    private System.Random rnd;
-    public int firingArcAngle = 0;
 
     // Abilities
     [Header ("Abilities")]
@@ -70,7 +71,6 @@ public class Pawn : NetworkBehaviour
 
         // Combat
         bullet = bulletPrefab.GetComponent<Bullet>();
-        rnd = new System.Random();
     }
 
     // Start is called before the first frame update
@@ -91,8 +91,8 @@ public class Pawn : NetworkBehaviour
     void Update()
     {
         // Movement
-        if (isMove)
-            controller.Move(movement * speed * Time.unscaledDeltaTime);
+        // if (isMove)
+        //     controller.Move(movement * speed * Time.unscaledDeltaTime);
 
         // Abilities
         hpTimer += Time.unscaledDeltaTime;
@@ -112,19 +112,19 @@ public class Pawn : NetworkBehaviour
         }
 
         // Combat
-        if (isEnemy)
-            fireTimer += Time.deltaTime;
-        else
-            fireTimer += Time.unscaledDeltaTime;
+        // if (isEnemy)
+        //     fireTimer += Time.deltaTime;
+        // else
+        //     fireTimer += Time.unscaledDeltaTime;
 
-        if (isShooting)
-        {
-            if (fireTimer > 1.0f / fireRate)
-            {
-                fireTimer = 0.0f;
-                Shoot(transform.position, transform.rotation);
-            }
-        }
+        // if (isShooting)
+        // {
+        //     if (fireTimer > 1.0f / fireRate)
+        //     {
+        //         fireTimer = 0.0f;
+        //         Shoot(transform.position, transform.rotation);
+        //     }
+        // }
 
         // Abilities
         if (isAbilityL)
@@ -213,20 +213,7 @@ public class Pawn : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void Shoot(Vector3 position, Quaternion rotation)
     {
-        GameObject b;
-        if (isEnemy)
-        {
-            int randDegree = rnd.Next(firingArcAngle);
-            int ranSign = rnd.NextDouble() > 0.5f ? 1 : -1;
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Character");
-            Vector3 dir = players[0].transform.position - transform.position;
-            b = Instantiate(bullet.gameObject, position, Quaternion.LookRotation(dir) * Quaternion.Euler(0, ranSign * randDegree, 0));
-        }
-        else
-        {
-            b = Instantiate(bullet.gameObject, position, Quaternion.LookRotation(aim));
-        }
-        
+        GameObject b = Instantiate(bullet.gameObject, position, rotation);
         NetworkServer.Spawn(b);
     }
 
