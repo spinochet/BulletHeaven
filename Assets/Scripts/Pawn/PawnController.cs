@@ -9,10 +9,12 @@ using UnityEngine.UI;
 
 public class PawnController : NetworkBehaviour 
 {
-    [SerializeField] protected Pawn pawn;
+    [SyncVar] public Pawn pawn;
 
-    public void TogglePause(bool isPaused)
-    {
-        
-    }
+    // [Command(requiresAuthority = false)]
+    // public void SpawnPawn(GameObject _pawn)
+    // {
+    //     pawn = Instantiate(_pawn).GetComponent<Pawn>();
+    //     NetworkServer.Spawn(pawn.gameObject);
+    // }
 }

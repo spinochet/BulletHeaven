@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: -8281485748624298167}
   - component: {fileID: -7185356826066695946}
   m_Layer: 8
-  m_Name: Robot
+  m_Name: Arthur
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,9 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isEnemy: 0
-  name: Robot
+  name: Arthur
   portrait: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
+  model: {fileID: 1092565388352361883}
   speed: 10
   maxHP: 200
   hpRegenRate: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   clientAuthority: 1
-  sendInterval: 0.01
+  sendInterval: 0
   syncPosition: 1
   syncRotation: 0
   syncScale: 0

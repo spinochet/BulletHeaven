@@ -36,7 +36,7 @@ public class EnemyController : PawnController
             fireTimer = 0.0f;
             GameObject[] players = GameObject.FindGameObjectsWithTag("Character");
             Vector3 dir = players[0].transform.position - transform.position;
-            pawn.Shoot(transform.position, Quaternion.LookRotation(dir));
+            pawn.Shoot(Quaternion.LookRotation(dir));
         }
     }
 }

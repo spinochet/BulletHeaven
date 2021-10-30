@@ -297,6 +297,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   pawn: {fileID: 8019127529922287089}
+  shootFrequency: 0.3
 --- !u!114 &8019127529922287089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,9 +312,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isEnemy: 1
   name: Archer
   portrait: {fileID: 0}
+  model: {fileID: 5555527058871000464}
   speed: 2.5
   maxHP: 50
   hpRegenRate: 0

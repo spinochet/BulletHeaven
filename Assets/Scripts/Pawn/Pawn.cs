@@ -7,21 +7,20 @@ using Mirror;
 public class Pawn : NetworkBehaviour
 {
     private HUDController hud;
-    public bool isEnemy;
     // private PawnController pawnController;
+    private GameObject partner;
 
     // Character Data
     [Header ("Character Data")]
     [SerializeField] private string name;
     [SerializeField] private Sprite portrait;
+    [SerializeField] private GameObject model;
+    public Sprite Portrait { get { return portrait; } }
 
     // Movement
     [Header ("Movement")]
     [SerializeField] private float speed = 10.0f;
     private CharacterController controller;
-    private Vector3 movement;
-    public Vector3 Movement { get { return movement; } }
-    private bool isMove = true;
 
     // Stats
     [Header ("Stats")]
@@ -58,13 +57,12 @@ public class Pawn : NetworkBehaviour
     private bool isAbilityL;
     private bool isAbilityR;
 
-    // -----
-    // SETUP
-    // -----
-
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
+        // Movement 
+        controller = GetComponent<CharacterController>();
+        
         // Stats
         hp = maxHP;
         stamina = maxStamina;
@@ -76,23 +74,17 @@ public class Pawn : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Movement
-        controller = GetComponent<CharacterController>();
-    }
-
-    // Assign player's HUD
-    public void AssignHUD(HUDController _hud)
-    {
-        hud = _hud;
-        hud.UpdatePortrait(portrait.texture);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Movement
-        // if (isMove)
-        //     controller.Move(movement * speed * Time.unscaledDeltaTime);
+        // Update move
+        if (!model.activeSelf)
+        {
+            transform.position = partner.transform.position;
+        }
 
         // Abilities
         hpTimer += Time.unscaledDeltaTime;
@@ -105,26 +97,11 @@ public class Pawn : NetworkBehaviour
             stamina += staminaRegenRate * Time.unscaledDeltaTime;
 
         // Update HUD
-        if (hud)
+        if (hud && model.activeSelf)
         {
             hud.UpdateHealth(hp / maxHP);
             hud.UpdateStamina(stamina / maxStamina);
         }
-
-        // Combat
-        // if (isEnemy)
-        //     fireTimer += Time.deltaTime;
-        // else
-        //     fireTimer += Time.unscaledDeltaTime;
-
-        // if (isShooting)
-        // {
-        //     if (fireTimer > 1.0f / fireRate)
-        //     {
-        //         fireTimer = 0.0f;
-        //         Shoot(transform.position, transform.rotation);
-        //     }
-        // }
 
         // Abilities
         if (isAbilityL)
@@ -143,21 +120,38 @@ public class Pawn : NetworkBehaviour
         }
     }
 
+    // -----
+    // SETUP
+    // -----
+
+    // Assign player's HUD
+    public void AssignHUD(HUDController _hud)
+    {
+        hud = _hud;
+        hud.UpdatePortrait(portrait.texture);
+    }
+
+    // Assign partner
+    public void AssignPartner(NetworkIdentity _partner)
+    {
+        partner = _partner.gameObject;
+        Debug.Log(partner.gameObject.name);
+    }
+
+    // Set visibility of model
+    public void SetVisibility(bool visible)
+    {
+        model.SetActive(visible);
+    }
+
     // --------
     // MOVEMENT
     // --------
 
     // Move character in XY plane
-    public void Move(Vector2 moveVector)
+    public void Move(Vector3 moveVector)
     {
-        movement.x = moveVector.x;
-        movement.z = moveVector.y;
-    }
-
-    public void EnableMovement(bool move)
-    {
-        isMove = move;
-        if (!move) movement = Vector3.zero;
+        controller.Move(moveVector * speed * Time.unscaledDeltaTime);
     }
 
     // -----
@@ -167,17 +161,21 @@ public class Pawn : NetworkBehaviour
     // Add health to player
     public void TakeDamage(float value)
     {
-        hp -= value;
-        hpTimer = 0.0f;
-
-        if (hp <= 0)
+        if (model.activeSelf)
         {
-            SoundManager.Instance.Play(name + " Death");
-            Destroy(gameObject);
+            hp -= value;
+            hpTimer = 0.0f;
 
-        } else
-        {
-            SoundManager.Instance.Play(name + " Hurt");
+            if (hp <= 0)
+            {
+                SoundManager.Instance.Play(name + " Death");
+                Destroy(gameObject);
+
+            }
+            else
+            {
+                SoundManager.Instance.Play(name + " Hurt");
+            }
         }
     }
 
@@ -192,35 +190,12 @@ public class Pawn : NetworkBehaviour
     // COMBAT
     // ------
 
-    // Start shooting
-    public void StartShooting()
-    {
-        if (fireTimer > 1.0f / fireRate)
-        {
-            fireTimer = 0.0f;
-            Shoot(transform.position, transform.rotation);
-        }
-
-        isShooting = true;
-    }
-
-    // Set aim
-    public void Aim(Vector3 target)
-    {
-        aim = target;
-    }
-
+    // Ask server to spawn bullet prefab
     [Command(requiresAuthority = false)]
-    public void Shoot(Vector3 position, Quaternion rotation)
+    public void Shoot(Quaternion aim)
     {
-        GameObject b = Instantiate(bullet.gameObject, position, rotation);
+        GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
         NetworkServer.Spawn(b);
-    }
-
-    // Stop shooting
-    public void StopShooting()
-    {
-        isShooting = false;
     }
 
     // ---------

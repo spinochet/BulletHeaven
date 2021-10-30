@@ -2743,6 +2743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6959813842397716186}
   - component: {fileID: 2550607295318706356}
+  - component: {fileID: 8088176507006494027}
   m_Layer: 5
   m_Name: P1 Stats
   m_TagString: Untagged
@@ -2785,7 +2786,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd87ff208b58784abe9bd6b41133b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   pause: {fileID: 4732046359811459410}
+--- !u!114 &8088176507006494027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6959813842397716189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 8da631b61c27cce47be4447e7b707202
+  hasSpawned: 0
 --- !u!1 &6959813842414221836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,6 +3071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6959813842503067980}
   - component: {fileID: 3688932927021370820}
+  - component: {fileID: 2660309088402427776}
   m_Layer: 5
   m_Name: P4 Stats
   m_TagString: Untagged
@@ -3093,7 +3114,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd87ff208b58784abe9bd6b41133b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   pause: {fileID: 4732046359811459410}
+--- !u!114 &2660309088402427776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6959813842503067983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 8da631b61c27cce47be4447e7b707202
+  hasSpawned: 0
 --- !u!1 &6959813842520699092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,6 +5624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6959813843802129512}
   - component: {fileID: 3208381757206076227}
+  - component: {fileID: 5338562064426653967}
   m_Layer: 5
   m_Name: P3 Stats
   m_TagString: Untagged
@@ -5626,7 +5667,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd87ff208b58784abe9bd6b41133b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   pause: {fileID: 4732046359811459410}
+--- !u!114 &5338562064426653967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6959813843802129515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 8da631b61c27cce47be4447e7b707202
+  hasSpawned: 0
 --- !u!1 &6959813843842329795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5782,6 +5842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6959813843881212931}
   - component: {fileID: 4946220830180612226}
+  - component: {fileID: 6599740440963098563}
   m_Layer: 5
   m_Name: P2 Stats
   m_TagString: Untagged
@@ -5824,7 +5885,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd87ff208b58784abe9bd6b41133b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   pause: {fileID: 4732046359811459410}
+--- !u!114 &6599740440963098563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6959813843881212930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 8da631b61c27cce47be4447e7b707202
+  hasSpawned: 0
 --- !u!1 &6959813843907562683
 GameObject:
   m_ObjectHideFlags: 0

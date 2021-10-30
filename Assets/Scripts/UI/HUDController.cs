@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HUDController : MonoBehaviour
+using Mirror;
+
+public class HUDController : NetworkBehaviour
 {
     [SerializeField] Pause pause;
 
