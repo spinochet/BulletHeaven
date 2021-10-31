@@ -7,12 +7,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class PawnController : NetworkBehaviour 
+abstract public class PawnController : NetworkBehaviour 
 {
-    [SerializeField] protected Pawn pawn;
+    [SyncVar] public Pawn pawn;
 
-    public void TogglePause(bool isPaused)
-    {
-        
-    }
+    abstract public void Destroy(Pawn _pawn);
+
+    // [Command(requiresAuthority = false)]
+    // public void SpawnPawn(GameObject _pawn)
+    // {
+    //     pawn = Instantiate(_pawn).GetComponent<Pawn>();
+    //     NetworkServer.Spawn(pawn.gameObject);
+    // }
 }

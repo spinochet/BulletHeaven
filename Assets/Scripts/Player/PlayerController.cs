@@ -12,12 +12,65 @@ public class PlayerController : PawnController
     // Character and player data
     private Color playerColor;
 
-    private Vector3 movement;
+    // Movement
+    private Vector3 movement = Vector3.zero;
+    private float speed = 10.0f;
+    private bool canMove = true;
+
+    // Stats
+    private HUDController hud;
+
+    // Combat
+    private bool isShooting = false;
+    private float fireTimer = 0.0f;
+
+    // Abilities
+    private bool isAbilityL;
+    private bool isAbilityR;
 
     void Awake()
     {
         DontDestroyOnLoad(this);
     }
+
+    void Update()
+    {
+        if (pawn)
+        {
+            // Movement
+            pawn.Move(movement);
+
+            // Combat
+            fireTimer += Time.unscaledDeltaTime;
+            if (isShooting && fireTimer > 1.0f / pawn.FireRate)
+            {
+                fireTimer = 0.0f;
+                pawn.Shoot(transform.rotation);
+            }
+        }
+    }
+
+    public override void Destroy(Pawn _pawn)
+    {
+        if (_pawn.partner)
+        {
+            Pawn newPawn = _pawn.partner.GetComponent<Pawn>();
+            newPawn.SetVisibility(true);
+            TargetPossesPawn(newPawn.transform.GetComponent<NetworkIdentity>());
+        }
+        else
+        {
+            // Something something...
+            // Game over...
+            // Something something...
+        }
+
+        Destroy(_pawn.gameObject);
+    }
+
+    // -----
+    // SETUP
+    // -----
 
     // Assign pawn to controller over the network
     [TargetRpc]
@@ -26,7 +79,10 @@ public class PlayerController : PawnController
         if (this.isLocalPlayer)
         {
             pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
-            pawn.StopShooting();
+            pawn.pawnController = this;
+            
+            if (hud)
+                pawn.AssignHUD(hud);
 
             // Switch input map
             PlayerInput input = GetComponent<PlayerInput>();
@@ -34,23 +90,11 @@ public class PlayerController : PawnController
         }
     }
 
-    // Assign pawn to controller over the network
+    // Assign player's HUD
     [TargetRpc]
-    public void TargetPossesPawnPos(NetworkIdentity pawnIdentity, Vector3 position)
+    public void TargetAssignHUD(HUDController _hud)
     {
-        if (this.isLocalPlayer)
-        {
-            pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
-            pawn.StopShooting();
-            pawn.transform.position = position;
-
-            // Switch input map
-            PlayerInput input = GetComponent<PlayerInput>();
-            if (input) input.SwitchCurrentActionMap("Gameplay");
-
-            pawn.EnableMovement(true);
-            pawn.Move(new Vector2(movement.x, movement.z));
-        }
+        hud = _hud;
     }
 
     // ---------------
@@ -60,8 +104,12 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if (this.isLocalPlayer && pawn)
-            pawn.Move(input.Get<Vector2>());
+        if (this.isLocalPlayer)
+        {
+            Vector2 inputVec = input.Get<Vector2>();
+            movement.x = inputVec.x;
+            movement.z = inputVec.y;
+        }
     }
 
     // -------------
@@ -71,38 +119,12 @@ public class PlayerController : PawnController
     // Shoot action callback
     void OnShoot(InputValue input)
     {
-        bool isShooting = input.Get<float>() > 0.0f ? true : false;
-
-        if (this.isLocalPlayer && pawn)
-        {
-            if (isShooting) pawn.StartShooting();
-            else pawn.StopShooting();
-        }
+        isShooting = input.Get<float>() > 0.0f ? true : false;
     }
 
-    void OnShootStraight(InputValue input)
-    {
-        bool isShooting = input.Get<float>() > 0.0f ? true : false;
-
-        if (this.isLocalPlayer && pawn)
-        {
-            pawn.Aim(Vector3.forward);
-            if (isShooting) pawn.StartShooting();
-            else pawn.StopShooting();
-        }
-    }
-
-    // Shoot action callback
-    void OnAim(InputValue input)
-    {
-        if (this.isLocalPlayer && pawn)
-        {
-            Vector3 target = Camera.main.ScreenToWorldPoint((Vector3) input.Get<Vector2>());
-            target.y = 0.0f;
-
-            pawn.Aim(target - pawn.transform.position);
-        }
-    }
+    // --------------
+    // ABILITY EVENTS
+    // --------------
 
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
@@ -141,7 +163,6 @@ public class PlayerController : PawnController
     [Command(requiresAuthority = false)]
     void Switch()
     {
-        movement = pawn.Movement;
         PlayerNetworkManager.Instance.SwitchCharacters(pawn);
     }
 

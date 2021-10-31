@@ -239,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3007241012240742892}
   - component: {fileID: 3007241012240742899}
-  - component: {fileID: 3007241012240742893}
+  - component: {fileID: -9180918540305325821}
   - component: {fileID: 8019127529922287089}
   - component: {fileID: -4387995181352385413}
   m_Layer: 10
@@ -282,7 +282,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3007241012240742893
+--- !u!114 &-9180918540305325821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,12 +291,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3007241012240742889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f9b050caccf5d429077028ef0c55fd, type: 3}
+  m_Script: {fileID: 11500000, guid: bcbfb629815152840a89be29708e06e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 0.1
+  syncInterval: 0
   pawn: {fileID: 8019127529922287089}
+  shootFrequency: 0.3
+  shootFrequency: 0.3
 --- !u!114 &8019127529922287089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,9 +313,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isEnemy: 1
+  pawnController: {fileID: 0}
+  partner: {fileID: 0}
   name: Archer
   portrait: {fileID: 0}
+  model: {fileID: 5555527058871000464}
   speed: 2.5
   maxHP: 50
   hpRegenRate: 0

@@ -121,7 +121,6 @@ public class PlayerNetworkManager : NetworkManager
                     {
                         princess = Instantiate(spawnPrefabs[0], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(princess, players[i].gameObject);
-                        GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
                         robot = Instantiate(spawnPrefabs[1], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(robot, players[i].gameObject);
@@ -161,15 +160,18 @@ public class PlayerNetworkManager : NetworkManager
         {
             princess = Instantiate(spawnPrefabs[0], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(princess, identity.gameObject);
-            GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
 
             robot = Instantiate(spawnPrefabs[1], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             NetworkServer.Spawn(robot, identity.gameObject);
-            robot.SetActive(false);
-            
+            robot.GetComponent<Pawn>().SetVisibility(false);
+
+            princess.GetComponent<Pawn>().AssignPartner(robot.GetComponent<NetworkIdentity>());
+            robot.GetComponent<Pawn>().AssignPartner(princess.GetComponent<NetworkIdentity>());
+
+            GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(identity.gameObject.GetComponent<PlayerController>(), 1);
             identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
 
-            LevelManager.Instance.StartLevel();
+            // LevelManager.Instance.StartLevel();
         }
         else if (networkSceneName.Contains("Lobby"))
         {
@@ -263,13 +265,10 @@ public class PlayerNetworkManager : NetworkManager
             if (princess != null && robot != null)
             {
                 activeCharacter = 1;
-                robot.SetActive(true);
+                robot.GetComponent<Pawn>().SetVisibility(true);
 
-                players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(robot.GetComponent<NetworkIdentity>(), princess.transform.position);
-                GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(robot.GetComponent<Pawn>(), 1);
-
-                princess.GetComponent<Pawn>().EnableMovement(false);
-                princess.SetActive(false);
+                players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawn(robot.GetComponent<NetworkIdentity>());
+                princess.GetComponent<Pawn>().SetVisibility(false);
             }
         }
         else
@@ -277,13 +276,10 @@ public class PlayerNetworkManager : NetworkManager
             if (princess != null && robot != null)
             {
                 activeCharacter = 0;
-                princess.SetActive(true);
+                princess.GetComponent<Pawn>().SetVisibility(true);
 
-                players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawnPos(princess.GetComponent<NetworkIdentity>(), robot.transform.position);
-                GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(princess.GetComponent<Pawn>(), 1);
-
-                robot.GetComponent<Pawn>().EnableMovement(false);
-                robot.SetActive(false);
+                players[0].gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
+                robot.GetComponent<Pawn>().SetVisibility(false);
             }
         }
 

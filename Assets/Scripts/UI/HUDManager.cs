@@ -9,25 +9,25 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private HUDController p3;
     [SerializeField] private HUDController p4;
 
-    public void AssignHUD(Pawn pawn, int player)
+    public void AssignHUD(PlayerController pawn, int player)
     {
         switch (player)
         {
             case 0:
                 p1.gameObject.SetActive(true);
-                pawn.AssignHUD(p1);
+                pawn.TargetAssignHUD(p1);
                 break;
             case 1:
                 p2.gameObject.SetActive(true);
-                pawn.AssignHUD(p2);
+                pawn.TargetAssignHUD(p2);
                 break;
             case 2:
                 p3.gameObject.SetActive(true);
-                pawn.AssignHUD(p3);
+                pawn.TargetAssignHUD(p3);
                 break;
             case 3:
                 p4.gameObject.SetActive(true);
-                pawn.AssignHUD(p4);
+                pawn.TargetAssignHUD(p4);
                 break;
             default:
                 break;
