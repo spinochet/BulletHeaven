@@ -861,11 +861,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3007241012240742892}
   - component: {fileID: 3007241012240742899}
-  - component: {fileID: 3007241012240742893}
   - component: {fileID: 8019127529922287089}
   - component: {fileID: -4387995181352385413}
   - component: {fileID: 8140509201408157259}
   - component: {fileID: 1510655434230804597}
+  - component: {fileID: 7427910172306480252}
   m_Layer: 10
   m_Name: Tower
   m_TagString: Enemy
@@ -906,22 +906,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3007241012240742893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007241012240742889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f9b050caccf5d429077028ef0c55fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  pawn: {fileID: 8019127529922287089}
-  shootFrequency: 0.3
 --- !u!114 &8019127529922287089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,6 +920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  pawnController: {fileID: 0}
+  partner: {fileID: 0}
   name: Archer
   portrait: {fileID: 0}
   model: {fileID: 956896236593754978}
@@ -948,7 +934,7 @@ MonoBehaviour:
   staminaRegenCooldown: 0
   bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
     type: 3}
-  fireRate: 4
+  fireRate: 5
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
 --- !u!114 &-4387995181352385413
@@ -994,6 +980,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 5, z: 5.25}
   m_Center: {x: 0, y: 0, z: 1.75}
+--- !u!114 &7427910172306480252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007241012240742889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbfb629815152840a89be29708e06e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  pawn: {fileID: 0}
+  shootFrequency: 0.2
 --- !u!1 &3532057981992372333
 GameObject:
   m_ObjectHideFlags: 0
