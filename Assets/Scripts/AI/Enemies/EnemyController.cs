@@ -27,6 +27,28 @@ public class EnemyController : PawnController
             pawn = GetComponent<Pawn>();
     }
 
+    // Return position of nearest player
+    public Vector3 GetNearestPlayer()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Character");
+
+        Vector3 target = Vector3.zero;
+        float closest = 1000000;
+
+        foreach (GameObject player in players)
+        {
+            Vector3 dir = player.transform.position - transform.position;
+
+            if (dir.magnitude < closest)
+            {
+                closest = dir.magnitude;
+                target = player.transform.position;
+            }
+        }
+
+        return target;
+    }
+
     // Return rotation to aim at player
     public Quaternion AimAtPlayer()
     {

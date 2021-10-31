@@ -284,7 +284,7 @@ PrefabInstance:
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: spawnPrefabs.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -331,8 +331,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPrefabs.Array.data[6]
       value: 
-      objectReference: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022845, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1364,16 +1363,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 3007241012240742889, guid: d24e92fb37a0b85428816f6d50d03a84,
+  _enemyPrefab: {fileID: 3190423347124433723, guid: eccdbddbc0bb7714a9149525461dd66c,
     type: 3}
-  _spawnPoint: {x: 2, y: 0, z: 6}
-  numShifts: 4
+  _spawnPoint: {x: 3.92, y: 0, z: 6}
+  numShifts: 1
   dist: 2
   rowDist: 0
   numRows: 1
   stagger: 0
   pauseLevel: 0
-  dir: 3
+  dir: 1
 --- !u!1 &1194587290
 GameObject:
   m_ObjectHideFlags: 0

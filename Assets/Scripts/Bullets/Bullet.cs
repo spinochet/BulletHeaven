@@ -9,10 +9,10 @@ public class Bullet : NetworkBehaviour
     [SerializeField] private bool destroyOnCollision = true;
     [SerializeField] private bool isEnemyBullet = false;
 
-    [SerializeField] private string name;
-    [SerializeField] private float speed = 5.0f;
-    [SerializeField] private float damage = 10.0f;
-    [SerializeField] private float fireRate = 30.0f;
+    [SerializeField] protected string name;
+    [SerializeField] protected float speed = 5.0f;
+    [SerializeField] protected float damage = 10.0f;
+    [SerializeField] protected float fireRate = 30.0f;
 
     private Pawn owner;
 
