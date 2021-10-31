@@ -7,8 +7,8 @@ using Mirror;
 public class Pawn : NetworkBehaviour
 {
     private HUDController hud;
-    // private PawnController pawnController;
-    private GameObject partner;
+    public PawnController pawnController;
+    public GameObject partner;
 
     // Character Data
     [Header ("Character Data")]
@@ -169,8 +169,10 @@ public class Pawn : NetworkBehaviour
             if (hp <= 0)
             {
                 SoundManager.Instance.Play(name + " Death");
-                Destroy(gameObject);
-
+                if (pawnController)
+                    pawnController.Destroy(this);
+                else
+                    Destroy(gameObject);
             }
             else
             {

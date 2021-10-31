@@ -39,4 +39,10 @@ public class EnemyController : PawnController
             pawn.Shoot(Quaternion.LookRotation(dir));
         }
     }
+
+    // Destroy object
+    public override void Destroy(Pawn _pawn)
+    {
+
+    }
 }

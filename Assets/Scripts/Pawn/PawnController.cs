@@ -7,9 +7,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class PawnController : NetworkBehaviour 
+abstract public class PawnController : NetworkBehaviour 
 {
     [SyncVar] public Pawn pawn;
+
+    abstract public void Destroy(Pawn _pawn);
 
     // [Command(requiresAuthority = false)]
     // public void SpawnPawn(GameObject _pawn)

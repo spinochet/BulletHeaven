@@ -50,6 +50,24 @@ public class PlayerController : PawnController
         }
     }
 
+    public override void Destroy(Pawn _pawn)
+    {
+        if (_pawn.partner)
+        {
+            Pawn newPawn = _pawn.partner.GetComponent<Pawn>();
+            newPawn.SetVisibility(true);
+            TargetPossesPawn(newPawn.transform.GetComponent<NetworkIdentity>());
+        }
+        else
+        {
+            // Something something...
+            // Game over...
+            // Something something...
+        }
+
+        Destroy(_pawn.gameObject);
+    }
+
     // -----
     // SETUP
     // -----
@@ -61,6 +79,7 @@ public class PlayerController : PawnController
         if (this.isLocalPlayer)
         {
             pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
+            pawn.pawnController = this;
             
             if (hud)
                 pawn.AssignHUD(hud);
