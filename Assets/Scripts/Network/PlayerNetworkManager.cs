@@ -171,12 +171,7 @@ public class PlayerNetworkManager : NetworkManager
             GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(identity.gameObject.GetComponent<PlayerController>(), 1);
             identity.gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
 
-            // HUDManager hudManager = GameObject.Find("HUD").GetComponent<HUDManager>(); //.AssignHUD(princess.gameObject.GetComponent<Pawn>(), 1);
-            // identity.gameObject.GetComponent<PlayerController>().TargetAssignHUD(hudManager.p2);
-
-            // identity.gameObject.GetComponent<PlayerController>().SpawnPawn(spawnPrefabs[0]);
-
-            LevelManager.Instance.StartLevel();
+            // LevelManager.Instance.StartLevel();
         }
         else if (networkSceneName.Contains("Lobby"))
         {
