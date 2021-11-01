@@ -1367,7 +1367,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9137037101897162286}
   - component: {fileID: 779130386241985341}
-  - component: {fileID: 3383428407623277481}
+  - component: {fileID: -1827947646099602199}
+  - component: {fileID: 8994575241230496379}
+  - component: {fileID: 5329236142225710907}
+  - component: {fileID: 4659130995365385921}
   m_Layer: 10
   m_Name: Assault4x4
   m_TagString: Enemy
@@ -1382,7 +1385,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9137037101897162285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.9659259, z: 0.258819, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
@@ -1394,7 +1397,7 @@ Transform:
   - {fileID: 8783259467402017794}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -30, y: 180, z: 0}
 --- !u!65 &779130386241985341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1408,7 +1411,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 15, z: 26.926983}
   m_Center: {x: 0, y: 7.5, z: -0.48650932}
---- !u!114 &3383428407623277481
+--- !u!114 &-1827947646099602199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1417,7 +1420,78 @@ MonoBehaviour:
   m_GameObject: {fileID: 9137037101897162285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0c0302d4ea76241bf1b01532ceb03d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 1fd9c7f4a5df34e9d89056573f421d0d
+  hasSpawned: 0
+--- !u!114 &8994575241230496379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137037101897162285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  pawnController: {fileID: 0}
+  partner: {fileID: 0}
+  name: 
+  portrait: {fileID: 0}
+  model: {fileID: 0}
+  speed: 10
+  maxHP: 100
+  hpRegenRate: 0
+  hpRegenCooldown: 0
+  maxStamina: 100
+  staminaRegenRate: 1
+  staminaRegenCooldown: 2.5
+  bulletPrefab: {fileID: 0}
+  fireRate: 0
+  abilityL: {fileID: 0}
+  abilityR: {fileID: 0}
+--- !u!143 &5329236142225710907
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137037101897162285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4659130995365385921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137037101897162285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbfb629815152840a89be29708e06e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  pawn: {fileID: 0}
+  speed: 2.5
+  shootFrequency: 0
+  bullets: 5
+  fireCooldown: 1
