@@ -121,6 +121,7 @@ public class WaveSpawner3D : MonoBehaviour
                 sp = (_spawnPoint + data.dir * e_offset);
 
                 GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                 enemies.Add(e);
             }
 
@@ -137,6 +138,7 @@ public class WaveSpawner3D : MonoBehaviour
                 sp1 = (_spawnPoint + data.dir * e_offset);
                 
                 GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                 enemies.Add(e);
 
                 if (e_offset != 0) {
@@ -144,6 +146,7 @@ public class WaveSpawner3D : MonoBehaviour
                     sp2 = (_spawnPoint + data.dir2 * e_offset);
                     
                     e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                    e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                     enemies.Add(e);
                 }
             }
@@ -175,6 +178,7 @@ public class WaveSpawner3D : MonoBehaviour
                     }
                     
                     GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                    e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                     enemies.Add(e);
                 }
             }

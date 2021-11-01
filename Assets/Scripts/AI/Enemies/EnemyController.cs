@@ -6,11 +6,14 @@ public class EnemyController : PawnController
 {
     // TEMP BEHAVIORS
     protected CharacterController controller;
-    protected float speed = 2.5f;
-
+    [SerializeField] protected float speed = 2.5f;
 
     protected float fireTimer;
+    protected float cooldownTimer;
     public float shootFrequency = 0.3f;
+
+    protected float delay = 100.0f;
+    protected float delayTimer = 0.0f;
 
     void Awake()
     {
@@ -22,6 +25,28 @@ public class EnemyController : PawnController
     {
         if (!pawn)
             pawn = GetComponent<Pawn>();
+    }
+
+    // Return position of nearest player
+    public Vector3 GetNearestPlayer()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Character");
+
+        Vector3 target = Vector3.zero;
+        float closest = 1000000;
+
+        foreach (GameObject player in players)
+        {
+            Vector3 dir = player.transform.position - transform.position;
+
+            if (dir.magnitude < closest)
+            {
+                closest = dir.magnitude;
+                target = player.transform.position;
+            }
+        }
+
+        return target;
     }
 
     // Return rotation to aim at player
@@ -44,6 +69,15 @@ public class EnemyController : PawnController
         }
 
         return Quaternion.LookRotation(dir);
+    }
+
+    // Set delay so every enemy is slightly off
+    public void SetDelay(float _delay)
+    {
+        delay = _delay;
+        delayTimer = 0.0f;
+
+        Debug.Log(delay);
     }
 
     // Destroy object

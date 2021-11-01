@@ -213,18 +213,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
---- !u!1 &312713247 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1186317a95548354db94389df4ac5117,
-    type: 3}
-  m_PrefabInstance: {fileID: 2008821280}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &312713250 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
-    type: 3}
-  m_PrefabInstance: {fileID: 2008821280}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &493878536
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,140 +736,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde31c3142ff75448b360b03d818673d, type: 3}
---- !u!1 &1357088392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1357088396}
-  - component: {fileID: 1357088398}
-  - component: {fileID: 1357088397}
-  - component: {fileID: 1357088395}
-  - component: {fileID: 1357088394}
-  - component: {fileID: 1357088393}
-  m_Layer: 0
-  m_Name: Roomba
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1357088393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357088392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 2561795385
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &1357088394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357088392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  pawnController: {fileID: 0}
-  partner: {fileID: 0}
-  name: Roomba
-  portrait: {fileID: 0}
-  model: {fileID: 312713247}
-  speed: 10
-  maxHP: 100
-  hpRegenRate: 0
-  hpRegenCooldown: 0
-  maxStamina: 100
-  staminaRegenRate: 1
-  staminaRegenCooldown: 2.5
-  bulletPrefab: {fileID: 8061707729531987755, guid: f7aadd38a56ee724eb4c3596a054643a,
-    type: 3}
-  fireRate: 10
-  abilityL: {fileID: 0}
-  abilityR: {fileID: 0}
---- !u!114 &1357088395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357088392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db136d1aad48554b83971b4eec896be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  pawn: {fileID: 1357088394}
-  shootFrequency: 0.3
---- !u!4 &1357088396
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357088392}
-  m_LocalRotation: {x: 0, y: 0.9063079, z: -0, w: -0.42261827}
-  m_LocalPosition: {x: -3.79, y: 0, z: 2.0519984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 312713250}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
---- !u!143 &1357088397
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357088392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.6
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}
---- !u!54 &1357088398
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357088392}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!20 &1380105908 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7025826338078573930, guid: ba07ae0548b7283438514e1e31213ad6,
@@ -957,87 +811,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba07ae0548b7283438514e1e31213ad6, type: 3}
---- !u!1001 &2008821280
+--- !u!1001 &6969649162534798002
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1357088396}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524986, guid: 67babca0f9b885d41b573cb1dfa45776,
+        type: 3}
+      propertyPath: m_Name
+      value: Roomba
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969649163862524987, guid: 67babca0f9b885d41b573cb1dfa45776,
+        type: 3}
+      propertyPath: sceneId
+      value: 2561795385
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -3.79
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.0519984
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.9063079
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.42261827
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 230
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
+    - target: {fileID: 6969649163862524990, guid: 67babca0f9b885d41b573cb1dfa45776,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1186317a95548354db94389df4ac5117,
-        type: 3}
-      propertyPath: m_Name
-      value: roomba
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1186317a95548354db94389df4ac5117, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 67babca0f9b885d41b573cb1dfa45776, type: 3}

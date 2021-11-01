@@ -200,6 +200,14 @@ public class Pawn : NetworkBehaviour
         NetworkServer.Spawn(b);
     }
 
+    // Ask server to spawn bomb prefab
+    [Command(requiresAuthority = false)]
+    public void Bomb(Vector3 target)
+    {
+        GameObject b = Instantiate(bullet.gameObject, target, Quaternion.identity);
+        NetworkServer.Spawn(b);
+    }
+
     // ---------
     // ABILITIES
     // ---------
