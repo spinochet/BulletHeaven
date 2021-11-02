@@ -30,14 +30,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ShootStraight",
-                    "type": "PassThrough",
-                    "id": "5a8b4f2f-825c-41d4-bd79-8287b6c94e33",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Aim",
                     "type": "PassThrough",
                     "id": "1d98e48a-705f-4c93-8a53-56d46ae2550b",
@@ -199,14 +191,25 @@
                 },
                 {
                     "name": "1D Axis",
-                    "id": "8c226dcf-2329-4f59-bbd2-d7d6f87a39c1",
+                    "id": "aeec2551-f732-43a6-941d-5e50067890f8",
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "M&K",
                     "action": "Shoot",
                     "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "d27e312d-9a9d-40f9-ae97-aaceb5876cb7",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "M&K",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
@@ -504,28 +507,6 @@
                     "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "aeec2551-f732-43a6-941d-5e50067890f8",
-                    "path": "1DAxis(minValue=0,whichSideWins=2)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "M&K",
-                    "action": "ShootStraight",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "positive",
-                    "id": "d27e312d-9a9d-40f9-ae97-aaceb5876cb7",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "M&K",
-                    "action": "ShootStraight",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         },

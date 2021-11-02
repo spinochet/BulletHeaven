@@ -9,8 +9,6 @@ public class Level1Tutorial : TutorialScript
 
     private bool canShoot = false;
 
-    private float timer = 0.0f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +28,11 @@ public class Level1Tutorial : TutorialScript
     // Update is called once per frame
     void Update()
     {
-        if (Camera.main.WorldToScreenPoint(transform.position).y <= Camera.main.pixelHeight && !tutorialStarted)
+        if (!tutorialStarted && Camera.main.WorldToScreenPoint(transform.position).y <= 0)
         {
             tutorialStarted = true;
-        }
-        else if (Camera.main.WorldToScreenPoint(transform.position).y <= 0 && !canShoot)
-        {
-            canShoot = true;
             LevelManager.Instance.PauseLevel();
+            Debug.Log("Tutorial started");
 
             // foreach (GameObject player in players)
             // {
@@ -49,11 +44,12 @@ public class Level1Tutorial : TutorialScript
             LevelManager.Instance.EndTutorial();
             Destroy(gameObject);
         }
-        if (tutorialStarted && canShoot && timer < 5.0f)
+        if (tutorialStarted && timer < timing)
         {
+            Debug.Log("Counting");
             timer += Time.deltaTime;
         }
-        else if (timer > 5.0f)
+        else if (tutorialStarted && timer >= timing)
         {
             LevelManager.Instance.ResumeLevel();
         }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class TutorialScript : MonoBehaviour
 {
     protected bool tutorialStarted;
+    [SerializeField] protected float timing = 0.0f;
+    protected float timer = 0.0f;
     
     // Start is called before the first frame update
     void Start()
