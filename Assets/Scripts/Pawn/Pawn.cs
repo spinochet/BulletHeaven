@@ -68,7 +68,8 @@ public class Pawn : NetworkBehaviour
         stamina = maxStamina;
 
         // Combat
-        bullet = bulletPrefab.GetComponent<Bullet>();
+        if (bulletPrefab)
+            bullet = bulletPrefab.GetComponent<Bullet>();
     }
 
     // Start is called before the first frame update
