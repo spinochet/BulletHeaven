@@ -91,7 +91,7 @@ public class WaveSpawner3D : MonoBehaviour
             if (!paused)
             {
                 paused = true;
-                LevelManager.Instance.PauseLevel();
+                LevelManager.Instance.StopScrolling();
             }
             else if (CheckEnemies())
             {

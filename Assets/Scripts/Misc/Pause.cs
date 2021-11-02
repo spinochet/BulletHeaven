@@ -9,20 +9,13 @@ public class Pause : MonoBehaviour
 {
     private bool isPaused;
 
-    public void TogglePause()
+    public void ResumeLevel()
     {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0.0f : 1.0f;
-
-        gameObject.SetActive(isPaused);
-        // GameObject.Find("Player Manager").GetComponent<PlayerManager>().TogglePause();
+        LevelManager.Instance.TogglePause();
     }
 
     public void MainMenu()
     {
-        // GameObject.Find("Player Manager").GetComponent<PlayerManager>().DeletePlayers();
-        // Destroy(GameObject.Find("Player Manager"));
-        
         SceneManager.LoadScene("MainMenu");
     }
 

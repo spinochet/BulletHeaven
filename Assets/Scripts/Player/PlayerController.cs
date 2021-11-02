@@ -151,6 +151,7 @@ public class PlayerController : PawnController
     {
         // if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
         //     manager.TogglePause(this);
+        LevelManager.Instance.TogglePause();
     }
 
     // Switch action callback

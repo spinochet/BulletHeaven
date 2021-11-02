@@ -31,7 +31,7 @@ public class Level1Tutorial : TutorialScript
         if (!tutorialStarted && Camera.main.WorldToScreenPoint(transform.position).y <= 0)
         {
             tutorialStarted = true;
-            LevelManager.Instance.PauseLevel();
+            LevelManager.Instance.StopScrolling();
             Debug.Log("Tutorial started");
 
             // foreach (GameObject player in players)

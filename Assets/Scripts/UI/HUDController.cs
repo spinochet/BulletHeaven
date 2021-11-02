@@ -50,11 +50,4 @@ public class HUDController : NetworkBehaviour
     {
         text.text = score.ToString();
     }
-
-    // Toggle pause
-    public void TogglePause()
-    {
-        pause.gameObject.SetActive(true);
-        pause.TogglePause();
-    }
 }

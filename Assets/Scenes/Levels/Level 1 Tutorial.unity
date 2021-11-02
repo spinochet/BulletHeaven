@@ -667,6 +667,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+--- !u!114 &611228823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4732046359811459410, guid: 8da631b61c27cce47be4447e7b707202,
+    type: 3}
+  m_PrefabInstance: {fileID: 646270417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b753045dea5f442bbf4fe0fcd86826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &646270417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -683,6 +695,16 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneId
       value: 3453209288
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719394753601372009, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 611228823}
+    - target: {fileID: 5719394753601372009, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6086191115237827613, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
@@ -1746,6 +1768,7 @@ MonoBehaviour:
   syncInterval: 0.1
   spawnPointP1: {fileID: 1057251843}
   spawnPointP2: {fileID: 527750577}
+  pauseController: {fileID: 611228823}
   nextLevel: Level 2
   scrollSpeed: 2.5
   backgrounds:
