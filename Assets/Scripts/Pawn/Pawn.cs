@@ -68,7 +68,8 @@ public class Pawn : NetworkBehaviour
         stamina = maxStamina;
 
         // Combat
-        bullet = bulletPrefab.GetComponent<Bullet>();
+        if (bulletPrefab)
+            bullet = bulletPrefab.GetComponent<Bullet>();
     }
 
     // Start is called before the first frame update
@@ -158,7 +159,7 @@ public class Pawn : NetworkBehaviour
     // STATS
     // -----
 
-    // Add health to player
+    // Reduce health to pawn
     public void TakeDamage(float value)
     {
         if (model.activeSelf)

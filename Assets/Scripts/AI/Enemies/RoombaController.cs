@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoombaController : EnemyController
 {
-    // private Vector3 movement = Vector3.zero;
+    private bool inBounds = false;
 
     void Awake()
     {
@@ -16,6 +16,12 @@ public class RoombaController : EnemyController
     {
         controller.Move(transform.forward * speed * Time.deltaTime);
 
+
+        if (CheckBorders() && inBounds)
+            transform.rotation = AimAtPlayer();
+
+        inBounds = CheckBounds();
+
         fireTimer += Time.unscaledDeltaTime;
         if (fireTimer > 1.0f / pawn.FireRate)
         {
@@ -24,9 +30,25 @@ public class RoombaController : EnemyController
         }
     }
 
-    // OnControllerColliderHit is called when the controller hits a collider while performing a Move.
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    bool CheckBounds()
     {
-        transform.rotation = AimAtPlayer();
+        Vector3 position = Camera.main.WorldToScreenPoint(transform.position);
+        bool up = position.y <= Camera.main.pixelHeight;
+        bool down = position.y >= 0.0f;
+        bool right = position.x <= Camera.main.pixelWidth;
+        bool left = position.x >= 0.0f;
+
+        return up && down && right && left;
+    }
+
+    bool CheckBorders()
+    {
+        Vector3 position = Camera.main.WorldToScreenPoint(transform.position);
+        bool up = position.y >= Camera.main.pixelHeight;
+        bool down = position.y <= 0.0f;
+        bool right = position.x >= Camera.main.pixelWidth;
+        bool left = position.x <= 0.0f;
+
+        return up || down || right || left;
     }
 }

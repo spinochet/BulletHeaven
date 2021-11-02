@@ -7,6 +7,10 @@ public class EnemyController : PawnController
     // TEMP BEHAVIORS
     protected CharacterController controller;
     [SerializeField] protected float speed = 2.5f;
+    [SerializeField] protected float contactDamage = 20.0f;
+    [SerializeField] protected float contactKnockback = 20.0f;
+    [SerializeField] protected float contactCooldown = 5.0f;
+    protected float contactTimer;
 
     protected float fireTimer;
     protected float cooldownTimer;
@@ -18,6 +22,7 @@ public class EnemyController : PawnController
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        contactTimer = contactCooldown;
     }
 
     // Start is called before the first frame update
@@ -84,5 +89,17 @@ public class EnemyController : PawnController
     public override void Destroy(Pawn _pawn)
     {
         Destroy(gameObject);
+    }
+
+    // OnControllerColliderHit is called when the controller hits a collider while performing a Move.
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (contactTimer >= contactCooldown)
+            if (hit.gameObject.tag == "Character")
+            {
+                contactTimer = 0.0f;
+                hit.transform.GetComponent<Pawn>().TakeDamage(contactDamage);
+                // Player knockback goes here
+            }
     }
 }

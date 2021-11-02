@@ -9,14 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6969649163862524990}
-  - component: {fileID: 6969649163862524988}
   - component: {fileID: 6969649163862524991}
   - component: {fileID: 6969649163862524985}
   - component: {fileID: 6969649163862524984}
   - component: {fileID: 6969649163862524987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Roomba
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,22 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
---- !u!54 &6969649163862524988
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969649163862524986}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!143 &6969649163862524991
 CharacterController:
   m_ObjectHideFlags: 0
@@ -85,6 +68,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   pawn: {fileID: 6969649163862524984}
+  speed: 2.5
   shootFrequency: 0.3
 --- !u!114 &6969649163862524984
 MonoBehaviour:
@@ -100,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  pawnController: {fileID: 0}
+  pawnController: {fileID: 6969649163862524985}
   partner: {fileID: 0}
   name: Roomba
   portrait: {fileID: 0}
