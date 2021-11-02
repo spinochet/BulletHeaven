@@ -353,13 +353,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417460615}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 144.6}
+  m_LocalRotation: {x: 0.009773729, y: 0, z: 0, w: 0.99995226}
+  m_LocalPosition: {x: 0, y: 0, z: 80.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 827653191}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.12, y: 0, z: 0}
 --- !u!114 &417460617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,10 +372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
+  _enemyPrefab: {fileID: 6969649163862524986, guid: 67babca0f9b885d41b573cb1dfa45776,
     type: 3}
-  _spawnPoint: {x: -1, y: 0, z: 4.71}
-  numShifts: 2
+  _spawnPoint: {x: 4.82, y: 0, z: 8.63}
+  numShifts: 1
   dist: 7
   rowDist: 4
   numRows: 1
@@ -1330,7 +1330,7 @@ PrefabInstance:
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: spawnPrefabs.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -1366,6 +1366,12 @@ PrefabInstance:
       propertyPath: spawnPrefabs.Array.data[10]
       value: 
       objectReference: {fileID: 6969649163862524986, guid: 67babca0f9b885d41b573cb1dfa45776,
+        type: 3}
+    - target: {fileID: 2123622467903022834, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[11]
+      value: 
+      objectReference: {fileID: 4606116710772447293, guid: 6782b822e235944d5918f5a7ee702e2f,
         type: 3}
     - target: {fileID: 2123622467903022845, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -2504,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
+  _enemyPrefab: {fileID: 4606116710772447293, guid: 6782b822e235944d5918f5a7ee702e2f,
     type: 3}
   _spawnPoint: {x: -4.18, y: 0, z: 1.79}
   numShifts: 2
