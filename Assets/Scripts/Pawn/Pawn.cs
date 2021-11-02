@@ -158,7 +158,7 @@ public class Pawn : NetworkBehaviour
     // STATS
     // -----
 
-    // Add health to player
+    // Reduce health to pawn
     public void TakeDamage(float value)
     {
         if (model.activeSelf)
