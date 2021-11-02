@@ -15,6 +15,7 @@ public class Pawn : NetworkBehaviour
     [SerializeField] private string name;
     [SerializeField] private Sprite portrait;
     [SerializeField] private GameObject model;
+    public GameObject Model { get { return model; } }
     public Sprite Portrait { get { return portrait; } }
 
     // Movement

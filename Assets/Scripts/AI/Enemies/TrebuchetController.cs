@@ -17,6 +17,8 @@ public class TrebuchetController : EnemyController
             fireTimer = 0.0f;
             Vector3 target = GetNearestPlayer();
             target.y = 0.5f;
+
+            pawn.Model.GetComponent<Animator>().Play("Attack");
             pawn.Bomb(target);
         }
     }
