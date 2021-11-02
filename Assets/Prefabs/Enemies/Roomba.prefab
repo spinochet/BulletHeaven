@@ -69,6 +69,9 @@ MonoBehaviour:
   syncInterval: 0
   pawn: {fileID: 6969649163862524984}
   speed: 2.5
+  contactDamage: 20
+  contactKnockback: 20
+  contactCooldown: 5
   shootFrequency: 0.3
 --- !u!114 &6969649163862524984
 MonoBehaviour:
@@ -90,13 +93,13 @@ MonoBehaviour:
   portrait: {fileID: 0}
   model: {fileID: 7816071014362468803}
   speed: 10
-  maxHP: 100
+  maxHP: 150
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
   staminaRegenRate: 1
   staminaRegenCooldown: 2.5
-  bulletPrefab: {fileID: 8061707729531987755, guid: f7aadd38a56ee724eb4c3596a054643a,
+  bulletPrefab: {fileID: 8061707729531987755, guid: b06ce244f02e34363a89e3a7fedb8e7b,
     type: 3}
   fireRate: 10
   abilityL: {fileID: 0}
