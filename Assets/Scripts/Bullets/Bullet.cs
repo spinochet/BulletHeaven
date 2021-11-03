@@ -14,7 +14,7 @@ public class Bullet : NetworkBehaviour
     [SerializeField] protected float damage = 10.0f;
     [SerializeField] protected float fireRate = 30.0f;
 
-    private Pawn owner;
+    private PlayerController owner;
 
     void Awake()
     {
@@ -38,16 +38,23 @@ public class Bullet : NetworkBehaviour
         return fireRate;
     }
 
+    // Set the ownwe of the bullet
+    public void SetOwner(PlayerController playerController)
+    {
+        owner = playerController;
+    }
+
     // FIX AFTER SPRINT
     public void OnTriggerEnter(Collider col)
     {
         if (col.transform.GetComponent<Pawn>() || col.transform.GetComponent<Bullet>())
         {
-            // if (owner != null)
-            //     owner.AddPoints(100);
-
+            float hp = 1;
             if (col.transform.GetComponent<Pawn>())
-                col.transform.GetComponent<Pawn>().TakeDamage(10);
+                hp = col.transform.GetComponent<Pawn>().TakeDamage(10);
+
+            if (!isEnemyBullet && hp <= 0)
+                PlayerNetworkManager.Instance.Players[0].gameObject.GetComponent<PlayerController>().AddPoints(100);
 
             if (destroyOnCollision) Destroy(gameObject);
         }
