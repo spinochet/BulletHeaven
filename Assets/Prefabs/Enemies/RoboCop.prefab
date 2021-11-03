@@ -69,9 +69,12 @@ MonoBehaviour:
   syncInterval: 0
   pawn: {fileID: 5359561344335052814}
   speed: 2.5
-  shootFrequency: 0.8
-  bullets: 3
-  fireCooldown: 2
+  contactDamage: 20
+  contactKnockback: 20
+  contactCooldown: 5
+  shootFrequency: 0.3
+  bullets: 2
+  fireCooldown: 5
 --- !u!114 &5359561344335052814
 MonoBehaviour:
   m_ObjectHideFlags: 0

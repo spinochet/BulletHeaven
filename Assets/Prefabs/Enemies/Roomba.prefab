@@ -93,7 +93,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   model: {fileID: 7816071014362468803}
   speed: 10
-  maxHP: 150
+  maxHP: 100
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100

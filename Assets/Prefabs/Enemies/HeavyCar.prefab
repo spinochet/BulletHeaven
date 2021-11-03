@@ -99,8 +99,8 @@ MonoBehaviour:
   syncInterval: 0.1
   pawn: {fileID: 9192485142696004558}
   speed: 4.5
-  contactDamage: 60
-  contactKnockback: 60
+  contactDamage: 40
+  contactKnockback: 40
   contactCooldown: 5
   shootFrequency: 0.3
 --- !u!143 &6031032840967050281
