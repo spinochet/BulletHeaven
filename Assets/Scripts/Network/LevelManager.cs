@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 using Mirror;
 
 public class LevelManager : NetworkBehaviour
@@ -126,7 +128,8 @@ public class LevelManager : NetworkBehaviour
 
     public void NextLevel()
     {
-        PlayerNetworkManager.Instance.LoadArcadeLevel(nextLevel);
+        // PlayerNetworkManager.Instance.LoadArcadeLevel(nextLevel);
+        SceneManager.LoadScene(nextLevel);
     }
 
     public GameObject SpawnEnemy(GameObject enemyPrefab, Vector3 position, Quaternion rotation)

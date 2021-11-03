@@ -11,10 +11,12 @@ public class CutScene : NetworkBehaviour
     public string scene;
 
     // Update is called once per frame
-    [Command(requiresAuthority = false)]
+    // [Command(requiresAuthority = false)]
     public void NextLevel()
     {
         Ultima.used = false;
-        PlayerNetworkManager.Instance.LoadArcadeLevel(scene);
+        // PlayerNetworkManager.Instance.LoadArcadeLevel(scene);
+
+        SceneManager.LoadScene(scene);
     }
 }

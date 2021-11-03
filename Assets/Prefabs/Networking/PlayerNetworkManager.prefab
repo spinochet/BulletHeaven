@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47e0880c660f3e40804941f18dd746e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  PersistNetworkManagerToOfflineScene: 1
+  dontDestroyOnLoad: 0
+  PersistNetworkManagerToOfflineScene: 0
   runInBackground: 1
   autoStartServerBuild: 1
   serverTickRate: 60
@@ -71,7 +71,21 @@ MonoBehaviour:
   - {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b, type: 3}
   - {fileID: 8061707729531987755, guid: a73dd1e26f801564c919d5a502a9feb7, type: 3}
   - {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e, type: 3}
-  debugLevel: 0
+  - {fileID: 6853557065506435931, guid: 4c0afbee51de2a8428e46e01eb85fd71, type: 3}
+  - {fileID: 8940679715309894626, guid: ace8eb8558e244b43a5ca7100181987f, type: 3}
+  - {fileID: 4606116710772447293, guid: 6782b822e235944d5918f5a7ee702e2f, type: 3}
+  - {fileID: 950931905164956052, guid: 914f39da280a391468bbb77b63482a80, type: 3}
+  - {fileID: 3007241012240742889, guid: d24e92fb37a0b85428816f6d50d03a84, type: 3}
+  - {fileID: 6969649163862524986, guid: 67babca0f9b885d41b573cb1dfa45776, type: 3}
+  - {fileID: 3007241012240742889, guid: 07f5a39cd7b8c4f6dbe47fb524264a67, type: 3}
+  - {fileID: 2026149287328535000, guid: f647b3b12fbae412489961cdfda1bb7b, type: 3}
+  - {fileID: 3190423347124433723, guid: eccdbddbc0bb7714a9149525461dd66c, type: 3}
+  - {fileID: 7087081191271511823, guid: 61546e037a4774f16a1e941d90bddfb2, type: 3}
+  - {fileID: 8061707729531987755, guid: b06ce244f02e34363a89e3a7fedb8e7b, type: 3}
+  - {fileID: 8061707729531987755, guid: 6395978d2ba0af64bbd1d26234e8cf4c, type: 3}
+  - {fileID: 8061707729531987755, guid: b7d191381cf5c92408900c9879b5ba78, type: 3}
+  - {fileID: 7493698809534200211, guid: 924bb2a5a2acca94e8ce3bdbb05130ab, type: 3}
+  debugLevel: 1
   debugPlayer: 0
   activeCharacter: 0
 --- !u!114 &4023920863425053509

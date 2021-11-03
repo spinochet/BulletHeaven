@@ -29,25 +29,22 @@ public class PlayerNetworkManager : NetworkManager
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
+        Debug.Log("Awake");
         players = new NetworkIdentity[4];
 
         if (_instance == null)
             _instance = this;
-        else
-            DestroyImmediate(this);
     }
 
     void Start()
     {
-        if (debugLevel)
-        {
-            StartHost();
-        }
+        StartHost();
+
     }
 
     void Update()
     {
-        // Debug.Log(GetLocalIPAddress());
+        Debug.Log("Update");
     }
 
     // -----------------
@@ -126,7 +123,11 @@ public class PlayerNetworkManager : NetworkManager
                         robot = Instantiate(spawnPrefabs[1], new Vector3(-3.0f + (1.5f * i), 0.0f, 0.0f), Quaternion.identity);
                         NetworkServer.Spawn(robot, players[i].gameObject);
                         robot.SetActive(false);
+
+                        princess.GetComponent<Pawn>().AssignPartner(robot.GetComponent<NetworkIdentity>());
+                        robot.GetComponent<Pawn>().AssignPartner(princess.GetComponent<NetworkIdentity>());
                         
+                        GameObject.Find("HUD").GetComponent<HUDManager>().AssignHUD(players[i].gameObject.GetComponent<PlayerController>(), 1);
                         players[i].gameObject.GetComponent<PlayerController>().TargetPossesPawn(princess.GetComponent<NetworkIdentity>());
                     }
                 }
@@ -214,7 +215,7 @@ public class PlayerNetworkManager : NetworkManager
     // Called on clients when a scene has completed loaded, when the scene load was initiated by the server.
     public override void OnClientSceneChanged(NetworkConnection conn)
     {
-        if (mode == NetworkManagerMode.ClientOnly || mode == NetworkManagerMode.Host)
+        if (mode == NetworkManagerMode.ClientOnly)
         {
             base.OnClientSceneChanged(conn);
         }

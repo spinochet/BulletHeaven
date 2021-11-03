@@ -19,8 +19,10 @@ public class MainMenuController : MonoBehaviour
     public void StoryMode()
     {
         // SceneManager.LoadScene("CutScene1");
-        PlayerNetworkManager.Instance.StartHost();
-        PlayerNetworkManager.Instance.LoadStoryLevel("CutScene1");
+        // PlayerNetworkManager.Instance.StartHost();
+        // PlayerNetworkManager.Instance.LoadStoryLevel("CutScene1");
+
+        SceneManager.LoadScene("CutScene1");
     }
 
     public void ArcadeMode()

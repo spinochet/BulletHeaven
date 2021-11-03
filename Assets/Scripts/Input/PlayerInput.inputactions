@@ -62,14 +62,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "c2bbe875-f2bd-4517-8d47-11f4f1b4a408",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Switch",
                     "type": "Button",
                     "id": "a0382a9c-9b31-4eca-b098-33c118d04c27",
@@ -441,28 +433,6 @@
                     "action": "Burst",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "54a06620-0141-4d80-affa-79bc5a668511",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "M&K",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d233ce2c-8831-46e3-919c-434ead01c15b",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",

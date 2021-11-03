@@ -31,7 +31,7 @@ public class PlayerController : PawnController
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
+        // DontDestroyOnLoad(this);
     }
 
     void Update()
