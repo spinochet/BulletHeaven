@@ -42,10 +42,11 @@ public class LevelManager : NetworkBehaviour
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
-        if (_instance == null)
+        Debug.Log("Level Awake");
+        // if (_instance == null)
             _instance = this;
-        else
-            DestroyImmediate(this);
+        // else
+        //     DestroyImmediate(this);
     }
 
     // Start is called before the first frame update

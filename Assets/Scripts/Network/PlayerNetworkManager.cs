@@ -29,10 +29,10 @@ public class PlayerNetworkManager : NetworkManager
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
-        Debug.Log("Awake");
+        Debug.Log("Network Awake");
         players = new NetworkIdentity[4];
 
-        if (_instance == null)
+        // if (_instance == null)
             _instance = this;
     }
 
@@ -44,7 +44,6 @@ public class PlayerNetworkManager : NetworkManager
 
     void Update()
     {
-        Debug.Log("Update");
     }
 
     // -----------------

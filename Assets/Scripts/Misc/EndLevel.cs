@@ -13,6 +13,7 @@ public class EndLevel : MonoBehaviour
     {
         if (transform.position.z <= 0.0f)
         {
+            PlayerNetworkManager.Instance.StopHost();
             LevelManager.Instance.NextLevel();
         }
     }
