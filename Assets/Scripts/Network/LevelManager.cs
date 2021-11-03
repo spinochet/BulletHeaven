@@ -49,10 +49,17 @@ public class LevelManager : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        background_1.transform.position = new Vector3(0.0f, -1.0f, 0.0f);
-        background_1.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
-        background_2.transform.position = new Vector3(0.0f, -1.0f, 20.0f);
-        background_2.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
+        if (background_1)
+        {
+            background_1.transform.position = new Vector3(0.0f, -1.0f, 0.0f);
+            background_1.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
+        }
+
+        if (background_2)
+        {
+            background_2.transform.position = new Vector3(0.0f, -1.0f, 20.0f);
+            background_2.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
+        }
 
         cam = Camera.main;
     }
@@ -68,14 +75,20 @@ public class LevelManager : NetworkBehaviour
                 tutorial.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
             
             // Scroll background 1
-            background_1.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
-            if (cam.WorldToScreenPoint(background_1.transform.position).y <= 0.0f)
-                background_1.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
+            if (background_1)
+            {
+                background_1.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
+                if (cam.WorldToScreenPoint(background_1.transform.position).y <= 0.0f)
+                    background_1.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
+            }
 
             // Scroll background 2
-            background_2.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
-            if (cam.WorldToScreenPoint(background_2.transform.position).y <= 0.0f)
-                background_2.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
+            if (background_2)
+            {
+                background_2.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
+                if (cam.WorldToScreenPoint(background_2.transform.position).y <= 0.0f)
+                    background_2.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
+            }
         }
     }
 

@@ -51,7 +51,7 @@ public class Bullet : NetworkBehaviour
         {
             float hp = 1;
             if (col.transform.GetComponent<Pawn>())
-                hp = col.transform.GetComponent<Pawn>().TakeDamage(10);
+                hp = col.transform.GetComponent<Pawn>().TakeDamage(damage);
 
             if (!isEnemyBullet && hp <= 0)
                 PlayerNetworkManager.Instance.Players[0].gameObject.GetComponent<PlayerController>().AddPoints(100);
