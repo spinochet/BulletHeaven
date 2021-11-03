@@ -207,6 +207,7 @@ public class Pawn : NetworkBehaviour
     {
         if (!LevelManager.Instance.IsPaused)
         {
+            Debug.Log("Is this being called?");
             GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
             NetworkServer.Spawn(b);
         }

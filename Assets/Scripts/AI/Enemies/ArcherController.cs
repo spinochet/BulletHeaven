@@ -29,8 +29,9 @@ public class ArcherController : EnemyController
             {
                 fireTimer = 0.0f;
                 ++bulletsFired;
-
-                pawn.Model.GetComponent<Animator>().Play("Attack");
+                if (pawn.Model.GetComponent<Animator>()) {
+                    pawn.Model.GetComponent<Animator>().Play("Attack");
+                }
                 pawn.Shoot(AimAtPlayer());
             }
             else if (bulletsFired >= bullets)

@@ -1968,7 +1968,7 @@ MonoBehaviour:
   spawnPointP1: {fileID: 0}
   spawnPointP2: {fileID: 0}
   pauseController: {fileID: 0}
-  nextLevel: Level 2
+  nextLevel: Level 2 Tuned
   scrollSpeed: 2.5
   backgrounds:
   - {fileID: 21300000, guid: 6fb7b0fca18ceaf4ab7c4438e5515a0c, type: 3}
