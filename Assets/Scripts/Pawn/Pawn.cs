@@ -165,7 +165,7 @@ public class Pawn : NetworkBehaviour
     // -----
 
     // Reduce health to pawn
-    public void TakeDamage(float value)
+    public float TakeDamage(float value)
     {
         if (model.activeSelf && !LevelManager.Instance.IsPaused)
         {
@@ -185,6 +185,8 @@ public class Pawn : NetworkBehaviour
                 SoundManager.Instance.Play(name + " Hurt");
             }
         }
+
+        return hp;
     }
 
     // Consume player stamina
