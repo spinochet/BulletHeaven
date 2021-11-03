@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-4651132326853590254
+--- !u!1102 &-5657913108797599674
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: robot|robot_idle (1)
+  m_Name: robocop|robocop_run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 166050092482263109, guid: 8a7bdd4bbd6492c448bec01fa7e2b94c, type: 3}
+  m_Motion: {fileID: -637059354565555239, guid: c26629dd88af4f840a79cdb3f6788beb,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -32,19 +33,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Robot
+  m_Name: Robocop
   serializedVersion: 5
-  m_AnimatorParameters:
-  - m_Name: isRunning
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+  m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 1293934918191542}
+    m_StateMachine: {fileID: 3850632216364250298}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -54,7 +49,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1107 &1293934918191542
+--- !u!1107 &3850632216364250298
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -64,7 +59,7 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -4651132326853590254}
+    m_State: {fileID: -5657913108797599674}
     m_Position: {x: 30, y: 190, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
@@ -75,4 +70,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -4651132326853590254}
+  m_DefaultState: {fileID: -5657913108797599674}

@@ -81,9 +81,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   pawn: {fileID: 5359561344335052814}
-  maxHP: 50
   speed: 2.5
-  fireRate: 1.5
+  contactDamage: 20
+  contactKnockback: 20
+  contactCooldown: 5
   shootFrequency: 0.3
   bullets: 5
   fireCooldown: 5
@@ -217,6 +218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy_archer_rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 20e574d9dd4521e4fa45851b2d9b6dfd,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cf44e69637b44204ca711dea70f4f97a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e574d9dd4521e4fa45851b2d9b6dfd, type: 3}
 --- !u!1 &7850687974871191934 stripped

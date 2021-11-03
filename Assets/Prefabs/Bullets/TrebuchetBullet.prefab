@@ -84,7 +84,7 @@ MonoBehaviour:
   speed: 15
   damage: 50
   fireRate: 0.5
-  shadow: {fileID: 8061707729862278857}
+  shadow: {fileID: 8061707729531987755}
   radius: 10
   expandSpeed: 2.5
   targets: []

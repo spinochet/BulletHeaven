@@ -36,6 +36,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: princess_texture
+    second: {fileID: 2100000, guid: 3e9c7f828d889134c8e33cbf8823ded5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: skin
     second: {fileID: 2100000, guid: 102ae8bd4fa86994ca82e715b1948c9a, type: 2}
   - first:
@@ -187,7 +192,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -31,6 +31,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: robot_texture
+    second: {fileID: 2100000, guid: 5e20bfc6175371c488a643b5b8564971, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: robot_yellow
     second: {fileID: 2100000, guid: 5ddc2f33e4a368949a00c7bea41f60a8, type: 2}
   materials:
@@ -177,7 +182,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

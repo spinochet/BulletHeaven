@@ -202,6 +202,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: horse
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: d07fcbfd88e77dd419b0cb908d3daf13,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f1f81a200adbb054091f4cf9eace8ffd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d07fcbfd88e77dd419b0cb908d3daf13, type: 3}
 --- !u!1 &140467378611506757 stripped
