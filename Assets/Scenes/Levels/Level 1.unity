@@ -1069,6 +1069,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da631b61c27cce47be4447e7b707202, type: 3}
+--- !u!114 &646270418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4732046359811459410, guid: 8da631b61c27cce47be4447e7b707202,
+    type: 3}
+  m_PrefabInstance: {fileID: 646270417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b753045dea5f442bbf4fe0fcd86826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &650104855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1967,8 +1979,8 @@ MonoBehaviour:
   syncInterval: 0.1
   spawnPointP1: {fileID: 0}
   spawnPointP2: {fileID: 0}
-  pauseController: {fileID: 0}
-  nextLevel: Level 2 Tuned
+  pauseController: {fileID: 646270418}
+  nextLevel: CutScene2
   scrollSpeed: 2.5
   backgrounds:
   - {fileID: 21300000, guid: 6fb7b0fca18ceaf4ab7c4438e5515a0c, type: 3}

@@ -2131,7 +2131,7 @@ MonoBehaviour:
   spawnPointP1: {fileID: 0}
   spawnPointP2: {fileID: 0}
   pauseController: {fileID: 1635984706}
-  nextLevel: Level 4
+  nextLevel: CutScene4
   scrollSpeed: 2.5
   backgrounds:
   - {fileID: 0}

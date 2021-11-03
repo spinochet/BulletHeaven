@@ -165,17 +165,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -4, y: 0, z: 6}
   numShifts: 2
   dist: 13
   rowDist: 13
   numRows: 2
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &39014614
 MonoBehaviour:
@@ -238,17 +236,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 6.5, y: 0, z: 6}
   numShifts: 4
   dist: -6
   rowDist: 6
   numRows: 3
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &185644165
 MonoBehaviour:
@@ -311,9 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c696c7f882a6b8048ba7e3b7a058c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  nextLevel: MainMenu
 --- !u!114 &271052491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,17 +368,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -1, y: 0, z: 6}
   numShifts: 2
   dist: 7
   rowDist: 4
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &417460618
 MonoBehaviour:
@@ -448,17 +439,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 3, y: 0, z: 9}
   numShifts: 2
   dist: 3
   rowDist: -3
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &425945687
 MonoBehaviour:
@@ -521,17 +510,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -2, y: 0, z: 6}
   numShifts: 4
   dist: -2
   rowDist: 1
   numRows: 1
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &474968535
 MonoBehaviour:
@@ -557,10 +544,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2660309088402427776, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: sceneId
+      value: 1155943202
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338562064426653967, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: sceneId
+      value: 2591018523
+      objectReference: {fileID: 0}
     - target: {fileID: 6086191115237827613, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599740440963098563, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: sceneId
+      value: 3500630262
       objectReference: {fileID: 0}
     - target: {fileID: 6959813842056720536, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
@@ -817,6 +819,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8088176507006494027, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: sceneId
+      value: 3150443772
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da631b61c27cce47be4447e7b707202, type: 3}
 --- !u!1 &533042259
@@ -863,17 +870,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 4, y: 0, z: 6}
   numShifts: 1
   dist: 6
   rowDist: 1
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &533042262
 MonoBehaviour:
@@ -936,17 +941,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 1.5, y: 0, z: 6}
   numShifts: 2
   dist: -3
   rowDist: 4
   numRows: 3
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &546119747
 MonoBehaviour:
@@ -1009,17 +1012,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 4, y: 0, z: 6}
   numShifts: 2
   dist: 3
   rowDist: 4
   numRows: 2
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &579680261
 MonoBehaviour:
@@ -1074,8 +1075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  background1: {fileID: 0}
-  background2: {fileID: 0}
 --- !u!4 &827653191
 Transform:
   m_ObjectHideFlags: 0
@@ -1157,17 +1156,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -2.5, y: 0, z: 12}
   numShifts: 2
   dist: 5
   rowDist: -3
   numRows: 3
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &871475446
 MonoBehaviour:
@@ -1322,17 +1319,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -1, y: 0, z: 9}
   numShifts: 2
   dist: 3
   rowDist: -3
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1012937551
 MonoBehaviour:
@@ -1395,17 +1390,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 0, y: 0, z: 6}
   numShifts: 7
   dist: 2
   rowDist: 1
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 3
 --- !u!114 &1013655800
 MonoBehaviour:
@@ -1537,17 +1530,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -1.5, y: 0, z: 6}
   numShifts: 2
   dist: 3
   rowDist: 3
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1035182782
 MonoBehaviour:
@@ -1610,17 +1601,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 3, y: 0, z: 6}
   numShifts: 2
   dist: -11
   rowDist: 7
   numRows: 1
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1052860237
 MonoBehaviour:
@@ -1683,17 +1672,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -3, y: 0, z: 6}
   numShifts: 2
   dist: 6
   rowDist: 1
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1287003344
 MonoBehaviour:
@@ -1756,17 +1743,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 4, y: 0, z: 6}
   numShifts: 2
   dist: -11
   rowDist: 7
   numRows: 1
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1364712497
 MonoBehaviour:
@@ -1829,17 +1814,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -6, y: 0, z: 6}
   numShifts: 4
   dist: 4
   rowDist: 1
   numRows: 1
   stagger: 0
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1367535151
 MonoBehaviour:
@@ -1902,17 +1885,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 2, y: 0, z: 6}
   numShifts: 4
   dist: 2
   rowDist: 1
   numRows: 1
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1528839561
 MonoBehaviour:
@@ -1975,17 +1956,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -4, y: 0, z: 6}
   numShifts: 2
   dist: -3
   rowDist: 4
   numRows: 2
   stagger: 0
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1596561661
 MonoBehaviour:
@@ -2172,17 +2151,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: 2, y: 0, z: 14}
   numShifts: 2
   dist: -3
   rowDist: -8
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1726985865
 MonoBehaviour:
@@ -2245,17 +2222,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -4, y: 0, z: 9}
   numShifts: 2
   dist: 3
   rowDist: -3
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1832560426
 MonoBehaviour:
@@ -2318,17 +2293,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 9137037101897162285, guid: 1fd9c7f4a5df34e9d89056573f421d0d,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -4, y: 0, z: 6}
   numShifts: 2
   dist: 6
   rowDist: 8
   numRows: 2
   stagger: 1
+  pauseLevel: 0
   dir: 2
 --- !u!114 &1852314417
 MonoBehaviour:
@@ -2391,17 +2364,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   _enemyPrefab: {fileID: 3007241012240742889, guid: 322e2294b1b446e4db08e71c6b0958b7,
     type: 3}
-  _spawnPoints: []
   _spawnPoint: {x: -4, y: 0, z: 6}
   numShifts: 2
   dist: 3
   rowDist: -3
   numRows: 1
   stagger: 1
+  pauseLevel: 0
   dir: 1
 --- !u!114 &1921236013
 MonoBehaviour:
