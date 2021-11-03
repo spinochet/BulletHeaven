@@ -11,6 +11,7 @@ public class PlayerController : PawnController
 {
     // Character and player data
     private Color playerColor;
+    private int score = 0;
 
     // Movement
     private Vector3 movement = Vector3.zero;
@@ -170,6 +171,12 @@ public class PlayerController : PawnController
     // -----
     // SCORE
     // -----
+
+    public void AddPoints(int points)
+    {
+        score += points;
+        hud.UpdateScore(score);
+    }
 
     public void ResetPoints()
     {

@@ -12,6 +12,7 @@ public class PlayerNetworkManager : NetworkManager
 
     // Player data
     private NetworkIdentity[] players;
+    public NetworkIdentity[] Players { get { return players; } }
 
     // Manage connections
     private int readyClients;
