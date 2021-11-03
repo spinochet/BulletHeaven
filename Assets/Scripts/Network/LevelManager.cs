@@ -14,6 +14,7 @@ public class LevelManager : NetworkBehaviour
     [Header ("Level Stuff")]
     public GameObject spawnPointP1;
     public GameObject spawnPointP2;
+    [SerializeField] private Pause pauseController;
     [SerializeField] private string nextLevel;
 
     // Backgrounds
@@ -27,6 +28,9 @@ public class LevelManager : NetworkBehaviour
     private Camera cam;
     private bool isScrolling = false;
     public bool IsScrolling { get { return isScrolling; } }
+
+    private bool isPaused = false;
+    public bool IsPaused { get { return isPaused; } }
 
     [Header ("Tutorial Stuff")]
     [SerializeField] private GameObject tutorial;
@@ -120,26 +124,44 @@ public class LevelManager : NetworkBehaviour
         return e;
     }
 
-    public void PauseLevel()
+    public void StopScrolling()
     {
         isScrolling = false;
         // PauseLevelRpc();
     }
 
-    // [ClientRpc]
-    // public void PauseLevelRpc()
-    // {
-    //     isScrolling = false;
-    // }
+    [Command(requiresAuthority = false)]
+    public void TogglePause()
+    {
+        isPaused = !isPaused;
+        pauseController.gameObject.SetActive(isPaused);
+        Time.timeScale = isPaused ? 0.0f : 1.0f;
+
+        TogglePauseRpc();
+    }
+
+    [ClientRpc]
+    public void TogglePauseRpc()
+    {
+        isPaused = !isPaused;
+        pauseController.gameObject.SetActive(isPaused);
+        Time.timeScale = isPaused ? 0.0f : 1.0f;
+    }
 
     public void ResumeLevel()
     {
         isScrolling = true;
+        isPaused = false;
+        Time.timeScale = 1.0f;
+
+        ResumeLevelRpc();
     }
 
-    // [ClientRpc]
-    // public void ResumeLevelRpc()
-    // {
-    //     isScrolling = true;
-    // }
+    [ClientRpc]
+    public void ResumeLevelRpc()
+    {
+        isScrolling = true;
+        isPaused = false;
+        Time.timeScale = 1.0f;
+    }
 }

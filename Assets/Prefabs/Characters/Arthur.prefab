@@ -69,6 +69,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  pawnController: {fileID: 0}
+  partner: {fileID: 0}
   name: Arthur
   portrait: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   model: {fileID: 7236291899873529416}
@@ -244,6 +246,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: robot_rigged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8a7bdd4bbd6492c448bec01fa7e2b94c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7a82bb42edfb8fe46ab447eb1c7a1ef6, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 8a7bdd4bbd6492c448bec01fa7e2b94c,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7bdd4bbd6492c448bec01fa7e2b94c, type: 3}

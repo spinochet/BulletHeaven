@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 918523723399140219
     second: horse|horse_run
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: b0e1b92e1b423334cb7d1390c49c18cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: enemy_armor
+    second: {fileID: 2100000, guid: 91beaa0364c210b46aa686ff86c923d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horse
+    second: {fileID: 2100000, guid: d62f6a6e670f69f42bcd5bf0a90d7546, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -93,7 +108,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

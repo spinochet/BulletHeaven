@@ -15,6 +15,7 @@ public class Pawn : NetworkBehaviour
     [SerializeField] private string name;
     [SerializeField] private Sprite portrait;
     [SerializeField] private GameObject model;
+    public GameObject Model { get { return model; } }
     public Sprite Portrait { get { return portrait; } }
 
     // Movement
@@ -81,43 +82,46 @@ public class Pawn : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Update move
-        if (!model.activeSelf)
+        if (!LevelManager.Instance.IsPaused)
         {
-            transform.position = partner.transform.position;
-        }
+            // Update move
+            if (!model.activeSelf)
+            {
+                transform.position = partner.transform.position;
+            }
 
-        // Abilities
-        hpTimer += Time.unscaledDeltaTime;
-        staminaTimer += Time.unscaledDeltaTime;
+            // Abilities
+            hpTimer += Time.unscaledDeltaTime;
+            staminaTimer += Time.unscaledDeltaTime;
 
-        // Recover health and stamina
-        if (hp < maxHP && hpTimer > hpRegenCooldown)
-            hp += hpRegenRate * Time.unscaledDeltaTime;
-        if (stamina < maxStamina && staminaTimer > staminaRegenCooldown) 
-            stamina += staminaRegenRate * Time.unscaledDeltaTime;
+            // Recover health and stamina
+            if (hp < maxHP && hpTimer > hpRegenCooldown)
+                hp += hpRegenRate * Time.unscaledDeltaTime;
+            if (stamina < maxStamina && staminaTimer > staminaRegenCooldown) 
+                stamina += staminaRegenRate * Time.unscaledDeltaTime;
 
-        // Update HUD
-        if (hud && model.activeSelf)
-        {
-            hud.UpdateHealth(hp / maxHP);
-            hud.UpdateStamina(stamina / maxStamina);
-        }
+            // Update HUD
+            if (hud && model.activeSelf)
+            {
+                hud.UpdateHealth(hp / maxHP);
+                hud.UpdateStamina(stamina / maxStamina);
+            }
 
-        // Abilities
-        if (isAbilityL)
-        {
-            ConsumeStamina(abilityL.GetCost() * Time.unscaledDeltaTime);
+            // Abilities
+            if (isAbilityL)
+            {
+                ConsumeStamina(abilityL.GetCost() * Time.unscaledDeltaTime);
 
-            if (stamina <= 0.0f)
-                abilityL.Deactivate();
-        }
-        else if (isAbilityR && abilityR != null)
-        {
-            ConsumeStamina(abilityR.GetCost() * Time.unscaledDeltaTime);
+                if (stamina <= 0.0f)
+                    abilityL.Deactivate();
+            }
+            else if (isAbilityR && abilityR != null)
+            {
+                ConsumeStamina(abilityR.GetCost() * Time.unscaledDeltaTime);
 
-            if (stamina <= 0.0f)
-                abilityR.Deactivate();
+                if (stamina <= 0.0f)
+                    abilityR.Deactivate();
+            }
         }
     }
 
@@ -152,7 +156,8 @@ public class Pawn : NetworkBehaviour
     // Move character in XY plane
     public void Move(Vector3 moveVector)
     {
-        controller.Move(moveVector * speed * Time.unscaledDeltaTime);
+        if (!LevelManager.Instance.IsPaused)
+            controller.Move(moveVector * speed * Time.unscaledDeltaTime);
     }
 
     // -----
@@ -162,7 +167,7 @@ public class Pawn : NetworkBehaviour
     // Reduce health to pawn
     public void TakeDamage(float value)
     {
-        if (model.activeSelf)
+        if (model.activeSelf && !LevelManager.Instance.IsPaused)
         {
             hp -= value;
             hpTimer = 0.0f;
@@ -185,8 +190,11 @@ public class Pawn : NetworkBehaviour
     // Consume player stamina
     public void ConsumeStamina(float value)
     {
-        stamina -= value;
-        staminaTimer = 0.0f;
+        if (!LevelManager.Instance.IsPaused)
+        {
+            stamina -= value;
+            staminaTimer = 0.0f;
+        }
     }
 
     // ------
@@ -197,16 +205,22 @@ public class Pawn : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void Shoot(Quaternion aim)
     {
-        GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
-        NetworkServer.Spawn(b);
+        if (!LevelManager.Instance.IsPaused)
+        {
+            GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
+            NetworkServer.Spawn(b);
+        }
     }
 
     // Ask server to spawn bomb prefab
     [Command(requiresAuthority = false)]
     public void Bomb(Vector3 target)
     {
-        GameObject b = Instantiate(bullet.gameObject, target, Quaternion.identity);
-        NetworkServer.Spawn(b);
+        if (!LevelManager.Instance.IsPaused)
+        {
+            GameObject b = Instantiate(bullet.gameObject, target, Quaternion.identity);
+            NetworkServer.Spawn(b);
+        }
     }
 
     // ---------
@@ -216,38 +230,44 @@ public class Pawn : NetworkBehaviour
     // Activate chosen ability
     public void ActivateAbility(int i)
     {
-        if (i == 0 && abilityL != null && stamina > abilityL.GetCost())
+        if (!LevelManager.Instance.IsPaused)
         {
-            abilityL.Activate();
+            if (i == 0 && abilityL != null && stamina > abilityL.GetCost())
+            {
+                abilityL.Activate();
 
-            if (!abilityL.IsOverTime())
-                ConsumeStamina(abilityL.GetCost());
-            else
-                isAbilityL = true;
-        }
-        else if (i == 1 && abilityR != null && stamina > abilityR.GetCost())
-        {
-            abilityR.Activate();
+                if (!abilityL.IsOverTime())
+                    ConsumeStamina(abilityL.GetCost());
+                else
+                    isAbilityL = true;
+            }
+            else if (i == 1 && abilityR != null && stamina > abilityR.GetCost())
+            {
+                abilityR.Activate();
 
-            if (!abilityR.IsOverTime())
-                ConsumeStamina(abilityR.GetCost());
-            else
-                isAbilityR = true;
+                if (!abilityR.IsOverTime())
+                    ConsumeStamina(abilityR.GetCost());
+                else
+                    isAbilityR = true;
+            }
         }
     }
 
     // Deactivate chosen ability
     public void DeactivateAbility(int i)
     {
-        if (i == 0 && isAbilityL)
+        if (!LevelManager.Instance.IsPaused)
         {
-            isAbilityL = false;
-            abilityL.Deactivate();
-        }
-        else if (i == 1 && isAbilityR)
-        {
-            isAbilityR = false;
-            abilityR.Deactivate();
+            if (i == 0 && isAbilityL)
+            {
+                isAbilityL = false;
+                abilityL.Deactivate();
+            }
+            else if (i == 1 && isAbilityR)
+            {
+                isAbilityR = false;
+                abilityR.Deactivate();
+            }
         }
     }
 }

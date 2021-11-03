@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 8650844250385639035
     second: trebuchet|trebuchet_launch
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trebuchet
+    second: {fileID: 2100000, guid: 62c90f047ffbadf44b79f12b901e3d10, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -93,7 +98,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

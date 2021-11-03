@@ -34,7 +34,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4621344652166699556}
+  - {fileID: 2558915259565732924}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70,9 +70,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  pawnController: {fileID: 0}
+  partner: {fileID: 0}
   name: Maya
   portrait: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
-  model: {fileID: 5434016079657320606}
+  model: {fileID: 2938818051078729350}
   speed: 10
   maxHP: 100
   hpRegenRate: 0
@@ -185,7 +187,7 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!1001 &5163633178714406351
+--- !u!1001 &2596798677641106391
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -267,17 +269,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: princess_rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 07e1abbd15d9c934bb81820b8d0ff165,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0953ba7a2da0bf64683bdabc9765cc3a, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 07e1abbd15d9c934bb81820b8d0ff165,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07e1abbd15d9c934bb81820b8d0ff165, type: 3}
---- !u!1 &5434016079657320606 stripped
+--- !u!1 &2938818051078729350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 07e1abbd15d9c934bb81820b8d0ff165,
     type: 3}
-  m_PrefabInstance: {fileID: 5163633178714406351}
+  m_PrefabInstance: {fileID: 2596798677641106391}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4621344652166699556 stripped
+--- !u!4 &2558915259565732924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
     type: 3}
-  m_PrefabInstance: {fileID: 5163633178714406351}
+  m_PrefabInstance: {fileID: 2596798677641106391}
   m_PrefabAsset: {fileID: 0}

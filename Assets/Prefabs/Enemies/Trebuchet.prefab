@@ -69,6 +69,9 @@ MonoBehaviour:
   syncInterval: 0
   pawn: {fileID: 7126290457998975314}
   speed: 2.5
+  contactDamage: 20
+  contactKnockback: 20
+  contactCooldown: 5
   shootFrequency: 0.3
 --- !u!114 &7126290457998975314
 MonoBehaviour:
@@ -213,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: trebuchet
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6cea020f3b2a1ca42855f63382c189a7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: df4a3fd6cc7a6074eb7d37d7493c882e, type: 2}
     - target: {fileID: 6733498143649143234, guid: 6cea020f3b2a1ca42855f63382c189a7,
         type: 3}
       propertyPath: m_LocalRotation.x
