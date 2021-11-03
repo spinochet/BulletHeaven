@@ -50,9 +50,9 @@ public class LevelManager : NetworkBehaviour
     void Start()
     {
         background_1.transform.position = new Vector3(0.0f, -1.0f, 0.0f);
-        background_1.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
+        //background_1.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
         background_2.transform.position = new Vector3(0.0f, -1.0f, 20.0f);
-        background_2.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
+        //background_2.GetComponent<SpriteRenderer>().sprite = backgrounds[currentBackground];
 
         cam = Camera.main;
     }

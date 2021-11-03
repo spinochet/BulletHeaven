@@ -1967,6 +1967,7 @@ MonoBehaviour:
   syncInterval: 0.1
   spawnPointP1: {fileID: 0}
   spawnPointP2: {fileID: 0}
+  pauseController: {fileID: 0}
   nextLevel: Level 2
   scrollSpeed: 2.5
   backgrounds:
@@ -1974,7 +1975,7 @@ MonoBehaviour:
   background_1: {fileID: 120795217}
   background_2: {fileID: 1992797434}
   tutorial: {fileID: 922692280}
-  playTutorial: 0
+  playTutorial: 1
 --- !u!82 &1965803429
 AudioSource:
   m_ObjectHideFlags: 0

@@ -81,7 +81,7 @@ MonoBehaviour:
   destroyOnCollision: 1
   isEnemyBullet: 1
   name: 
-  speed: 15
+  speed: 10
   damage: 10
   fireRate: 15
 --- !u!114 &8560735329830366163

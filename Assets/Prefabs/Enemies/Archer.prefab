@@ -87,7 +87,7 @@ MonoBehaviour:
   contactCooldown: 5
   shootFrequency: 0.3
   bullets: 5
-  fireCooldown: 5
+  fireCooldown: 4
 --- !u!114 &5359561344335052814
 MonoBehaviour:
   m_ObjectHideFlags: 0
