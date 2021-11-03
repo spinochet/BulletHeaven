@@ -16,6 +16,11 @@ public class FinalBossController : EnemyController
         
     }
 
+    public override void Destroy(Pawn _pawn)
+    {
+        PlayerNetworkManager.Instance.LoadArcadeLevel("CutScene5");
+    }
+
     // Update is called once per frame
     void Update()
     {
