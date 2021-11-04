@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
 public class FinalBossController : EnemyController
 {
     [SerializeField] private GameObject sideLaserPrefab;
@@ -18,7 +16,7 @@ public class FinalBossController : EnemyController
 
     public override void Destroy(Pawn _pawn)
     {
-        PlayerNetworkManager.Instance.LoadArcadeLevel("CutScene5");
+        // PlayerNetworkManager.Instance.LoadArcadeLevel("CutScene5");
     }
 
     // Update is called once per frame
@@ -28,14 +26,14 @@ public class FinalBossController : EnemyController
         if (sideLaserTimer >= sideLaserRate)
         {
             sideLaserTimer = 0.0f;
-            Pew();
+            // Pew();
         }
     }
 
-    [Command(requiresAuthority = false)]
-    private void Pew()
-    {
-        GameObject sl = GameObject.Instantiate(sideLaserPrefab);
-        NetworkServer.Spawn(sl);
-    }
+    // [Command(requiresAuthority = false)]
+    // private void Pew()
+    // {
+    //     GameObject sl = GameObject.Instantiate(sideLaserPrefab);
+    //     NetworkServer.Spawn(sl);
+    // }
 }

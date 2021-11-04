@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
-public class Bullet : NetworkBehaviour
+public class Bullet : MonoBehaviour
 {
     [SerializeField] private bool destroyOnCollision = true;
     [SerializeField] private bool isEnemyBullet = false;
@@ -18,7 +16,7 @@ public class Bullet : NetworkBehaviour
 
     void Awake()
     {
-        SoundManager.Instance.Play(name);
+        // SoundManager.Instance.Play(name);
     }
 
     // Update is called once per frame
@@ -44,7 +42,6 @@ public class Bullet : NetworkBehaviour
         owner = playerController;
     }
 
-    // FIX AFTER SPRINT
     public void OnTriggerEnter(Collider col)
     {
         if (col.transform.GetComponent<Pawn>() || col.transform.GetComponent<Bullet>())
@@ -53,16 +50,11 @@ public class Bullet : NetworkBehaviour
             if (col.transform.GetComponent<Pawn>())
                 hp = col.transform.GetComponent<Pawn>().TakeDamage(damage);
 
-            if (!isEnemyBullet && hp <= 0)
-                PlayerNetworkManager.Instance.Players[0].gameObject.GetComponent<PlayerController>().AddPoints(100);
+            if (owner != null && hp <= 0.0f)
+                owner.AddPoints(100);
 
-            if (destroyOnCollision) Destroy(gameObject);
-        }
-        else if (col.gameObject.tag == "Letter")
-        {
-            Debug.Log("Here");
-            Destroy(col.gameObject);
-            Destroy(gameObject);
+            if (destroyOnCollision)
+                Destroy(gameObject);
         }
     }
 }

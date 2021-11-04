@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using Mirror;
-
 public class EndLevel : MonoBehaviour
 {
     // Update is called once per frame
@@ -13,8 +11,8 @@ public class EndLevel : MonoBehaviour
     {
         if (transform.position.z <= 0.0f)
         {
-            PlayerNetworkManager.Instance.StopHost();
-            LevelManager.Instance.NextLevel();
+            // PlayerNetworkManager.Instance.StopHost();
+            // LevelManager.Instance.NextLevel();
         }
     }
 }

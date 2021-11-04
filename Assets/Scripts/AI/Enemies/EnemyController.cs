@@ -81,8 +81,6 @@ public class EnemyController : PawnController
     {
         delay = _delay;
         delayTimer = 0.0f;
-
-        Debug.Log(delay);
     }
 
     // Destroy object

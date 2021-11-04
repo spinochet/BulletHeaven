@@ -6,23 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menus/MainMenu.unity
-    guid: c9dd9b930caef8c41857308c4368de2b
+    path: Assets/Scenes/Menus/MainMenu Offline.unity
+    guid: ef13f041233ca294ebb775d269c4f031
   - enabled: 1
-    path: Assets/Scenes/Menus/Lobby.unity
-    guid: 77ef3485883417247b4720d3b73be1d6
+    path: Assets/Scenes/Levels/Offline/Level 1 Offline.unity
+    guid: 766cd14f3bd246849b1f8aadbf9d201c
   - enabled: 1
-    path: Assets/Scenes/Levels/Level 1.unity
-    guid: 25e5aefe721f843cdaf5fa6a4862a173
+    path: Assets/Scenes/Levels/Offline/Level 2 Offline.unity
+    guid: e0ef653ed7429ef4c948aa9135b51abd
   - enabled: 1
-    path: Assets/Scenes/Levels/Level 2.unity
-    guid: 98cd3944b69f15c4495b261ae9c74197
+    path: Assets/Scenes/Levels/Offline/Level 3 Offline.unity
+    guid: c489af49a2a362a458a9b18f6f5588e2
   - enabled: 1
-    path: Assets/Scenes/Levels/Level 3.unity
-    guid: 7461935fac603d1428279512845be8ad
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 4.unity
-    guid: 64490c5a8c66d124e97f4d3bd55e6bc4
+    path: Assets/Scenes/Levels/Offline/Level 4 Offline.unity
+    guid: 8855a1a3e1f18484190c476ffb022813
   - enabled: 1
     path: Assets/Scenes/Cut Scenes/CutScene1.unity
     guid: 688280a1ee65ea94e905fcce2c2dfa1e
@@ -38,10 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cut Scenes/CutScene5.unity
     guid: 8428322628d91ea4fb1d080c611011dd
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 2 Tuned.unity
-    guid: 3fff4489a08d6409bab4402731a69694
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 3 Tuned.unity
-    guid: 7ab284c1a95ef4ed0ba951e3e3778cdf
   m_configObjects: {}

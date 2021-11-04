@@ -4,30 +4,57 @@ using UnityEngine;
 
 public class HUDManager : MonoBehaviour
 {
-    [SerializeField] private HUDController p1;
-    [SerializeField] private HUDController p2;
-    [SerializeField] private HUDController p3;
-    [SerializeField] private HUDController p4;
+    private HUDController p1 = null;
+    private HUDController p2 = null;
 
-    public void AssignHUD(PlayerController pawn, int player)
+    // Awake is called when the script instance is being loaded.
+    void Awake()
     {
-        switch (player)
+        p1 = transform.Find("P1 Stats").GetComponent<HUDController>();
+        p2 = transform.Find("P2 Stats").GetComponent<HUDController>();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (PlayerManager.Instance)
+        {
+            // Assign player 1 HUD
+            if (PlayerManager.Instance.P1)
+            {
+                p1.gameObject.SetActive(true);
+                PlayerManager.Instance.P1.AssignHUD(p1);
+            }
+            else
+            {
+                p1.gameObject.SetActive(false);
+            }
+
+            // Assign player 2 HUD
+            if (PlayerManager.Instance.P2)
+            {
+                p2.gameObject.SetActive(true);
+                PlayerManager.Instance.P2.AssignHUD(p1);
+            }
+            else
+            {
+                p2.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    // Assign HUD depending on player number
+    public void AssignHUD(PlayerController player, int playerNum)
+    {
+        switch (playerNum)
         {
             case 0:
                 p1.gameObject.SetActive(true);
-                pawn.TargetAssignHUD(p1);
+                player.AssignHUD(p1);
                 break;
             case 1:
                 p2.gameObject.SetActive(true);
-                pawn.TargetAssignHUD(p2);
-                break;
-            case 2:
-                p3.gameObject.SetActive(true);
-                pawn.TargetAssignHUD(p3);
-                break;
-            case 3:
-                p4.gameObject.SetActive(true);
-                pawn.TargetAssignHUD(p4);
+                player.AssignHUD(p2);
                 break;
             default:
                 break;

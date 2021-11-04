@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
 public class ChainLightning : Ability
 {
     [SerializeField] private int maxChain = 3;
@@ -12,7 +10,6 @@ public class ChainLightning : Ability
 
     [SerializeField] private GameObject particles;
 
-    [Command(requiresAuthority = false)]
     override public void Activate()
     {
         StartCoroutine(Chain());
@@ -30,7 +27,6 @@ public class ChainLightning : Ability
         float timer = timing;
 
         GameObject particle = Instantiate(particles, current.transform.position, Quaternion.identity);
-        NetworkServer.Spawn(particle);
 
         for (int i = 0; i <= maxChain; ++i)
         {

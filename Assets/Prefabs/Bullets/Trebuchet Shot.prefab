@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8061707729531987766}
   - component: {fileID: -7562469688537319190}
   - component: {fileID: 7092112802995860820}
-  - component: {fileID: 8560735329830366163}
   m_Layer: 10
   m_Name: Trebuchet Shot
   m_TagString: Bullet
@@ -76,8 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d310270d35d75346bcab6161d0136ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   destroyOnCollision: 1
   isEnemyBullet: 1
   name: Trebuchet Shot
@@ -88,23 +85,6 @@ MonoBehaviour:
   radius: 10
   expandSpeed: 2.5
   targets: []
---- !u!114 &8560735329830366163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8061707729531987755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 6395978d2ba0af64bbd1d26234e8cf4c
-  hasSpawned: 0
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0

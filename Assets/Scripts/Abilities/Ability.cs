@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
-abstract public class Ability : NetworkBehaviour
+abstract public class Ability : MonoBehaviour
 {
     [SerializeField] protected float cost = 20.0f;
     [SerializeField] protected bool overTime;

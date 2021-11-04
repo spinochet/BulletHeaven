@@ -11,11 +11,6 @@ GameObject:
   - component: {fileID: 1027628024979106852}
   - component: {fileID: 1027628024979106853}
   - component: {fileID: -4788320597337895063}
-  - component: {fileID: -2938303050458440424}
-  - component: {fileID: -1585304140282818587}
-  - component: {fileID: -6181670409465947137}
-  - component: {fileID: 6169354877529406646}
-  - component: {fileID: -3489781365833388046}
   m_Layer: 8
   m_Name: Maya
   m_TagString: Character
@@ -68,8 +63,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   pawnController: {fileID: 0}
   partner: {fileID: 0}
   name: Maya
@@ -85,108 +78,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
   fireRate: 20
-  abilityL: {fileID: -1585304140282818587}
-  abilityR: {fileID: -6181670409465947137}
---- !u!114 &-2938303050458440424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce2bdca0ca7252429c53c0f4c9745f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  cost: 20
-  overTime: 1
-  timeScale: 0.3
---- !u!114 &-1585304140282818587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05fb8a82291cf418083a947537bbedd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  cost: 20
-  overTime: 0
-  maxChain: 3
-  timing: 0.1
-  minDist: 20
-  particles: {fileID: 6364527484130840815, guid: 9da3060265d786c45afb6a214f6fff8f,
-    type: 3}
---- !u!114 &-6181670409465947137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aa6e7cad1c05ed4e8a975b3ac7c072d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  cost: 0
-  overTime: 0
---- !u!114 &6169354877529406646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 2f55efd5276c2274f810c48f6e54822d
-  hasSpawned: 0
---- !u!114 &-3489781365833388046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027628024979106863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  sendInterval: 0
-  syncPosition: 1
-  syncRotation: 0
-  syncScale: 0
-  interpolatePosition: 1
-  interpolateRotation: 0
-  interpolateScale: 0
-  bufferTimeMultiplier: 3
-  bufferSizeLimit: 64
-  catchupThreshold: 6
-  catchupMultiplier: 0.1
-  showGizmos: 0
-  showOverlay: 0
-  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  abilityL: {fileID: 0}
+  abilityR: {fileID: 0}
 --- !u!1001 &2596798677641106391
 PrefabInstance:
   m_ObjectHideFlags: 0

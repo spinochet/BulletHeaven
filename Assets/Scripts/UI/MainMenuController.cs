@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] private EventSystem eventSystem;
-    [SerializeField] private float transitionTime = 0.0f;
+    // [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private string firstLevel;
 
     // ---------
     // MAIN MENU
@@ -18,11 +18,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StoryMode()
     {
-        // SceneManager.LoadScene("CutScene1");
-        // PlayerNetworkManager.Instance.StartHost();
-        // PlayerNetworkManager.Instance.LoadStoryLevel("CutScene1");
-
-        SceneManager.LoadScene("CutScene1");
+        SceneManager.LoadScene(firstLevel);
     }
 
     public void ArcadeMode()
@@ -32,9 +28,7 @@ public class MainMenuController : MonoBehaviour
 
     public void SettingsMode()
     {
-        // GameObject.Find("Player Manager").GetComponent<PlayerManager>().StoryMode();
-        // SceneManager.LoadScene("CutScene1");
-        // StartCoroutine(LoadStoryLevel());
+        
     }
 
     public void QuitGame()

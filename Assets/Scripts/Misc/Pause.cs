@@ -11,7 +11,7 @@ public class Pause : MonoBehaviour
 
     public void ResumeLevel()
     {
-        LevelManager.Instance.TogglePause();
+        // LevelManager.Instance.TogglePause();
     }
 
     public void MainMenu()

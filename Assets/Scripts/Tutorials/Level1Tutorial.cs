@@ -19,10 +19,10 @@ public class Level1Tutorial : TutorialScript
         //     player.GetComponent<Pawn>().enabled = false;
         // }
 
-        if (!LevelManager.Instance.PlayTutorial)
-        {
-            Destroy(gameObject);
-        }
+        // if (!LevelManager.Instance.PlayTutorial)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class Level1Tutorial : TutorialScript
         if (!tutorialStarted && Camera.main.WorldToScreenPoint(transform.position).y <= 0)
         {
             tutorialStarted = true;
-            LevelManager.Instance.StopScrolling();
+            // LevelManager.Instance.StopScrolling();
             Debug.Log("Tutorial started");
 
             // foreach (GameObject player in players)
@@ -41,7 +41,7 @@ public class Level1Tutorial : TutorialScript
         }
         else if (transform.position.z <= -16.0f)
         {
-            LevelManager.Instance.EndTutorial();
+            // LevelManager.Instance.EndTutorial();
             Destroy(gameObject);
         }
         if (tutorialStarted && timer < timing)
@@ -51,7 +51,7 @@ public class Level1Tutorial : TutorialScript
         }
         else if (tutorialStarted && timer >= timing)
         {
-            LevelManager.Instance.ResumeLevel();
+            // LevelManager.Instance.ResumeLevel();
         }
     }
 

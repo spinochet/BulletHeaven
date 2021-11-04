@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-using Mirror;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-abstract public class PawnController : NetworkBehaviour 
+abstract public class PawnController : MonoBehaviour 
 {
-    [SyncVar] public Pawn pawn;
+    [SerializeField] protected Pawn pawn;
 
     abstract public void Destroy(Pawn _pawn);
 

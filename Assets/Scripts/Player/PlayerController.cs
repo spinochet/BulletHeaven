@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-using Mirror;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -29,9 +27,10 @@ public class PlayerController : PawnController
     private bool isAbilityL;
     private bool isAbilityR;
 
+    // Awake is called when the script instance is being loaded.
     void Awake()
     {
-        // DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this);
     }
 
     void Update()
@@ -48,6 +47,14 @@ public class PlayerController : PawnController
                 fireTimer = 0.0f;
                 pawn.Shoot(transform.rotation);
             }
+
+            // Stats
+            if (hud != null)
+            {
+                hud.UpdateHealth(pawn.GetHP());
+                hud.UpdateStamina(pawn.GetStamina());
+                hud.UpdateScore(score);
+            }
         }
     }
 
@@ -57,7 +64,7 @@ public class PlayerController : PawnController
         {
             Pawn newPawn = _pawn.partner.GetComponent<Pawn>();
             newPawn.SetVisibility(true);
-            TargetPossesPawn(newPawn.transform.GetComponent<NetworkIdentity>());
+            PossesPawn(newPawn);
         }
         else
         {
@@ -74,26 +81,21 @@ public class PlayerController : PawnController
     // -----
 
     // Assign pawn to controller over the network
-    [TargetRpc]
-    public void TargetPossesPawn(NetworkIdentity pawnIdentity)
+    public void PossesPawn(Pawn _pawn)
     {
-        if (this.isLocalPlayer)
-        {
-            pawn = pawnIdentity.gameObject.GetComponent<Pawn>();
-            pawn.pawnController = this;
-            
-            if (hud)
-                pawn.AssignHUD(hud);
+        pawn = _pawn;
+        pawn.pawnController = this;
 
-            // Switch input map
-            PlayerInput input = GetComponent<PlayerInput>();
-            if (input) input.SwitchCurrentActionMap("Gameplay");
-        }
+        if (hud)
+            hud.UpdatePortrait(pawn.Portrait.texture);
+
+        // Switch input map
+        PlayerInput input = GetComponent<PlayerInput>();
+        if (input) input.SwitchCurrentActionMap("Gameplay");
     }
 
     // Assign player's HUD
-    [TargetRpc]
-    public void TargetAssignHUD(HUDController _hud)
+    public void AssignHUD(HUDController _hud)
     {
         hud = _hud;
     }
@@ -105,12 +107,9 @@ public class PlayerController : PawnController
     // Move action callback
     void OnMove(InputValue input)
     {
-        if (this.isLocalPlayer)
-        {
-            Vector2 inputVec = input.Get<Vector2>();
-            movement.x = inputVec.x;
-            movement.z = inputVec.y;
-        }
+        Vector2 inputVec = input.Get<Vector2>();
+        movement.x = inputVec.x;
+        movement.z = inputVec.y;
     }
 
     // -------------
@@ -130,7 +129,7 @@ public class PlayerController : PawnController
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {
-        if (this.isLocalPlayer && pawn)
+        if (pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
             else pawn.DeactivateAbility(0);
@@ -140,7 +139,7 @@ public class PlayerController : PawnController
     // AbilityR action callback function
     void OnAbilityR(InputValue input)
     {
-        if (this.isLocalPlayer && pawn)
+        if (pawn)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
             else pawn.DeactivateAbility(1);
@@ -152,20 +151,19 @@ public class PlayerController : PawnController
     {
         // if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
         //     manager.TogglePause(this);
-        LevelManager.Instance.TogglePause();
+        // LevelManager.Instance.TogglePause();
     }
 
     // Switch action callback
     void OnSwitch()
     {
-        if (this.isLocalPlayer)
-            Switch();
-    }
+        Pawn newPawn = pawn.partner.GetComponent<Pawn>();
+        pawn.pawnController = null;
+        pawn.SetVisibility(false);
 
-    [Command(requiresAuthority = false)]
-    void Switch()
-    {
-        PlayerNetworkManager.Instance.SwitchCharacters(pawn);
+        PossesPawn(newPawn);
+        newPawn.SetVisibility(true);
+
     }
 
     // -----
@@ -175,7 +173,6 @@ public class PlayerController : PawnController
     public void AddPoints(int points)
     {
         score += points;
-        hud.UpdateScore(score);
     }
 
     public void ResetPoints()

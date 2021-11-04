@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
 public class WaveSpawner3D : MonoBehaviour
 {
 
@@ -91,11 +89,11 @@ public class WaveSpawner3D : MonoBehaviour
             if (!paused)
             {
                 paused = true;
-                LevelManager.Instance.StopScrolling();
+                // LevelManager.Instance.StopScrolling();
             }
             else if (CheckEnemies())
             {
-                LevelManager.Instance.ResumeLevel();
+                // LevelManager.Instance.ResumeLevel();
                 Destroy(gameObject);
             }
         }
@@ -120,7 +118,7 @@ public class WaveSpawner3D : MonoBehaviour
                 Vector3 sp = Vector3.zero;
                 sp = (_spawnPoint + data.dir * e_offset);
 
-                GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                 e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                 enemies.Add(e);
             }
@@ -137,7 +135,7 @@ public class WaveSpawner3D : MonoBehaviour
                 Vector3 sp1 = Vector3.zero;
                 sp1 = (_spawnPoint + data.dir * e_offset);
                 
-                GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                GameObject e = Instantiate(_enemyPrefab, sp1 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                 e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                 enemies.Add(e);
 
@@ -145,7 +143,7 @@ public class WaveSpawner3D : MonoBehaviour
                     Vector3 sp2 = Vector3.zero;
                     sp2 = (_spawnPoint + data.dir2 * e_offset);
                     
-                    e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                    e = Instantiate(_enemyPrefab, sp2 + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                     e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                     enemies.Add(e);
                 }
@@ -177,7 +175,7 @@ public class WaveSpawner3D : MonoBehaviour
                         sp = (_spawnPoint + data.dir * i) + (Vector3.forward * rowDist * j) + (Vector3.right * dist * 0.5f * staggerFactor);
                     }
                     
-                    GameObject e = LevelManager.Instance.SpawnEnemy(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
+                    GameObject e = Instantiate(_enemyPrefab, sp + transform.position, Quaternion.Euler(0.0f,180f,0.0f));
                     e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
                     enemies.Add(e);
                 }

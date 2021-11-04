@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
-public class SideLaser : NetworkBehaviour
+public class SideLaser : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
 
@@ -73,7 +71,6 @@ public class SideLaser : NetworkBehaviour
             timer = 0.0f;
 
             GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
-            NetworkServer.Spawn(b);
 
             Destroy(gameObject);
 

@@ -4,19 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using Mirror;
-
-public class HUDController : NetworkBehaviour
+public class HUDController : MonoBehaviour
 {
-    [SerializeField] Pause pause;
+    [SerializeField] Pause pause = null;
 
-    private Slider hpBar;
-    private Slider staminaBar;
-    private RawImage portrait;
-    private Text text;
+    private Slider hpBar = null;
+    private Slider staminaBar = null;
+    private RawImage portrait = null;
+    private Text text = null;
 
-    // Start is called before the first frame update
-    void Start()
+    // Awake is called when the script instance is being loaded.
+    void Awake()
     {
         hpBar = transform.Find("HP Bar").GetComponent<Slider>();
         staminaBar = transform.Find("Stamina Bar").GetComponent<Slider>();
@@ -27,12 +25,18 @@ public class HUDController : NetworkBehaviour
     // Update current health
     public void UpdateHealth(float value)
     {
+        if (hpBar == null)
+            hpBar = transform.Find("HP Bar").GetComponent<Slider>();
+            
         hpBar.value = value;
     }
 
     // Update current stamina
     public void UpdateStamina(float value)
     {
+        if (staminaBar == null)
+            transform.Find("Stamina Bar").GetComponent<Slider>();
+        
         staminaBar.value = value;
     }
 
@@ -48,6 +52,9 @@ public class HUDController : NetworkBehaviour
     // Update current score
     public void UpdateScore(int score)
     {
+        if (text == null)
+            transform.Find("Score/ScoreText").GetComponent<Text>();
+        
         text.text = score.ToString();
     }
 }

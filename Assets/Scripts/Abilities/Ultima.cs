@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-
 public class Ultima : Ability
 {
     public static bool used = false;
 
-    [Command(requiresAuthority = false)]
     override public void Activate()
     {
         if (!used)
@@ -36,7 +33,6 @@ public class Ultima : Ability
         }
     }
 
-    [Command(requiresAuthority = false)]
     override public void Deactivate()
     {
         // Reset time scale

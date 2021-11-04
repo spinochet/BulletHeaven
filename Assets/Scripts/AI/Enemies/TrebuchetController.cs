@@ -7,7 +7,7 @@ public class TrebuchetController : EnemyController
     // Update is called once per frame
     void Update()
     {
-        if (LevelManager.Instance.IsScrolling)
+        // if (LevelManager.Instance.IsScrolling)
             controller.Move(Vector3.forward * -speed * Time.deltaTime);
 
         // Combat
