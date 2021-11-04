@@ -13,10 +13,7 @@ public class ArcherController : EnemyController
     // Update is called once per frame
     void Update()
     {
-        // if (LevelManager.Instance.IsScrolling) {
-            controller.enabled = true;
-            controller.Move(Vector3.forward * -speed * Time.deltaTime);
-        // }
+        Scroll();
             
 
         // Combat

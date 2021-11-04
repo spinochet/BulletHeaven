@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyController : PawnController
 {
-    // TEMP BEHAVIORS
     protected CharacterController controller;
+    protected LevelManager manager;
+
     [SerializeField] protected float speed = 2.5f;
     [SerializeField] protected float contactDamage = 20.0f;
     [SerializeField] protected float contactKnockback = 20.0f;
@@ -30,6 +31,13 @@ public class EnemyController : PawnController
     {
         if (!pawn)
             pawn = GetComponent<Pawn>();
+    }
+
+    // Constantly scroll through level
+    public void Scroll()
+    {
+        if (manager == null || manager.IsScrolling)
+            controller.Move(Vector3.forward * -speed * Time.deltaTime);
     }
 
     // Return position of nearest player
@@ -74,6 +82,12 @@ public class EnemyController : PawnController
         }
 
         return Quaternion.LookRotation(dir);
+    }
+
+    // Set level manager
+    public void SetLevelManager(LevelManager _manager)
+    {
+        manager = _manager;
     }
 
     // Set delay so every enemy is slightly off

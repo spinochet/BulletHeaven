@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     private GameObject background_2 = null;
 
     private bool isScrolling = true;
+    public bool IsScrolling { get { return isScrolling; } }
 
     private Camera cam = null;
 
@@ -54,5 +55,11 @@ public class LevelManager : MonoBehaviour
                     background_2.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
             }
         }
+    }
+
+    // Toggle scrolling the level on and off
+    public void ToggleScrolling(bool on)
+    {
+        isScrolling = on;
     }
 }

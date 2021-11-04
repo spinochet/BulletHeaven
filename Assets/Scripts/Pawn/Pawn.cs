@@ -153,14 +153,14 @@ public class Pawn : MonoBehaviour
     // Reduce health to pawn
     public float TakeDamage(float value)
     {
-        // if (model.activeSelf && !LevelManager.Instance.IsPaused)
-        // {
+        if (model.activeSelf)
+        {
             hp -= value;
             hpTimer = 0.0f;
 
             if (hp <= 0)
             {
-                // SoundManager.Instance.Play(name + " Death");
+                SoundManager.Instance.Play(name + " Death");
                 if (pawnController)
                     pawnController.Destroy(this);
                 else
@@ -168,9 +168,9 @@ public class Pawn : MonoBehaviour
             }
             else
             {
-                // SoundManager.Instance.Play(name + " Hurt");
+                SoundManager.Instance.Play(name + " Hurt");
             }
-        // }
+        }
 
         return hp;
     }

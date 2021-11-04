@@ -7,7 +7,7 @@ public class HorseController : EnemyController
     // Update is called once per frame
     void Update()
     {
-        controller.Move(-Vector3.forward * speed * Time.deltaTime);
+        Scroll();
         contactTimer += Time.deltaTime;
     }
 }

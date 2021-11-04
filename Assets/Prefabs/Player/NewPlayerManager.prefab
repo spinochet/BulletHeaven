@@ -118,7 +118,160 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugSound: 0
   source: {fileID: 7507915141636075429}
-  soundList: []
+  soundList:
+  - name: Fireball
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 05a7c1b15e818499ca0ba54c365572d2, type: 3}
+      volume: 2
+      soundCooldown: 0.25
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Laser
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 555f8f411463a434292d35da7e25977d, type: 3}
+      volume: 0.1
+      soundCooldown: 0.1
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Arrow
+    sound:
+      sound:
+      - {fileID: 8300000, guid: d7dbc4cdcabdc44e3a34af3c46f6b9ff, type: 3}
+      volume: 0.25
+      soundCooldown: 0.35
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Maya Hurt
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 777c66ebd43f14bb7a2a1f61e552862a, type: 3}
+      volume: 0.75
+      soundCooldown: 0.35
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Maya Death
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 9205f5af75ec9453baa43e360ca74d10, type: 3}
+      volume: 0.5
+      soundCooldown: 5
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Arthut Hurt
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 343ae7b87288e451288046d144ab755f, type: 3}
+      volume: 0.6
+      soundCooldown: 0.35
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Arthur Death
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 8cd442563f8204a48a67b52a43ec9976, type: 3}
+      volume: 0.4
+      soundCooldown: 5
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Trebuchet
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 46fd1196cae4e4a189d8105bc3849ec2, type: 3}
+      volume: 0.4
+      soundCooldown: 0.75
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Roomba
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 9082d364741b04722bf0a3d6addb0c3f, type: 3}
+      volume: 2
+      soundCooldown: 2
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Roomba Shot
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 52c904eb6713c471ea8837a39c75874d, type: 3}
+      volume: 0.5
+      soundCooldown: 0.25
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Vroom
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 536241c3b9a164808a00e18da2b6caf8, type: 3}
+      volume: 32
+      soundCooldown: 2.5
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Dragon Fire Shot
+    sound:
+      sound:
+      - {fileID: 8300000, guid: aba8b9272d0614df787d0a62c3a98735, type: 3}
+      volume: 0.7
+      soundCooldown: 0.35
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Dragon Tail Swipe
+    sound:
+      sound:
+      - {fileID: 8300000, guid: c560587ccb78a4f7d98e7e55f6fa3b74, type: 3}
+      volume: 0.5
+      soundCooldown: 2.5
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Dragon Laser Blast
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 187851b7d143d4f22b3b3bf39955442d, type: 3}
+      volume: 0.5
+      soundCooldown: 3
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Chain Lightning
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 05ac7ade7eb1e4026b77f0ebb742013d, type: 3}
+      volume: 1
+      soundCooldown: 3
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Bullet Time
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 1377a6c630a7e406f8a710108213f628, type: 3}
+      volume: 1.25
+      soundCooldown: 3
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Archer Death
+    sound:
+      sound:
+      - {fileID: 8300000, guid: c3063734048d248929e91f3008e5710f, type: 3}
+      volume: 0.35
+      soundCooldown: 0.15
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
 --- !u!82 &7507915141636075429
 AudioSource:
   m_ObjectHideFlags: 0

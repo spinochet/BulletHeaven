@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
 
     void Awake()
     {
-        // SoundManager.Instance.Play(name);
+        SoundManager.Instance.Play(name);
     }
 
     // Update is called once per frame
