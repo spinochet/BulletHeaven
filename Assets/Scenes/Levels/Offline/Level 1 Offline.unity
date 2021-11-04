@@ -738,6 +738,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2256315794562083999, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2490313897265814353, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -843,11 +848,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7187843087691640187, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 8154011667539690793, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: pause
       value: 
       objectReference: {fileID: 715185922}
+    - target: {fileID: 8721233653968576060, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePause
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bdc18a21a6b93b43aff2e4c736b17a6, type: 3}
 --- !u!1 &1029031089

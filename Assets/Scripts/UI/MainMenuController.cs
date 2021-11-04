@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour
 {
     // [SerializeField] private EventSystem eventSystem;
     [SerializeField] private string firstLevel;
+    [SerializeField] private GameObject settings;
 
     // ---------
     // MAIN MENU
@@ -28,7 +29,7 @@ public class MainMenuController : MonoBehaviour
 
     public void SettingsMode()
     {
-        
+        settings.SetActive(true);
     }
 
     public void QuitGame()
