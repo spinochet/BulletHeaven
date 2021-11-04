@@ -61,15 +61,15 @@ public class PlayerManager : MonoBehaviour
         // Drop-in Co-op
         if (SceneManager.GetActiveScene().name.Contains("Level"))
         {
+            // Assign hud
+            GameObject hud = GameObject.Find("HUD");
+            if (hud)
+                hud.GetComponent<HUDManager>().AssignHUD(newPlayer, input.playerIndex);
             // Spawn players
             if (player1Pawn && !player1Pawn.IsPossesed)
                 newPlayer.PossesPawn(player1Pawn);
             else if (player2Pawn && !player2Pawn.IsPossesed)
                 newPlayer.PossesPawn(player2Pawn);
-
-            GameObject hud = GameObject.Find("HUD");
-            if (hud)
-                hud.GetComponent<HUDManager>().AssignHUD(newPlayer, input.playerIndex);
         }
     }
 

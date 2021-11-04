@@ -12,6 +12,7 @@ public class HUDController : MonoBehaviour
     private Slider staminaBar = null;
     private RawImage portrait = null;
     private Text text = null;
+    private OffHUDController offController = null;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -20,6 +21,7 @@ public class HUDController : MonoBehaviour
         staminaBar = transform.Find("Stamina Bar").GetComponent<Slider>();
         portrait = transform.Find("Portrait/Character").GetComponent<RawImage>();
         text = transform.Find("Score/ScoreText").GetComponent<Text>();
+        offController = transform.Find("Off-Stats").GetComponent<OffHUDController>();
     }
 
     // Update current health
@@ -31,6 +33,15 @@ public class HUDController : MonoBehaviour
         hpBar.value = value;
     }
 
+    // Update off character's current health
+    public void UpdateOffHealth(float value)
+    {
+        if (offController == null)
+            offController = transform.Find("Off-Stats").GetComponent<OffHUDController>();
+            
+        offController.UpdateHealth(value);
+    }
+
     // Update current stamina
     public void UpdateStamina(float value)
     {
@@ -40,6 +51,15 @@ public class HUDController : MonoBehaviour
         staminaBar.value = value;
     }
 
+    // Update off character's current stamina
+    public void UpdateOffStamina(float value)
+    {
+        if (offController == null)
+            offController = transform.Find("Off-Stats").GetComponent<OffHUDController>();
+        
+        offController.UpdateStamina(value);
+    }
+
     // Update character portrait
     public void UpdatePortrait(Texture texture)
     {
@@ -47,6 +67,15 @@ public class HUDController : MonoBehaviour
             portrait = transform.Find("Portrait/Character").GetComponent<RawImage>();
 
         portrait.texture = texture;
+    }
+
+    // Update character portrait
+    public void UpdateOffPortrait(Texture texture)
+    {
+        if (offController == null)
+            offController = transform.Find("Off-Stats").GetComponent<OffHUDController>();
+
+        offController.UpdatePortrait(texture);
     }
 
     // Update current score

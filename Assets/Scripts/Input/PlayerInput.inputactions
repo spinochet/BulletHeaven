@@ -30,14 +30,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Aim",
-                    "type": "PassThrough",
-                    "id": "1d98e48a-705f-4c93-8a53-56d46ae2550b",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Burst",
                     "type": "PassThrough",
                     "id": "3e4bce7e-10e8-436d-b71b-8b12d877515e",
@@ -464,17 +456,6 @@
                     "processors": "",
                     "groups": "M&K",
                     "action": "Switch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4df10933-baa3-4267-a997-57dd94be0cb4",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "M&K",
-                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

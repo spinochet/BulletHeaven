@@ -9,6 +9,7 @@ public class PlayerController : PawnController
 {
     // Character and player data
     private Color playerColor;
+    private Pawn partner;
     private int score = 0;
 
     // Movement
@@ -54,6 +55,12 @@ public class PlayerController : PawnController
                 hud.UpdateHealth(pawn.GetHP());
                 hud.UpdateStamina(pawn.GetStamina());
                 hud.UpdateScore(score);
+
+                if (partner)
+                {
+                    hud.UpdateOffHealth(partner.GetHP());
+                    hud.UpdateOffStamina(partner.GetStamina());
+                }
             }
         }
     }
@@ -86,8 +93,15 @@ public class PlayerController : PawnController
         pawn = _pawn;
         pawn.pawnController = this;
 
+        if (pawn.partner)
+            partner = pawn.partner.GetComponent<Pawn>();
+
         if (hud)
+        {
             hud.UpdatePortrait(pawn.Portrait.texture);
+            if (partner != null)
+                hud.UpdateOffPortrait(partner.Portrait.texture);
+        }
 
         // Switch input map
         PlayerInput input = GetComponent<PlayerInput>();
@@ -160,6 +174,9 @@ public class PlayerController : PawnController
         Pawn newPawn = pawn.partner.GetComponent<Pawn>();
         pawn.pawnController = null;
         pawn.SetVisibility(false);
+
+        // if (pawn.partner)
+        //     partner = pawn.partner.GetComponent<Pawn>();
 
         PossesPawn(newPawn);
         newPawn.SetVisibility(true);
