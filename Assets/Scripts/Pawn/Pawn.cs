@@ -140,6 +140,15 @@ public class Pawn : MonoBehaviour
         controller.Move(moveVector * speed * Time.unscaledDeltaTime);
     }
 
+    // Pause pawn's animation
+    public void ToggleAnimation(bool playing)
+    {
+        if (playing)
+            model.GetComponent<Animator>().speed = 1.0f;
+        else
+            model.GetComponent<Animator>().speed = 0.0f;
+    }
+
     // -----
     // STATS
     // -----

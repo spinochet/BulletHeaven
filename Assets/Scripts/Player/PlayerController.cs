@@ -160,12 +160,19 @@ public class PlayerController : PawnController
         }
     }
 
+    // ------
+    // EVENTS
+    // ------
+
     // Pause action callback function
     void OnPause()
     {
-        // if ((manager.mode == NetworkManagerMode.Offline || this.isLocalPlayer) && manager)
-        //     manager.TogglePause(this);
-        // LevelManager.Instance.TogglePause();
+        hud.TogglePause();
+    }
+
+    public void TogglePawnAnimation(bool playing)
+    {
+        pawn.ToggleAnimation(playing);
     }
 
     // Switch action callback
@@ -175,12 +182,8 @@ public class PlayerController : PawnController
         pawn.pawnController = null;
         pawn.SetVisibility(false);
 
-        // if (pawn.partner)
-        //     partner = pawn.partner.GetComponent<Pawn>();
-
         PossesPawn(newPawn);
         newPawn.SetVisibility(true);
-
     }
 
     // -----

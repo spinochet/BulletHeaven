@@ -86,4 +86,11 @@ public class HUDController : MonoBehaviour
         
         text.text = score.ToString();
     }
+
+    // Pause game and display menu
+    public void TogglePause()
+    {
+        pause.gameObject.SetActive(true);
+        pause.TogglePause();
+    }
 }
