@@ -167,7 +167,8 @@ public class PlayerController : PawnController
     // Pause action callback function
     void OnPause()
     {
-        hud.TogglePause();
+        if (pawn != null)
+            hud.TogglePause();
     }
 
     public void TogglePawnAnimation(bool playing)

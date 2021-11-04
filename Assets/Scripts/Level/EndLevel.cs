@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
-    [SerializeField] private string nextLevel;
-
     // Update is called once per frame
     void Update()
     {

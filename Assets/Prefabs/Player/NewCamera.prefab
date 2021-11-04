@@ -220,6 +220,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 977460847645615725, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 5335486449939078059}
     - target: {fileID: 2418956784990969313, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -400,6 +405,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 852469624280170867}
+    - target: {fileID: 8792603335729394475, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 5335486449939078059}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da631b61c27cce47be4447e7b707202, type: 3}
 --- !u!224 &2490313897952894782 stripped
@@ -533,3 +543,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1496318758511991294}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5335486449939078059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6829859828766802517, guid: 862ec8718ca3f9847b628c9a723fcbf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1496318758511991294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b753045dea5f442bbf4fe0fcd86826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

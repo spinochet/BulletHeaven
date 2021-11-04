@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c696c7f882a6b8048ba7e3b7a058c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 
 --- !u!1 &446763794
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,18 +521,6 @@ MonoBehaviour:
   stagger: 1
   pauseLevel: 1
   dir: 1
---- !u!114 &715185922 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5335486449939078059, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1010914348}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b753045dea5f442bbf4fe0fcd86826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &806119245
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,11 +650,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 485798565395583087, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
-        type: 3}
-      propertyPath: pause
-      value: 
-      objectReference: {fileID: 715185922}
     - target: {fileID: 549760345953939314, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -833,11 +815,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3629147111292665688, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6514519585152076609, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -853,11 +830,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 8154011667539690793, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
-        type: 3}
-      propertyPath: pause
-      value: 
-      objectReference: {fileID: 715185922}
     - target: {fileID: 8721233653968576060, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
