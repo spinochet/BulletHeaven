@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header ("Level Stuff")]
+    [SerializeField] private string nextLevel;
+
     [Header ("Autoscroll")]
     [SerializeField] private float scrollSpeed = 2.5f;
     [SerializeField] private GameObject backgroundPrefab = null;
@@ -61,5 +66,11 @@ public class LevelManager : MonoBehaviour
     public void ToggleScrolling(bool on)
     {
         isScrolling = on;
+    }
+
+    // Load next level
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(nextLevel);
     }
 }

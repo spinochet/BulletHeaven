@@ -257,7 +257,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -602,7 +602,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -724,7 +724,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -921,7 +921,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1191,7 +1191,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1251,97 +1251,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986360710}
   m_CullTransparentMesh: 0
---- !u!1001 &1190904693
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1990560045131368748, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: scene
-      value: Level 4 Tuned
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368750, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_Name
-      value: NextLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368751, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: sceneId
-      value: 1698634492
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9903476025b464dfca849122ba5d90ae, type: 3}
---- !u!114 &1190904694 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1990560045131368748, guid: 9903476025b464dfca849122ba5d90ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1190904693}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c505f68dba16e4435a3d3a89d8e03447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1242579504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,7 +1482,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
-  nextLevel: {fileID: 1190904694}
+  nextLevel: Level 4 Offline
 --- !u!114 &1329424064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1688,7 +1597,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1810,7 +1719,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -2115,7 +2024,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space

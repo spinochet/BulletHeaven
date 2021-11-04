@@ -8,7 +8,7 @@ namespace DialogueSystem
     public class DialogueBaseClass : MonoBehaviour
     {
         public InputAction space;
-        private bool spacePressed;
+        private bool spacePressed = false;
 
         public bool finished { get; private set; }
 
@@ -20,16 +20,19 @@ namespace DialogueSystem
             textHolder.color = textColor;
             textHolder.font = textFont;
 
+            spacePressed = false;
             for (int i = 0; i < input.Length; i++)
             {
                 textHolder.text += input[i];
+
                 //SoundManager.instance.PlaySound(sound);
-                yield return new WaitForSeconds(delay);
+                if (!spacePressed)
+                    yield return new WaitForSeconds(delay);
             }
 
-            // yield return new WaitForSeconds(delay);
             spacePressed = false;
             while (!spacePressed) yield return null;
+
             finished = true;
         }
 

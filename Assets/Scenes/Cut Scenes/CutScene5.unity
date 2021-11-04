@@ -347,7 +347,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -355,7 +355,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -469,7 +469,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -477,7 +477,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -740,7 +740,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -748,7 +748,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1010,7 +1010,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1132,7 +1132,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1277,7 +1277,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
-  nextLevel: {fileID: 0}
+  nextLevel: MainMenu Offline
 --- !u!114 &1230275914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1789,7 +1789,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1797,7 +1797,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1985,7 +1985,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1993,7 +1993,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -2108,7 +2108,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -2116,7 +2116,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space

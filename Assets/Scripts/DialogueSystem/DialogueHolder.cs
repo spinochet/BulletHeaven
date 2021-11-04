@@ -13,14 +13,17 @@ namespace DialogueSystem
 
         private void Awake()
         {
+            // Enable cutscene actions
+            skip.Enable();
+
+            // Assign cutscene actions
+            skip.performed += ctx => Skip();
+
             StartCoroutine(dialogueSequence());
         }
 
         private IEnumerator dialogueSequence()
         {
-            skip.Enable();
-            skip.performed += ctx => Skip();
-
             for (int i = 0; i < transform.childCount; i++)
             {
                 Deactivate();

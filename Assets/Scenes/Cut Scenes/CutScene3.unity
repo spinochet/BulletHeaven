@@ -183,7 +183,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -191,7 +191,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -328,7 +328,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
-  nextLevel: {fileID: 1612479403}
+  nextLevel: Level 3 Offline
 --- !u!114 &183288540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -451,7 +451,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -935,7 +935,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -943,7 +943,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1132,7 +1132,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1328,7 +1328,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1336,7 +1336,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1524,7 +1524,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1532,7 +1532,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1646,7 +1646,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1654,7 +1654,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1849,7 +1849,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1857,7 +1857,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1992,97 +1992,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1612479402
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1990560045131368748, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: scene
-      value: Level 3 Tuned
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368749, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368750, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: m_Name
-      value: NextLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990560045131368751, guid: 9903476025b464dfca849122ba5d90ae,
-        type: 3}
-      propertyPath: sceneId
-      value: 1635398694
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9903476025b464dfca849122ba5d90ae, type: 3}
---- !u!114 &1612479403 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1990560045131368748, guid: 9903476025b464dfca849122ba5d90ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1612479402}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c505f68dba16e4435a3d3a89d8e03447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1674508413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,7 +2054,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
       m_Path: <Keyboard>/space
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -2153,7 +2062,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
       m_Processors: 
       m_Groups: 
       m_Action: Space
