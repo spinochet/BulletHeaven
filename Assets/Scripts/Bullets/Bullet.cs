@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private bool destroyOnCollision = true;
-    [SerializeField] private bool isEnemyBullet = false;
+    [System.Serializable]
+    public struct Level
+    {
+        public bool destroyOnCollision; 
+        public float speed;
+        public float damage;
 
-    [SerializeField] protected string name;
-    [SerializeField] protected float speed = 5.0f;
-    [SerializeField] protected float damage = 10.0f;
-    [SerializeField] protected float fireRate = 30.0f;
+        public float fireRate;
+        public int numBullets;
+        public float bulletSpacing;
+    }
 
-    private PlayerController owner;
+    [SerializeField] protected string name = null;
+    [SerializeField] protected List<Level> levels = null;
+    protected PlayerController owner = null;
+    protected int currentLevel = 0;
 
     void Awake()
     {
@@ -22,38 +29,55 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isEnemyBullet)
-            transform.position += transform.forward * speed * Time.deltaTime;
+        if (!owner)
+            transform.position += transform.forward * levels[currentLevel].speed * Time.deltaTime;
         else
-            transform.position += transform.forward * speed * Time.unscaledDeltaTime;
+            transform.position += transform.forward * levels[owner.CurrentLevel].speed * Time.unscaledDeltaTime;
             
         transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
     }
 
     // Return bullet's fire rate
-    public float GetFireRate()
+    public float GetFireRate(int currentLevel = 0)
     {
-        return fireRate;
+        return levels[currentLevel].fireRate;
+    }
+
+    // Return number of bullets
+    public int GetNumBullets(int currentLevel = 0)
+    {
+        return levels[currentLevel].numBullets;
+    }
+
+    // return bullet spacing
+    public float GetBulletSpacing(int currentLevel = 0)
+    {
+        return levels[currentLevel].bulletSpacing;
     }
 
     // Set the ownwe of the bullet
-    public void SetOwner(PlayerController playerController)
+    public void SetOwner(PlayerController playerController, int bulletLevel = 0)
     {
         owner = playerController;
+        currentLevel = bulletLevel;
     }
 
     public void OnTriggerEnter(Collider col)
     {
         if (col.transform.GetComponent<Pawn>() || col.transform.GetComponent<Bullet>())
         {
+            int level = 0;
+            if (owner)
+                level = owner.CurrentLevel;
+
             float hp = 1;
             if (col.transform.GetComponent<Pawn>())
-                hp = col.transform.GetComponent<Pawn>().TakeDamage(damage);
+                hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage);
 
             if (owner != null && hp <= 0.0f)
                 owner.AddPoints(100);
 
-            if (destroyOnCollision)
+            if (levels[level].destroyOnCollision)
                 Destroy(gameObject);
         }
     }

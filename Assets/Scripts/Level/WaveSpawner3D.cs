@@ -11,7 +11,7 @@ public class WaveSpawner3D : MonoBehaviour
         public Vector3 dir2;
     }
 
-    public GameObject _enemyPrefab;
+    [SerializeField] private GameObject _enemyPrefab;
 
     public Vector3 _spawnPoint;
     public int numShifts;

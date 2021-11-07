@@ -75,12 +75,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506f08b091291f84b8db4a40129950e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOnCollision: 1
-  isEnemyBullet: 1
   name: Bullet
-  speed: 10
-  damage: 10
-  fireRate: 15
+  levels:
+  - destroyOnCollision: 0
+    speed: 0
+    damage: 0
+    fireRate: 0
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0

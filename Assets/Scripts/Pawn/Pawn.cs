@@ -14,6 +14,8 @@ public class Pawn : MonoBehaviour
     [SerializeField] private string name;
     [SerializeField] private Sprite portrait;
     [SerializeField] private GameObject model;
+    private int currentLevel = 0;
+
     public GameObject Model { get { return model; } }
     public Sprite Portrait { get { return portrait; } }
 
@@ -46,7 +48,7 @@ public class Pawn : MonoBehaviour
 
     public float FireRate { get { return fireRate; } }
 
-    Bullet bullet;
+    public Bullet bullet;
     private bool isShooting;
     private float fireTimer;
 
@@ -69,7 +71,9 @@ public class Pawn : MonoBehaviour
 
         // Combat
         if (bulletPrefab)
+        {
             bullet = bulletPrefab.GetComponent<Bullet>();
+        }
     }
 
     // Start is called before the first frame update
@@ -204,10 +208,35 @@ public class Pawn : MonoBehaviour
     // Ask server to spawn bullet prefab
     public void Shoot(Quaternion aim)
     {
-        GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
+        int numBullets = bullet.GetNumBullets(currentLevel);
+        float bulletSpacing = bullet.GetBulletSpacing(currentLevel);
 
-        if (pawnController is PlayerController)
-            b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
+        float spaceFactor = (numBullets - 1.0f) / 2.0f;
+        Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor); 
+
+        Debug.Log("Position: " + transform.position);
+        Debug.Log("Bullet: " + startSpawn);
+
+        for (int i = 0; i < numBullets; ++i)
+        {
+            GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim);
+            if (pawnController is PlayerController)
+                b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
+        }
+
+
+
+
+
+
+
+
+        // GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
+
+        // if (pawnController is PlayerController)
+        // {
+        //     b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
+        // }
     }
 
     // Ask server to spawn bomb prefab

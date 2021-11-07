@@ -87,6 +87,12 @@ public class HUDController : MonoBehaviour
         text.text = score.ToString();
     }
 
+    // Turn on/off off HUD
+    public void ToggleOffHUD(bool enable)
+    {
+        offController.gameObject.SetActive(enable);
+    }
+
     // Pause game and display menu
     public void TogglePause()
     {

@@ -31,7 +31,7 @@ public class TrebuchetBullet : Bullet
                 {
                     Pawn pawn = target.GetComponent<Pawn>();
                     if (pawn)
-                        pawn.TakeDamage(damage);
+                        pawn.TakeDamage(levels[currentLevel].damage);
                 }
             }
 
