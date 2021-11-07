@@ -6,7 +6,7 @@ public class Ultima : Ability
 {
     public static bool used = false;
 
-    override public void Activate()
+    override public void Activate(int level = 0)
     {
         if (!used)
         {

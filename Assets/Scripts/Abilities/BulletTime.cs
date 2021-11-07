@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class BulletTime : Ability
 {
-    [SerializeField] private float timeScale = 0.3f;
-
-    override public void Activate()
+    [System.Serializable]
+    public struct BulletTimeLevel
     {
-        Time.timeScale = timeScale;
-        Time.fixedDeltaTime = timeScale / 60.0f;
+        public float timeScale;
+        public float cost;
+    }
+
+    [SerializeField] protected List<BulletTimeLevel> levels;
+
+    override public void Activate(int level = 0)
+    {
+        level = level >= levels.Count ? levels.Count : level;
+
+        Time.timeScale = levels[level].timeScale;
+        Time.fixedDeltaTime = levels[level].timeScale / 60.0f;
     }
 
     override public void Deactivate()

@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
 {
     [Header ("Level Stuff")]
     [SerializeField] private string nextLevel;
+    [SerializeField] private GameObject spawn1;
+    [SerializeField] private GameObject spawn2;
 
     [Header ("Autoscroll")]
     [SerializeField] private float scrollSpeed = 2.5f;
@@ -32,7 +34,7 @@ public class LevelManager : MonoBehaviour
         background_2.GetComponent<SpriteRenderer>().sprite = backgroundSprite;
 
         // Spawn players
-        PlayerManager.Instance.SpawnPawns();
+        PlayerManager.Instance.SpawnPawns(new Vector3(-2.0f, 0.0f, -2.0f), new Vector3(2.0f, 0.0f, -2.0f));
 
         cam = Camera.main;
     }

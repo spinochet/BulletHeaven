@@ -10,7 +10,7 @@ public class ChainLightning : Ability
 
     [SerializeField] private GameObject particles;
 
-    override public void Activate()
+    override public void Activate(int level = 0)
     {
         StartCoroutine(Chain());
     }

@@ -65,40 +65,84 @@ public class PlayerManager : MonoBehaviour
             GameObject hud = GameObject.Find("HUD");
             if (hud)
                 hud.GetComponent<HUDManager>().AssignHUD(newPlayer, input.playerIndex);
+
             // Spawn players
             if (player1Pawn && !player1Pawn.IsPossesed)
+            {
                 newPlayer.PossesPawn(player1Pawn);
+                player1Pawn.SetVisibility(true);
+            }
             else if (player2Pawn && !player2Pawn.IsPossesed)
+            {
                 newPlayer.PossesPawn(player2Pawn);
+                player2Pawn.SetVisibility(true);
+            }
+
+            // Check if both players have spawned
+            if (player1Pawn && player1Pawn.IsPossesed && player2Pawn && player2Pawn.IsPossesed)
+            {
+                player1Pawn.AssignPartner(null);
+                player2Pawn.AssignPartner(null);
+
+                if (hud)
+                    hud.GetComponent<HUDManager>().ToggleOffHUD(false);
+            }
         }
     }
 
     // Spawn pawns into level
-    public void SpawnPawns()
+    public void SpawnPawns(Vector3 spawn1, Vector3 spawn2)
     {
         GameObject hud = GameObject.Find("HUD");
 
-        // Spawn player 1
-        player1Pawn = GameObject.Instantiate(playablePrefabs[0]).GetComponent<Pawn>();
+        // Spawn pawns
+        player1Pawn = GameObject.Instantiate(playablePrefabs[0], spawn1, Quaternion.identity).GetComponent<Pawn>();
+        player2Pawn = GameObject.Instantiate(playablePrefabs[1], spawn2, Quaternion.identity).GetComponent<Pawn>();
+
+        // Assign player 1
+        if (p1 != null && p2 == null)
+        {
+            player1Pawn.AssignPartner(player2Pawn);
+            player2Pawn.AssignPartner(player1Pawn);
+            player2Pawn.SetVisibility(false);
+        }
+
+        // Assign player 2
+        else if (p2 != null && p1 == null)
+        {
+            player1Pawn.AssignPartner(player2Pawn);
+            player2Pawn.AssignPartner(player1Pawn);
+            player1Pawn.SetVisibility(false);
+        }
+
+        // No players
+        else if (p1 == null && p2 == null)
+        {
+            player1Pawn.AssignPartner(player2Pawn);
+            player2Pawn.AssignPartner(player1Pawn);
+
+            player1Pawn.SetVisibility(false);
+            player2Pawn.SetVisibility(false);
+        }
+
+        // Both players
+        else if (hud)
+        {
+            hud.GetComponent<HUDManager>().ToggleOffHUD(false);
+        }
+
+        // Assign player 1 HUD
         if (p1 != null)
         {
             if (hud) hud.GetComponent<HUDManager>().AssignHUD(p1, 0);
             p1.PossesPawn(player1Pawn);
         }
 
-        // Spawn player 2
-        player2Pawn = GameObject.Instantiate(playablePrefabs[1]).GetComponent<Pawn>();
+        // Assign player 2 HUD
         if (p2 != null)
         {
             if (hud) hud.GetComponent<HUDManager>().AssignHUD(p2, 1);
             p2.PossesPawn(player2Pawn);
-        }
-        else
-        {
-            player1Pawn.AssignPartner(player2Pawn);
-            player2Pawn.AssignPartner(player1Pawn);
-
-            player2Pawn.SetVisibility(false);
         }
     }
 }

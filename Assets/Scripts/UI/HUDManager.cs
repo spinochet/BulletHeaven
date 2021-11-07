@@ -60,4 +60,11 @@ public class HUDManager : MonoBehaviour
                 break;
         }
     }
+
+    // Toggle off hud on and off
+    public void ToggleOffHUD(bool toggle)
+    {
+        p1.ToggleOffHUD(false);
+        p2.ToggleOffHUD(false);
+    }
 }

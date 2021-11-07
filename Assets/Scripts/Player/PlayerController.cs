@@ -71,6 +71,10 @@ public class PlayerController : PawnController
     {
         if (_pawn.partner)
         {
+            // Deactivate abilities
+            pawn.DeactivateAbility(0);
+            pawn.DeactivateAbility(1);
+
             Pawn newPawn = _pawn.partner.GetComponent<Pawn>();
             newPawn.partner = null;
             newPawn.SetVisibility(true);

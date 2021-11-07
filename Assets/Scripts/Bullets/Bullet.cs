@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [System.Serializable]
-    public struct Level
+    public struct BulletLevel
     {
         public bool destroyOnCollision; 
         public float speed;
@@ -16,8 +16,8 @@ public class Bullet : MonoBehaviour
         public float bulletSpacing;
     }
 
-    [SerializeField] protected string name = null;
-    [SerializeField] protected List<Level> levels = null;
+    [SerializeField] protected string name;
+    [SerializeField] protected List<BulletLevel> levels;
     protected PlayerController owner = null;
     protected int currentLevel = 0;
 
@@ -40,18 +40,21 @@ public class Bullet : MonoBehaviour
     // Return bullet's fire rate
     public float GetFireRate(int currentLevel = 0)
     {
+        currentLevel = currentLevel >= levels.Count ? levels.Count : currentLevel;
         return levels[currentLevel].fireRate;
     }
 
     // Return number of bullets
     public int GetNumBullets(int currentLevel = 0)
     {
+        currentLevel = currentLevel >= levels.Count ? levels.Count : currentLevel;
         return levels[currentLevel].numBullets;
     }
 
     // return bullet spacing
     public float GetBulletSpacing(int currentLevel = 0)
     {
+        currentLevel = currentLevel >= levels.Count ? levels.Count : currentLevel;
         return levels[currentLevel].bulletSpacing;
     }
 
@@ -59,7 +62,7 @@ public class Bullet : MonoBehaviour
     public void SetOwner(PlayerController playerController, int bulletLevel = 0)
     {
         owner = playerController;
-        currentLevel = bulletLevel;
+        currentLevel = bulletLevel >= levels.Count ? levels.Count : bulletLevel;
     }
 
     public void OnTriggerEnter(Collider col)

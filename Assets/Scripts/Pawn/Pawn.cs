@@ -71,9 +71,7 @@ public class Pawn : MonoBehaviour
 
         // Combat
         if (bulletPrefab)
-        {
             bullet = bulletPrefab.GetComponent<Bullet>();
-        }
     }
 
     // Start is called before the first frame update
@@ -86,7 +84,7 @@ public class Pawn : MonoBehaviour
     void Update()
     {
         // Update move
-        if (!model.activeSelf)
+        if (!model.activeSelf && partner)
         {
             transform.position = partner.transform.position;
         }
@@ -125,7 +123,10 @@ public class Pawn : MonoBehaviour
     // Assign partner
     public void AssignPartner(Pawn _partner)
     {
-        partner = _partner.gameObject;
+        if (_partner != null)
+            partner = _partner.gameObject;
+        else
+            partner = null;
     }
 
     // Set visibility of model
@@ -214,29 +215,12 @@ public class Pawn : MonoBehaviour
         float spaceFactor = (numBullets - 1.0f) / 2.0f;
         Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor); 
 
-        Debug.Log("Position: " + transform.position);
-        Debug.Log("Bullet: " + startSpawn);
-
         for (int i = 0; i < numBullets; ++i)
         {
             GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim);
             if (pawnController is PlayerController)
                 b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
         }
-
-
-
-
-
-
-
-
-        // GameObject b = Instantiate(bullet.gameObject, transform.position, aim);
-
-        // if (pawnController is PlayerController)
-        // {
-        //     b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
-        // }
     }
 
     // Ask server to spawn bomb prefab
@@ -254,7 +238,7 @@ public class Pawn : MonoBehaviour
     {
         if (i == 0 && abilityL != null && stamina > abilityL.GetCost())
         {
-            abilityL.Activate();
+            abilityL.Activate(currentLevel);
 
             if (!abilityL.IsOverTime())
                 ConsumeStamina(abilityL.GetCost());
@@ -263,7 +247,7 @@ public class Pawn : MonoBehaviour
         }
         else if (i == 1 && abilityR != null && stamina > abilityR.GetCost())
         {
-            abilityR.Activate();
+            abilityR.Activate(currentLevel);
 
             if (!abilityR.IsOverTime())
                 ConsumeStamina(abilityR.GetCost());
