@@ -32,6 +32,7 @@ namespace DialogueSystem
             }
             gameObject.SetActive(false);
 
+            skip.Disable();
             SceneManager.LoadScene(nextLevel);
         }
 
