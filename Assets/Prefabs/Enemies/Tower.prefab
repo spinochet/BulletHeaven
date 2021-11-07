@@ -863,7 +863,6 @@ GameObject:
   - component: {fileID: 3007241012240742899}
   - component: {fileID: 7427910172306480252}
   - component: {fileID: 8019127529922287089}
-  - component: {fileID: -4387995181352385413}
   - component: {fileID: 8140509201408157259}
   - component: {fileID: 1510655434230804597}
   m_Layer: 10
@@ -918,8 +917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbfb629815152840a89be29708e06e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   pawn: {fileID: 8019127529922287089}
   speed: 2.5
   contactDamage: 20
@@ -940,8 +937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   pawnController: {fileID: 7427910172306480252}
   partner: {fileID: 0}
   name: Tower
@@ -957,25 +952,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8061707729531987755, guid: a6c4303473557194fb6171b7967bf18e,
     type: 3}
   fireRate: 5
+  bullet: {fileID: 0}
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
---- !u!114 &-4387995181352385413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007241012240742889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 07f5a39cd7b8c4f6dbe47fb524264a67
-  hasSpawned: 0
 --- !u!114 &8140509201408157259
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -96,7 +96,7 @@ public class HUDController : MonoBehaviour
     // Pause game and display menu
     public void TogglePause()
     {
-        pause.gameObject.SetActive(true);
+        // pause.gameObject.SetActive(true);
         pause.TogglePause();
     }
 }

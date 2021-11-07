@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ChainLightning : Ability
 {
-    [SerializeField] private int maxChain = 3;
-    [SerializeField] private float timing;
-    [SerializeField] private float minDist = 20.0f;
+    [System.Serializable]
+    public struct ChainLightningLevel
+    {
+        public float maxChain;
+        public float timing;
+        public float minDist;
+
+        public float cost;
+    }
 
     [SerializeField] private GameObject particles;
+    [SerializeField] protected List<ChainLightningLevel> levels;
 
     override public void Activate(int level = 0)
     {
-        StartCoroutine(Chain());
+        StartCoroutine(Chain(level));
     }
 
     override public void Deactivate()
@@ -20,24 +27,24 @@ public class ChainLightning : Ability
         
     }
 
-    IEnumerator Chain()
+    IEnumerator Chain(int level)
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject current = gameObject;
-        float timer = timing;
+        float timer = levels[level].timing;
 
         GameObject particle = Instantiate(particles, current.transform.position, Quaternion.identity);
 
-        for (int i = 0; i <= maxChain; ++i)
+        for (int i = 0; i <= levels[level].maxChain; ++i)
         {
-            while (timer < timing)
+            while (timer < levels[level].timing)
             {
                 timer += Time.deltaTime;
                 yield return null;
             }
 
             GameObject closest = null;
-            float dist = minDist;
+            float dist = levels[level].minDist;
 
             foreach (GameObject enemy in enemies)
             {

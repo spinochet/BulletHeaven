@@ -99,6 +99,12 @@ public class PlayerController : PawnController
     // Assign pawn to controller over the network
     public void PossesPawn(Pawn _pawn)
     {
+        if (pawn)
+        {
+            pawn.DeactivateAbility(0);
+            pawn.DeactivateAbility(1);
+        }
+
         pawn = _pawn;
         pawn.pawnController = this;
 

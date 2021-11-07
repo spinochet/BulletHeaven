@@ -7,42 +7,49 @@ using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
+    [SerializeField] private GameObject pauseObject;
     private bool isPaused;
 
     public void TogglePause()
     {
         isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0.0f : 1.0f;
+        pauseObject.SetActive(isPaused);
 
-        if (isPaused)
+        if (isPaused) ToggleOn();
+        else ToggleOff();
+    }
+
+    void ToggleOn()
+    {
+        pauseObject.SetActive(true);
+        Time.timeScale = 0.0f;
+
+        // Pause all players
+        PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
+        foreach (PlayerController player in players)
         {
-            Time.timeScale = 0.0f;
-
-            // Pause all players
-            PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
-            foreach (PlayerController player in players)
-            {
-                player.TogglePawnAnimation(false);
-                player.enabled = false;
-            }
+            player.TogglePawnAnimation(false);
+            player.enabled = false;
         }
-        else
-        {
-            Time.timeScale = 1.0f;
-            gameObject.SetActive(false);
+    }
 
-            // Pause all players
-            PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
-            foreach (PlayerController player in players)
-            {
-                player.enabled = true;
-                player.TogglePawnAnimation(true);
-            }
+    void ToggleOff()
+    {
+        pauseObject.SetActive(false);
+        Time.timeScale = 1.0f;
+
+        // Pause all players
+        PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
+        foreach (PlayerController player in players)
+        {
+            player.enabled = true;
+            player.TogglePawnAnimation(true);
         }
     }
 
     public void MainMenu()
     {
+        ToggleOff();
         SceneManager.LoadScene("MainMenu Offline");
     }
 

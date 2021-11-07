@@ -45,6 +45,7 @@ namespace DialogueSystem
 
         private void Skip()
         {
+            skip.Disable();
             SceneManager.LoadScene(nextLevel);
         }
     }

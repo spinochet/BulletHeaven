@@ -413,6 +413,28 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "positive",
+                    "id": "c5ad8af1-2746-49d3-a3d3-dc238f5c9be0",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "M&K",
+                    "action": "Burst",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "f5c5b9fc-cc59-42a4-a8ff-cd0c249bf0a3",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "M&K",
+                    "action": "Burst",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "558da19d-645e-46df-91d6-2aaff39427ac",
                     "path": "1DAxis",

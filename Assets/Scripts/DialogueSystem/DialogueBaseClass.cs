@@ -33,6 +33,7 @@ namespace DialogueSystem
             spacePressed = false;
             while (!spacePressed) yield return null;
 
+            space.Disable();
             finished = true;
         }
 

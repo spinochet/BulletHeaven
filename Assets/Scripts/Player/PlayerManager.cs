@@ -43,12 +43,6 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Add players to game
     public void AddPlayer(PlayerInput input)
     {

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8376575375856421762}
-  - component: {fileID: 2120249021397337012}
   - component: {fileID: 9192485142696004558}
   - component: {fileID: 8502039096651758891}
   - component: {fileID: 6031032840967050281}
@@ -35,23 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2120249021397337012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606116710772447293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 6782b822e235944d5918f5a7ee702e2f
-  hasSpawned: 0
 --- !u!114 &9192485142696004558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,8 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c977859c2e8ed147830add7ced117c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   pawnController: {fileID: 8502039096651758891}
   partner: {fileID: 0}
   name: 
@@ -81,6 +61,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8061707729531987755, guid: f7aadd38a56ee724eb4c3596a054643a,
     type: 3}
   fireRate: 0
+  bullet: {fileID: 0}
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
 --- !u!114 &8502039096651758891
@@ -95,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a3a38aacca659489be81a3043e50f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   pawn: {fileID: 9192485142696004558}
   speed: 4.5
   contactDamage: 40
