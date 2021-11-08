@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1027628024979106863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2558915259565732924}
   m_Father: {fileID: 0}
@@ -78,6 +78,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
   fireRate: 20
+  bullet: {fileID: 0}
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
 --- !u!1001 &2596798677641106391
@@ -95,12 +96,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
@@ -145,17 +146,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 07e1abbd15d9c934bb81820b8d0ff165,
         type: 3}
