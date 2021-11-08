@@ -79,8 +79,8 @@ MonoBehaviour:
   levels:
   - destroyOnCollision: 1
     speed: 10
-    damage: 10
-    fireRate: 1
+    damage: 5
+    fireRate: 10
     numBullets: 1
     bulletSpacing: 0
 --- !u!1 &8061707729862278857
