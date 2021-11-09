@@ -78,18 +78,21 @@ public class PlayerController : PawnController
             Pawn newPawn = _pawn.partner.GetComponent<Pawn>();
             newPawn.partner = null;
             newPawn.SetVisibility(true);
+
+            Destroy(_pawn.gameObject);
             PossesPawn(newPawn);
 
             hud.ToggleOffHUD(false);
         }
         else
         {
-            // Something something...
-            // Game over...
-            // Something something...
-        }
+            Destroy(_pawn.gameObject);
 
-        Destroy(_pawn.gameObject);
+            LevelManager level = GameObject.FindObjectOfType(typeof(LevelManager)) as LevelManager;
+            level.RestoreCheckpoint();
+
+            hud.ToggleOffHUD(true);
+        }
     }
 
     // -----

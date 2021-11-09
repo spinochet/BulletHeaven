@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
     public bool IsScrolling { get { return isScrolling; } }
 
     private Camera cam = null;
+    private float zCheckpoint = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,47 @@ public class LevelManager : MonoBehaviour
     public void ToggleScrolling(bool on)
     {
         isScrolling = on;
+    }
+
+    // Save checkpoint
+    public void SetCheckpoint()
+    {
+        zCheckpoint = transform.position.z;
+
+        WaveSpawner3D[] waves = FindObjectsOfType(typeof(WaveSpawner3D)) as WaveSpawner3D[];
+        foreach (WaveSpawner3D wave in waves)
+        {
+            if (wave.IsSpawned)
+                Destroy(wave.gameObject);
+        }
+    }
+
+    // Save checkpoint
+    public void RestoreCheckpoint()
+    {
+        transform.position = new Vector3(0.0f, 0.0f, zCheckpoint);
+        isScrolling = true;
+
+        Pawn[] pawns = FindObjectsOfType(typeof(Pawn)) as Pawn[];
+        foreach (Pawn pawn in pawns)
+        {
+            Destroy(pawn.gameObject);
+        }
+
+        Bullet[] bullets = FindObjectsOfType(typeof(Bullet)) as Bullet[];
+        foreach (Bullet bullet in bullets)
+        {
+            Destroy(bullet.gameObject);
+        }
+        
+        WaveSpawner3D[] waves = FindObjectsOfType(typeof(WaveSpawner3D)) as WaveSpawner3D[];
+        foreach (WaveSpawner3D wave in waves)
+        {
+            wave.Reset();
+        }
+
+        // Spawn players
+        PlayerManager.Instance.SpawnPawns(new Vector3(-2.0f, 0.0f, -2.0f), new Vector3(2.0f, 0.0f, -2.0f));
     }
 
     // Load next level

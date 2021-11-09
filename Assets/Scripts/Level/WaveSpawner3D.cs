@@ -22,6 +22,7 @@ public class WaveSpawner3D : MonoBehaviour
 
     public bool stagger;
     public bool pauseLevel;
+    [SerializeField] private bool isCheckpoint = false;
 
     public Direction dir;
 
@@ -30,6 +31,8 @@ public class WaveSpawner3D : MonoBehaviour
     Camera cam;
     private bool spawned = false;
     private bool paused = false;
+    private bool checkpoint = false;
+    public bool IsSpawned { get { return spawned; } }
 
     void Start()
     {
@@ -84,7 +87,7 @@ public class WaveSpawner3D : MonoBehaviour
             enemies = new List<GameObject>();
             SpawnWave();
         }
-        else if (spawned && cam.WorldToScreenPoint(transform.position).y <= 0.0f)
+        else if (!checkpoint && spawned && cam.WorldToScreenPoint(transform.position).y <= 0.0f)
         {
             if (!paused)
             {
@@ -94,9 +97,19 @@ public class WaveSpawner3D : MonoBehaviour
             else if (CheckEnemies())
             {
                 transform.parent.GetComponent<LevelManager>().ToggleScrolling(true);
-                Destroy(gameObject);
+                if (isCheckpoint)
+                    transform.parent.GetComponent<LevelManager>().SetCheckpoint();
+
+                checkpoint = true;
             }
         }
+    }
+
+    public void Reset()
+    {
+        spawned = false;
+        paused = false;
+        checkpoint = false;
     }
 
     void SpawnEnemy(Vector3 position, Quaternion rotation)
@@ -113,7 +126,6 @@ public class WaveSpawner3D : MonoBehaviour
 
         if (dir == Direction.V_ANGLE)
         {
-
             // I would advise making the V angle have an 
             // odd number of enemies
             int target_offset = numShifts / 2;
@@ -183,13 +195,7 @@ public class WaveSpawner3D : MonoBehaviour
         }
 
         if (!pauseLevel)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-
-        }
+            checkpoint = true;
     }
 
     bool CheckEnemies()

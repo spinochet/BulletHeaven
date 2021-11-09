@@ -7,6 +7,7 @@ public class Pawn : MonoBehaviour
     private HUDController hud;
     public PawnController pawnController;
     public bool IsPossesed { get { return pawnController != null; } }
+    public bool IsPlayerPawn { get { return pawnController is PlayerController; } }
     public GameObject partner;
 
     // Character Data
@@ -184,6 +185,19 @@ public class Pawn : MonoBehaviour
             {
                 SoundManager.Instance.Play(name + " Hurt");
             }
+        }
+
+        return hp;
+    }
+
+    // Restore health to pawn
+    public float RestoreHealth(float value)
+    {
+        if (model.activeSelf)
+        {
+            hp += value;
+            if (hp >= maxHP)
+                hp = maxHP;
         }
 
         return hp;
