@@ -181,6 +181,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18282898998147669, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18282898998147669, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549760345953939314, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549760345953939314, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 852469624280170864, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: m_Name
@@ -277,6 +297,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2490313898478075542, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079503576593132515, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079503576593132515, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514519585152076609, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514519585152076609, guid: 9bdc18a21a6b93b43aff2e4c736b17a6,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1596,10 +1636,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: CutScene4
+  spawn1: {fileID: 0}
+  spawn2: {fileID: 0}
   scrollSpeed: 2.5
   backgroundPrefab: {fileID: 2952894996708380642, guid: 72160b1e1181d44429a7cfd99968c0bc,
     type: 3}
-  backgroundSprite: {fileID: 21300000, guid: 93051849990014bdb874e43acee422cb, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 0f9fee4618f00497aa65b74c47d3b76f, type: 3}
 --- !u!1001 &1595354841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1607,6 +1649,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[7].sound.volume
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[10].sound.volume
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1765,7 +1817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c696c7f882a6b8048ba7e3b7a058c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 
 --- !u!1 &1709361823
 GameObject:
   m_ObjectHideFlags: 0
