@@ -270,6 +270,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
+      propertyPath: soundList.Array.data[0].sound.sound.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
       propertyPath: debugSound
       value: 1
       objectReference: {fileID: 0}
@@ -728,6 +733,21 @@ PrefabInstance:
       propertyPath: soundList.Array.data[2].sound.sound.Array.data[12]
       value: 
       objectReference: {fileID: 8300000, guid: d7dbc4cdcabdc44e3a34af3c46f6b9ff, type: 3}
+    - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: soundList.Array.data[0].sound.sound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 730feb289b4524c76b840abf28efc0a5, type: 3}
+    - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: soundList.Array.data[0].sound.sound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a33c4387b02543c3a9c3792aaa4de73, type: 3}
+    - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: soundList.Array.data[0].sound.sound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c1e805d76f9645afb2448b50724ae05, type: 3}
     - target: {fileID: 7288465762301627842, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: Priority
@@ -811,6 +831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Priority
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147229329178635488, guid: 8ef4f50ae03a94413af83a058ee4c105,
+        type: 3}
+      propertyPath: Mute
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4147229329178635489, guid: 8ef4f50ae03a94413af83a058ee4c105,
         type: 3}
@@ -912,7 +937,7 @@ PrefabInstance:
     - target: {fileID: 2587591455584452500, guid: d687b9c23008c43da9352cfb06f4641b,
         type: 3}
       propertyPath: Mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2587591455584452501, guid: d687b9c23008c43da9352cfb06f4641b,
         type: 3}
