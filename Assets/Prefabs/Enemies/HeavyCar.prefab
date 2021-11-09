@@ -54,7 +54,7 @@ Transform:
   m_GameObject: {fileID: 4606116710772447293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.29, z: 0.35}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4819240205726960708}
   m_Father: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   speed: 4.5
   contactDamage: 40
   contactKnockback: 40
-  contactCooldown: 5
+  contactCooldown: 3
   shootFrequency: 0.3
 --- !u!143 &6031032840967050281
 CharacterController:
@@ -193,12 +193,12 @@ PrefabInstance:
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.108
+      value: 0.027
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.079
+      value: 0.081
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
@@ -243,17 +243,17 @@ PrefabInstance:
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.04
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.04
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.04
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 329658655207290794, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
