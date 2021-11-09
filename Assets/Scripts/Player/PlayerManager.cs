@@ -99,6 +99,9 @@ public class PlayerManager : MonoBehaviour
             player1Pawn.AssignPartner(player2Pawn);
             player2Pawn.AssignPartner(player1Pawn);
             player2Pawn.SetVisibility(false);
+
+            if (hud)
+                hud.GetComponent<HUDManager>().ToggleOffHUD(true);
         }
 
         // Assign player 2
@@ -107,6 +110,9 @@ public class PlayerManager : MonoBehaviour
             player1Pawn.AssignPartner(player2Pawn);
             player2Pawn.AssignPartner(player1Pawn);
             player1Pawn.SetVisibility(false);
+
+            if (hud)
+                hud.GetComponent<HUDManager>().ToggleOffHUD(true);
         }
 
         // No players
@@ -117,6 +123,9 @@ public class PlayerManager : MonoBehaviour
 
             player1Pawn.SetVisibility(false);
             player2Pawn.SetVisibility(false);
+
+            if (hud)
+                hud.GetComponent<HUDManager>().ToggleOffHUD(true);
         }
 
         // Both players
@@ -137,6 +146,25 @@ public class PlayerManager : MonoBehaviour
         {
             if (hud) hud.GetComponent<HUDManager>().AssignHUD(p2, 1);
             p2.PossesPawn(player2Pawn);
+        }
+    }
+
+    // --------
+    // GAMEPLAY
+    // --------
+
+    public void CheckPlayersAlive()
+    {
+        bool playersExist = p1 || p2;
+        bool playersDead = ((p1 && !p1.IsAlive) || !p1) && ((p2 && !p2.IsAlive) || !p2);
+
+        if (playersExist && playersDead)
+        {
+            GameObject lose = GameObject.Find("LoseMenu");
+            if (lose) lose.GetComponent<LoseController>().ToggleLose(true);
+
+            GameObject level = GameObject.Find("LoseMenu");
+            if (lose) lose.GetComponent<LoseController>().ToggleLose(true);
         }
     }
 }

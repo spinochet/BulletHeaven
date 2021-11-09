@@ -12,6 +12,9 @@ public class PlayerController : PawnController
     private Pawn partner;
     private int currentLevel = 0;
     public int CurrentLevel { get { return currentLevel; } }
+
+    public bool alive = false;
+    public bool IsAlive { get { return alive; }}
     private int score = 0;
 
     // Movement
@@ -87,11 +90,15 @@ public class PlayerController : PawnController
         else
         {
             Destroy(_pawn.gameObject);
+            alive = false;
+            
+            PlayerManager.Instance.CheckPlayersAlive();
 
-            LevelManager level = GameObject.FindObjectOfType(typeof(LevelManager)) as LevelManager;
-            level.RestoreCheckpoint();
+            // LevelManager level = GameObject.FindObjectOfType(typeof(LevelManager)) as LevelManager;
+            // level.RestoreCheckpoint();
 
-            hud.ToggleOffHUD(true);
+            // hud.ToggleLose(true);
+            // hud.ToggleOffHUD(true);
         }
     }
 

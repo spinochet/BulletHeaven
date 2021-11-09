@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
-    [SerializeField] Pause pause = null;
+    [SerializeField] private Pause pause = null;
+    [SerializeField] private LoseController loseController = null;
 
     private Slider hpBar = null;
     private Slider staminaBar = null;
@@ -96,7 +97,12 @@ public class HUDController : MonoBehaviour
     // Pause game and display menu
     public void TogglePause()
     {
-        // pause.gameObject.SetActive(true);
         pause.TogglePause();
+    }
+
+    // Try again or give up
+    public void ToggleLose(bool on)
+    {
+        loseController.ToggleLose(on);
     }
 }
