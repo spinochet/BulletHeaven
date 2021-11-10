@@ -70,6 +70,7 @@ MonoBehaviour:
   contactKnockback: 20
   contactCooldown: 5
   shootFrequency: 0.3
+  anim: {fileID: 486947460283430292}
 --- !u!114 &7126290457998975314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +232,12 @@ GameObject:
 --- !u!4 &5774125952766652398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6cea020f3b2a1ca42855f63382c189a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6317258949678090245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &486947460283430292 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 6cea020f3b2a1ca42855f63382c189a7,
     type: 3}
   m_PrefabInstance: {fileID: 6317258949678090245}
   m_PrefabAsset: {fileID: 0}

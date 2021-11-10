@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class TrebuchetController : EnemyController
 {
+    [SerializeField] private Animator anim;
+
+    void Awake()
+    {
+        controller = GetComponent<CharacterController>();
+        contactTimer = contactCooldown;
+
+        if (!anim)
+            anim = GetComponent<Animator>();
+    }   
+
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +28,8 @@ public class TrebuchetController : EnemyController
             Vector3 target = GetNearestPlayer();
             target.y = 0.5f;
 
-            pawn.Model.GetComponent<Animator>().Play("Attack");
+
+            if (anim) anim.Play("Attack");
             SoundManager.Instance.Play("Trebuchet");
             pawn.Bomb(target);
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8061707729531987766}
   - component: {fileID: -7112166854753641012}
   - component: {fileID: 8061707729531987753}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
     fireRate: 10
     numBullets: 1
     bulletSpacing: 0
-  particle: {fileID: 7493259298288516860, guid: cee05959a43334644b876b24f6869b3e,
+  particle: {fileID: 7493259298288516860, guid: af7b3aabbc415064f86798ff9398d39b,
     type: 3}
 --- !u!1 &8061707729862278857
 GameObject:
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8061707729862278868}
   - component: {fileID: 8061707729862278871}
   - component: {fileID: 5219332282022198620}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
