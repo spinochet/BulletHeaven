@@ -1214,6 +1214,11 @@ PrefabInstance:
       propertyPath: soundList.Array.data[10].sound.soundCooldown
       value: 4.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[8].sound.soundCooldown
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: m_LocalPosition.x
