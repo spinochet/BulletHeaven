@@ -91,7 +91,7 @@ public class PlayerController : PawnController
         {
             Destroy(_pawn.gameObject);
             alive = false;
-            
+
             PlayerManager.Instance.CheckPlayersAlive();
 
             // LevelManager level = GameObject.FindObjectOfType(typeof(LevelManager)) as LevelManager;
@@ -226,10 +226,13 @@ public class PlayerController : PawnController
         score += points;
     }
 
+    public void LosePoints()
+    {
+        score /= 2;
+    }
+
     public void ResetPoints()
     {
-        // score = 0;
-        // if (hudController)
-        //     hudController.UpdateScore(score);
+        score = 0;
     }
 }

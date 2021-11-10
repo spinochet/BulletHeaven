@@ -30,6 +30,12 @@ public class LoseController : MonoBehaviour
 
         lose.SetActive(false);
         Time.timeScale = 1.0f;
+
+        PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
+        foreach (PlayerController player in players)
+        {
+            player.LosePoints();
+        }
     }
 
     // Go back to main menu
@@ -38,5 +44,11 @@ public class LoseController : MonoBehaviour
         SceneManager.LoadScene("MainMenu Offline");
         lose.SetActive(false);
         Time.timeScale = 1.0f;
+
+        PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
+        foreach (PlayerController player in players)
+        {
+            player.ResetPoints();
+        }
     }
 }
