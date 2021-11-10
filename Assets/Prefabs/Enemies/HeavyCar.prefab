@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4848847040019243789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847925452603787907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy: {fileID: 4606116710772447293}
 --- !u!1 &4606116710772447293
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +41,7 @@ Transform:
   m_GameObject: {fileID: 4606116710772447293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.29, z: 0.35}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4819240205726960708}
   m_Father: {fileID: 0}
@@ -80,8 +93,9 @@ MonoBehaviour:
   speed: 4.5
   contactDamage: 40
   contactKnockback: 40
-  contactCooldown: 5
+  contactCooldown: 3
   shootFrequency: 0.3
+  soundEffect: Vroom
 --- !u!143 &6031032840967050281
 CharacterController:
   m_ObjectHideFlags: 0
@@ -93,8 +107,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 5
+  m_Radius: 2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -115,12 +129,12 @@ PrefabInstance:
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.108
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.079
+      value: 0.081
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
@@ -165,17 +179,17 @@ PrefabInstance:
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.045
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.045
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.045
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 329658655207290794, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
@@ -328,6 +342,12 @@ GameObject:
 --- !u!4 &4819240205726960708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4640650886058229921}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1847925452603787907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6468225748388825634, guid: 01fe01818e78242af824e3af849db5f6,
     type: 3}
   m_PrefabInstance: {fileID: 4640650886058229921}
   m_PrefabAsset: {fileID: 0}

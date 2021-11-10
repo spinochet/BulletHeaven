@@ -28,11 +28,16 @@ Transform:
   m_GameObject: {fileID: 3007241012240742889}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0.35}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+>>>>>>> NewLevelsTuned
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
 >>>>>>> NewLevelsTuned
   m_Children:
   - {fileID: 8088875005405010293}
@@ -51,7 +56,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.41
+  m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -76,7 +81,7 @@ MonoBehaviour:
   contactCooldown: 5
   shootFrequency: 0.3
   bullets: 2
-  fireCooldown: 3
+  fireCooldown: 2.5
 --- !u!114 &5359561344335052814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,10 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pawnController: {fileID: -9180918540305325821}
   partner: {fileID: 0}
-  name: RoboCop
+  name: Archer
   portrait: {fileID: 0}
   model: {fileID: 8866079520386696143}
-  speed: 2.5
+  speed: 10
   maxHP: 50
   hpRegenRate: 0
   hpRegenCooldown: 0
@@ -135,12 +140,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.078
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.165
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}
@@ -185,17 +190,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.14
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8585457642280064643, guid: c26629dd88af4f840a79cdb3f6788beb,
         type: 3}

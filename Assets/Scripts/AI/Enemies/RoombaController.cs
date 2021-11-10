@@ -15,6 +15,7 @@ public class RoombaController : EnemyController
     void Update()
     {
         controller.Move(transform.forward * speed * Time.deltaTime);
+        SoundManager.Instance.Play("Roomba");
 
 
         if (CheckBorders() && inBounds)

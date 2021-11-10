@@ -18,6 +18,7 @@ public class TrebuchetController : EnemyController
             target.y = 0.5f;
 
             pawn.Model.GetComponent<Animator>().Play("Attack");
+            SoundManager.Instance.Play("Trebuchet");
             pawn.Bomb(target);
         }
     }
