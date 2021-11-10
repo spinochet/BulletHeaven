@@ -71,11 +71,11 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FalloffAmount: 0.05
-    - _FresnelSize: 0.1
+    - _FresnelSize: 0.01
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightingCutoff: 0.27
+    - _LightingCutoff: 0.67
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0

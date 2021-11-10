@@ -173,6 +173,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 3
 --- !u!1 &236092339
 GameObject:
@@ -269,6 +270,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &450969926
 GameObject:
@@ -322,6 +324,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 3
 --- !u!1 &469381559
 GameObject:
@@ -375,6 +378,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &532015225
 GameObject:
@@ -520,6 +524,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 1
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &806119245
 GameObject:
@@ -573,6 +578,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   pauseLevel: 1
+  isCheckpoint: 0
   dir: 1
 --- !u!4 &922692282 stripped
 Transform:
@@ -632,6 +638,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 2
 --- !u!1001 &1010914348
 PrefabInstance:
@@ -889,6 +896,7 @@ MonoBehaviour:
   numRows: 2
   stagger: 1
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &1033663429
 GameObject:
@@ -942,6 +950,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &1074643453
 GameObject:
@@ -995,6 +1004,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 2
 --- !u!1 &1142665298
 GameObject:
@@ -1048,6 +1058,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 1
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &1154795138
 GameObject:
@@ -1101,6 +1112,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 3
 --- !u!1 &1194587290
 GameObject:
@@ -1154,6 +1166,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 2
 --- !u!1001 &1388625091
 PrefabInstance:
@@ -1360,6 +1373,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 2
 --- !u!1001 &1775507518
 PrefabInstance:
@@ -1492,6 +1506,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &1920383330
 GameObject:
@@ -1545,6 +1560,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 1
+  isCheckpoint: 0
   dir: 1
 --- !u!1 &1965803426
 GameObject:
@@ -1668,6 +1684,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 1
+  isCheckpoint: 0
   dir: 3
 --- !u!1 &2109322275
 GameObject:
@@ -1721,4 +1738,5 @@ MonoBehaviour:
   numRows: 3
   stagger: 1
   pauseLevel: 0
+  isCheckpoint: 0
   dir: 1
