@@ -32,7 +32,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: robot_texture
-    second: {fileID: 2100000, guid: 5e20bfc6175371c488a643b5b8564971, type: 2}
+    second: {fileID: 2100000, guid: 89c78fc477a4628439a0aa0ec8cb2b06, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -42,7 +42,7 @@ ModelImporter:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -95,8 +95,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: robot|robot_idle (1)
-      takeName: robot|robot_idle
+      name: robot|robot_run
+      takeName: robot|robot_run
       internalID: 0
       firstFrame: 0
       lastFrame: 19
@@ -106,7 +106,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -182,7 +182,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

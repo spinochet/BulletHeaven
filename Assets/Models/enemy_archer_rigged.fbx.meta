@@ -18,6 +18,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: enemy_archer_texture
+    second: {fileID: 2100000, guid: ce54d2d04b74cfb4eb9b4af1dbe79031, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: enemy_armor
     second: {fileID: 2100000, guid: 91beaa0364c210b46aa686ff86c923d3, type: 2}
   - first:
@@ -29,7 +34,7 @@ ModelImporter:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
