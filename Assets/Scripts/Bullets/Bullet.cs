@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] protected string name;
     [SerializeField] protected List<BulletLevel> levels;
+    [SerializeField] protected GameObject particle;
     protected PlayerController owner = null;
     protected int currentLevel = 0;
 
@@ -81,7 +82,11 @@ public class Bullet : MonoBehaviour
                 owner.AddPoints(100);
 
             if (levels[level].destroyOnCollision)
+            {
+                if (particle != null)
+                    Instantiate(particle, transform.position, transform.rotation);
                 Destroy(gameObject);
+            }
         }
     }
 }
