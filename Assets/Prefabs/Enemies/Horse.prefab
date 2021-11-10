@@ -100,6 +100,19 @@ MonoBehaviour:
   bullet: {fileID: 0}
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
+--- !u!114 &6680088040594422883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378500593838485561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b419360f832dba47836b4257ad45ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy: {fileID: 950931905164956052}
 --- !u!1001 &950931906166682388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +211,12 @@ GameObject:
 --- !u!4 &772608106425947391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d07fcbfd88e77dd419b0cb908d3daf13,
+    type: 3}
+  m_PrefabInstance: {fileID: 950931906166682388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6378500593838485561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3047072205940063443, guid: d07fcbfd88e77dd419b0cb908d3daf13,
     type: 3}
   m_PrefabInstance: {fileID: 950931906166682388}
   m_PrefabAsset: {fileID: 0}

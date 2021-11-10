@@ -83,6 +83,8 @@ MonoBehaviour:
     fireRate: 10
     numBullets: 1
     bulletSpacing: 0
+  particle: {fileID: 7493259298288516860, guid: cee05959a43334644b876b24f6869b3e,
+    type: 3}
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0
