@@ -14,10 +14,10 @@ public class FinalBossController : EnemyController
         
     }
 
-    public override void Destroy(Pawn _pawn)
-    {
-        // PlayerNetworkManager.Instance.LoadArcadeLevel("CutScene5");
-    }
+    // public override void Destroy(Pawn _pawn)
+    // {
+    //     // PlayerNetworkManager.Instance.LoadArcadeLevel("CutScene5");
+    // }
 
     // Update is called once per frame
     void Update()
@@ -26,14 +26,14 @@ public class FinalBossController : EnemyController
         if (sideLaserTimer >= sideLaserRate)
         {
             sideLaserTimer = 0.0f;
-            // Pew();
+            Pew();
         }
     }
 
     // [Command(requiresAuthority = false)]
-    // private void Pew()
-    // {
-    //     GameObject sl = GameObject.Instantiate(sideLaserPrefab);
-    //     NetworkServer.Spawn(sl);
-    // }
+    private void Pew()
+    {
+        GameObject sl = GameObject.Instantiate(sideLaserPrefab);
+        // NetworkServer.Spawn(sl);
+    }
 }
