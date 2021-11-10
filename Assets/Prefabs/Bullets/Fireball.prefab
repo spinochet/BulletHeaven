@@ -81,7 +81,7 @@ MonoBehaviour:
     speed: 15
     damage: 10
     fireRate: 10
-    numBullets: 2
+    numBullets: 1
     bulletSpacing: 0.5
 --- !u!1 &8061707729862278857
 GameObject:

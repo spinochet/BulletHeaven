@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6969649163862524986}
   m_LocalRotation: {x: 0, y: 0.9063079, z: -0, w: -0.42261827}
   m_LocalPosition: {x: -3.79, y: 0, z: 2.0519984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 7436449594210061177}
   m_Father: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   model: {fileID: 7816071014362468803}
   speed: 10
-  maxHP: 100
+  maxHP: 400
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
@@ -165,17 +165,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1186317a95548354db94389df4ac5117,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186317a95548354db94389df4ac5117,
         type: 3}

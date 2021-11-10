@@ -29,9 +29,9 @@ public class LevelManager : MonoBehaviour
     {
         // Spawn backgrounds
         Quaternion spawnRotation = Quaternion.Euler(90.0f, 0.0f, 0.0f);
-        background_1 = GameObject.Instantiate(backgroundPrefab, new Vector3(0.0f, -1.0f, 0.0f), spawnRotation);
+        background_1 = GameObject.Instantiate(backgroundPrefab, new Vector3(0.0f, -1.0f, 20.2f), spawnRotation);
         background_1.GetComponent<SpriteRenderer>().sprite = backgroundSprite;
-        background_2 = GameObject.Instantiate(backgroundPrefab, new Vector3(0.0f, -1.0f, 20.0f), spawnRotation);
+        background_2 = GameObject.Instantiate(backgroundPrefab, new Vector3(0.0f, -1.0f, 45.0f), spawnRotation);
         background_2.GetComponent<SpriteRenderer>().sprite = backgroundSprite;
 
         // Spawn players
@@ -52,7 +52,7 @@ public class LevelManager : MonoBehaviour
             {
                 background_1.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
                 if (cam.WorldToScreenPoint(background_1.transform.position).y <= 0.0f)
-                    background_1.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
+                    background_1.transform.position = new Vector3(0.0f, -1.0f, 45.0f);
             }
 
             // Scroll background 2
@@ -60,7 +60,7 @@ public class LevelManager : MonoBehaviour
             {
                 background_2.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
                 if (cam.WorldToScreenPoint(background_2.transform.position).y <= 0.0f)
-                    background_2.transform.position = new Vector3(0.0f, -1.0f, 34.6f);
+                    background_2.transform.position = new Vector3(0.0f, -1.0f, 45.0f);
             }
         }
     }

@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pawnController: {fileID: 8502039096651758891}
   partner: {fileID: 0}
-  name: 
+  name: Heavy Car
   portrait: {fileID: 0}
   model: {fileID: 3383507968236058327}
   speed: 10
@@ -165,17 +165,17 @@ PrefabInstance:
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 182261695018208485, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.05
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 329658655207290794, guid: 01fe01818e78242af824e3af849db5f6,
         type: 3}
