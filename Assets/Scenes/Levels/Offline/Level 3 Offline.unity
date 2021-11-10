@@ -227,7 +227,7 @@ MonoBehaviour:
   numRows: 3
   stagger: 1
   pauseLevel: 1
-  isCheckpoint: 0
+  isCheckpoint: 1
   dir: 1
 --- !u!1001 &140071292
 PrefabInstance:
@@ -1741,7 +1741,7 @@ MonoBehaviour:
   numRows: 1
   stagger: 0
   pauseLevel: 1
-  isCheckpoint: 0
+  isCheckpoint: 1
   dir: 1
 --- !u!1 &1563839623
 GameObject:

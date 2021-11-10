@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
         PlayerManager.Instance.SpawnPawns(new Vector3(-2.0f, 0.0f, -2.0f), new Vector3(2.0f, 0.0f, -2.0f));
 
         cam = Camera.main;
+        zCheckpoint = transform.position.z;
     }
 
     // Update is called once per frame
