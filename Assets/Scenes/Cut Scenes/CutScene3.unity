@@ -199,8 +199,8 @@ MonoBehaviour:
   input: "It seems like that was the last of them. I\u2019m glad we were able to
     defeat them together. "
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 417476582}
 --- !u!114 &151716777
@@ -229,12 +229,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &151716778
 CanvasRenderer:
@@ -357,13 +357,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90334636, g: 0.90345806, b: 0.9433962, a: 1}
+  m_Color: {r: 0.90334636, g: 0.90345806, b: 0.9433962, a: 0.19607843}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -458,8 +458,8 @@ MonoBehaviour:
       m_Flags: 0
   input: ......
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 836137827}
 --- !u!114 &190762960
@@ -488,12 +488,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &190762961
 CanvasRenderer:
@@ -951,8 +951,8 @@ MonoBehaviour:
   input: "I\u2019m detecting strange activity around us. I can\u2019t determine where
     we are or even what timeline we\u2019re in."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 582263037}
 --- !u!114 &983171746
@@ -981,12 +981,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &983171747
 CanvasRenderer:
@@ -1147,8 +1147,8 @@ MonoBehaviour:
       m_Flags: 0
   input: 'This strange timeline holds many surprises for us, Princess. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 1290593921}
 --- !u!114 &1194176039
@@ -1177,12 +1177,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1194176040
 CanvasRenderer:
@@ -1343,8 +1343,8 @@ MonoBehaviour:
       m_Flags: 0
   input: 'What can possibly be left for us to fight? '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 336491215}
 --- !u!114 &1242576905
@@ -1373,12 +1373,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1242576906
 CanvasRenderer:
@@ -1539,8 +1539,8 @@ MonoBehaviour:
       m_Flags: 0
   input: What is it, Arthur?
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1781517910}
 --- !u!114 &1389105819
@@ -1569,12 +1569,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1389105820
 CanvasRenderer:
@@ -1659,10 +1659,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: ' Wait. What do you mean? How will I get home?'
+  input: Wait. What do you mean? How will I get home?
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1074849228}
 --- !u!114 &1439614918
@@ -1691,12 +1691,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1439614919
 CanvasRenderer:
@@ -1864,8 +1864,8 @@ MonoBehaviour:
       m_Flags: 0
   input: "Home is not an option. I\u2019m sensing enemies looking to swarm us."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 1197331450}
 --- !u!114 &1531098323
@@ -1894,12 +1894,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1531098324
 CanvasRenderer:
@@ -2069,8 +2069,8 @@ MonoBehaviour:
       m_Flags: 0
   input: Yes, I agree....
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 706846787}
 --- !u!114 &1674508416
@@ -2099,12 +2099,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1674508417
 CanvasRenderer:
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5bf7869d87b2da64cab377492a6d0c01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4640f0b6e9c4f83469d4953353d99376, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
