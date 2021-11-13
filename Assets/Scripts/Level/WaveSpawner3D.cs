@@ -11,7 +11,7 @@ public class WaveSpawner3D : MonoBehaviour
         public Vector3 dir2;
     }
 
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private List<GameObject> _enemyPrefabs;
 
     public Vector3 _spawnPoint;
     public int numShifts;
@@ -23,6 +23,8 @@ public class WaveSpawner3D : MonoBehaviour
     public bool stagger;
     public bool pauseLevel;
     [SerializeField] private bool isCheckpoint = false;
+
+    private int nextEnemy = 0;
 
     public Direction dir;
 
@@ -114,7 +116,11 @@ public class WaveSpawner3D : MonoBehaviour
 
     void SpawnEnemy(Vector3 position, Quaternion rotation)
     {
-        GameObject e = Instantiate(_enemyPrefab, position, rotation);
+        GameObject e = Instantiate(_enemyPrefabs[nextEnemy], position, rotation);
+        nextEnemy++;
+        if (nextEnemy == _enemyPrefabs.Count) {
+            nextEnemy = 0;
+        }
         e.GetComponent<EnemyController>().SetLevelManager(transform.parent.GetComponent<LevelManager>());
         e.GetComponent<EnemyController>().SetDelay(Random.Range(0.0f, 2.0f));
         enemies.Add(e);

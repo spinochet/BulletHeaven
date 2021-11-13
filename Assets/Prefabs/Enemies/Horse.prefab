@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pawn: {fileID: 950931905164956053}
-  speed: 5
+  speed: 6
   contactDamage: 30
   contactKnockback: 30
   contactCooldown: 1
@@ -88,8 +88,8 @@ MonoBehaviour:
   name: Horse
   portrait: {fileID: 0}
   model: {fileID: 140467378611506757}
-  speed: 5
-  maxHP: 250
+  speed: 6
+  maxHP: 100
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100

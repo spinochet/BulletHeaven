@@ -78,11 +78,12 @@ MonoBehaviour:
   name: Roomba Shot
   levels:
   - destroyOnCollision: 1
-    speed: 10
+    speed: 15
     damage: 10
     fireRate: 2
     numBullets: 1
     bulletSpacing: 0
+  particle: {fileID: 0}
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0
