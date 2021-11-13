@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5821586098139283666}
   m_Layer: 0
   m_Name: Level 3 BGM
-  m_TagString: Untagged
+  m_TagString: BGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

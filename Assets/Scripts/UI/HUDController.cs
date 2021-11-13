@@ -15,6 +15,9 @@ public class HUDController : MonoBehaviour
     private Text text = null;
     private OffHUDController offController = null;
 
+    public Texture Portrait { get { return portrait.texture; } }
+    public string Score { get { return text.text; } }
+
     // Awake is called when the script instance is being loaded.
     void Awake()
     {

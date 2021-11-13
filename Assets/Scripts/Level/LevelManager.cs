@@ -116,6 +116,11 @@ public class LevelManager : MonoBehaviour
     // Load next level
     public void NextLevel()
     {
-        SceneManager.LoadScene(nextLevel);
+        GameObject win = GameObject.Find("Win Screen");
+        if (win)
+        {
+            win.GetComponent<WinScreen>().TriggerWin(nextLevel);
+        }
+        // SceneManager.LoadScene(nextLevel);
     }
 }

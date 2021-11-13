@@ -153,6 +153,22 @@ public class PlayerManager : MonoBehaviour
     // GAMEPLAY
     // --------
 
+    public void LockPlayers()
+    {
+        if (p1)
+            p1.enabled = false;
+        if (p2)
+            p1.enabled = false;
+    }
+
+    public void UnlockPlayers()
+    {
+        if (p1)
+            p1.enabled = true;
+        if (p2)
+            p1.enabled = true;
+    }
+
     public void CheckPlayersAlive()
     {
         bool playersExist = p1 || p2;

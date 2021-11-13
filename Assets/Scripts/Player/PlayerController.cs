@@ -170,7 +170,7 @@ public class PlayerController : PawnController
     // AbilityL action callback function
     void OnAbilityL(InputValue input)
     {
-        if (pawn)
+        if (pawn && enabled)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
             else pawn.DeactivateAbility(0);
@@ -180,7 +180,7 @@ public class PlayerController : PawnController
     // AbilityR action callback function
     void OnAbilityR(InputValue input)
     {
-        if (pawn)
+        if (pawn && enabled)
         {
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
             else pawn.DeactivateAbility(1);
@@ -194,7 +194,7 @@ public class PlayerController : PawnController
     // Pause action callback function
     void OnPause()
     {
-        if (pawn != null)
+        if (pawn != null && enabled)
             hud.TogglePause();
     }
 
@@ -206,7 +206,7 @@ public class PlayerController : PawnController
     // Switch action callback
     void OnSwitch()
     {
-        if (pawn.partner != null)
+        if (pawn.partner != null && enabled)
         {
             Pawn newPawn = pawn.partner.GetComponent<Pawn>();
             pawn.pawnController = null;
