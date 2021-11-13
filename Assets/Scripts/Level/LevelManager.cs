@@ -53,7 +53,7 @@ public class LevelManager : MonoBehaviour
             {
                 background_1.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
                 if (cam.WorldToScreenPoint(background_1.transform.position).y <= 0.0f)
-                    background_1.transform.position = new Vector3(0.0f, -1.0f, 45.0f);
+                    background_1.transform.position = background_2.transform.position + new Vector3(0.0f, -1.0f, 25.0f);
             }
 
             // Scroll background 2
@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
             {
                 background_2.transform.position -= Vector3.forward * scrollSpeed * Time.deltaTime;
                 if (cam.WorldToScreenPoint(background_2.transform.position).y <= 0.0f)
-                    background_2.transform.position = new Vector3(0.0f, -1.0f, 45.0f);
+                    background_2.transform.position = background_1.transform.position + new Vector3(0.0f, -1.0f, 25.0f);
             }
         }
     }
