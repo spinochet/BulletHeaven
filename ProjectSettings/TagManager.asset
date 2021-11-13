@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Character
   - Letter
+  - BGM
   layers:
   - Default
   - TransparentFX

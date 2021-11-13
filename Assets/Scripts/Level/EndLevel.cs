@@ -10,6 +10,7 @@ public class EndLevel : MonoBehaviour
         if (transform.position.z <= 0.0f)
         {
             transform.parent.GetComponent<LevelManager>().NextLevel();
+            Destroy(gameObject);
         }
     }
 }

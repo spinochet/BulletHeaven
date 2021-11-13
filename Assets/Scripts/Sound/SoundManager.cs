@@ -24,16 +24,22 @@ public class SoundManager : MonoBehaviour
         public bool test;
     }
 
+    // SoundManager Singleton
     private static SoundManager _instance;
     public static SoundManager Instance { get { return _instance; } }
 
     public bool debugSound;
 
+    // SFX Soundss
     [SerializeField] private AudioSource source;
-
     public List<SoundHack> soundList;
+
     private Dictionary<string, Sound> sounds;
+    private float sfxVolume = 1.0f;
     private float timer = 0.0f;
+
+    // BGM
+    private float bgmVolume = 1.0f;
 
     private void Awake()
     {
@@ -86,6 +92,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    // Play SFX sounds
     public void Play(string name)
     {
         if (sounds.ContainsKey(name))
