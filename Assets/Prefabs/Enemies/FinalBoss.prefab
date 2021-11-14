@@ -73,6 +73,14 @@ MonoBehaviour:
   sideLaserPrefab: {fileID: 7493698809534200211, guid: 924bb2a5a2acca94e8ce3bdbb05130ab,
     type: 3}
   sideLaserRate: 1.5
+  sideLaserChance: 1
+  swordPrefab: {fileID: 1874497009314317738, guid: 7a6825cb1381ccf4d937cad53c3d186f,
+    type: 3}
+  swordRate: 5
+  swordChance: 1
+  smallLaserPrefab: {fileID: 0}
+  fireRate: 0.4
+  fireChance: 0.8
 --- !u!114 &6853557065506435929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,14 +99,15 @@ MonoBehaviour:
   portrait: {fileID: 0}
   model: {fileID: 6043215003955658715}
   speed: 2.5
-  maxHP: 2000
+  maxHP: 5000
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
   staminaRegenRate: 1
   staminaRegenCooldown: 2.5
-  bulletPrefab: {fileID: 0}
-  fireRate: 0
+  bulletPrefab: {fileID: 8061707729531987755, guid: 969eb21ef26066f49be6b7787917dcc1,
+    type: 3}
+  fireRate: 2.5
   bullet: {fileID: 0}
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
