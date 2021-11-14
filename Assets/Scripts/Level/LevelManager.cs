@@ -123,4 +123,20 @@ public class LevelManager : MonoBehaviour
         }
         // SceneManager.LoadScene(nextLevel);
     }
+
+    // ------------
+    // EDITOR STUFF
+    // ------------
+
+    void OnDrawGizmos()
+    {
+        Vector3 p1 = new Vector3(-7.2f, 0f, 500.0f);
+        Vector3 p2 = new Vector3(-7.2f, 0f, -5.4f);
+        Vector3 p3 = new Vector3(7.2f, 0f, -5.4f);
+        Vector3 p4 = new Vector3(7.2f, 0f, 500.0f);
+
+        Gizmos.color = Color.white;
+        Gizmos.DrawLine(p1, p2);
+        Gizmos.DrawLine(p3, p4);
+    }
 }

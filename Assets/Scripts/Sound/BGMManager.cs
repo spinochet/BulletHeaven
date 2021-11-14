@@ -30,10 +30,10 @@ public class BGMManager : MonoBehaviour
             play5.Enable();
 
             play1.performed += ctx => SwitchTrack(0);
-            play2.performed += ctx => SwitchTrack(0);
-            play3.performed += ctx => SwitchTrack(0);
-            play4.performed += ctx => SwitchTrack(0);
-            play5.performed += ctx => SwitchTrack(0);
+            play2.performed += ctx => SwitchTrack(1);
+            play3.performed += ctx => SwitchTrack(2);
+            play4.performed += ctx => SwitchTrack(3);
+            play5.performed += ctx => SwitchTrack(4);
         }
     }
 
