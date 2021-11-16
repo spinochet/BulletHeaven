@@ -9,13 +9,16 @@ public class SwordAttack : MonoBehaviour
     [SerializeField] private float chargeTime;
     [SerializeField] private float speed;
 
-    private AudioSource audio;
     private float timer;
+    private int side;
     private bool flag;
 
     void Awake()
     {
-        audio = GetComponent<AudioSource>();
+        float f = Random.Range(0.0f, 1.0f);
+        side = f < 0.5f ? -1 : 1;
+
+        transform.position = new Vector3(11 * side, 0.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -23,36 +26,44 @@ public class SwordAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer < chargeTime)
+        if (timer < chargeTime && !flag)
         {
             Color c = sprite.color;
             c.a = (Mathf.Sin(timer * 3.0f) + 1.0f) * 0.25f;
             sprite.color = c;
         }
-        else
+        else if (!flag)
         {
-            if (!flag) audio.Play();
-
-            flag = true;
-            sprite.gameObject.SetActive(false);
-            Vector3 euler = transform.eulerAngles;
-            euler.y -= Time.deltaTime * speed;
-            transform.eulerAngles = euler;
+            StartCoroutine(StartAttack());
         }
+    }
 
-        if (timer > chargeTime + speed / 90.0f)
+    IEnumerator StartAttack()
+    {
+        if (!flag)
         {
+            flag = true;
+            float angle = 0.0f;
+            timer = 0.0f;
+
+            while (angle < 200.0f)
+            {
+                angle += speed * Time.deltaTime;
+                transform.rotation = Quaternion.Euler(0.0f, -angle * side, 0.0f);
+                yield return null;
+            }
+
             Destroy(gameObject);
         }
     }
 
     void OnTriggerEnter(Collider col)
     {
-        // NewPlayerController player = col.transform.GetComponent<NewPlayerController>();
+        Pawn player = col.transform.GetComponent<Pawn>();
 
-        // if (player)
-        // {
-        //     player.TakeDamage(damage);
-        // }
+        if (player)
+        {
+            player.TakeDamage(damage);
+        }
     }
 }

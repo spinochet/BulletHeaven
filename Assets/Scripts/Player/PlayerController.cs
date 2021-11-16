@@ -77,6 +77,7 @@ public class PlayerController : PawnController
             // Deactivate abilities
             pawn.DeactivateAbility(0);
             pawn.DeactivateAbility(1);
+            hud.UpdateHealth(0.0f);
 
             Pawn newPawn = _pawn.partner.GetComponent<Pawn>();
             newPawn.partner = null;
