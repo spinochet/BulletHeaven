@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -200,8 +200,8 @@ MonoBehaviour:
     chat short. The kingdom\u2019s forces will arrive at any moment to collect and
     imprison me."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 247194231}
 --- !u!114 &20036049
@@ -230,12 +230,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &20036050
 CanvasRenderer:
@@ -435,13 +435,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90334636, g: 0.90345806, b: 0.9433962, a: 1}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0.07058824}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -458,6 +458,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145639486}
+  m_CullTransparentMesh: 0
+--- !u!1 &155836356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155836357}
+  - component: {fileID: 155836359}
+  - component: {fileID: 155836358}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &155836357
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155836356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 352430919}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 843, y: -428.86}
+  m_SizeDelta: {x: 204.07892, y: 222.2839}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &155836358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155836356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Press Space To Advance Dialogue
+--- !u!222 &155836359
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155836356}
   m_CullTransparentMesh: 0
 --- !u!1 &227047102
 GameObject:
@@ -737,6 +815,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1294508095}
+  - {fileID: 899602620}
+  - {fileID: 155836357}
   m_Father: {fileID: 313356686}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -933,8 +1013,8 @@ MonoBehaviour:
       m_Flags: 0
   input: What's happening?!
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1003166890}
 --- !u!114 &387073829
@@ -963,12 +1043,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &387073830
 CanvasRenderer:
@@ -1055,8 +1135,8 @@ MonoBehaviour:
       m_Flags: 0
   input: Given the state of emergency, I am at your service, Princess.
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 914407192}
 --- !u!114 &417777297
@@ -1085,12 +1165,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &417777298
 CanvasRenderer:
@@ -1177,8 +1257,8 @@ MonoBehaviour:
       m_Flags: 0
   input: "Good, let\u2019s fight."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 856874535}
 --- !u!114 &442897844
@@ -1207,12 +1287,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &442897845
 CanvasRenderer:
@@ -1447,8 +1527,8 @@ MonoBehaviour:
       m_Flags: 0
   input: Gods please, send me a warrior. Someone that can help.
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 446347782}
 --- !u!114 &506183871
@@ -1477,12 +1557,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &506183872
 CanvasRenderer:
@@ -1570,8 +1650,8 @@ MonoBehaviour:
   input: "Hello.. My name is Maya and I\u2019m the sole princess and heir of the
     Kingdom of Botland."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 500101296}
 --- !u!114 &581340389
@@ -1600,12 +1680,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &581340390
 CanvasRenderer:
@@ -1690,10 +1770,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: ' I need your help to battle them and evade their bastardly desires.  '
+  input: 'I need your help to battle them and evade their bastardly desires.  '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 227047104}
 --- !u!114 &759866792
@@ -1722,12 +1802,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &759866793
 CanvasRenderer:
@@ -1814,8 +1894,8 @@ MonoBehaviour:
       m_Flags: 0
   input: The war begins and where am I? In this shallow cave sulking like a rat.
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 26807321}
 --- !u!114 &831758043
@@ -1844,12 +1924,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &831758044
 CanvasRenderer:
@@ -1932,6 +2012,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856874533}
+  m_CullTransparentMesh: 0
+--- !u!1 &899602619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899602620}
+  - component: {fileID: 899602622}
+  - component: {fileID: 899602621}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &899602620
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899602619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 352430919}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -811.2, y: 462}
+  m_SizeDelta: {x: 297.6239, y: 155.93793}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &899602621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899602619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Press CTRL To  Skip '
+--- !u!222 &899602622
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899602619}
   m_CullTransparentMesh: 0
 --- !u!1 &914407190
 GameObject:
@@ -2311,11 +2469,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: ' That was an abnormal experience I would never like to relive. I would
-    like to know now: who are you and where am I? '
+  input: 'That was an abnormal experience I would never like to relive. I would like
+    to know now: who are you and where am I? '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 2046013250}
 --- !u!114 &1598328332
@@ -2344,12 +2502,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1598328333
 CanvasRenderer:
@@ -2436,8 +2594,8 @@ MonoBehaviour:
       m_Flags: 0
   input: "I can\u2019t do this alone. I need assistance."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 377517596}
 --- !u!114 &1612738948
@@ -2466,12 +2624,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1612738949
 CanvasRenderer:
@@ -2713,11 +2871,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: ' I am known as Arthur. I am from Camelocity, a metropolis in the northern
+  input: 'I am known as Arthur. I am from Camelocity, a metropolis in the northern
     sector of Earth. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 1264912602}
 --- !u!114 &1928926335
@@ -2746,12 +2904,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1928926336
 CanvasRenderer:
@@ -2836,11 +2994,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: ' I prayed for a hero to assist me and now here you are. What shall I call
+  input: 'I prayed for a hero to assist me and now here you are. What shall I call
     you? '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1813379238}
 --- !u!114 &2042481029
@@ -2869,12 +3027,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &2042481030
 CanvasRenderer:

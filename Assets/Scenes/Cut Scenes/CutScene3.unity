@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -199,8 +199,8 @@ MonoBehaviour:
   input: "It seems like that was the last of them. I\u2019m glad we were able to
     defeat them together. "
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 417476582}
 --- !u!114 &151716777
@@ -229,12 +229,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &151716778
 CanvasRenderer:
@@ -357,13 +357,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90334636, g: 0.90345806, b: 0.9433962, a: 1}
+  m_Color: {r: 0.90334636, g: 0.90345806, b: 0.9433962, a: 0.19607843}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -458,8 +458,8 @@ MonoBehaviour:
       m_Flags: 0
   input: ......
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 836137827}
 --- !u!114 &190762960
@@ -488,12 +488,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &190762961
 CanvasRenderer:
@@ -502,6 +502,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190762957}
+  m_CullTransparentMesh: 0
+--- !u!1 &319612541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 319612542}
+  - component: {fileID: 319612544}
+  - component: {fileID: 319612543}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &319612542
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319612541}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2079486048}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 843, y: -428.86}
+  m_SizeDelta: {x: 204.07892, y: 222.2839}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &319612543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319612541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Press Space To Advance Dialogue
+--- !u!222 &319612544
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319612541}
   m_CullTransparentMesh: 0
 --- !u!1 &336491213
 GameObject:
@@ -951,8 +1029,8 @@ MonoBehaviour:
   input: "I\u2019m detecting strange activity around us. I can\u2019t determine where
     we are or even what timeline we\u2019re in."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 582263037}
 --- !u!114 &983171746
@@ -981,12 +1059,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &983171747
 CanvasRenderer:
@@ -1147,8 +1225,8 @@ MonoBehaviour:
       m_Flags: 0
   input: 'This strange timeline holds many surprises for us, Princess. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 1290593921}
 --- !u!114 &1194176039
@@ -1177,12 +1255,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1194176040
 CanvasRenderer:
@@ -1343,8 +1421,8 @@ MonoBehaviour:
       m_Flags: 0
   input: 'What can possibly be left for us to fight? '
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 336491215}
 --- !u!114 &1242576905
@@ -1373,12 +1451,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1242576906
 CanvasRenderer:
@@ -1539,8 +1617,8 @@ MonoBehaviour:
       m_Flags: 0
   input: What is it, Arthur?
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1781517910}
 --- !u!114 &1389105819
@@ -1569,12 +1647,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1389105820
 CanvasRenderer:
@@ -1659,10 +1737,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: ' Wait. What do you mean? How will I get home?'
+  input: Wait. What do you mean? How will I get home?
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1074849228}
 --- !u!114 &1439614918
@@ -1691,12 +1769,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1439614919
 CanvasRenderer:
@@ -1864,8 +1942,8 @@ MonoBehaviour:
       m_Flags: 0
   input: "Home is not an option. I\u2019m sensing enemies looking to swarm us."
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 1197331450}
 --- !u!114 &1531098323
@@ -1894,12 +1972,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1531098324
 CanvasRenderer:
@@ -2069,8 +2147,8 @@ MonoBehaviour:
       m_Flags: 0
   input: Yes, I agree....
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
-  delay: 0.07
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 706846787}
 --- !u!114 &1674508416
@@ -2099,12 +2177,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 104
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 
 --- !u!222 &1674508417
 CanvasRenderer:
@@ -2318,6 +2396,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1457478367}
+  - {fileID: 2114427901}
+  - {fileID: 319612542}
   m_Father: {fileID: 1774342255}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2345,7 +2425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5bf7869d87b2da64cab377492a6d0c01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4640f0b6e9c4f83469d4953353d99376, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2362,4 +2442,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079486047}
+  m_CullTransparentMesh: 0
+--- !u!1 &2114427900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114427901}
+  - component: {fileID: 2114427903}
+  - component: {fileID: 2114427902}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2114427901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114427900}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2079486048}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -811.2001, y: 462}
+  m_SizeDelta: {x: 297.6239, y: 155.93793}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2114427902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114427900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5ac0194462d2f834699be9a0f6245c9c, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Press CTRL To  Skip '
+--- !u!222 &2114427903
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114427900}
   m_CullTransparentMesh: 0
