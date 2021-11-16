@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected string name;
     [SerializeField] protected List<BulletLevel> levels;
     [SerializeField] protected GameObject particle;
+    [SerializeField] protected GameObject healthPack;
     protected PlayerController owner = null;
     protected int currentLevel = 0;
 
@@ -75,8 +76,26 @@ public class Bullet : MonoBehaviour
                 level = owner.CurrentLevel;
 
             float hp = 1;
-            if (col.transform.GetComponent<Pawn>())
+            if (col.transform.GetComponent<Pawn>()) {
                 hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage);
+                if (hp <= 0 && owner) {
+                    float playerHp = owner.GetPawn().GetHP();
+                    Debug.Log("Player HP: " + playerHp);
+                    System.Random rand = new System.Random();
+                    float randomFloat = (float)rand.NextDouble();
+                    Debug.Log("random float: " + randomFloat);
+
+                    float healthP = (1 - playerHp);
+
+                    if (randomFloat <= ((healthP * 0.25) / healthP)) {
+                        if (healthPack) {
+                            Instantiate(healthPack, transform.position, transform.rotation);
+                        }
+                        
+                    }        
+                }
+            }
+                
 
             if (owner != null && hp <= 0.0f)
                 owner.AddPoints(100);

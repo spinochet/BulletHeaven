@@ -236,4 +236,8 @@ public class PlayerController : PawnController
     {
         score = 0;
     }
+
+    public Pawn GetPawn() {
+        return pawn;
+    }
 }

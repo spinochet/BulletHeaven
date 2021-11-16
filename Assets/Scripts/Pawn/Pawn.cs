@@ -176,10 +176,12 @@ public class Pawn : MonoBehaviour
             if (hp <= 0)
             {
                 SoundManager.Instance.Play(name + " Death");
-                if (pawnController)
+                if (pawnController) {
                     pawnController.Destroy(this);
-                else
+                } else {
                     Destroy(gameObject);
+                }
+                    
             }
             else
             {
