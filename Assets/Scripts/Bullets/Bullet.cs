@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected List<BulletLevel> levels;
     [SerializeField] protected GameObject particle;
     [SerializeField] protected GameObject healthPack;
+    public float healthPackProbability = 0.25f;
     protected PlayerController owner = null;
     protected int currentLevel = 0;
 
@@ -87,7 +88,7 @@ public class Bullet : MonoBehaviour
 
                     float healthP = (1 - playerHp);
 
-                    if (randomFloat <= ((healthP * 0.25) / healthP)) {
+                    if (randomFloat <= ((healthP * healthPackProbability) / healthP)) {
                         if (healthPack) {
                             Instantiate(healthPack, transform.position, transform.rotation);
                         }
