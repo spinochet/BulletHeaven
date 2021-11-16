@@ -502,41 +502,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6853557065506435929, guid: 4c0afbee51de2a8428e46e01eb85fd71,
-        type: 3}
-      propertyPath: speed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853557065506435929, guid: 4c0afbee51de2a8428e46e01eb85fd71,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 8061707729531987755, guid: 969eb21ef26066f49be6b7787917dcc1,
-        type: 3}
-    - target: {fileID: 6853557065506435929, guid: 4c0afbee51de2a8428e46e01eb85fd71,
-        type: 3}
-      propertyPath: fireRate
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6853557065506435931, guid: 4c0afbee51de2a8428e46e01eb85fd71,
         type: 3}
       propertyPath: m_Name
       value: FinalBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853557065506435934, guid: 4c0afbee51de2a8428e46e01eb85fd71,
-        type: 3}
-      propertyPath: speed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853557065506435934, guid: 4c0afbee51de2a8428e46e01eb85fd71,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853557065506435934, guid: 4c0afbee51de2a8428e46e01eb85fd71,
-        type: 3}
-      propertyPath: fireChance
-      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c0afbee51de2a8428e46e01eb85fd71, type: 3}
