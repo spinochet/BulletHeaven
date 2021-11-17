@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1337,6 +1337,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[18].sound.sound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[18].name
+      value: Boulder Crash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[18].sound.sound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a8d8cfd09cbd44fe99ddfc8dfae110a, type: 3}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[18].sound.volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[18].sound.soundCooldown
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: m_LocalPosition.x

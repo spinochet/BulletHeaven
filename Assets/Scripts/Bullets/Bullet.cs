@@ -84,14 +84,18 @@ public class Bullet : MonoBehaviour
             if (col.transform.GetComponent<Pawn>()) {
                 hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage);
                 if (hp <= 0 && owner) {
+
+                    // Getting player HP percentage
                     float playerHp = owner.GetPawn().GetHP();
-                    Debug.Log("Player HP: " + playerHp);
+
+                    // Getting random float between 0 and 1
                     System.Random rand = new System.Random();
                     float randomFloat = (float)rand.NextDouble();
-                    Debug.Log("random float: " + randomFloat);
 
+                    // Getting "probability" of lower health
                     float healthP = (1 - playerHp);
 
+                    // Using Bays to calculate probability of dropping health pack
                     if (randomFloat <= ((healthP * healthPackProbability) / healthP)) {
                         if (healthPack) {
                             Instantiate(healthPack, transform.position, transform.rotation);

@@ -19,6 +19,7 @@ public class BulletTime : Ability
 
         Time.timeScale = levels[level].timeScale;
         Time.fixedDeltaTime = levels[level].timeScale / 60.0f;
+        SoundManager.Instance.Play("Bullet Time");
     }
 
     override public void Deactivate()

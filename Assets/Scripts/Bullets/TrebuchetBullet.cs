@@ -30,12 +30,16 @@ public class TrebuchetBullet : Bullet
                 if (target)
                 {
                     Pawn pawn = target.GetComponent<Pawn>();
-                    if (pawn)
+                    if (pawn) {
                         pawn.TakeDamage(levels[currentLevel].damage);
+                        
+                    }
+                        
                 }
             }
-
+            SoundManager.Instance.Play("Boulder Crash");
             Destroy(gameObject);
+            
         }
         else
         {

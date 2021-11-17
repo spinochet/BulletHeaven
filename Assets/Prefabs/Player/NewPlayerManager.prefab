@@ -293,6 +293,18 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
+  - name: Bullet
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 555f8f411463a434292d35da7e25977d, type: 3}
+      - {fileID: 8300000, guid: c15695f248a1f4876bfc0f0261b330f9, type: 3}
+      - {fileID: 8300000, guid: f133ed0d49d5e47e0997de8313372def, type: 3}
+      - {fileID: 8300000, guid: 0af9240d0a28542aca9cb5448c2cef66, type: 3}
+      volume: 0.075
+      soundCooldown: 0.08
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
 --- !u!82 &7507915141636075429
 AudioSource:
   m_ObjectHideFlags: 0

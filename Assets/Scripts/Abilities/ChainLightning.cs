@@ -63,6 +63,7 @@ public class ChainLightning : Ability
             {
                 closestPosition = closest.transform.position;
                 Instantiate(particles, closestPosition, Quaternion.identity);
+                SoundManager.Instance.Play("Chain Lightning");
                 trailObject.transform.position = closestPosition;
 
                 Destroy(closest);
