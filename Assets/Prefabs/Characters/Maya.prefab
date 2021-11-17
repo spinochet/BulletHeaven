@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1027628024979106852}
   - component: {fileID: 1027628024979106853}
   - component: {fileID: -4788320597337895063}
+  - component: {fileID: 5300418926613717126}
   m_Layer: 8
   m_Name: Maya
   m_TagString: Character
@@ -79,8 +80,30 @@ MonoBehaviour:
     type: 3}
   fireRate: 20
   bullet: {fileID: 0}
-  abilityL: {fileID: 0}
+  abilityL: {fileID: 5300418926613717126}
   abilityR: {fileID: 0}
+--- !u!114 &5300418926613717126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027628024979106863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fb8a82291cf418083a947537bbedd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 20
+  overTime: 0
+  particles: {fileID: 7493259298288516860, guid: cee05959a43334644b876b24f6869b3e,
+    type: 3}
+  trail: {fileID: 7493259298288516860, guid: 11b055935b9310544b5641ec8d90e02d, type: 3}
+  levels:
+  - maxChain: 3
+    timing: 0.1
+    minDist: 5
+    cost: 0
 --- !u!1001 &2596798677641106391
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -71,15 +71,19 @@ public class Bullet : MonoBehaviour
         if (col.transform.GetComponent<Pawn>() || col.transform.GetComponent<Bullet>())
         {
             int level = 0;
+            EnemyController enemy  = null;
             if (owner)
+            {
                 level = owner.CurrentLevel;
+                enemy = col.transform.GetComponent<EnemyController>();
+            }
 
             float hp = 1;
             if (col.transform.GetComponent<Pawn>())
                 hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage);
 
-            if (owner != null && hp <= 0.0f)
-                owner.AddPoints(100);
+            if (owner != null && hp <= 0.0f && enemy != null)
+                owner.AddPoints(enemy.Score);
 
             if (levels[level].destroyOnCollision)
             {

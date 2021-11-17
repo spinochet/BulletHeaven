@@ -15,6 +15,7 @@ public class ChainLightning : Ability
     }
 
     [SerializeField] private GameObject particles;
+    [SerializeField] private GameObject trail;
     [SerializeField] protected List<ChainLightningLevel> levels;
 
     override public void Activate(int level = 0)
@@ -30,12 +31,11 @@ public class ChainLightning : Ability
     IEnumerator Chain(int level)
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        GameObject current = gameObject;
+        GameObject trailObject = Instantiate(trail, transform.position, Quaternion.identity);
+        Vector3 closestPosition = transform.position;
         float timer = levels[level].timing;
 
-        GameObject particle = Instantiate(particles, current.transform.position, Quaternion.identity);
-
-        for (int i = 0; i <= levels[level].maxChain; ++i)
+        for (int i = 0; i < levels[level].maxChain; ++i)
         {
             while (timer < levels[level].timing)
             {
@@ -50,8 +50,8 @@ public class ChainLightning : Ability
             {
                 if (enemy)
                 {
-                    Vector3 diff = current.transform.position - enemy.transform.position;
-                    if (diff.magnitude < dist && enemy != current)
+                    Vector3 diff = closestPosition - enemy.transform.position;
+                    if (diff.magnitude < dist)
                     {
                         closest = enemy;
                         dist = diff.magnitude;
@@ -59,13 +59,18 @@ public class ChainLightning : Ability
                 }
             }
 
-            if (closest == null) break;
-            if (current.tag == "Enemy")
+            if (closest)
             {
-                particle.transform.position = current.transform.position;
-                Destroy(current);
+                closestPosition = closest.transform.position;
+                Instantiate(particles, closestPosition, Quaternion.identity);
+                trailObject.transform.position = closestPosition;
+
+                Destroy(closest);
             }
-            current = closest;
+            else
+            {
+                break;
+            }
 
             timer = 0.0f;
         }

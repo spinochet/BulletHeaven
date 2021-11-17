@@ -7,11 +7,14 @@ public class EnemyController : PawnController
     protected CharacterController controller;
     protected LevelManager manager;
 
+    [SerializeField] protected int score = 100;
     [SerializeField] protected float speed = 2.5f;
     [SerializeField] protected float contactDamage = 20.0f;
     [SerializeField] protected float contactKnockback = 20.0f;
     [SerializeField] protected float contactCooldown = 5.0f;
     protected float contactTimer;
+
+    public int Score { get { return score; } }
 
     protected float fireTimer;
     protected float cooldownTimer;
