@@ -173,7 +173,7 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Arthut Hurt
+  - name: Arthur Hurt
     sound:
       sound:
       - {fileID: 8300000, guid: 343ae7b87288e451288046d144ab755f, type: 3}
@@ -216,8 +216,8 @@ MonoBehaviour:
       - {fileID: 8300000, guid: 1190bdc1ea1804655868c57c3aac50b1, type: 3}
       - {fileID: 8300000, guid: 8cba64e20a82b4265a27256a00f7daf0, type: 3}
       - {fileID: 8300000, guid: 798f63e6484bb4ff8bd72cc3ce0fee3f, type: 3}
-      volume: 0.5
-      soundCooldown: 0.25
+      volume: 0.3
+      soundCooldown: 0.08
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
@@ -243,8 +243,8 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: c560587ccb78a4f7d98e7e55f6fa3b74, type: 3}
-      volume: 0.5
-      soundCooldown: 2.5
+      volume: 0.7
+      soundCooldown: 0
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
       sound:
       - {fileID: 8300000, guid: 187851b7d143d4f22b3b3bf39955442d, type: 3}
       volume: 0.5
-      soundCooldown: 3
+      soundCooldown: 2
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: BoulderCrash
+  - name: Boulder Crash
     sound:
       sound:
       - {fileID: 8300000, guid: 2a8d8cfd09cbd44fe99ddfc8dfae110a, type: 3}
