@@ -1216,7 +1216,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
-  nextLevel: Level 2 Offline
+  nextLevel: Level 2 Offline Refactor
 --- !u!114 &771462984
 MonoBehaviour:
   m_ObjectHideFlags: 0

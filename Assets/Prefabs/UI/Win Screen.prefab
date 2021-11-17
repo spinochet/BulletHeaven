@@ -471,7 +471,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bce3a752d578c544ea0173cca3e7e3c2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3eb1df79238db4947bb7db43e6c680a2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press start to continue.
+  m_Text: Hold enter to continue.
 --- !u!114 &4990347162948591236
 MonoBehaviour:
   m_ObjectHideFlags: 0
