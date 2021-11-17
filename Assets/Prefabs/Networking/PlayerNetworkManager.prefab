@@ -106,7 +106,7 @@ MonoBehaviour:
       soundCooldown: 0.1
       soundLastPlayed: 0
       timeLastPlayed: 0
-    test: 1
+    test: 0
   - name: Arrow
     sound:
       sound:
