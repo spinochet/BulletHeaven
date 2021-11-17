@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dragon_tail_material
+  m_Name: dragon_head_material
   m_Shader: {fileID: -6465566751694194690, guid: da3c52f92cbf39c479fe0f95ad789505,
     type: 3}
   m_ShaderKeywords: _EMISSION
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 64ab761be864e224a957c5835f842b10, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4c0d8c7b347a9cf42b33feb8f15cfcfb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
