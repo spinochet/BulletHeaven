@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/MainMenu Offline.unity
     guid: ef13f041233ca294ebb775d269c4f031
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Offline/Level 1 Offline.unity
     guid: 766cd14f3bd246849b1f8aadbf9d201c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Offline/Level 2 Offline.unity
     guid: e0ef653ed7429ef4c948aa9135b51abd
   - enabled: 1
@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cut Scenes/CutScene5.unity
     guid: 8428322628d91ea4fb1d080c611011dd
+  - enabled: 1
+    path: Assets/Scenes/Levels/Offline/Level 1 Offline Refactor.unity
+    guid: b3d23d26a52e5724b9adf3c9d73681ea
+  - enabled: 1
+    path: Assets/Scenes/Levels/Offline/Level 2 Offline Refactor.unity
+    guid: 63b483b494557d447bd4da8f5b46e03e
   m_configObjects: {}
