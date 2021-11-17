@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.size
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -9690,22 +9690,22 @@ PrefabInstance:
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[18].name
-      value: Bullet TIme
+      value: Health Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[18].sound.sound.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 1377a6c630a7e406f8a710108213f628, type: 3}
+      objectReference: {fileID: 8300000, guid: fd807cd2eecd1415ea41831f6142966a, type: 3}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[18].sound.volume
-      value: 1.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[18].sound.soundCooldown
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -45671,6 +45671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: soundList.Array.data[17].test
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
+        type: 3}
+      propertyPath: soundList.Array.data[18].test
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7288465762301627842, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}

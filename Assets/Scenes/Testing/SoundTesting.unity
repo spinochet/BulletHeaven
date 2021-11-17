@@ -538,6 +538,11 @@ PrefabInstance:
       propertyPath: soundList.Array.data[13].sound.soundCooldown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[18].sound.volume
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d450b74648844a6931300bc2d36c41, type: 3}
 --- !u!1001 &5223775782977387071
