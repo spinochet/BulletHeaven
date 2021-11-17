@@ -1339,34 +1339,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
-      propertyPath: soundList.Array.size
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[18].sound.sound.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[18].name
-      value: Boulder Crash
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[18].sound.sound.Array.data[0]
+      propertyPath: soundList.Array.data[19].sound.sound.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 2a8d8cfd09cbd44fe99ddfc8dfae110a, type: 3}
+      objectReference: {fileID: 8300000, guid: c15695f248a1f4876bfc0f0261b330f9, type: 3}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
-      propertyPath: soundList.Array.data[18].sound.volume
-      value: 0.5
-      objectReference: {fileID: 0}
+      propertyPath: soundList.Array.data[19].sound.sound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f133ed0d49d5e47e0997de8313372def, type: 3}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
-      propertyPath: soundList.Array.data[18].sound.soundCooldown
-      value: 0.75
-      objectReference: {fileID: 0}
+      propertyPath: soundList.Array.data[19].sound.sound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0af9240d0a28542aca9cb5448c2cef66, type: 3}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1552,16 +1537,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2587591455584452500, guid: d687b9c23008c43da9352cfb06f4641b,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587591455584452500, guid: d687b9c23008c43da9352cfb06f4641b,
-        type: 3}
-      propertyPath: BypassReverbZones
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2587591455584452501, guid: d687b9c23008c43da9352cfb06f4641b,
         type: 3}
       propertyPath: m_Name

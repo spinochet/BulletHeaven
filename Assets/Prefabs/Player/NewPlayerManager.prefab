@@ -305,6 +305,15 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
+  - name: Health Pickup
+    sound:
+      sound:
+      - {fileID: 8300000, guid: fd807cd2eecd1415ea41831f6142966a, type: 3}
+      volume: 2
+      soundCooldown: 1
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
 --- !u!82 &7507915141636075429
 AudioSource:
   m_ObjectHideFlags: 0

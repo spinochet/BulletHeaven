@@ -19,8 +19,7 @@ public class HealthPack : MonoBehaviour
         if (pawn && pawn.IsPlayerPawn)
         {
             pawn.RestoreHealth(curePotency);
-            SoundManager.Instance.Play("Health Pack");
-            Debug.Log("Playing Sound?");
+            SoundManager.Instance.Play("Health Pickup");
             Destroy(gameObject);
         }
     }
