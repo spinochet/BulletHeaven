@@ -11,7 +11,11 @@ public class PlayerController : PawnController
     private Color playerColor;
     private Pawn partner;
     private int currentLevel = 0;
+    private int maxLevel = 4;
     public int CurrentLevel { get { return currentLevel; } }
+
+    private int experience = 0;
+    [SerializeField] private List<int> experienceNeeded;
 
     public bool alive = false;
     public bool IsAlive { get { return alive; }}
@@ -37,6 +41,7 @@ public class PlayerController : PawnController
     void Awake()
     {
         DontDestroyOnLoad(this);
+        maxLevel = experienceNeeded.Count;
     }
 
     void Update()
@@ -225,6 +230,13 @@ public class PlayerController : PawnController
     public void AddPoints(int points)
     {
         score += points;
+        experience += points;
+
+        if (currentLevel < maxLevel && experienceNeeded[currentLevel] < experience)
+        {
+            experience = 0;
+            currentLevel++;
+        }
     }
 
     public void LosePoints()
