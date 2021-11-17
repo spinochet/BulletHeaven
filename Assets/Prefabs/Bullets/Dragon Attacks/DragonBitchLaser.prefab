@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8061707729531987752}
   - component: {fileID: 8061707729531987766}
-  - component: {fileID: -7562469688537319190}
+  - component: {fileID: -7112166854753641012}
   - component: {fileID: 8061707729531987753}
   m_Layer: 10
-  m_Name: Roomba Shot
-  m_TagString: Bullet
+  m_Name: DragonBitchLaser
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,9 +45,9 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-7562469688537319190
+--- !u!54 &-7112166854753641012
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,15 +75,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506f08b091291f84b8db4a40129950e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Roomba Shot
+  name: Laser
   levels:
   - destroyOnCollision: 1
-    speed: 15
+    speed: 20
     damage: 10
-    fireRate: 2
-    numBullets: 1
-    bulletSpacing: 0
-  particle: {fileID: 0}
+    fireRate: 10
+    numBullets: 3
+    bulletSpacing: 0.75
+  particle: {fileID: 7493259298288516860, guid: af7b3aabbc415064f86798ff9398d39b,
+    type: 3}
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +96,7 @@ GameObject:
   - component: {fileID: 8061707729862278870}
   - component: {fileID: 8061707729862278868}
   - component: {fileID: 8061707729862278871}
-  - component: {fileID: 9177137076577153167}
+  - component: {fileID: 5219332282022198620}
   m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
@@ -110,13 +111,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8061707729862278857}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.078}
+  m_LocalScale: {x: 0.8, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 8061707729531987752}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!212 &8061707729862278868
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fcf7a9f18dd769e45954b7af804c5701, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -186,7 +187,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9177137076577153167
+--- !u!114 &5219332282022198620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

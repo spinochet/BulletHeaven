@@ -150,7 +150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965803427}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &236092341
 MonoBehaviour:
@@ -256,6 +256,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+--- !u!1 &791424109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791424110}
+  - component: {fileID: 791424111}
+  m_Layer: 0
+  m_Name: FinalBoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &791424110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791424109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1965803427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791424111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791424109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd1a48e2de94f5419e5e12b268585c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - dir: 0
+    enemyPrefab: {fileID: 6853557065506435931, guid: 4c0afbee51de2a8428e46e01eb85fd71,
+      type: 3}
+    color: {r: 1, g: 0.2028302, b: 0.2028302, a: 1}
+    spawnPoint: {x: 0, y: 0, z: 8.38}
+    numEnemies: 1
+    dist: 1
+    angle: 0
+    stack: 0
+    numStacks: 0
+    x_offset: 0
+    z_offset: 0
+  pauseLevel: 1
+  isCheckpoint: 1
 --- !u!1001 &1010914348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -646,6 +704,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 791424110}
   - {fileID: 236092340}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -668,7 +727,7 @@ MonoBehaviour:
   scrollSpeed: 2.5
   backgroundPrefab: {fileID: 2952894996708380642, guid: 72160b1e1181d44429a7cfd99968c0bc,
     type: 3}
-  backgroundSprite: {fileID: 21300000, guid: 6fb7b0fca18ceaf4ab7c4438e5515a0c, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 2f05d555b368d6242b5b6eee3f0e2f9a, type: 3}
 --- !u!1001 &2109323767034933911
 PrefabInstance:
   m_ObjectHideFlags: 0
