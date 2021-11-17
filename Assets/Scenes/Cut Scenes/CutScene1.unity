@@ -2082,7 +2082,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press CTRL To  Skip '
+  m_Text: 'Press ESC To  Skip '
 --- !u!222 &899602622
 CanvasRenderer:
   m_ObjectHideFlags: 0
