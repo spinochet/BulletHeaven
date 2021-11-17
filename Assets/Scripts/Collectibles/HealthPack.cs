@@ -6,10 +6,20 @@ public class HealthPack : MonoBehaviour
 {
     [SerializeField] private float curePotency = 20.0f;
     public float speed = 2.5f;
+    private LevelManager level;
+
+
+    void Start()
+    {
+        level = FindObjectOfType<LevelManager>();
+    }
 
     void Update()
     {
-        transform.position -= new Vector3(0.0f, 0.0f, speed * Time.deltaTime);
+        if (level.IsScrolling) {
+            transform.position -= new Vector3(0.0f, 0.0f, speed * Time.deltaTime);
+        }
+        
     }
 
     public void OnTriggerEnter(Collider col)
