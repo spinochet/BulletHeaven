@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1113288142577064117, guid: 7d0a34beed3af4bc7b95658f9ec8754f,
+        type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1113288142577064118, guid: 7d0a34beed3af4bc7b95658f9ec8754f,
         type: 3}
       propertyPath: m_Name
@@ -488,8 +493,122 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNetworkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[14].test
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[13].test
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[12].test
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[14].sound.soundCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[10].test
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[0].test
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[1].test
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[13].sound.volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578981018556762462, guid: 67d450b74648844a6931300bc2d36c41,
+        type: 3}
+      propertyPath: soundList.Array.data[13].sound.soundCooldown
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d450b74648844a6931300bc2d36c41, type: 3}
+--- !u!1001 &5223775782977387071
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.63602066
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.21169394
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.37317812
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440796, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223775782705440798, guid: 4b50de1419dfb46f78d2dca088400c1d,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss/Level 4 BGM
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b50de1419dfb46f78d2dca088400c1d, type: 3}
 --- !u!1001 &7586180172055419057
 PrefabInstance:
   m_ObjectHideFlags: 0

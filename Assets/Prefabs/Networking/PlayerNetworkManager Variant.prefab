@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2123622467903022833, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: m_Name
-      value: PlayerNetworkManager
+      value: PlayerNetworkManager Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2123622467903022833, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -9465,12 +9465,12 @@ PrefabInstance:
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[13].sound.volume
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[13].sound.soundCooldown
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
@@ -9490,7 +9490,7 @@ PrefabInstance:
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
       propertyPath: soundList.Array.data[14].sound.soundCooldown
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4023920863425053509, guid: dde31c3142ff75448b360b03d818673d,
         type: 3}
