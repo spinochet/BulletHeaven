@@ -87,6 +87,7 @@ MonoBehaviour:
     type: 3}
   healthPack: {fileID: 2109323766547428551, guid: 4b0ffa6f883e1564682b16009793d0d9,
     type: 3}
+  healthPackProbability: 0.2
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0
