@@ -1,25 +1,14 @@
 fileFormatVersion: 2
-guid: 89827af37d30c694a81b04f6132ae1f4
+guid: 0771444d9b7c2114eae2a0e765a65fda
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: 5196972020135492732
-    second: dragon_tail|dragon_tail_swing_left
-  - first:
-      74: -7543167265761065093
-    second: dragon_tail|dragon_tail_swing_right
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 788d4fdca689cd841bab990c81d19ba1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: dragon_tail_texture
-    second: {fileID: 2100000, guid: d7981e29a6af7474989919a80baecc7d, type: 2}
+      name: dragon_head_texture
+    second: {fileID: 2100000, guid: ad878490374a4d6478a8e7d56ce560dc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
