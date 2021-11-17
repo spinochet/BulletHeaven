@@ -103,6 +103,7 @@ MonoBehaviour:
   - maxChain: 3
     timing: 0.1
     minDist: 5
+    damage: 100
     cost: 0
 --- !u!1001 &2596798677641106391
 PrefabInstance:

@@ -10,13 +10,14 @@ public class ChainLightning : Ability
         public float maxChain;
         public float timing;
         public float minDist;
-
+        public float damage;
         public float cost;
     }
 
     [SerializeField] private GameObject particles;
     [SerializeField] private GameObject trail;
     [SerializeField] protected List<ChainLightningLevel> levels;
+
 
     override public void Activate(int level = 0)
     {
@@ -65,8 +66,12 @@ public class ChainLightning : Ability
                 Instantiate(particles, closestPosition, Quaternion.identity);
                 SoundManager.Instance.Play("Chain Lightning");
                 trailObject.transform.position = closestPosition;
+                
+                Pawn enemy = closest.transform.GetComponent<Pawn>();
+                if (enemy) {
+                    enemy.TakeDamage(levels[level].damage);
+                }
 
-                Destroy(closest);
             }
             else
             {
