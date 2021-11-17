@@ -163,12 +163,12 @@ public class WaveSpawner : MonoBehaviour
                 break;
         }
 
+        if (Application.isEditor && !Application.isPlaying)
+            foreach (Vector3 position in spawnPoints)
+                Gizmos.DrawSphere(position, 0.5f);
         if (Application.isPlaying)
             foreach (Vector3 position in spawnPoints)
                 SpawnEnemy(wave, position, Quaternion.Euler(0.0f,180f,0.0f));
-        else if (Application.isEditor)
-            foreach (Vector3 position in spawnPoints)
-                Gizmos.DrawSphere(position, 0.5f);
     }
 
     void SpawnHelper(ref List<Vector3> spawnPoints, Vector3 spawnPoint, Vector3 dir, int numEnemies, float dist)

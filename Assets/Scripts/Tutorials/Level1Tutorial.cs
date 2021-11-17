@@ -6,6 +6,7 @@ public class Level1Tutorial : TutorialScript
 {
     [SerializeField] private List<GameObject> objects;
     private GameObject[] players;
+    private LevelManager levelManager;
 
     private bool canShoot = false;
 
@@ -13,6 +14,7 @@ public class Level1Tutorial : TutorialScript
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Character");
+        levelManager = transform.parent.GetComponent<LevelManager>();
 
         // foreach (GameObject player in players)
         // {
@@ -31,27 +33,17 @@ public class Level1Tutorial : TutorialScript
         if (!tutorialStarted && Camera.main.WorldToScreenPoint(transform.position).y <= 0)
         {
             tutorialStarted = true;
-            // LevelManager.Instance.StopScrolling();
-            Debug.Log("Tutorial started");
-
-            // foreach (GameObject player in players)
-            // {
-            //     player.GetComponent<Pawn>().enabled = true;
-            // }
+            levelManager.ToggleScrolling(false);
         }
         else if (transform.position.z <= -16.0f)
         {
-            // LevelManager.Instance.EndTutorial();
+            levelManager.ToggleScrolling(true);
             Destroy(gameObject);
         }
         if (tutorialStarted && timer < timing)
         {
             Debug.Log("Counting");
             timer += Time.deltaTime;
-        }
-        else if (tutorialStarted && timer >= timing)
-        {
-            // LevelManager.Instance.ResumeLevel();
         }
     }
 
