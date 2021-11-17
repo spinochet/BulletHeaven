@@ -636,20 +636,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 579680258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d89d3b9f54a42ec937caa4c5237a2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dd1a48e2de94f5419e5e12b268585c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 3007241012240742889, guid: d24e92fb37a0b85428816f6d50d03a84,
-    type: 3}
-  _spawnPoint: {x: 4, y: 0, z: 3.98}
-  numShifts: 2
-  dist: 3
-  rowDist: 4
-  numRows: 1
-  stagger: 0
+  waves:
+  - dir: 0
+    enemyPrefab: {fileID: 3007241012240742889, guid: d24e92fb37a0b85428816f6d50d03a84,
+      type: 3}
+    color: {r: 0.20392156, g: 0.34172443, b: 1, a: 1}
+    spawnPoint: {x: 4, y: 0, z: 3.98}
+    numEnemies: 2
+    dist: 3
+    angle: -45
+    stack: 0
+    numStacks: 0
+    x_offset: 0
+    z_offset: 0
   pauseLevel: 0
   isCheckpoint: 0
-  dir: 2
 --- !u!1001 &624969130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -711,11 +715,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147229329178635488, guid: 8ef4f50ae03a94413af83a058ee4c105,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4147229329178635489, guid: 8ef4f50ae03a94413af83a058ee4c105,
         type: 3}
@@ -1155,81 +1154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.size
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[17].sound.sound.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[17].name
-      value: Bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[17].sound.sound.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 555f8f411463a434292d35da7e25977d, type: 3}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[17].sound.volume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[17].sound.soundCooldown
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[5].name
-      value: Arthur Hurt
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[1].sound.volume
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[1].sound.soundCooldown
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[9].sound.soundCooldown
-      value: 0.075
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[9].sound.volume
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[10].sound.volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[8].sound.volume
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[10].sound.soundCooldown
-      value: 4.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
-        type: 3}
-      propertyPath: soundList.Array.data[8].sound.soundCooldown
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: m_LocalPosition.x
