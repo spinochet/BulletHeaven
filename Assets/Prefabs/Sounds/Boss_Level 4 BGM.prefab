@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5223775782705440796}
   - component: {fileID: 5223775782705440797}
+  - component: {fileID: 8403792077318908539}
   m_Layer: 0
   m_Name: Boss_Level 4 BGM
   m_TagString: BGM
@@ -41,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: da98d4ea3e24541aa8f13755f20d5983, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2ad228ea009484cafa9597da60d99fbd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -49,7 +50,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -127,3 +128,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!165 &8403792077318908539
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223775782705440798}
+  m_Enabled: 0
+  m_CutoffFrequency: 3000
+  m_HighpassResonanceQ: 1
