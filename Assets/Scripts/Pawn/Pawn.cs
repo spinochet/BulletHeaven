@@ -227,13 +227,22 @@ public class Pawn : MonoBehaviour
     {
         int numBullets = bullet.GetNumBullets(currentLevel);
         float bulletSpacing = bullet.GetBulletSpacing(currentLevel);
+        float bulletAngle = bullet.GetBulletAngle(currentLevel);
 
         float spaceFactor = (numBullets - 1.0f) / 2.0f;
-        Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor); 
+        Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor);
+        float startAngle = 0;
+        float angleStep = 0;
+
+        if (numBullets > 1)
+        {
+            startAngle = -bulletAngle;
+            angleStep = (bulletAngle * 2) / (numBullets - 1);
+        }
 
         for (int i = 0; i < numBullets; ++i)
         {
-            GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim);
+            GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim * Quaternion.Euler(0.0f, startAngle + (angleStep * i), 0.0f));
             if (pawnController is PlayerController)
                 b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
         }

@@ -52,7 +52,7 @@ public class ChainLightning : Ability
                 if (enemy)
                 {
                     Vector3 diff = closestPosition - enemy.transform.position;
-                    if (diff.magnitude < dist)
+                    if (diff.magnitude < dist && diff.magnitude > 0.1f)
                     {
                         closest = enemy;
                         dist = diff.magnitude;

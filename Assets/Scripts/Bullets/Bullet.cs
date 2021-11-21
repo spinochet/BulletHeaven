@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
         public float fireRate;
         public int numBullets;
         public float bulletSpacing;
+        public float angle;
     }
 
     [SerializeField] protected string name;
@@ -59,6 +60,13 @@ public class Bullet : MonoBehaviour
     {
         currentLevel = currentLevel >= levels.Count ? levels.Count : currentLevel;
         return levels[currentLevel].bulletSpacing;
+    }
+
+    // return bullet angle
+    public float GetBulletAngle(int currentLevel = 0)
+    {
+        currentLevel = currentLevel >= levels.Count ? levels.Count : currentLevel;
+        return levels[currentLevel].angle;
     }
 
     // Set the ownwe of the bullet
