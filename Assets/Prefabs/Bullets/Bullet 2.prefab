@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8588150055511093303}
   - component: {fileID: 4149884318236851582}
   - component: {fileID: 7583672119000671300}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: -5714502692662860827}
   - component: {fileID: 8061707729531987753}
   - component: {fileID: 3628526055417821027}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Bullet 2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -185,6 +185,10 @@ MonoBehaviour:
     fireRate: 2
     numBullets: 1
     bulletSpacing: 0
+    angle: 0
+  particle: {fileID: 0}
+  healthPack: {fileID: 0}
+  healthPackProbability: 0.25
 --- !u!135 &3628526055417821027
 SphereCollider:
   m_ObjectHideFlags: 0

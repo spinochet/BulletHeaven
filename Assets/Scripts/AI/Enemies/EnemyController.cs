@@ -103,6 +103,9 @@ public class EnemyController : PawnController
     // Destroy object
     public override void Destroy(Pawn _pawn)
     {
+        // if (pawn.Model.GetComponent<Animator>()) {
+        //     pawn.Model.GetComponent<Animator>().Play("Death");
+        // }
         Destroy(gameObject);
     }
 

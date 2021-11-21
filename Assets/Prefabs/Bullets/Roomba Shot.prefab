@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8061707729531987766}
   - component: {fileID: -7562469688537319190}
   - component: {fileID: 8061707729531987753}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Roomba Shot
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -83,7 +83,10 @@ MonoBehaviour:
     fireRate: 2
     numBullets: 1
     bulletSpacing: 0
+    angle: 0
   particle: {fileID: 0}
+  healthPack: {fileID: 0}
+  healthPackProbability: 0.25
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +99,7 @@ GameObject:
   - component: {fileID: 8061707729862278868}
   - component: {fileID: 8061707729862278871}
   - component: {fileID: 9177137076577153167}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
