@@ -50,6 +50,7 @@ public class Pawn : MonoBehaviour
     public float FireRate { get { return fireRate; } }
 
     public Bullet bullet;
+    public Bullet.BulletLevel powerUp;
     private bool isShooting;
     private float fireTimer;
 
@@ -225,9 +226,9 @@ public class Pawn : MonoBehaviour
     // Ask server to spawn bullet prefab
     public void Shoot(Quaternion aim)
     {
-        int numBullets = bullet.GetNumBullets(currentLevel);
-        float bulletSpacing = bullet.GetBulletSpacing(currentLevel);
-        float bulletAngle = bullet.GetBulletAngle(currentLevel);
+        int numBullets = bullet.GetNumBullets(currentLevel) + powerUp.numBullets;
+        float bulletSpacing = bullet.GetBulletSpacing(currentLevel) + powerUp.bulletSpacing;
+        float bulletAngle = bullet.GetBulletAngle(currentLevel) + powerUp.angle;
 
         float spaceFactor = (numBullets - 1.0f) / 2.0f;
         Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor);
@@ -244,7 +245,7 @@ public class Pawn : MonoBehaviour
         {
             GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim * Quaternion.Euler(0.0f, startAngle + (angleStep * i), 0.0f));
             if (pawnController is PlayerController)
-                b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
+                b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController, powerUp, currentLevel);
         }
     }
 
@@ -252,6 +253,12 @@ public class Pawn : MonoBehaviour
     public void Bomb(Vector3 target)
     {
         GameObject b = Instantiate(bullet.gameObject, target, Quaternion.identity);
+    }
+
+    // Power up bullets
+    public void PowerUp(Bullet.BulletLevel level, float duration)
+    {
+        powerUp = level;
     }
 
     // ---------
