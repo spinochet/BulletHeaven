@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour
     protected PlayerController owner = null;
     protected int currentLevel = 0;
 
+    private BulletLevel powerUp;
+
     void Awake()
     {
         SoundManager.Instance.Play(name);
@@ -33,10 +35,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!owner)
-            transform.position += transform.forward * levels[currentLevel].speed * Time.deltaTime;
+        if (owner)
+            transform.position += transform.forward * (levels[owner.CurrentLevel].speed + owner.pawn.powerUp.speed) * Time.unscaledDeltaTime;
         else
-            transform.position += transform.forward * levels[owner.CurrentLevel].speed * Time.unscaledDeltaTime;
+            transform.position += transform.forward * levels[currentLevel].speed * Time.deltaTime;
             
         transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
     }
@@ -70,10 +72,11 @@ public class Bullet : MonoBehaviour
     }
 
     // Set the ownwe of the bullet
-    public void SetOwner(PlayerController playerController, int bulletLevel = 0)
+    public void SetOwner(PlayerController playerController, BulletLevel _powerUp, int bulletLevel = 0)
     {
         owner = playerController;
         currentLevel = bulletLevel >= levels.Count ? levels.Count : bulletLevel;
+        powerUp = _powerUp;
     }
 
     public void OnTriggerEnter(Collider col)
@@ -90,7 +93,11 @@ public class Bullet : MonoBehaviour
 
             float hp = 1;
             if (col.transform.GetComponent<Pawn>()) {
-                hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage);
+                if (owner)
+                    hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage + owner.pawn.powerUp.damage);
+                else
+                    hp = col.transform.GetComponent<Pawn>().TakeDamage(levels[level].damage);
+
                 if (hp <= 0 && owner) {
 
                     // Getting player HP percentage

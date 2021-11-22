@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 abstract public class PawnController : MonoBehaviour 
 {
-    [SerializeField] protected Pawn pawn;
+    [SerializeField] public Pawn pawn;
 
     abstract public void Destroy(Pawn _pawn);
 
