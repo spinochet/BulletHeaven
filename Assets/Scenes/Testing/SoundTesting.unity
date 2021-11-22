@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 1113288142577064117, guid: 7d0a34beed3af4bc7b95658f9ec8754f,
         type: 3}
       propertyPath: Mute
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1113288142577064118, guid: 7d0a34beed3af4bc7b95658f9ec8754f,
         type: 3}
@@ -220,17 +220,17 @@ PrefabInstance:
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: soundList.Array.data[1].test
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: soundList.Array.data[2].test
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: soundList.Array.data[7].test
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
@@ -245,12 +245,12 @@ PrefabInstance:
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: soundList.Array.data[15].test
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: soundList.Array.data[14].test
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
@@ -260,12 +260,22 @@ PrefabInstance:
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: debugSound
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: soundList.Array.data[17].sound.volume
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[0].test
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126045612596913845, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: soundList.Array.data[19].test
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
@@ -533,7 +543,7 @@ PrefabInstance:
     - target: {fileID: 2587591455584452500, guid: d687b9c23008c43da9352cfb06f4641b,
         type: 3}
       propertyPath: Mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2587591455584452501, guid: d687b9c23008c43da9352cfb06f4641b,
         type: 3}
