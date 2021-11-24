@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5821586098139283693}
   - component: {fileID: 5821586098139283666}
+  - component: {fileID: 2771213001276263537}
   m_Layer: 0
   m_Name: Level 3 BGM
   m_TagString: BGM
@@ -42,9 +43,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4436091832541892969, guid: e43d0a26c72fc9347b2d182dc0952c51,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: da98d4ea3e24541aa8f13755f20d5983, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ec1f5dd59644640d68ef66c134e365fc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -128,3 +129,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!165 &2771213001276263537
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821586098139283667}
+  m_Enabled: 0
+  m_CutoffFrequency: 3500
+  m_HighpassResonanceQ: 1

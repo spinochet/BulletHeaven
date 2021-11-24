@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2587591455584452507}
   - component: {fileID: 2587591455584452500}
+  - component: {fileID: 1295031000117413350}
   m_Layer: 0
   m_Name: Level 1 BGM
   m_TagString: BGM
@@ -128,3 +129,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!165 &1295031000117413350
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587591455584452501}
+  m_Enabled: 0
+  m_CutoffFrequency: 3000
+  m_HighpassResonanceQ: 1
