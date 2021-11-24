@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -405,7 +405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318158783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 124.000015}
+  m_LocalPosition: {x: 0, y: 0, z: 121.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 827653191}
@@ -425,10 +425,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3007241012240742889, guid: d24e92fb37a0b85428816f6d50d03a84,
     type: 3}
-  _spawnPoint: {x: 0.06, y: 0, z: 5.48}
+  _spawnPoint: {x: 0.06, y: 0, z: 4.5}
   numShifts: 2
   dist: 5
-  rowDist: 4
+  rowDist: 3
   numRows: 1
   stagger: 0
   pauseLevel: 0
