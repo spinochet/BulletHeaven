@@ -217,6 +217,11 @@ public class Pawn : MonoBehaviour
     {
         stamina -= value;
         staminaTimer = 0.0f;
+
+        if (stamina > maxStamina)
+            stamina = maxStamina;
+        if (stamina < 0.0f)
+            stamina = 0.0f;
     }
 
     // ------

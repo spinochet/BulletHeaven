@@ -101,6 +101,30 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: 7e1a0ac9-e3c4-4820-b3d8-72ab09c83bcf
+        m_Path: <Keyboard>/space
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: d4cc5c33-e3f8-411a-a3b4-edf3f68842c0
+        m_Path: <Mouse>/leftButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: a2f701ab-8d00-482b-a053-7f79ee686026
+        m_Path: <Gamepad>/buttonSouth
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 1970121109247671467, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}

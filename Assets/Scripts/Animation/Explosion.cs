@@ -20,8 +20,6 @@ public class Explosion : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         //use this value to create pivot vector)
@@ -35,20 +33,8 @@ public class Explosion : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "Floor")  // Change this to bullets
-        {
-            explode();
-        }
-
-    }
-
     public void explode()
     {
-        //make object disappear
-        gameObject.SetActive(false);
-
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++)
         {
@@ -77,6 +63,7 @@ public class Explosion : MonoBehaviour
             }
         }
 
+        gameObject.SetActive(false);
     }
 
     void createPiece(int x, int y, int z)
@@ -96,6 +83,7 @@ public class Explosion : MonoBehaviour
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
+        piece.GetComponent<Rigidbody>().useGravity = true;
     }
 
 }

@@ -547,6 +547,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 852469624280170867}
+    - target: {fileID: 2999990011097236204, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -538.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999990011940870051, guid: 8da631b61c27cce47be4447e7b707202,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -538.55
+      objectReference: {fileID: 0}
     - target: {fileID: 2999990012161056476, guid: 8da631b61c27cce47be4447e7b707202,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -923,6 +933,12 @@ PrefabInstance:
       propertyPath: winAudio
       value: 
       objectReference: {fileID: 910306020642704495}
+    - target: {fileID: 7864327860207382902, guid: 3a223c081cfb0aa44a508a0919856c6f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4436091832541892969, guid: e43d0a26c72fc9347b2d182dc0952c51,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a223c081cfb0aa44a508a0919856c6f, type: 3}
 --- !u!224 &6096530823470211916 stripped

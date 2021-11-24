@@ -14,6 +14,9 @@ public class EnemyController : PawnController
     [SerializeField] protected float contactCooldown = 5.0f;
     protected float contactTimer;
 
+    [Space (5)]
+    [SerializeField] protected Explosion expurotion;
+
     public int Score { get { return score; } }
 
     protected float fireTimer;
@@ -103,9 +106,9 @@ public class EnemyController : PawnController
     // Destroy object
     public override void Destroy(Pawn _pawn)
     {
-        // if (pawn.Model.GetComponent<Animator>()) {
-        //     pawn.Model.GetComponent<Animator>().Play("Death");
-        // }
+        if (expurotion)
+            expurotion.explode();
+            
         Destroy(gameObject);
     }
 
