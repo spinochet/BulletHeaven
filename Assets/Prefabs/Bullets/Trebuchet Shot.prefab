@@ -79,11 +79,14 @@ MonoBehaviour:
   levels:
   - destroyOnCollision: 0
     speed: 0
-    damage: 50
+    damage: 33
     fireRate: 0
     numBullets: 0
     bulletSpacing: 0
+    angle: 0
   particle: {fileID: 0}
+  healthPack: {fileID: 0}
+  healthPackProbability: 0.25
   shadow: {fileID: 8061707729531987755}
   radius: 10
   expandSpeed: 2.5

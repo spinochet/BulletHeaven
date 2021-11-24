@@ -37,6 +37,11 @@ public class PlayerController : PawnController
     private bool isAbilityL;
     private bool isAbilityR;
 
+    // Touchscreen
+    public bool isTouch;
+    private bool isTouching;
+    private Vector2 touchPosition;
+
     // Awake is called when the script instance is being loaded.
     void Awake()
     {
@@ -46,17 +51,44 @@ public class PlayerController : PawnController
 
     void Update()
     {
+
         if (pawn)
         {
-            // Movement
-            pawn.Move(movement);
-
-            // Combat
+            // Timers
             fireTimer += Time.unscaledDeltaTime;
-            if (isShooting && fireTimer > 1.0f / pawn.FireRate)
+
+            if (!isTouch)
             {
-                fireTimer = 0.0f;
-                pawn.Shoot(transform.rotation);
+                // Movement
+                pawn.Move(movement);
+
+                // Combat
+                if (isShooting && fireTimer > 1.0f / pawn.FireRate)
+                {
+                    fireTimer = 0.0f;
+                    pawn.Shoot(transform.rotation);
+                }
+            }
+            else if (isTouching)
+            {
+                // Movement
+                Vector3 pawnPosition = Camera.main.WorldToScreenPoint(pawn.transform.position);
+                movement.x = touchPosition.x - pawnPosition.x;
+                movement.z = touchPosition.y - pawnPosition.y;
+
+                if (movement.magnitude > 5.0f)
+                    movement.Normalize();
+                else
+                    movement = Vector3.zero;
+
+                pawn.Move(movement);
+
+                // Combat
+                if (fireTimer > 1.0f / pawn.FireRate)
+                {
+                    fireTimer = 0.0f;
+                    pawn.Shoot(transform.rotation);
+                }
             }
 
             // Stats
@@ -159,6 +191,27 @@ public class PlayerController : PawnController
         movement.z = inputVec.y;
     }
 
+    // MoveTouch action callback
+    void OnMoveTouch(InputValue input)
+    {
+        Debug.Log("MoveTouch");
+        touchPosition = input.Get<Vector2>();
+    }
+
+    // Touch action callback
+    void OnTouch(InputValue input)
+    {
+        Debug.Log("Touch");
+        isTouching = input.Get<float>() > 0.0f ? true : false;
+    }
+
+    // Tap action callback
+    void OnTap(InputValue input)
+    {
+        OnSwitch();
+    }
+
+
     // -------------
     // COMBAT EVENTS
     // -------------
@@ -231,6 +284,8 @@ public class PlayerController : PawnController
     {
         score += points;
         experience += points;
+
+        pawn.ConsumeStamina(-5.0f);
 
         if (currentLevel < maxLevel && experienceNeeded[currentLevel] < experience)
         {

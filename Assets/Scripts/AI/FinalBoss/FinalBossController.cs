@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinalBossController : EnemyController
 {
+    [SerializeField] private Slider hp;
+
     [Header ("Big Ass Laser")]
     [SerializeField] private GameObject sideLaserPrefab;
     [SerializeField] private float sideLaserRate = 1.5f;
@@ -24,7 +28,6 @@ public class FinalBossController : EnemyController
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -57,6 +60,8 @@ public class FinalBossController : EnemyController
                 pawn.Shoot(AimAtPlayer());
             }
         }
+
+        hp.value = pawn.GetHP();
     }
 
     // Fire laser from the side of the screen

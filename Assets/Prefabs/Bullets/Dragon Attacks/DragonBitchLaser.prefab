@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8061707729531987766}
   - component: {fileID: -7112166854753641012}
   - component: {fileID: 8061707729531987753}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: DragonBitchLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,10 +81,13 @@ MonoBehaviour:
     speed: 20
     damage: 10
     fireRate: 10
-    numBullets: 3
-    bulletSpacing: 0.75
+    numBullets: 2
+    bulletSpacing: 2
+    angle: 0
   particle: {fileID: 7493259298288516860, guid: af7b3aabbc415064f86798ff9398d39b,
     type: 3}
+  healthPack: {fileID: 0}
+  healthPackProbability: 0.25
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +100,7 @@ GameObject:
   - component: {fileID: 8061707729862278868}
   - component: {fileID: 8061707729862278871}
   - component: {fileID: 5219332282022198620}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

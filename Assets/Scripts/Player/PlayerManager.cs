@@ -169,6 +169,14 @@ public class PlayerManager : MonoBehaviour
             p1.enabled = true;
     }
 
+    public void ResetScore()
+    {
+        if (p1)
+            p1.ResetPoints();
+        if (p2)
+            p2.ResetPoints();
+    }
+
     public void CheckPlayersAlive()
     {
         bool playersExist = p1 || p2;

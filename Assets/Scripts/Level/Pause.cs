@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pauseObject;
+    [SerializeField] private GameObject settings;
     private bool isPaused;
 
     public void TogglePause()
@@ -45,6 +46,17 @@ public class Pause : MonoBehaviour
             player.enabled = true;
             player.TogglePawnAnimation(true);
         }
+    }
+
+    public void Restart()
+    {
+        PlayerManager.Instance.ResetScore();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Settings()
+    {
+        settings.SetActive(true);
     }
 
     public void MainMenu()
