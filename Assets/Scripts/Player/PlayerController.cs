@@ -159,6 +159,17 @@ public class PlayerController : PawnController
         movement.z = inputVec.y;
     }
 
+    // MoveTouch action callback
+    void OnMoveTouch(InputValue input)
+    {
+        Vector2 inputVec = input.Get<Vector2>();
+        Vector3 pawnPosition = pawn.transform.position;
+
+        movement.x = inputVec.x - pawnPosition.x;
+        movement.z = inputVec.y - pawnPosition.y;
+        movement.Normalize();
+    }
+
     // -------------
     // COMBAT EVENTS
     // -------------
