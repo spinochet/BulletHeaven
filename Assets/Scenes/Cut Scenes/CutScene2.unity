@@ -196,6 +196,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Don't worry Arthur! Let's go clear your name.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -466,6 +474,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: All this trouble... because I summoned you.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -583,6 +599,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1084,6 +1108,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: I am afraid that I have a request for you now, Princess.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1216,6 +1248,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
+    - m_Name: 
+      m_Id: 7f61eb39-93fe-4833-b4c4-27c87fcbe5fb
+      m_Path: <Touchscreen>/press
+      m_Interactions: Hold(duration=1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
   nextLevel: Level 2 Offline
 --- !u!114 &771462984
 MonoBehaviour:
@@ -1339,6 +1379,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1873,6 +1921,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: While we have been battling, I recieved an emergency alert from Camelocity.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1990,6 +2046,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2232,6 +2296,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: I think I can take it from here, Arthur.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2349,6 +2421,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2545,6 +2625,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ddd99642-703e-48de-bf7a-727b4f3c426f
+      m_Path: <Touchscreen>/primaryTouch/tap
       m_Interactions: 
       m_Processors: 
       m_Groups: 

@@ -196,6 +196,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: "It seems like that was the last of them. I\u2019m glad we were able to
     defeat them together. "
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -328,6 +336,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
+    - m_Name: 
+      m_Id: bd5a9bfd-9489-40a9-b476-cde618363d6d
+      m_Path: <Touchscreen>/press
+      m_Interactions: Hold(duration=1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
   nextLevel: Level 3 Offline
 --- !u!114 &183288540
 MonoBehaviour:
@@ -452,6 +468,14 @@ MonoBehaviour:
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
       m_Interactions: Hold(duration=0.05,pressPoint=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1026,6 +1050,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: "I\u2019m detecting strange activity around us. I can\u2019t determine where
     we are or even what timeline we\u2019re in."
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1219,6 +1251,14 @@ MonoBehaviour:
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
       m_Interactions: Hold(duration=0.05,pressPoint=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1419,6 +1459,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: 'What can possibly be left for us to fight? '
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1615,6 +1663,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: What is it, Arthur?
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1733,6 +1789,14 @@ MonoBehaviour:
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
       m_Interactions: Hold(duration=0.05,pressPoint=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Space
@@ -1940,6 +2004,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: "Home is not an option. I\u2019m sensing enemies looking to swarm us."
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2141,6 +2213,14 @@ MonoBehaviour:
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
       m_Interactions: Hold(duration=0.05,pressPoint=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 07e76fae-447a-4511-bbbc-b0d01f9f4cb7
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Space
