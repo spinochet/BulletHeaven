@@ -318,7 +318,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 1377a6c630a7e406f8a710108213f628, type: 3}
-      volume: 1.25
+      volume: 1
       soundCooldown: 3
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 2a8d8cfd09cbd44fe99ddfc8dfae110a, type: 3}
-      volume: 0.5
+      volume: 0.75
       soundCooldown: 0.75
       soundLastPlayed: 0
       timeLastPlayed: 0

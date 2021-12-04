@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1490,6 +1490,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500101294}
   m_CullTransparentMesh: 0
+--- !u!1001 &505785919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7945459
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10979674
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.37454492
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970904716732754503, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_Name
+      value: Intro Theme
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dadf7e2e7c4fa495284ee72539e348c4, type: 3}
 --- !u!1 &506183868
 GameObject:
   m_ObjectHideFlags: 0
