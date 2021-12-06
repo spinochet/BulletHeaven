@@ -87,9 +87,17 @@
                 },
                 {
                     "name": "Tap",
-                    "type": "Button",
-                    "id": "80576962-33e1-4f87-b75e-a406b4898653",
+                    "type": "PassThrough",
+                    "id": "f75ab4bb-62d4-4975-8682-7677bcfd3c02",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SecondTap",
+                    "type": "Value",
+                    "id": "f460a2e8-c844-4a33-860d-739f77fde53d",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 }
@@ -559,7 +567,7 @@
                 },
                 {
                     "name": "",
-                    "id": "c3cba5f8-c3fe-408a-963f-02148b5e8249",
+                    "id": "212454e8-78ce-40f7-b84e-2a186fd9a066",
                     "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
@@ -567,6 +575,28 @@
                     "action": "Tap",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e7a29bf5-2b16-484a-a37a-3fb00a16cbde",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondTap",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "8dcde04e-3360-4312-af55-b8c9e5810171",
+                    "path": "<Touchscreen>/touch0/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touchscreen",
+                    "action": "SecondTap",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

@@ -58,8 +58,8 @@ public class Pawn : MonoBehaviour
     [Header ("Abilities")]
     [SerializeField] private Ability abilityL;
     [SerializeField] private Ability abilityR;
-    private bool isAbilityL;
-    private bool isAbilityR;
+    public bool isAbilityL;
+    public bool isAbilityR;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -85,6 +85,10 @@ public class Pawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 adjustedPosition = transform.position;
+        adjustedPosition.y = 0.0f;
+        transform.position = adjustedPosition;
+
         // Update move
         if (!model.activeSelf && partner)
         {
@@ -145,6 +149,10 @@ public class Pawn : MonoBehaviour
     public void Move(Vector3 moveVector)
     {
         controller.Move(moveVector * speed * Time.unscaledDeltaTime);
+
+        Vector3 adjustedPosition = transform.position;
+        adjustedPosition.y = 0.0f;
+        transform.position = adjustedPosition;
     }
 
     // Pause pawn's animation

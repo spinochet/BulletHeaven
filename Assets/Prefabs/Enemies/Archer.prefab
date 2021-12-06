@@ -84,7 +84,7 @@ MonoBehaviour:
   contactDamage: 20
   contactKnockback: 20
   contactCooldown: 5
-  expurotion: {fileID: 1899748844727248758}
+  expurotion: {fileID: 0}
   shootFrequency: 0.3
   bullets: 3
   fireCooldown: 3
@@ -201,18 +201,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3729288099447234142}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1899748844727248758 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2998364115250575656, guid: 82e764f4db14bb74daed94f636d36436,
-    type: 3}
-  m_PrefabInstance: {fileID: 3729288099447234142}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb95dd8ca53a8c44696e70a9143a8ccb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6931698226566130735
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -208,7 +208,8 @@ public class PlayerController : PawnController
     // Tap action callback
     void OnTap(InputValue input)
     {
-        OnSwitch();
+        // if (pawn)
+        //     OnSwitch();
     }
 
 
@@ -244,6 +245,37 @@ public class PlayerController : PawnController
             if (input.Get<float>() > 0.0f) pawn.ActivateAbility(1);
             else pawn.DeactivateAbility(1);
         }
+    }
+
+    // AbilityL action callback function
+    void SecondTap(InputValue input)
+    {
+        if (pawn && enabled)
+        {
+            if (input.Get<float>() > 0.0f) pawn.ActivateAbility(0);
+            else pawn.DeactivateAbility(0);
+        }
+    }
+
+    public bool AbilityButton()
+    {
+        if (pawn && enabled)
+        {
+            if (!pawn.isAbilityL)
+            {
+                pawn.ActivateAbility(0);
+                Debug.Log("Activate");
+            }
+            else
+            {
+                pawn.DeactivateAbility(0);
+                Debug.Log("Deactivate");
+            }
+
+            return pawn.isAbilityL;
+        }
+
+        return false;
     }
 
     // ------
