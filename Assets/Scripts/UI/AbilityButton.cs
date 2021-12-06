@@ -21,4 +21,9 @@ public class AbilityButton : MonoBehaviour
     {
         player.AbilityButton();
     }
+
+    public void Switch()
+    {
+        player.Switch();
+    }
 }

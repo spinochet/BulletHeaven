@@ -294,6 +294,11 @@ public class PlayerController : PawnController
         pawn.ToggleAnimation(playing);
     }
 
+    public void Switch()
+    {
+        OnSwitch();
+    }
+
     // Switch action callback
     void OnSwitch()
     {
