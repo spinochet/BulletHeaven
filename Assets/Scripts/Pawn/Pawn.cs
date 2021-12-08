@@ -15,7 +15,6 @@ public class Pawn : MonoBehaviour
     [SerializeField] private string name;
     [SerializeField] private Sprite portrait;
     [SerializeField] private GameObject model;
-    private int currentLevel = 0;
 
     public GameObject Model { get { return model; } }
     public Sprite Portrait { get { return portrait; } }
@@ -239,6 +238,12 @@ public class Pawn : MonoBehaviour
     // Ask server to spawn bullet prefab
     public void Shoot(Quaternion aim)
     {
+        int currentLevel = 0;
+        if (pawnController is PlayerController)
+        {
+            currentLevel = ((PlayerController)pawnController).CurrentLevel;
+        }
+
         int numBullets = bullet.GetNumBullets(currentLevel) + powerUp.numBullets;
         float bulletSpacing = bullet.GetBulletSpacing(currentLevel) + powerUp.bulletSpacing;
         float bulletAngle = bullet.GetBulletAngle(currentLevel) + powerUp.angle;
@@ -281,6 +286,11 @@ public class Pawn : MonoBehaviour
     // Activate chosen ability
     public void ActivateAbility(int i)
     {
+        int currentLevel = 0;
+        if (pawnController is PlayerController)
+        {
+            currentLevel = ((PlayerController)pawnController).CurrentLevel;
+        }
         if (i == 0 && abilityL != null && stamina > abilityL.GetCost())
         {
             abilityL.Activate(currentLevel);

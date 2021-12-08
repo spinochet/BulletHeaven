@@ -326,8 +326,10 @@ public class PlayerController : PawnController
 
         if (currentLevel < maxLevel && experienceNeeded[currentLevel] < experience)
         {
+
             experience = 0;
             currentLevel++;
+            Debug.Log("Current Level: " + currentLevel);
         }
     }
 

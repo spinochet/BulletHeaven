@@ -208,6 +208,7 @@ MonoBehaviour:
   radius: 10
   expandSpeed: 2.5
   targets: []
+  vfx: {fileID: 7493259298288516860, guid: bc20ed3930baebd4697dd3371be9fac8, type: 3}
 --- !u!1 &8061707729862278857
 GameObject:
   m_ObjectHideFlags: 0

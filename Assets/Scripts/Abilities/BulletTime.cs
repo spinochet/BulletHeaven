@@ -15,7 +15,7 @@ public class BulletTime : Ability
 
     override public void Activate(int level = 0)
     {
-        level = level >= levels.Count ? levels.Count : level;
+        level = level >= (levels.Count-1) ? (levels.Count-1) : level;
 
         Time.timeScale = levels[level].timeScale;
         Time.fixedDeltaTime = levels[level].timeScale / 60.0f;

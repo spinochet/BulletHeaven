@@ -21,6 +21,7 @@ public class ChainLightning : Ability
 
     override public void Activate(int level = 0)
     {
+        level = level >= (levels.Count-1) ? (levels.Count-1) : level;
         StartCoroutine(Chain(level));
     }
 

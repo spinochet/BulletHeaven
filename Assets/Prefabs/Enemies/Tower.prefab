@@ -914,10 +914,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pawn: {fileID: 8019127529922287089}
+  score: 100
   speed: 2.5
   contactDamage: 20
   contactKnockback: 20
   contactCooldown: 5
+  vfx: {fileID: 7493259298288516860, guid: c015bd4773151c64185bc2def47cd039, type: 3}
   shootFrequency: 0.2
   bullets: 3
   fireCooldown: 1.5
@@ -949,8 +951,18 @@ MonoBehaviour:
     type: 3}
   fireRate: 4
   bullet: {fileID: 0}
+  powerUp:
+    destroyOnCollision: 0
+    speed: 0
+    damage: 0
+    fireRate: 0
+    numBullets: 0
+    bulletSpacing: 0
+    angle: 0
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
+  isAbilityL: 0
+  isAbilityR: 0
 --- !u!114 &8140509201408157259
 MonoBehaviour:
   m_ObjectHideFlags: 0

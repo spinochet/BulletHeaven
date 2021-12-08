@@ -81,6 +81,20 @@ MonoBehaviour:
     speed: 15
     damage: 6
     fireRate: 10
+    numBullets: 1
+    bulletSpacing: 0
+    angle: 20
+  - destroyOnCollision: 1
+    speed: 15
+    damage: 6
+    fireRate: 10
+    numBullets: 2
+    bulletSpacing: 0
+    angle: 20
+  - destroyOnCollision: 1
+    speed: 15
+    damage: 6
+    fireRate: 10
     numBullets: 3
     bulletSpacing: 0
     angle: 20

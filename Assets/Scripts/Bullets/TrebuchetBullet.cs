@@ -11,6 +11,8 @@ public class TrebuchetBullet : Bullet
     [SerializeField] private float expandSpeed = 2.5f;
     [SerializeField] private List<GameObject> targets;
 
+    [SerializeField] protected GameObject vfx;
+
     private float timer = 0.0f;
 
     void Awake()
@@ -38,6 +40,10 @@ public class TrebuchetBullet : Bullet
                 }
             }
             SoundManager.Instance.Play("Boulder Crash");
+            if (vfx) {
+                Instantiate(vfx, transform.position, transform.rotation);
+            }
+            
             Destroy(gameObject);
             
         }

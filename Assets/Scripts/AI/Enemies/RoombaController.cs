@@ -9,6 +9,7 @@ public class RoombaController : EnemyController
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        particleSystem = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -28,6 +29,16 @@ public class RoombaController : EnemyController
         {
             fireTimer = 0.0f;
             pawn.Shoot(transform.rotation);
+        }
+
+        if (pawn) {
+            
+            if (pawn.GetHP() <= 50.0f) {
+                Debug.Log("Roomba is on half health!");
+                particleSystem.Play();
+            } else {
+                particleSystem.Stop();
+            }
         }
     }
 
