@@ -76,6 +76,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pawn: {fileID: 0}
-  experienceNeeded: a00f0000581b0000e02e0000
+  experienceNeeded: a00f0000401f0000c8320000
   alive: 0
   isTouch: 0

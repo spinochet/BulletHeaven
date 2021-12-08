@@ -33,7 +33,7 @@ public class RoombaController : EnemyController
 
         if (pawn) {
             
-            if (pawn.GetHP() <= 50.0f) {
+            if (pawn.GetHP() <= 0.50f) {
                 Debug.Log("Roomba is on half health!");
                 particleSystem.Play();
             } else {

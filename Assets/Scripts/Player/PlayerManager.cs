@@ -191,4 +191,16 @@ public class PlayerManager : MonoBehaviour
             if (lose) lose.GetComponent<LoseController>().ToggleLose(true);
         }
     }
+
+    public float GetHP()
+    {
+        float alpha = 0f;
+        if (player1Pawn)
+            alpha += player1Pawn.GetHP();
+        if (player2Pawn)
+            alpha += player2Pawn.GetHP();
+
+        alpha = (2f - alpha) / 2f;
+        return alpha;
+    }
 }
