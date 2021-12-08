@@ -78,4 +78,4 @@ MonoBehaviour:
   pawn: {fileID: 0}
   experienceNeeded: 
   alive: 0
-  isTouch: 1
+  isTouch: 0
