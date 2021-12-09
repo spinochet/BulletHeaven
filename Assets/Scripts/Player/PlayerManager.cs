@@ -180,7 +180,7 @@ public class PlayerManager : MonoBehaviour
     public void CheckPlayersAlive()
     {
         bool playersExist = p1 || p2;
-        bool playersDead = (p1 && !p1.IsAlive) || (p2 && !p2.IsAlive);
+        bool playersDead = (p1 && !p1.IsAlive) && (p2 && !p2.IsAlive);
 
         if (playersExist && playersDead)
         {
