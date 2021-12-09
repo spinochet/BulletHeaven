@@ -78,7 +78,7 @@ MonoBehaviour:
   name: Bullet
   levels:
   - destroyOnCollision: 1
-    speed: 10
+    speed: 12.5
     damage: 10
     fireRate: 1
     numBullets: 1

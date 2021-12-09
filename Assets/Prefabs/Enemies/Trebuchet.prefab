@@ -300,6 +300,7 @@ MonoBehaviour:
   vfx: {fileID: 7493259298288516860, guid: 5dc0add50cda7d044a42d0938f21d2e7, type: 3}
   shootFrequency: 0.3
   anim: {fileID: 486947460283430292}
+  hp: {fileID: 1177478060571957246}
 --- !u!114 &7126290457998975314
 MonoBehaviour:
   m_ObjectHideFlags: 0

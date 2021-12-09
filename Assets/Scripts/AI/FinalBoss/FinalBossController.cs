@@ -58,6 +58,7 @@ public class FinalBossController : EnemyController
             {
                 fireTimer = 0.0f;
                 pawn.Shoot(AimAtPlayer());
+                SoundManager.Instance.Play("Dragon Bullets");
             }
         }
 

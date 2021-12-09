@@ -48,8 +48,10 @@ public class HUDManager : MonoBehaviour
     void Update()
     {
         // Color c = vingette.color;
-        // c.a = PlayerManager.Instance.GetHP();
+        // c.a = 0.75f;
         // vingette.color = c;
+
+
     }
 
     // Assign HUD depending on player number
