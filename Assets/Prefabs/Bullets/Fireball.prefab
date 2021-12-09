@@ -86,14 +86,14 @@ MonoBehaviour:
     angle: 0
   - destroyOnCollision: 1
     speed: 15
-    damage: 10
+    damage: 6
     fireRate: 15
     numBullets: 2
     bulletSpacing: 0.5
     angle: 0
   - destroyOnCollision: 1
     speed: 15
-    damage: 10
+    damage: 5
     fireRate: 20
     numBullets: 3
     bulletSpacing: 0.5

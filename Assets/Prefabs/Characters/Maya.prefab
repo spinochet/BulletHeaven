@@ -74,8 +74,8 @@ MonoBehaviour:
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
-  staminaRegenRate: 0
-  staminaRegenCooldown: 0
+  staminaRegenRate: 10
+  staminaRegenCooldown: 2
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
   fireRate: 20
@@ -90,6 +90,8 @@ MonoBehaviour:
     angle: 0
   abilityL: {fileID: 5300418926613717126}
   abilityR: {fileID: 0}
+  isAbilityL: 0
+  isAbilityR: 0
 --- !u!114 &5300418926613717126
 MonoBehaviour:
   m_ObjectHideFlags: 0

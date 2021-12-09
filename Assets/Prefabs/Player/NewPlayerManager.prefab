@@ -381,7 +381,16 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Tower Crumble
+  - name: Tower Death
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}
+      volume: 1
+      soundCooldown: 2
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Trebuchet Death
     sound:
       sound:
       - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}

@@ -87,7 +87,7 @@ MonoBehaviour:
   - destroyOnCollision: 1
     speed: 15
     damage: 6
-    fireRate: 10
+    fireRate: 6
     numBullets: 2
     bulletSpacing: 0
     angle: 20
