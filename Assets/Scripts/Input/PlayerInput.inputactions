@@ -358,6 +358,28 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "06a4bfd0-b3c0-4105-9fd9-add258f5eb98",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityL",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "e491f438-0b92-4726-bbf9-9e30ed3ce975",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
+                    "action": "AbilityL",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "0d4a6b93-c118-4a2e-9995-6c90f6201fa2",
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
@@ -491,7 +513,7 @@
                 {
                     "name": "",
                     "id": "a71cc481-c573-470f-9566-69dfd33091de",
-                    "path": "",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamecube",
@@ -528,6 +550,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "M&K",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e20bbb1-98ed-4c09-8c67-a3602fa0ebf2",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
