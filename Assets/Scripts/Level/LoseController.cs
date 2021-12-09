@@ -17,7 +17,7 @@ public class LoseController : MonoBehaviour
             if (level)
                 level.ToggleScrolling(false);
 
-                Time.timeScale = 0.0f;
+            Time.timeScale = 0.0f;
         }
     }
 
@@ -36,6 +36,8 @@ public class LoseController : MonoBehaviour
         {
             player.LosePoints();
         }
+
+        SoundManager.Instance.ToggleHighPass(false);
     }
 
     // Go back to main menu

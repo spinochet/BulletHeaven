@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506f08b091291f84b8db4a40129950e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DragonFireShot
+  name: Dragon Fire Shot
   levels:
   - destroyOnCollision: 0
     speed: 50

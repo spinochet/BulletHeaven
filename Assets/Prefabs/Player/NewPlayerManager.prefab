@@ -320,7 +320,7 @@ MonoBehaviour:
       sound:
       - {fileID: 8300000, guid: aba8b9272d0614df787d0a62c3a98735, type: 3}
       volume: 1
-      soundCooldown: 2
+      soundCooldown: 0
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0

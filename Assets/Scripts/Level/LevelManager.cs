@@ -102,26 +102,12 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(bullet.gameObject);
         }
-
-        SideLaser[] lasers = FindObjectsOfType(typeof(SideLaser)) as SideLaser[];
-        foreach (SideLaser laser in lasers)
-        {
-            Destroy(laser.gameObject);
-        }
-
-        SwordAttack[] swords = FindObjectsOfType(typeof(SwordAttack)) as SwordAttack[];
-        foreach (SwordAttack sword in swords)
-        {
-            Destroy(sword.gameObject);
-        }
         
         WaveSpawner3D[] waves = FindObjectsOfType(typeof(WaveSpawner3D)) as WaveSpawner3D[];
         foreach (WaveSpawner3D wave in waves)
         {
             wave.Reset();
         }
-
-
 
         // Spawn players
         PlayerManager.Instance.SpawnPawns(new Vector3(-2.0f, 0.0f, -2.0f), new Vector3(2.0f, 0.0f, -2.0f));

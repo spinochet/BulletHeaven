@@ -46,6 +46,8 @@ public class SwordAttack : MonoBehaviour
             float angle = 0.0f;
             timer = 0.0f;
 
+            SoundManager.Instance.Play("Dragon Tail Swipe");
+
             while (angle < 200.0f)
             {
                 angle += speed * Time.deltaTime;
