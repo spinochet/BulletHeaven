@@ -3,11 +3,15 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 public class SettingsController : MonoBehaviour
 {
     public AudioMixer audio;
     public float threshold = -40.0f;
+
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private GameObject button;
 
     // Start is called before the first frame update
     void Start()

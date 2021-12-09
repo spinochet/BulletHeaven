@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class LoseController : MonoBehaviour
 {
     [SerializeField] private GameObject lose;
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private GameObject button;
 
     public void ToggleLose(bool on)
     {
@@ -18,6 +21,8 @@ public class LoseController : MonoBehaviour
                 level.ToggleScrolling(false);
 
             Time.timeScale = 0.0f;
+
+            eventSystem.SetSelectedGameObject(button);
         }
     }
 

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -199,6 +199,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
       m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -418,6 +426,14 @@ MonoBehaviour:
       m_Id: 463bb267-bb95-4264-a586-139a9a8392e1
       m_Path: <Touchscreen>/press
       m_Interactions: Hold(duration=1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 7ecdf9f9-1506-477c-bef0-88f9705704c6
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Skip
@@ -1035,6 +1051,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: What's happening?!
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1165,6 +1189,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Given the state of emergency, I am at your service, Princess.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1290,6 +1322,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
       m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1642,6 +1682,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Gods please, send me a warrior. Someone that can help.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1767,6 +1815,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
       m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1903,6 +1959,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: 'I need your help to battle them and evade their bastardly desires.  '
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2028,6 +2092,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
       m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2618,6 +2690,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: 'That was an abnormal experience I would never like to relive. I would like
     to know now: who are you and where am I? '
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -2744,6 +2824,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
       m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -3068,6 +3156,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: 'I am known as Arthur. I am from Camelocity, a metropolis in the northern
     sector of Earth. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -3194,6 +3290,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
       m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 

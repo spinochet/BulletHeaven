@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,6 +10,9 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pauseObject;
     [SerializeField] private GameObject settings;
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private GameObject button;
+    [SerializeField] private GameObject settingsButton;
     private bool isPaused;
 
     public void TogglePause()
@@ -24,6 +28,7 @@ public class Pause : MonoBehaviour
 
     void ToggleOn()
     {
+        eventSystem.SetSelectedGameObject(button);
         pauseObject.SetActive(true);
         Time.timeScale = 0.0f;
 
@@ -70,6 +75,7 @@ public class Pause : MonoBehaviour
     public void Settings()
     {
         settings.SetActive(true);
+        eventSystem.SetSelectedGameObject(settingsButton);
     }
 
     public void MainMenu()
