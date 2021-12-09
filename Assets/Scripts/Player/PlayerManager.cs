@@ -189,6 +189,8 @@ public class PlayerManager : MonoBehaviour
 
             GameObject level = GameObject.Find("LoseMenu");
             if (lose) lose.GetComponent<LoseController>().ToggleLose(true);
+
+            SoundManager.Instance.ToggleHighPass(true);
         }
     }
 

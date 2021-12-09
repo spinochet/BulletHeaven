@@ -125,6 +125,22 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: 823a6ee2-69bb-47c0-8c24-7b927b75cb70
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 77e55576-8bd9-4f7f-8678-56546b05a2c6
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 1970121109247671467, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}
@@ -164,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfd9762294fc3b418fad9713e40c43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugSound: 0
+  debugSound: 1
   source: {fileID: 7507915141636075429}
   soundList:
   - name: Fireball
@@ -278,11 +294,14 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Dragon Fire Shot
+  - name: Dragon Bullets
     sound:
       sound:
-      - {fileID: 8300000, guid: aba8b9272d0614df787d0a62c3a98735, type: 3}
-      volume: 0.7
+      - {fileID: 8300000, guid: 52c904eb6713c471ea8837a39c75874d, type: 3}
+      - {fileID: 8300000, guid: 1190bdc1ea1804655868c57c3aac50b1, type: 3}
+      - {fileID: 8300000, guid: 8cba64e20a82b4265a27256a00f7daf0, type: 3}
+      - {fileID: 8300000, guid: 798f63e6484bb4ff8bd72cc3ce0fee3f, type: 3}
+      volume: 0.5
       soundCooldown: 0.35
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -292,16 +311,16 @@ MonoBehaviour:
       sound:
       - {fileID: 8300000, guid: c560587ccb78a4f7d98e7e55f6fa3b74, type: 3}
       volume: 0.7
-      soundCooldown: 0
+      soundCooldown: 3
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Dragon Laser Blast
+  - name: Dragon Fire Shot
     sound:
       sound:
-      - {fileID: 8300000, guid: 187851b7d143d4f22b3b3bf39955442d, type: 3}
-      volume: 0.5
-      soundCooldown: 2
+      - {fileID: 8300000, guid: aba8b9272d0614df787d0a62c3a98735, type: 3}
+      volume: 1
+      soundCooldown: 0
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
@@ -359,6 +378,15 @@ MonoBehaviour:
       - {fileID: 8300000, guid: fd807cd2eecd1415ea41831f6142966a, type: 3}
       volume: 2
       soundCooldown: 1
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Tower Crumble
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}
+      volume: 1
+      soundCooldown: 2
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0

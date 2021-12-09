@@ -18,6 +18,8 @@ public class Pause : MonoBehaviour
 
         if (isPaused) ToggleOn();
         else ToggleOff();
+
+        SoundManager.Instance.ToggleHighPass(isPaused);
     }
 
     void ToggleOn()
@@ -50,8 +52,19 @@ public class Pause : MonoBehaviour
 
     public void Restart()
     {
-        PlayerManager.Instance.ResetScore();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LevelManager level = GameObject.FindObjectOfType(typeof(LevelManager)) as LevelManager;
+        if (level)
+            level.RestoreCheckpoint();
+
+        Time.timeScale = 1.0f;
+
+        PlayerController[] players = FindObjectsOfType(typeof(PlayerController)) as PlayerController[];
+        foreach (PlayerController player in players)
+        {
+            player.LosePoints();
+        }
+
+        TogglePause();
     }
 
     public void Settings()
