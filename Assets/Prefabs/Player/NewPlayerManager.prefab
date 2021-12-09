@@ -125,6 +125,22 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: 823a6ee2-69bb-47c0-8c24-7b927b75cb70
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 77e55576-8bd9-4f7f-8678-56546b05a2c6
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 1970121109247671467, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}
