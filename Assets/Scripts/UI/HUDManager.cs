@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class HUDManager : MonoBehaviour
 {
     private HUDController p1 = null;
     private HUDController p2 = null;
+    public RawImage vingette;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -41,6 +43,15 @@ public class HUDManager : MonoBehaviour
                 p2.gameObject.SetActive(false);
             }
         }
+    }
+
+    void Update()
+    {
+        // Color c = vingette.color;
+        // c.a = 0.75f;
+        // vingette.color = c;
+
+
     }
 
     // Assign HUD depending on player number

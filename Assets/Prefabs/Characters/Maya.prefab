@@ -74,14 +74,24 @@ MonoBehaviour:
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
-  staminaRegenRate: 5
-  staminaRegenCooldown: 2.5
+  staminaRegenRate: 10
+  staminaRegenCooldown: 2
   bulletPrefab: {fileID: 8061707729531987755, guid: b0164494330d11a4db5fb694284bdb9b,
     type: 3}
   fireRate: 20
   bullet: {fileID: 0}
+  powerUp:
+    destroyOnCollision: 0
+    speed: 0
+    damage: 0
+    fireRate: 0
+    numBullets: 0
+    bulletSpacing: 0
+    angle: 0
   abilityL: {fileID: 5300418926613717126}
   abilityR: {fileID: 0}
+  isAbilityL: 0
+  isAbilityR: 0
 --- !u!114 &5300418926613717126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,17 +104,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fb8a82291cf418083a947537bbedd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 20
+  cost: 40
   overTime: 0
   particles: {fileID: 7493259298288516860, guid: cee05959a43334644b876b24f6869b3e,
     type: 3}
   trail: {fileID: 7493259298288516860, guid: 11b055935b9310544b5641ec8d90e02d, type: 3}
   levels:
-  - maxChain: 3
+  - maxChain: 2
     timing: 0.1
-    minDist: 5
+    minDist: 25
     damage: 100
-    cost: 0
+    cost: 40
 --- !u!1001 &2596798677641106391
 PrefabInstance:
   m_ObjectHideFlags: 0

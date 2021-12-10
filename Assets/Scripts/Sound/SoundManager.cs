@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEditor;
 
@@ -109,5 +110,11 @@ public class SoundManager : MonoBehaviour
                 source.PlayOneShot(sound.sound[soundToPlay], sound.volume);
             }
         }
+    }
+
+    // Toggle high pass filer
+    public void ToggleHighPass(bool toggle)
+    {
+        GameObject.FindWithTag("BGM").GetComponent<AudioHighPassFilter>().enabled = toggle;
     }
 }

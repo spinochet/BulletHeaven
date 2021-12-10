@@ -49,7 +49,7 @@ MonoBehaviour:
   m_NotificationBehavior: 2
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_JoinBehavior: 1
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -70,13 +70,77 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: f64e737c-cf7f-4d96-ac4a-ec19fc8e63d8
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 51e2a410-b1e5-4fe1-9d51-671626756f57
+        m_Path: <Touchscreen>/press
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: ed063ae3-bd12-4b68-a82d-704214b8c6bc
+        m_Path: <Keyboard>/enter
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: c8039bd4-864a-4152-9184-6ed2b61ad99e
+        m_Path: <Gamepad>/start
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 7e1a0ac9-e3c4-4820-b3d8-72ab09c83bcf
+        m_Path: <Keyboard>/space
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: a2f701ab-8d00-482b-a053-7f79ee686026
+        m_Path: <Gamepad>/buttonSouth
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 54be7010-1bb6-4f6e-beda-aab7b3faa316
+        m_Path: <Mouse>/leftButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 823a6ee2-69bb-47c0-8c24-7b927b75cb70
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 77e55576-8bd9-4f7f-8678-56546b05a2c6
+        m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 1970121109247671467, guid: c6a9fff894159e34da498cc22a7327de,
     type: 3}
@@ -116,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfd9762294fc3b418fad9713e40c43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugSound: 0
+  debugSound: 1
   source: {fileID: 7507915141636075429}
   soundList:
   - name: Fireball
@@ -230,11 +294,14 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Dragon Fire Shot
+  - name: Dragon Bullets
     sound:
       sound:
-      - {fileID: 8300000, guid: aba8b9272d0614df787d0a62c3a98735, type: 3}
-      volume: 0.7
+      - {fileID: 8300000, guid: 52c904eb6713c471ea8837a39c75874d, type: 3}
+      - {fileID: 8300000, guid: 1190bdc1ea1804655868c57c3aac50b1, type: 3}
+      - {fileID: 8300000, guid: 8cba64e20a82b4265a27256a00f7daf0, type: 3}
+      - {fileID: 8300000, guid: 798f63e6484bb4ff8bd72cc3ce0fee3f, type: 3}
+      volume: 0.5
       soundCooldown: 0.35
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -244,16 +311,16 @@ MonoBehaviour:
       sound:
       - {fileID: 8300000, guid: c560587ccb78a4f7d98e7e55f6fa3b74, type: 3}
       volume: 0.7
-      soundCooldown: 0
+      soundCooldown: 3
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
-  - name: Dragon Laser Blast
+  - name: Dragon Fire Shot
     sound:
       sound:
-      - {fileID: 8300000, guid: 187851b7d143d4f22b3b3bf39955442d, type: 3}
-      volume: 0.5
-      soundCooldown: 2
+      - {fileID: 8300000, guid: aba8b9272d0614df787d0a62c3a98735, type: 3}
+      volume: 1
+      soundCooldown: 0
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
@@ -270,7 +337,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 1377a6c630a7e406f8a710108213f628, type: 3}
-      volume: 1.25
+      volume: 1
       soundCooldown: 3
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -288,7 +355,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 2a8d8cfd09cbd44fe99ddfc8dfae110a, type: 3}
-      volume: 0.5
+      volume: 0.75
       soundCooldown: 0.75
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -314,6 +381,24 @@ MonoBehaviour:
       soundLastPlayed: 0
       timeLastPlayed: 0
     test: 0
+  - name: Tower Death
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}
+      volume: 1
+      soundCooldown: 2
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
+  - name: Trebuchet Death
+    sound:
+      sound:
+      - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}
+      volume: 1
+      soundCooldown: 2
+      soundLastPlayed: 0
+      timeLastPlayed: 0
+    test: 0
 --- !u!82 &7507915141636075429
 AudioSource:
   m_ObjectHideFlags: 0
@@ -323,7 +408,8 @@ AudioSource:
   m_GameObject: {fileID: 6480658238416360583}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6722070949544461969, guid: e43d0a26c72fc9347b2d182dc0952c51,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

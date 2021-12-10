@@ -68,6 +68,38 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "MoveTouch",
+                    "type": "PassThrough",
+                    "id": "619be17c-9391-4f57-b737-d064db223edd",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Touch",
+                    "type": "PassThrough",
+                    "id": "ccfd16df-769e-4f71-a6b5-0ea0d8bef33f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Tap",
+                    "type": "PassThrough",
+                    "id": "f75ab4bb-62d4-4975-8682-7677bcfd3c02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SecondTap",
+                    "type": "Value",
+                    "id": "f460a2e8-c844-4a33-860d-739f77fde53d",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -326,6 +358,28 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "06a4bfd0-b3c0-4105-9fd9-add258f5eb98",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityL",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "e491f438-0b92-4726-bbf9-9e30ed3ce975",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
+                    "action": "AbilityL",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "0d4a6b93-c118-4a2e-9995-6c90f6201fa2",
                     "path": "1DAxis(minValue=0,whichSideWins=2)",
                     "interactions": "",
@@ -459,7 +513,7 @@
                 {
                     "name": "",
                     "id": "a71cc481-c573-470f-9566-69dfd33091de",
-                    "path": "",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamecube",
@@ -499,6 +553,83 @@
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e20bbb1-98ed-4c09-8c67-a3602fa0ebf2",
+                    "path": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamecube",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f6f2090-1f1a-432c-9955-e0024af4942a",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touchscreen",
+                    "action": "MoveTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "ff92f658-13fd-4a17-ae19-b8c8dab47fb6",
+                    "path": "1DAxis(minValue=0,whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "656b494f-3a96-44e0-a4db-b3751fbf1f92",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touchscreen",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "212454e8-78ce-40f7-b84e-2a186fd9a066",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touchscreen",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e7a29bf5-2b16-484a-a37a-3fb00a16cbde",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondTap",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "8dcde04e-3360-4312-af55-b8c9e5810171",
+                    "path": "<Touchscreen>/touch0/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touchscreen",
+                    "action": "SecondTap",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -655,6 +786,17 @@
                 },
                 {
                     "name": "",
+                    "id": "231be3ad-3f28-4c45-8702-5afd43b2ffec",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b215813a-8b14-45e5-8b93-00965d5725ba",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -761,6 +903,17 @@
             "devices": [
                 {
                     "devicePath": "<HID::mayflash limited MAYFLASH GameCube Controller Adapter>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Touchscreen",
+            "bindingGroup": "Touchscreen",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
                     "isOptional": false,
                     "isOR": false
                 }

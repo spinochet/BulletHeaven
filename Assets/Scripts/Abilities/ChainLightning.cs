@@ -21,6 +21,7 @@ public class ChainLightning : Ability
 
     override public void Activate(int level = 0)
     {
+        level = level >= (levels.Count-1) ? (levels.Count-1) : level;
         StartCoroutine(Chain(level));
     }
 
@@ -52,7 +53,7 @@ public class ChainLightning : Ability
                 if (enemy)
                 {
                     Vector3 diff = closestPosition - enemy.transform.position;
-                    if (diff.magnitude < dist)
+                    if (diff.magnitude < dist && diff.magnitude > 0.1f)
                     {
                         closest = enemy;
                         dist = diff.magnitude;

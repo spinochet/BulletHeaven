@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArcherController : EnemyController
 {
     [SerializeField] private int bullets = 5;
     [SerializeField] private float fireCooldown = 1.0f;
+    [SerializeField] private Slider hp;
 
     private int bulletsFired = 0;
     private bool isFiring = true;
@@ -14,8 +16,13 @@ public class ArcherController : EnemyController
     void Update()
     {
         Scroll();
-            
 
+        if (hp)
+        {
+            hp.gameObject.SetActive(pawn.GetHP() != 1.0f);
+            hp.value = pawn.GetHP();
+
+        }
         // Combat
         delayTimer += Time.deltaTime;
         if (delayTimer >= delay)

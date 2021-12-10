@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Pawn : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class Pawn : MonoBehaviour
     [SerializeField] private string name;
     [SerializeField] private Sprite portrait;
     [SerializeField] private GameObject model;
-    private int currentLevel = 0;
 
     public GameObject Model { get { return model; } }
     public Sprite Portrait { get { return portrait; } }
@@ -50,6 +50,7 @@ public class Pawn : MonoBehaviour
     public float FireRate { get { return fireRate; } }
 
     public Bullet bullet;
+    public Bullet.BulletLevel powerUp;
     private bool isShooting;
     private float fireTimer;
 
@@ -57,8 +58,8 @@ public class Pawn : MonoBehaviour
     [Header ("Abilities")]
     [SerializeField] private Ability abilityL;
     [SerializeField] private Ability abilityR;
-    private bool isAbilityL;
-    private bool isAbilityR;
+    public bool isAbilityL;
+    public bool isAbilityR;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -84,6 +85,10 @@ public class Pawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 adjustedPosition = transform.position;
+        adjustedPosition.y = 0.0f;
+        transform.position = adjustedPosition;
+
         // Update move
         if (!model.activeSelf && partner)
         {
@@ -144,6 +149,10 @@ public class Pawn : MonoBehaviour
     public void Move(Vector3 moveVector)
     {
         controller.Move(moveVector * speed * Time.unscaledDeltaTime);
+
+        Vector3 adjustedPosition = transform.position;
+        adjustedPosition.y = 0.0f;
+        transform.position = adjustedPosition;
     }
 
     // Pause pawn's animation
@@ -216,6 +225,11 @@ public class Pawn : MonoBehaviour
     {
         stamina -= value;
         staminaTimer = 0.0f;
+
+        if (stamina > maxStamina)
+            stamina = maxStamina;
+        if (stamina < 0.0f)
+            stamina = 0.0f;
     }
 
     // ------
@@ -225,17 +239,32 @@ public class Pawn : MonoBehaviour
     // Ask server to spawn bullet prefab
     public void Shoot(Quaternion aim)
     {
-        int numBullets = bullet.GetNumBullets(currentLevel);
-        float bulletSpacing = bullet.GetBulletSpacing(currentLevel);
+        int currentLevel = 0;
+        if (pawnController is PlayerController)
+        {
+            currentLevel = ((PlayerController)pawnController).CurrentLevel;
+        }
+
+        int numBullets = bullet.GetNumBullets(currentLevel) + powerUp.numBullets;
+        float bulletSpacing = bullet.GetBulletSpacing(currentLevel) + powerUp.bulletSpacing;
+        float bulletAngle = bullet.GetBulletAngle(currentLevel) + powerUp.angle;
 
         float spaceFactor = (numBullets - 1.0f) / 2.0f;
-        Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor); 
+        Vector3 startSpawn = transform.position + (Vector3.left * bulletSpacing * spaceFactor);
+        float startAngle = 0;
+        float angleStep = 0;
+
+        if (numBullets > 1)
+        {
+            startAngle = -bulletAngle;
+            angleStep = (bulletAngle * 2) / (numBullets - 1);
+        }
 
         for (int i = 0; i < numBullets; ++i)
         {
-            GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim);
+            GameObject b = Instantiate(bullet.gameObject, startSpawn + (Vector3.right * bulletSpacing * i), aim * Quaternion.Euler(0.0f, startAngle + (angleStep * i), 0.0f));
             if (pawnController is PlayerController)
-                b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController);
+                b.GetComponent<Bullet>().SetOwner((PlayerController) pawnController, powerUp, currentLevel);
         }
     }
 
@@ -245,6 +274,12 @@ public class Pawn : MonoBehaviour
         GameObject b = Instantiate(bullet.gameObject, target, Quaternion.identity);
     }
 
+    // Power up bullets
+    public void PowerUp(Bullet.BulletLevel level, float duration)
+    {
+        powerUp = level;
+    }
+
     // ---------
     // ABILITIES
     // ---------
@@ -252,6 +287,11 @@ public class Pawn : MonoBehaviour
     // Activate chosen ability
     public void ActivateAbility(int i)
     {
+        int currentLevel = 0;
+        if (pawnController is PlayerController)
+        {
+            currentLevel = ((PlayerController)pawnController).CurrentLevel;
+        }
         if (i == 0 && abilityL != null && stamina > abilityL.GetCost())
         {
             abilityL.Activate(currentLevel);

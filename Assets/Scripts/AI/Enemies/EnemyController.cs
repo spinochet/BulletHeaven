@@ -6,6 +6,7 @@ public class EnemyController : PawnController
 {
     protected CharacterController controller;
     protected LevelManager manager;
+    protected ParticleSystem particleSystem;
 
     [SerializeField] protected int score = 100;
     [SerializeField] protected float speed = 2.5f;
@@ -13,6 +14,9 @@ public class EnemyController : PawnController
     [SerializeField] protected float contactKnockback = 20.0f;
     [SerializeField] protected float contactCooldown = 5.0f;
     protected float contactTimer;
+
+    [Space (5)]
+    [SerializeField] protected GameObject vfx;
 
     public int Score { get { return score; } }
 
@@ -103,6 +107,11 @@ public class EnemyController : PawnController
     // Destroy object
     public override void Destroy(Pawn _pawn)
     {
+        Transform newVFXPosition = transform;
+        newVFXPosition.position -= new Vector3(0, 0, 3);
+        if (vfx)
+            Instantiate(vfx, newVFXPosition.position, transform.rotation);
+            
         Destroy(gameObject);
     }
 

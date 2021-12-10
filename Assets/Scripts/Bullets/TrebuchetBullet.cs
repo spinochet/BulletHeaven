@@ -6,9 +6,12 @@ public class TrebuchetBullet : Bullet
 {
     [Header ("Trebuchet")]
     [SerializeField] private GameObject shadow;
+    [SerializeField] private GameObject boulder;
     [SerializeField] private float radius = 5.0f;
     [SerializeField] private float expandSpeed = 2.5f;
     [SerializeField] private List<GameObject> targets;
+
+    [SerializeField] protected GameObject vfx;
 
     private float timer = 0.0f;
 
@@ -32,12 +35,15 @@ public class TrebuchetBullet : Bullet
                     Pawn pawn = target.GetComponent<Pawn>();
                     if (pawn) {
                         pawn.TakeDamage(levels[currentLevel].damage);
-                        
                     }
                         
                 }
             }
             SoundManager.Instance.Play("Boulder Crash");
+            if (vfx) {
+                Instantiate(vfx, transform.position, transform.rotation);
+            }
+            
             Destroy(gameObject);
             
         }
@@ -45,6 +51,12 @@ public class TrebuchetBullet : Bullet
         {
             float size = (timer / expandSpeed) * radius * 2.0f;
             shadow.transform.localScale = new Vector3(size, size, size);
+
+            if (timer >= 2.2f)
+            {
+                size = ((timer - 2.2f) / (expandSpeed - 2.2f)) * 2.0f;
+                boulder.transform.localScale = new Vector3(size, size, size);
+            }
         }
     }
 

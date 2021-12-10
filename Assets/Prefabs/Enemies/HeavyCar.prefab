@@ -65,7 +65,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   model: {fileID: 3383507968236058327}
   speed: 10
-  maxHP: 300
+  maxHP: 500
   hpRegenRate: 0
   hpRegenCooldown: 0
   maxStamina: 100
@@ -75,8 +75,18 @@ MonoBehaviour:
     type: 3}
   fireRate: 0
   bullet: {fileID: 0}
+  powerUp:
+    destroyOnCollision: 0
+    speed: 0
+    damage: 0
+    fireRate: 0
+    numBullets: 0
+    bulletSpacing: 0
+    angle: 0
   abilityL: {fileID: 0}
   abilityR: {fileID: 0}
+  isAbilityL: 0
+  isAbilityR: 0
 --- !u!114 &8502039096651758891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,10 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pawn: {fileID: 9192485142696004558}
+  score: 100
   speed: 4
   contactDamage: 40
   contactKnockback: 40
   contactCooldown: 3
+  vfx: {fileID: 0}
   shootFrequency: 0.3
   soundEffect: Vroom
 --- !u!143 &6031032840967050281

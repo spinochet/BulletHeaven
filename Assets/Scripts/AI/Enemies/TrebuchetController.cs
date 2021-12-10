@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrebuchetController : EnemyController
 {
     [SerializeField] private Animator anim;
+    [SerializeField] private Slider hp;
 
     void Awake()
     {
@@ -19,6 +21,13 @@ public class TrebuchetController : EnemyController
     void Update()
     {
         Scroll();
+
+        if (hp)
+        {
+            hp.gameObject.SetActive(pawn.GetHP() != 1.0f);
+            hp.value = pawn.GetHP();
+
+        }
 
         // Combat
         fireTimer += Time.deltaTime;

@@ -348,6 +348,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Maybe if we continue on, we will find those answers.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -695,6 +711,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: 'That was so strange. This world is a combination of our timelines. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -895,6 +927,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: 'Or rather something different. A sinister energy awaits us. I can sense
     it. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1087,6 +1135,22 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1357,6 +1421,22 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1640,6 +1720,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
+    - m_Name: 
+      m_Id: 2544800b-ad3d-4848-9e96-c35f21a08075
+      m_Path: <Touchscreen>/press
+      m_Interactions: Hold(duration=1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b3105164-62ad-4a38-8f62-74fa3abaaca3
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button10
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
   nextLevel: Level 4 Offline
 --- !u!114 &1329424064
 MonoBehaviour:
@@ -1768,6 +1864,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Maya I -
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1885,6 +1997,22 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2048,6 +2176,7 @@ GameObject:
   - component: {fileID: 1727218663}
   - component: {fileID: 1727218662}
   - component: {fileID: 1727218661}
+  - component: {fileID: 1727218664}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2120,6 +2249,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1727218664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727218660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1911219889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,6 +2350,22 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 08498b43-4a2f-4701-8712-631b381063e1
       m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 4e973c55-7ada-4a95-b5d5-7add8863831d
+      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
+      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
       m_Interactions: 
       m_Processors: 
       m_Groups: 

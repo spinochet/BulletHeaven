@@ -169,10 +169,18 @@ public class PlayerManager : MonoBehaviour
             p1.enabled = true;
     }
 
+    public void ResetScore()
+    {
+        if (p1)
+            p1.ResetPoints();
+        if (p2)
+            p2.ResetPoints();
+    }
+
     public void CheckPlayersAlive()
     {
         bool playersExist = p1 || p2;
-        bool playersDead = ((p1 && !p1.IsAlive) || !p1) && ((p2 && !p2.IsAlive) || !p2);
+        bool playersDead = (p1 && !p1.IsAlive) && (p2 && !p2.IsAlive);
 
         if (playersExist && playersDead)
         {
@@ -181,6 +189,20 @@ public class PlayerManager : MonoBehaviour
 
             GameObject level = GameObject.Find("LoseMenu");
             if (lose) lose.GetComponent<LoseController>().ToggleLose(true);
+
+            SoundManager.Instance.ToggleHighPass(true);
         }
+    }
+
+    public float GetHP()
+    {
+        float alpha = 0f;
+        if (player1Pawn)
+            alpha += player1Pawn.GetHP();
+        if (player2Pawn)
+            alpha += player2Pawn.GetHP();
+
+        alpha = (2f - alpha) / 2f;
+        return alpha;
     }
 }
