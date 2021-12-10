@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -121,6 +121,130 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &20036046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20036047}
+  - component: {fileID: 20036050}
+  - component: {fileID: 20036049}
+  - component: {fileID: 20036048}
+  m_Layer: 5
+  m_Name: DialogueLine9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &20036047
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20036046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 247194230}
+  m_Father: {fileID: 145639487}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 95.9, y: -3.5}
+  m_SizeDelta: {x: 1041.8, y: 279.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &20036048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20036046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space:
+    m_Name: Space
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
+      m_Path: <Keyboard>/space
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+  input: "Pleasure to make your acquaintance, but I\u2019m afraid I have to cut this
+    chat short. The kingdom\u2019s forces will arrive at any moment to collect and
+    imprison me."
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
+  delay: 0.08
+  characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
+  imageHolder: {fileID: 247194231}
+--- !u!114 &20036049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20036046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 104
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 2
+  m_Text: 
+--- !u!222 &20036050
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20036046}
+  m_CullTransparentMesh: 0
 --- !u!1 &26807319
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,150 +319,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26807319}
   m_CullTransparentMesh: 0
---- !u!1 &110346058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 110346059}
-  - component: {fileID: 110346062}
-  - component: {fileID: 110346061}
-  - component: {fileID: 110346060}
-  m_Layer: 5
-  m_Name: DialogueLine5 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &110346059
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110346058}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 886513677}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.9, y: -3.5}
-  m_SizeDelta: {x: 1041.8, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &110346060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110346058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-<<<<<<< Updated upstream
-  input: "Pleasure to make your acquaintance, but I\u2019m afraid I have to cut this
-    chat short. The kingdom\u2019s forces will arrive at any moment to collect and
-    imprison me."
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: ...
->>>>>>> Stashed changes
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
-  characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
-  imageHolder: {fileID: 886513678}
---- !u!114 &110346061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110346058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &110346062
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110346058}
-  m_CullTransparentMesh: 0
 --- !u!1 &145639486
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,20 +353,12 @@ RectTransform:
   - {fileID: 831758041}
   - {fileID: 1612738946}
   - {fileID: 506183869}
-  - {fileID: 1200501918}
   - {fileID: 387073827}
-  - {fileID: 1108682448}
-  - {fileID: 879885252}
-  - {fileID: 110346059}
-  - {fileID: 1535820313}
   - {fileID: 1598328330}
-  - {fileID: 1829447067}
-  - {fileID: 1928926333}
   - {fileID: 581340387}
-  - {fileID: 863550363}
-  - {fileID: 2089813823}
-  - {fileID: 894650711}
   - {fileID: 2042481027}
+  - {fileID: 1928926333}
+  - {fileID: 20036047}
   - {fileID: 759866790}
   - {fileID: 417777295}
   - {fileID: 442897842}
@@ -638,6 +610,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227047102}
+  m_CullTransparentMesh: 0
+--- !u!1 &247194229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247194230}
+  - component: {fileID: 247194232}
+  - component: {fileID: 247194231}
+  m_Layer: 5
+  m_Name: CharacterImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &247194230
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247194229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 20036047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -630, y: 0.0000076294}
+  m_SizeDelta: {x: 174, y: 279.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &247194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247194229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &247194232
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247194229}
   m_CullTransparentMesh: 0
 --- !u!1 &313356682
 GameObject:
@@ -922,7 +968,7 @@ RectTransform:
   m_Children:
   - {fileID: 1003166889}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -965,30 +1011,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: What's happening?!
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Whoa, wh-what's happening?!
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1003166890}
 --- !u!114 &387073829
@@ -1064,7 +1090,7 @@ RectTransform:
   m_Children:
   - {fileID: 914407191}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 18
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1107,31 +1133,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: Given the state of emergency, I am at your service, Princess.
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Given your current emotional instability, I deem it appropriate. I am at
-    your service, Princess.
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 914407192}
 --- !u!114 &417777297
@@ -1207,7 +1212,7 @@ RectTransform:
   m_Children:
   - {fileID: 856874534}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 19
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1250,30 +1255,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: "Good, let\u2019s fight."
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Great, let's go!
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 856874535}
 --- !u!114 &442897844
@@ -1540,31 +1525,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: Gods please, send me a warrior. Someone that can help.
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Gods, please! I know I don't ask for much, so send me your strongest warrior,
-    someone to help me end this!
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 446347782}
 --- !u!114 &506183871
@@ -1640,7 +1604,7 @@ RectTransform:
   m_Children:
   - {fileID: 500101295}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1683,31 +1647,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: "Hello.. My name is Maya and I\u2019m the sole princess and heir of the
     Kingdom of Botland."
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: What kind of armor is that? I've never seen anything like it!
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 500101296}
 --- !u!114 &581340389
@@ -1751,80 +1695,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581340386}
   m_CullTransparentMesh: 0
---- !u!1 &721446262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 721446263}
-  - component: {fileID: 721446265}
-  - component: {fileID: 721446264}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &721446263
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721446262}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 863550363}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &721446264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721446262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &721446265
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721446262}
-  m_CullTransparentMesh: 0
 --- !u!1 &759866789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1727,7 @@ RectTransform:
   m_Children:
   - {fileID: 227047103}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 17
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1900,31 +1770,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: 'I need your help to battle them and evade their bastardly desires.  '
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: I called for a hero to help me and you popped out, now will you help me
-    or not?
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 227047104}
 --- !u!114 &759866792
@@ -2043,31 +1892,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: The war begins and where am I? In this shallow cave sulking like a rat.
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Ugh, great, Maya. The war's raging out there and you're back here in a cave
-    feeling sorry for yourself.
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 26807321}
 --- !u!114 &831758043
@@ -2184,494 +2012,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856874533}
-  m_CullTransparentMesh: 0
---- !u!1 &863550362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 863550363}
-  - component: {fileID: 863550366}
-  - component: {fileID: 863550365}
-  - component: {fileID: 863550364}
-  m_Layer: 5
-  m_Name: DialogueLine11 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &863550363
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863550362}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 721446263}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.9, y: -3.5}
-  m_SizeDelta: {x: 1041.8, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &863550364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863550362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Reinforced titanium alloy.
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
-  characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
-  imageHolder: {fileID: 721446264}
---- !u!114 &863550365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863550362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &863550366
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863550362}
-  m_CullTransparentMesh: 0
---- !u!1 &879885251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 879885252}
-  - component: {fileID: 879885255}
-  - component: {fileID: 879885254}
-  - component: {fileID: 879885253}
-  m_Layer: 5
-  m_Name: DialogueLine3 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &879885252
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879885251}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1574759663}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4, y: -3.5}
-  m_SizeDelta: {x: 1223.2812, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &879885253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879885251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: The whirlwinds form a glowing portal, and from the light, out pops...
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.08
-  characterSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  imageHolder: {fileID: 1574759664}
---- !u!114 &879885254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879885251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &879885255
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879885251}
-  m_CullTransparentMesh: 0
---- !u!1 &886513676
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 886513677}
-  - component: {fileID: 886513679}
-  - component: {fileID: 886513678}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &886513677
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886513676}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 110346059}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &886513678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886513676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &886513679
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886513676}
-  m_CullTransparentMesh: 0
---- !u!1 &894650710
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 894650711}
-  - component: {fileID: 894650714}
-  - component: {fileID: 894650713}
-  - component: {fileID: 894650712}
-  m_Layer: 5
-  m_Name: DialogueLine6 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &894650711
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894650710}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1955260664}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.9, y: -3.5}
-  m_SizeDelta: {x: 1041.8, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &894650712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894650710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Titani... whatever, there's no time for this!
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
-  characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
-  imageHolder: {fileID: 1955260665}
---- !u!114 &894650713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894650710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &894650714
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894650710}
   m_CullTransparentMesh: 0
 --- !u!1 &899602619
 GameObject:
@@ -2899,430 +2239,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003166888}
   m_CullTransparentMesh: 0
---- !u!1 &1101826215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1101826216}
-  - component: {fileID: 1101826218}
-  - component: {fileID: 1101826217}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1101826216
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101826215}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1535820313}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1101826217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101826215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1101826218
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101826215}
-  m_CullTransparentMesh: 0
---- !u!1 &1108682447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1108682448}
-  - component: {fileID: 1108682451}
-  - component: {fileID: 1108682450}
-  - component: {fileID: 1108682449}
-  m_Layer: 5
-  m_Name: DialogueLine3 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1108682448
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108682447}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1934255760}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4, y: -3.5}
-  m_SizeDelta: {x: 1223.2812, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1108682449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108682447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: From the heart of the cave, the shining crystal emits a blinding light.
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.08
-  characterSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  imageHolder: {fileID: 1934255761}
---- !u!114 &1108682450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108682447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &1108682451
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108682447}
-  m_CullTransparentMesh: 0
---- !u!1 &1200501917
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1200501918}
-  - component: {fileID: 1200501921}
-  - component: {fileID: 1200501920}
-  - component: {fileID: 1200501919}
-  m_Layer: 5
-  m_Name: DialogueLine3 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1200501918
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200501917}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1254594955}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4, y: -3.5}
-  m_SizeDelta: {x: 1223.2812, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1200501919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200501917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: '*Deep rumbling*'
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.08
-  characterSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  imageHolder: {fileID: 1254594956}
---- !u!114 &1200501920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200501917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &1200501921
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200501917}
-  m_CullTransparentMesh: 0
---- !u!1 &1254594954
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1254594955}
-  - component: {fileID: 1254594957}
-  - component: {fileID: 1254594956}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1254594955
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254594954}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1200501918}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524.6406, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1254594956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254594954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1254594957
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254594954}
-  m_CullTransparentMesh: 0
 --- !u!1 &1264912600
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,218 +2394,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1535820312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1535820313}
-  - component: {fileID: 1535820316}
-  - component: {fileID: 1535820315}
-  - component: {fileID: 1535820314}
-  m_Layer: 5
-  m_Name: DialogueLine5 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1535820313
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535820312}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1101826216}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.9, y: -3.5}
-  m_SizeDelta: {x: 1041.8, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1535820314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535820312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: ...
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
-  characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
-  imageHolder: {fileID: 1101826217}
---- !u!114 &1535820315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535820312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &1535820316
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535820312}
-  m_CullTransparentMesh: 0
---- !u!1 &1574759662
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1574759663}
-  - component: {fileID: 1574759665}
-  - component: {fileID: 1574759664}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1574759663
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574759662}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 879885252}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524.6406, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1574759664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574759662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1574759665
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574759662}
-  m_CullTransparentMesh: 0
 --- !u!1 &1598328329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,7 +2426,7 @@ RectTransform:
   m_Children:
   - {fileID: 2046013249}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3765,31 +2469,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: 'That was an abnormal experience I would never like to relive. I would like
     to know now: who are you and where am I? '
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: Well, that was an abnormal experience I would never like to relive.
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 2046013250}
 --- !u!114 &1598328332
@@ -3908,30 +2592,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: "I can\u2019t do this alone. I need assistance."
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: 'But... I''m not gonna be able to take all those chumps alone. '
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 377517596}
 --- !u!114 &1612738948
@@ -3974,154 +2638,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612738945}
-  m_CullTransparentMesh: 0
---- !u!1 &1646363624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1646363625}
-  - component: {fileID: 1646363627}
-  - component: {fileID: 1646363626}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1646363625
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646363624}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1829447067}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1646363626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646363624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1646363627
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646363624}
-  m_CullTransparentMesh: 0
---- !u!1 &1744752572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1744752573}
-  - component: {fileID: 1744752575}
-  - component: {fileID: 1744752574}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1744752573
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744752572}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2089813823}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1744752574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744752572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1744752575
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744752572}
   m_CullTransparentMesh: 0
 --- !u!1 &1797311064
 GameObject:
@@ -4312,144 +2828,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813379236}
   m_CullTransparentMesh: 0
---- !u!1 &1829447066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1829447067}
-  - component: {fileID: 1829447070}
-  - component: {fileID: 1829447069}
-  - component: {fileID: 1829447068}
-  m_Layer: 5
-  m_Name: DialogueLine6 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1829447067
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829447066}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1646363625}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.9, y: -3.5}
-  m_SizeDelta: {x: 1041.8, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1829447068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829447066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: AH! What the heck are you!?
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
-  characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
-  imageHolder: {fileID: 1646363626}
---- !u!114 &1829447069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829447066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &1829447070
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829447066}
-  m_CullTransparentMesh: 0
 --- !u!1 &1928926332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,7 +2860,7 @@ RectTransform:
   m_Children:
   - {fileID: 1264912601}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4525,31 +2903,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: 'I am known as Arthur. I am from Camelocity, a metropolis in the northern
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: 'They call me Arthur. I come from Camelocity, a metropolis in the northern
->>>>>>> Stashed changes
     sector of Earth. '
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 99ebd5b1003e4401c8011ab738175e5b, type: 3}
   imageHolder: {fileID: 1264912602}
 --- !u!114 &1928926335
@@ -4593,154 +2951,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928926332}
   m_CullTransparentMesh: 0
---- !u!1 &1934255759
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1934255760}
-  - component: {fileID: 1934255762}
-  - component: {fileID: 1934255761}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1934255760
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934255759}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1108682448}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524.6406, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1934255761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934255759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1934255762
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934255759}
-  m_CullTransparentMesh: 0
---- !u!1 &1955260663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1955260664}
-  - component: {fileID: 1955260666}
-  - component: {fileID: 1955260665}
-  m_Layer: 5
-  m_Name: CharacterImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1955260664
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955260663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 894650711}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 0.0000076294}
-  m_SizeDelta: {x: 174, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1955260665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955260663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1955260666
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955260663}
-  m_CullTransparentMesh: 0
 --- !u!1 &2042481026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4773,7 +2983,7 @@ RectTransform:
   m_Children:
   - {fileID: 1813379237}
   m_Father: {fileID: 145639487}
-  m_RootOrder: 16
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4816,32 +3026,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-<<<<<<< Updated upstream
   input: 'I prayed for a hero to assist me and now here you are. What shall I call
     you? '
-=======
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: My name's Maya, I'm heir to the throne of Botland, and my kingdom was ambushed
-    by a bunch of punks that need pounding.
->>>>>>> Stashed changes
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
+  delay: 0.08
   characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
   imageHolder: {fileID: 1813379238}
 --- !u!114 &2042481029
@@ -4958,142 +3147,4 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046013248}
-  m_CullTransparentMesh: 0
---- !u!1 &2089813822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2089813823}
-  - component: {fileID: 2089813826}
-  - component: {fileID: 2089813825}
-  - component: {fileID: 2089813824}
-  m_Layer: 5
-  m_Name: DialogueLine6 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2089813823
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089813822}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1744752573}
-  m_Father: {fileID: 145639487}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.9, y: -3.5}
-  m_SizeDelta: {x: 1041.8, y: 279.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2089813824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089813822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6bc0f867d91da488ed48aa8e6f4a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space:
-    m_Name: Space
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e99f78d4-d1eb-4330-91c3-81d2cee358b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 85c8e679-c32c-4daf-9013-b3ebe85bb3b0
-      m_Path: <Keyboard>/space
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 08498b43-4a2f-4701-8712-631b381063e1
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: Hold(duration=0.05,pressPoint=0.1)
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: b1ce0627-c169-4a94-9536-d979038f5ca4
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1402173b-75bb-4f12-9501-4bb305fdf640
-      m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Space
-      m_Flags: 0
-  input: 'Tita... wha? '
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
-  delay: 0.04
-  characterSprite: {fileID: 21300000, guid: 2aac108fee1244cf9b7e704107bc4ea8, type: 3}
-  imageHolder: {fileID: 1744752574}
---- !u!114 &2089813825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089813822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 104
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: 
---- !u!222 &2089813826
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089813822}
   m_CullTransparentMesh: 0
