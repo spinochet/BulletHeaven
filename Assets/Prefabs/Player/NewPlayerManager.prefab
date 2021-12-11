@@ -328,7 +328,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 05ac7ade7eb1e4026b77f0ebb742013d, type: 3}
-      volume: 1
+      volume: 0.8
       soundCooldown: 3
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 1377a6c630a7e406f8a710108213f628, type: 3}
-      volume: 1
+      volume: 0.8
       soundCooldown: 3
       soundLastPlayed: 0
       timeLastPlayed: 0
@@ -385,16 +385,7 @@ MonoBehaviour:
     sound:
       sound:
       - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}
-      volume: 1
-      soundCooldown: 2
-      soundLastPlayed: 0
-      timeLastPlayed: 0
-    test: 0
-  - name: Trebuchet Death
-    sound:
-      sound:
-      - {fileID: 8300000, guid: 60b64457b630a4ae9b3ab6c54bdc7c9c, type: 3}
-      volume: 1
+      volume: 0.75
       soundCooldown: 2
       soundLastPlayed: 0
       timeLastPlayed: 0
