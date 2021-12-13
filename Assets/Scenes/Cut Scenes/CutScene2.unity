@@ -1925,8 +1925,8 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
-  input: You should not have to fit a precedent. You should tell them that you can
-    decide your own path.
+  input: I do not understand why you should have to fit a precedent. You should tell
+    them that you can decide your own path.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
   delay: 0.04
