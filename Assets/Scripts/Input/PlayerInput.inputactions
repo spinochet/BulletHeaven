@@ -567,6 +567,17 @@
                 },
                 {
                     "name": "",
+                    "id": "28d0008c-3470-467e-ac78-93a44809a2bf",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1f6f2090-1f1a-432c-9955-e0024af4942a",
                     "path": "<Touchscreen>/position",
                     "interactions": "",

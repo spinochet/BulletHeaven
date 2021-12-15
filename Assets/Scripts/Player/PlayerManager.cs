@@ -47,10 +47,12 @@ public class PlayerManager : MonoBehaviour
     public void AddPlayer(PlayerInput input)
     {
         PlayerController newPlayer = input.transform.GetComponent<PlayerController>();
-        if (input.playerIndex == 0)
+        if (p1 == null)
             p1 = newPlayer;
-        else
+        else if (p2 == null)
             p2 = newPlayer;
+        else
+            return;
 
         // Drop-in Co-op
         if (SceneManager.GetActiveScene().name.Contains("Level"))
@@ -158,7 +160,7 @@ public class PlayerManager : MonoBehaviour
         if (p1)
             p1.enabled = false;
         if (p2)
-            p1.enabled = false;
+            p2.enabled = false;
     }
 
     public void UnlockPlayers()
@@ -166,7 +168,7 @@ public class PlayerManager : MonoBehaviour
         if (p1)
             p1.enabled = true;
         if (p2)
-            p1.enabled = true;
+            p2.enabled = true;
     }
 
     public void ResetScore()
@@ -180,7 +182,13 @@ public class PlayerManager : MonoBehaviour
     public void CheckPlayersAlive()
     {
         bool playersExist = p1 || p2;
-        bool playersDead = (p1 && !p1.IsAlive) && (p2 && !p2.IsAlive);
+        bool p1Dead = ((p1 && !p1.IsAlive) || !p1);
+        bool p2Dead = ((p2 && !p2.IsAlive) || !p2);
+
+        if (p1Dead) Debug.Log("Player 1 is dead");
+        if (p2Dead) Debug.Log("Player 2 is dead");
+
+        bool playersDead = p1Dead && p2Dead;
 
         if (playersExist && playersDead)
         {

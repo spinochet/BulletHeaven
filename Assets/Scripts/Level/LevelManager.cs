@@ -77,8 +77,8 @@ public class LevelManager : MonoBehaviour
     {
         zCheckpoint = transform.position.z;
 
-        WaveSpawner3D[] waves = FindObjectsOfType(typeof(WaveSpawner3D)) as WaveSpawner3D[];
-        foreach (WaveSpawner3D wave in waves)
+        WaveSpawner[] waves = FindObjectsOfType(typeof(WaveSpawner)) as WaveSpawner[];
+        foreach (WaveSpawner wave in waves)
         {
             if (wave.IsSpawned)
                 Destroy(wave.gameObject);
@@ -103,8 +103,8 @@ public class LevelManager : MonoBehaviour
             Destroy(bullet.gameObject);
         }
         
-        WaveSpawner3D[] waves = FindObjectsOfType(typeof(WaveSpawner3D)) as WaveSpawner3D[];
-        foreach (WaveSpawner3D wave in waves)
+        WaveSpawner[] waves = FindObjectsOfType(typeof(WaveSpawner)) as WaveSpawner[];
+        foreach (WaveSpawner wave in waves)
         {
             wave.Reset();
         }
