@@ -121,6 +121,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &116106797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 500.31998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 79.840546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200290269253516019, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510135476030259288, guid: 7d64e4291141245e2958fa334cc0572f,
+        type: 3}
+      propertyPath: m_Name
+      value: Normal Theme
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d64e4291141245e2958fa334cc0572f, type: 3}
 --- !u!1 &151716774
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +276,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -366,6 +443,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
+    - m_Name: 
+      m_Id: 4f84ccc4-27d6-4948-a3ba-af8f9781d232
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
   nextLevel: Level 3 Offline
 --- !u!114 &183288540
 MonoBehaviour:
@@ -505,6 +590,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1170,6 +1263,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: What you may lack in etiquette is more than made up for by your bravery
     and altruism.
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1304,6 +1405,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1521,6 +1630,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: There is strange activity surrounding us. It appears as though my journey
     to your time period interfered with spacetime.
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1655,6 +1772,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1873,6 +1998,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Be on guard, Maya. I cannot predict what will await us.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2085,6 +2218,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: You... really think so? You don't think it's... unbefitting of a princess?
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2218,6 +2359,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2435,6 +2584,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: What's wrong?
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2568,6 +2725,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2866,6 +3031,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Home may not an option. I detect enemies approaching.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -3082,6 +3255,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -3473,6 +3654,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Does that mean we can't go back home?
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -3611,6 +3800,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: You have the noblest heart of any I have met and I am forever grateful.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -3744,6 +3941,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7a215eb5-0281-4761-b3f9-007c7c08c543
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 77f6f9e4-e7e0-4361-9612-294aa8ecbd1f
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -281,6 +281,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -502,6 +510,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: All of this because I ran away and wasn't strong enough to fight alone...
     It's as if the gods are punishing me.
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -550,6 +566,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108174485}
   m_CullTransparentMesh: 0
+--- !u!1001 &125481410
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7945459
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10979674
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.37454492
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424642278134344267, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970904716732754503, guid: dadf7e2e7c4fa495284ee72539e348c4,
+        type: 3}
+      propertyPath: m_Name
+      value: Intro Theme
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dadf7e2e7c4fa495284ee72539e348c4, type: 3}
 --- !u!1 &266886021
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +951,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: I never should have gone to that stupid cave and taken you away from your
     home! All of this is my fault!
   textColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1000,6 +1093,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1221,6 +1322,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Do not grieve for the past, Maya. Fighting at your side has reminded me
     of what means to be human. That alone is a greater gift than I could ever hope
     for.
@@ -1435,6 +1544,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: How... is that possible?
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -1568,6 +1685,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1707,6 +1832,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2072,6 +2205,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: Me too! You're never getting rid of me!
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -2205,6 +2346,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2344,6 +2493,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2649,6 +2806,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Skip
       m_Flags: 0
+    - m_Name: 
+      m_Id: 43b5013c-e6b8-48de-989a-b075940aaf9a
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
   nextLevel: Level 4 Offline
 --- !u!114 &1329424064
 MonoBehaviour:
@@ -2867,6 +3032,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Space
       m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
   input: I am honored. Your words mean the world to me.
   textColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 12800000, guid: 896c3d50012ca834194df82b591e756e, type: 3}
@@ -3000,6 +3173,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -3428,6 +3609,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: af91b0f0-9d6b-4b39-ae0c-09e71818d0fc
       m_Path: <HID::mayflash limited MAYFLASH GameCube Controller Adapter>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Space
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ed00bb95-0c9d-46df-b7ad-ee3aa0935820
+      m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
