@@ -1408,6 +1408,11 @@ PrefabInstance:
       propertyPath: soundList.Array.data[19].sound.sound.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 0af9240d0a28542aca9cb5448c2cef66, type: 3}
+    - target: {fileID: 6480658238416360578, guid: 626d1fad27e62d34fba1a202f7319266,
+        type: 3}
+      propertyPath: m_MaxPlayerCount
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6480658238416360580, guid: 626d1fad27e62d34fba1a202f7319266,
         type: 3}
       propertyPath: m_LocalPosition.x

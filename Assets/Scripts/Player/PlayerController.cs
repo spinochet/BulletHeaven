@@ -17,7 +17,7 @@ public class PlayerController : PawnController
     private int experience = 0;
     [SerializeField] private List<int> experienceNeeded;
 
-    public bool alive = false;
+    private bool alive = false;
     public bool IsAlive { get { return alive; }}
     private int score = 0;
 
@@ -47,6 +47,7 @@ public class PlayerController : PawnController
     {
         DontDestroyOnLoad(this);
         maxLevel = experienceNeeded.Count;
+        alive = true;
     }
 
     void Update()
@@ -130,13 +131,10 @@ public class PlayerController : PawnController
             Destroy(_pawn.gameObject);
             alive = false;
 
+            hud.UpdateHealth(0.0f);
+            hud.UpdateStamina(0.0f);
+
             PlayerManager.Instance.CheckPlayersAlive();
-
-            // LevelManager level = GameObject.FindObjectOfType(typeof(LevelManager)) as LevelManager;
-            // level.RestoreCheckpoint();
-
-            // hud.ToggleLose(true);
-            // hud.ToggleOffHUD(true);
         }
     }
 
@@ -336,11 +334,15 @@ public class PlayerController : PawnController
     public void LosePoints()
     {
         score /= 2;
+        alive = true;
     }
 
     public void ResetPoints()
     {
         score = 0;
+
+        experience = 0;
+        currentLevel = 0;
     }
 
     public Pawn GetPawn() {
